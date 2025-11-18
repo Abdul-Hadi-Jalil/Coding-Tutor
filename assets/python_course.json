@@ -1,0 +1,1238 @@
+{
+  "course_title": "Python Beginner Level",
+  "days": [
+    {
+      "title": "Day 1 – Introduction to Python",
+      "definition": "Python is a high-level programming language known for its simplicity and readability, making it perfect for beginners.",
+      "explanation": "Python is like learning to write instructions in a language that both humans and computers can understand. It was created to be easy to read and write, with a clean syntax that uses indentation to structure code. Think of Python as giving precise cooking recipes to a robot - each step must be clear and in the right order. You'll find Python used everywhere from web development to data science because it's versatile and has a huge community of developers.",
+      "code_example": "# This is your first Python program\nprint(\"Hello, World!\")\nprint(\"Welcome to Python programming!\")\n\n# Let's do some simple math\nprint(\"2 + 3 =\", 2 + 3)",
+      "real_world_example": "Python is used by companies like Google, Netflix, and Instagram for their backend services. It's also popular in scientific computing, artificial intelligence, and automation scripts. For example, when you use YouTube's recommendation system, Python code is working behind the scenes to suggest videos you might like.",
+      "interactive_tasks": [
+        "Write a program that prints your name and age",
+        "Create a program that calculates and prints the result of 15 × 8",
+        "Write code that prints three different greetings on separate lines"
+      ],
+      "quiz": [
+        {
+          "question": "What makes Python particularly good for beginners?",
+          "options": ["Complex syntax", "Easy readability", "Requires lots of memory", "Slow execution"],
+          "answer": "Easy readability",
+          "reasoning": "Python's clean, English-like syntax makes it easier for beginners to read and write code."
+        },
+        {
+          "question": "Which function is used to display output in Python?",
+          "options": ["display()", "show()", "print()", "output()"],
+          "answer": "print()",
+          "reasoning": "The print() function is used to display text and values in Python."
+        },
+        {
+          "question": "What symbol is used for single-line comments in Python?",
+          "options": ["//", "/*", "#", "--"],
+          "answer": "#",
+          "reasoning": "The hash symbol (#) is used for single-line comments in Python."
+        },
+        {
+          "question": "Which of these is NOT a common use of Python?",
+          "options": ["Web development", "Data science", "Operating system development", "Artificial intelligence"],
+          "answer": "Operating system development",
+          "reasoning": "While Python is versatile, it's not typically used for developing operating system kernels."
+        },
+        {
+          "question": "What is the output of: print(\"5 + 2 =\", 5 + 2)",
+          "options": ["7", "5 + 2 = 7", "\"5 + 2 =\" 7", "5 + 2 = 7"],
+          "answer": "5 + 2 = 7",
+          "reasoning": "The print function displays both the text and the calculated result together."
+        },
+        {
+          "question": "Which company does NOT heavily use Python?",
+          "options": ["Google", "Netflix", "Instagram", "Microsoft Windows kernel team"],
+          "answer": "Microsoft Windows kernel team",
+          "reasoning": "While Microsoft uses Python, the Windows kernel is primarily written in C and C++."
+        },
+        {
+          "question": "What is the purpose of comments in code?",
+          "options": ["To make code run faster", "To explain code to humans", "To hide code from computers", "To create executable files"],
+          "answer": "To explain code to humans",
+          "reasoning": "Comments help developers understand what the code does and are ignored by the computer."
+        }
+      ]
+    },
+    {
+      "title": "Day 2 – Setting up Python Environment",
+      "definition": "A Python environment includes the Python interpreter and tools needed to write, run, and manage Python code.",
+      "explanation": "Setting up your Python environment is like preparing your kitchen before cooking - you need the right tools and ingredients. You'll need Python installed on your computer, which acts as the 'translator' that converts your Python code into instructions the computer can understand. We'll also explore IDEs (Integrated Development Environments) which are like advanced text editors with special features for coding, such as syntax highlighting and debugging tools. Don't worry if this sounds technical - we'll walk through it step by step!",
+      "code_example": "# Let's verify our Python installation\nimport sys\n\nprint(\"Python version:\")\nprint(sys.version)\n\nprint(\"\\nPython installation path:\")\nprint(sys.executable)\n\n# Check if we can do basic operations\nprint(\"\\nTesting basic calculation:\")\nresult = 10 * 5\nprint(\"10 × 5 =\", result)",
+      "real_world_example": "Professional Python developers use environments like PyCharm, VS Code, or Jupyter Notebooks for complex projects. For example, data scientists at research institutions use Jupyter Notebooks to analyze data and create visualizations, while web developers might use VS Code with Python extensions to build websites using frameworks like Django.",
+      "interactive_tasks": [
+        "Write a program that checks your Python version and prints it",
+        "Create a script that calculates the area of a rectangle (length × width)",
+        "Write code that imports the math module and prints the value of pi"
+      ],
+      "quiz": [
+        {
+          "question": "What is the main component needed to run Python code?",
+          "options": ["Python compiler", "Python interpreter", "Python converter", "Python translator"],
+          "answer": "Python interpreter",
+          "reasoning": "The Python interpreter reads and executes Python code line by line."
+        },
+        {
+          "question": "What does IDE stand for?",
+          "options": ["Integrated Development Environment", "International Development Engine", "Interactive Digital Editor", "Intelligent Data Executor"],
+          "answer": "Integrated Development Environment",
+          "reasoning": "IDE stands for Integrated Development Environment, which provides comprehensive tools for coding."
+        },
+        {
+          "question": "Which module would you import to get information about the Python environment?",
+          "options": ["os", "environment", "sys", "platform"],
+          "answer": "sys",
+          "reasoning": "The sys module provides access to system-specific parameters and functions."
+        },
+        {
+          "question": "What is the purpose of an IDE's syntax highlighting?",
+          "options": ["To make code run faster", "To color-code different elements for readability", "To hide errors", "To convert code to other languages"],
+          "answer": "To color-code different elements for readability",
+          "reasoning": "Syntax highlighting uses colors to distinguish keywords, variables, and other code elements, making code easier to read."
+        },
+        {
+          "question": "Which of these is a popular Python IDE?",
+          "options": ["PyCharm", "Python Studio", "Code Master", "Dev Python"],
+          "answer": "PyCharm",
+          "reasoning": "PyCharm is a widely used IDE specifically designed for Python development."
+        },
+        {
+          "question": "What command would you use in command line to check if Python is installed?",
+          "options": ["python --check", "python --version", "check python", "verify python"],
+          "answer": "python --version",
+          "reasoning": "The 'python --version' command displays the installed Python version."
+        },
+        {
+          "question": "Why is it important to know your Python version?",
+          "options": ["For bragging rights", "Different versions have different features", "It affects computer speed", "Older versions are always better"],
+          "answer": "Different versions have different features",
+          "reasoning": "Python versions have different capabilities and syntax, so knowing your version helps ensure compatibility."
+        }
+      ]
+    },
+    {
+      "title": "Day 3 – Python Syntax and Structure",
+      "definition": "Python syntax refers to the set of rules that define how Python programs are written and structured, with a strong emphasis on readability through indentation.",
+      "explanation": "Think of Python syntax like the grammar rules of a language. Just as English has rules about sentence structure, Python has rules about how code should be written. The most unique aspect of Python is that it uses indentation (whitespace) to define blocks of code, unlike other languages that use braces {}. This means proper spacing is not just for looks - it's essential for the code to work correctly. We'll learn about statements, indentation, and the basic structure that every Python program follows.",
+      "code_example": "# Python uses indentation to define code blocks\n\n# Correct indentation\nif 5 > 2:\n    print(\"Five is greater than two!\")\n    print(\"This is inside the if block\")\n\nprint(\"This is outside the if block\")\n\n# Incorrect indentation would cause an error\n# if 5 > 2:\n# print(\"This would cause an IndentationError\")\n\n# Simple function definition\ndef greet(name):\n    message = \"Hello, \" + name + \"!\"\n    return message\n\n# Calling the function\nprint(greet(\"Alice\"))",
+      "real_world_example": "Python's clean syntax makes it popular for rapid application development and scripting. For instance, system administrators use Python scripts to automate tasks like file management and system monitoring because the code is easy to write and understand. Companies like Dropbox use Python for their desktop client because the readable code makes maintenance and updates more efficient.",
+      "interactive_tasks": [
+        "Write a program with proper indentation that checks if a number is positive",
+        "Create a function that takes two numbers and returns their sum",
+        "Fix the indentation errors in a provided code snippet"
+      ],
+      "quiz": [
+        {
+          "question": "How does Python define code blocks?",
+          "options": ["Using braces {}", "Using parentheses ()", "Using indentation", "Using keywords"],
+          "answer": "Using indentation",
+          "reasoning": "Python uses indentation (whitespace) to define blocks of code instead of braces."
+        },
+        {
+          "question": "What error occurs with incorrect indentation?",
+          "options": ["SyntaxError", "IndentationError", "BlockError", "SpaceError"],
+          "answer": "IndentationError",
+          "reasoning": "Python raises an IndentationError when the indentation is incorrect or inconsistent."
+        },
+        {
+          "question": "Which symbol is used to define a function in Python?",
+          "options": ["function", "def", "func", "define"],
+          "answer": "def",
+          "reasoning": "The 'def' keyword is used to define functions in Python."
+        },
+        {
+          "question": "What is the standard indentation in Python?",
+          "options": ["2 spaces", "4 spaces", "8 spaces", "1 tab"],
+          "answer": "4 spaces",
+          "reasoning": "The Python style guide (PEP 8) recommends 4 spaces per indentation level."
+        },
+        {
+          "question": "Which of these is a valid Python variable name?",
+          "options": ["2nd_number", "my-variable", "_temp", "global"],
+          "answer": "_temp",
+          "reasoning": "Variable names can start with letters or underscores, but not numbers or hyphens."
+        },
+        {
+          "question": "What does PEP 8 refer to?",
+          "options": ["Python Enhancement Proposal for style guide", "Python Error Prevention", "Program Execution Protocol", "Python Environment Package"],
+          "answer": "Python Enhancement Proposal for style guide",
+          "reasoning": "PEP 8 is the official style guide for Python code, providing conventions for writing readable code."
+        },
+        {
+          "question": "How do you indicate a line continuation in Python?",
+          "options": ["Using backslash \\", "Using forward slash /", "Using plus sign +", "Python doesn't allow line continuation"],
+          "answer": "Using backslash \\",
+          "reasoning": "The backslash \\ can be used to indicate that a line of code continues on the next line."
+        }
+      ]
+    },
+    {
+      "title": "Day 4 – Variables and Data Types",
+      "definition": "Variables are containers for storing data values, and data types define what kind of data a variable can hold in Python.",
+      "explanation": "Variables in Python are like labeled boxes where you can store information. You give each box a name and put values inside it. Python is dynamically typed, which means you don't need to declare what type of data a variable will hold - Python figures it out automatically! The basic data types include integers (whole numbers), floats (decimal numbers), strings (text), and booleans (True/False). Think of variables as sticky notes - you can write a name on them and stick them to different values throughout your program.",
+      "code_example": "# Variables and basic data types\n\n# Integer (whole number)\nage = 25\nprint(\"Age:\", age)\nprint(\"Type of age:\", type(age))\n\n# Float (decimal number)\nprice = 19.99\nprint(\"\\nPrice:\", price)\nprint(\"Type of price:\", type(price))\n\n# String (text)\nname = \"Alice\"\nmessage = 'Hello, World!'\nprint(\"\\nName:\", name)\nprint(\"Message:\", message)\nprint(\"Type of name:\", type(name))\n\n# Boolean (True/False)\nis_student = True\nis_working = False\nprint(\"\\nIs student:\", is_student)\nprint(\"Type of is_student:\", type(is_student))\n\n# Variable reassignment\ncounter = 10\nprint(\"\\nInitial counter:\", counter)\ncounter = 20  # Changing the value\nprint(\"Updated counter:\", counter)",
+      "real_world_example": "Variables are used everywhere in real applications. In a banking app, variables store account balances, customer names, and transaction amounts. In a game, variables track player health, score, and position. Social media apps use string variables for usernames and posts, integer variables for likes and followers, and boolean variables to track settings like notifications being on or off.",
+      "interactive_tasks": [
+        "Create variables to store your name, age, and favorite color, then print them",
+        "Write a program that swaps the values of two variables",
+        "Create variables of different data types and use the type() function to check their types"
+      ],
+      "quiz": [
+        {
+          "question": "What is a variable in Python?",
+          "options": ["A fixed value", "A container for storing data", "A type of function", "A programming error"],
+          "answer": "A container for storing data",
+          "reasoning": "A variable is a named location in memory used to store data values."
+        },
+        {
+          "question": "Which data type would you use to store decimal numbers?",
+          "options": ["int", "str", "float", "bool"],
+          "answer": "float",
+          "reasoning": "The float data type is used for numbers with decimal points."
+        },
+        {
+          "question": "What is the output of: print(type(\"Hello\"))",
+          "options": ["<class 'int'>", "<class 'str'>", "<class 'float'>", "<class 'bool'>"],
+          "answer": "<class 'str'>",
+          "reasoning": "The text \"Hello\" is a string, so type() returns <class 'str'>."
+        },
+        {
+          "question": "Which of these is a valid variable name?",
+          "options": ["first-name", "1st_place", "first_name", "class"],
+          "answer": "first_name",
+          "reasoning": "Variable names can contain letters, numbers, and underscores, but cannot start with numbers or use hyphens."
+        },
+        {
+          "question": "What does dynamic typing mean in Python?",
+          "options": ["Variables change type automatically", "You must declare variable types", "Python determines types at runtime", "Types are fixed once assigned"],
+          "answer": "Python determines types at runtime",
+          "reasoning": "Dynamic typing means Python figures out the data type automatically when you assign a value."
+        },
+        {
+          "question": "Which keyword is used to represent True or False values?",
+          "options": ["string", "integer", "boolean", "float"],
+          "answer": "boolean",
+          "reasoning": "Boolean data type represents True or False values."
+        },
+        {
+          "question": "What is the value of: result = 10 + 5.5",
+          "options": ["15", "15.5", "105.5", "Error"],
+          "answer": "15.5",
+          "reasoning": "When adding an integer and float, Python converts the result to float."
+        }
+      ]
+    },
+    {
+      "title": "Day 5 – Operators and Expressions",
+      "definition": "Operators are special symbols that perform operations on variables and values, while expressions combine variables, values, and operators to produce results.",
+      "explanation": "Operators in Python are like the tools in a math toolbox. You have arithmetic operators for calculations (+, -, *, /), comparison operators for comparisons (==, !=, >, <), and logical operators for combining conditions (and, or, not). Expressions are like math formulas that combine these elements. Think of it like cooking: operators are your cooking actions (chop, mix, bake), and expressions are the recipes that combine ingredients (variables) with actions (operators) to create a result.",
+      "code_example": "# Arithmetic operators\nnum1 = 15\nnum2 = 4\n\nprint(\"Arithmetic Operations:\")\nprint(\"Addition:\", num1 + num2)\nprint(\"Subtraction:\", num1 - num2)\nprint(\"Multiplication:\", num1 * num2)\nprint(\"Division:\", num1 / num2)\nprint(\"Floor Division:\", num1 // num2)  # Drops decimal\nprint(\"Modulus (remainder):\", num1 % num2)\nprint(\"Exponent:\", num1 ** 2)\n\n# Comparison operators\nprint(\"\\nComparison Operations:\")\nprint(\"Equal to:\", num1 == num2)\nprint(\"Not equal to:\", num1 != num2)\nprint(\"Greater than:\", num1 > num2)\nprint(\"Less than:\", num1 < num2)\n\n# Logical operators\nage = 20\nhas_license = True\n\nprint(\"\\nLogical Operations:\")\nprint(\"Can drive:\", age >= 18 and has_license)\nprint(\"Is teenager:\", age >= 13 and age <= 19)\nprint(\"Cannot drive:\", not has_license)\n\n# Assignment operators\nx = 10\nprint(\"\\nAssignment Operations:\")\nx += 5  # Same as x = x + 5\nprint(\"x after += 5:\", x)\nx *= 2  # Same as x = x * 2\nprint(\"x after *= 2:\", x)",
+      "real_world_example": "Operators are used constantly in real applications. E-commerce sites use arithmetic operators to calculate totals and discounts. Social media platforms use comparison operators to determine if users are old enough to register. Banking apps use logical operators to check multiple conditions (sufficient balance AND valid account) before processing transactions. Game engines use complex expressions to calculate physics, scores, and character interactions.",
+      "interactive_tasks": [
+        "Write a program that calculates the area and perimeter of a rectangle",
+        "Create a temperature converter from Celsius to Fahrenheit",
+        "Write expressions that check if a number is between 10 and 50, and divisible by 5"
+      ],
+      "quiz": [
+        {
+          "question": "Which operator is used for exponentiation?",
+          "options": ["^", "**", "^^", "exp"],
+          "answer": "**",
+          "reasoning": "The ** operator is used for exponentiation in Python (e.g., 2**3 = 8)."
+        },
+        {
+          "question": "What is the result of: 17 % 5",
+          "options": ["3.4", "3", "2", "85"],
+          "answer": "2",
+          "reasoning": "The modulus operator % returns the remainder of division (17 ÷ 5 = 3 with remainder 2)."
+        },
+        {
+          "question": "Which operator has the highest precedence?",
+          "options": ["+", "*", "**", "=="],
+          "answer": "**",
+          "reasoning": "Exponentiation (**) has the highest precedence, followed by multiplication/division, then addition/subtraction."
+        },
+        {
+          "question": "What does the 'and' operator return?",
+          "options": ["True if both conditions are true", "True if either condition is true", "The opposite of the condition", "The sum of conditions"],
+          "answer": "True if both conditions are true",
+          "reasoning": "The 'and' operator returns True only if both operands are True."
+        },
+        {
+          "question": "What is the value of: 5 + 3 * 2",
+          "options": ["16", "11", "13", "Error"],
+          "answer": "11",
+          "reasoning": "Multiplication has higher precedence than addition, so 3*2=6, then 5+6=11."
+        },
+        {
+          "question": "Which operator checks if two values are equal?",
+          "options": ["=", "==", "!=", "==="],
+          "answer": "==",
+          "reasoning": "The == operator checks for equality, while = is for assignment."
+        },
+        {
+          "question": "What does the 'not' operator do?",
+          "options": ["Reverses a boolean value", "Checks for inequality", "Performs logical AND", "Concatenates strings"],
+          "answer": "Reverses a boolean value",
+          "reasoning": "The 'not' operator returns the opposite boolean value (not True = False, not False = True)."
+        }
+      ]
+    },
+    {
+      "title": "Day 6 – Input and Output",
+      "definition": "Input refers to getting data from the user, while output refers to displaying data to the user, enabling interaction with Python programs.",
+      "explanation": "Input and output (I/O) are how your Python programs communicate with the outside world. Think of it like having a conversation: your program asks questions (input) and gives answers (output). The input() function lets you get information from users, while print() displays results. We'll also learn about formatting output to make it look nice and professional. Just like a good conversation, well-designed I/O makes programs user-friendly and interactive.",
+      "code_example": "# Basic input and output\n\n# Getting input from user\nname = input(\"Please enter your name: \")\nage = input(\"Please enter your age: \")\n\n# Displaying output\nprint(\"\\nHello,\", name + \"!\")\nprint(\"You are\", age, \"years old.\")\n\n# Input always returns a string, so we need to convert for numbers\nprint(\"\\n--- Number Calculations ---\")\nnum1 = float(input(\"Enter first number: \"))\nnum2 = float(input(\"Enter second number: \"))\n\nsum_result = num1 + num2\nproduct = num1 * num2\n\nprint(\"\\nResults:\")\nprint(\"Sum:\", sum_result)\nprint(\"Product:\", product)\n\n# Formatted output\nprint(\"\\n--- Formatted Output ---\")\nprint(f\"{num1} + {num2} = {sum_result}\")\nprint(f\"{num1} × {num2} = {product}\")\n\n# Multiple values in one print statement\nprint(\"\\nYou entered:\", num1, \"and\", num2, sep=\" ~ \", end=\"!\\n\")",
+      "real_world_example": "Input/output is fundamental to all interactive applications. ATM machines use input for PIN numbers and withdrawal amounts, with output showing balances and transaction confirmations. Online forms use input to collect user information, while output displays confirmation messages. Video games use input from controllers and keyboards, with output showing the game world on screen. Even voice assistants like Alexa use speech as input and output.",
+      "interactive_tasks": [
+        "Create a program that asks for user's name and favorite food, then prints a message",
+        "Write a simple calculator that takes two numbers and an operator from user",
+        "Create a mad libs game that asks for different words and creates a story"
+      ],
+      "quiz": [
+        {
+          "question": "Which function is used to get user input in Python?",
+          "options": ["get()", "input()", "read()", "scan()"],
+          "answer": "input()",
+          "reasoning": "The input() function is used to get input from the user in Python."
+        },
+        {
+          "question": "What data type does input() always return?",
+          "options": ["integer", "float", "string", "boolean"],
+          "answer": "string",
+          "reasoning": "The input() function always returns the user's input as a string, even if they enter numbers."
+        },
+        {
+          "question": "How do you convert user input to an integer?",
+          "options": ["int(input())", "input(int)", "convert.int(input())", "input().toInt()"],
+          "answer": "int(input())",
+          "reasoning": "Wrap the input() function with int() to convert the string input to an integer."
+        },
+        {
+          "question": "What does the 'f' in f-strings stand for?",
+          "options": ["fast", "format", "function", "file"],
+          "answer": "format",
+          "reasoning": "f-strings are called formatted string literals and allow embedding expressions inside strings."
+        },
+        {
+          "question": "Which parameter changes what print() puts between multiple items?",
+          "options": ["end", "sep", "delimiter", "between"],
+          "answer": "sep",
+          "reasoning": "The sep parameter specifies the separator between multiple items in a print statement."
+        },
+        {
+          "question": "What will: print(\"Hello\", \"World\", sep=\"-\") output?",
+          "options": ["Hello-World", "Hello World", "\"Hello\"-\"World\"", "Hello,World"],
+            "answer": "Hello-World",
+            "reasoning": "The sep=\"-\" parameter replaces the default space with a hyphen between items."
+            },
+            {
+              "question": "How can you make input() display a prompt message?",
+              "options": ["input(\"Message: \")", "input().prompt(\"Message\")", "\"Message: \".input()", "print(\"Message: \") then input()"],
+              "answer": "input(\"Message: \")",
+              "reasoning": "You can pass a string to input() that will be displayed as a prompt before waiting for input."
+            }
+          ]
+        },
+        {
+          "title": "Day 7 – Comments and Best Practices",
+          "definition": "Comments are non-executable notes in code that explain what the code does, while best practices are guidelines for writing clean, maintainable Python code.",
+          "explanation": "Comments are like leaving notes for yourself or other developers - they explain the 'why' behind your code. While the code itself tells the computer what to do, comments tell humans why you wrote it that way. We'll also learn about Python's style guide (PEP 8) which provides rules for writing clean code, like proper naming conventions and formatting. Think of it like writing a letter: you want it to be neat, organized, and easy for others to understand, not just technically correct.",
+          "code_example": "# This is a single-line comment\n\n\"\"\"\nThis is a multi-line comment (docstring)\nIt can span multiple lines and is often used\nat the beginning of files or functions\nto provide documentation.\n\"\"\"\n\n'''\nYou can also use single quotes for multi-line comments\nThis is less common but equally valid\n'''\n\n# Example of well-commented code following PEP 8\n\ndef calculate_circle_area(radius):\n    \"\"\"\n    Calculate the area of a circle given its radius.\n    \n    Args:\n        radius (float): The radius of the circle\n        \n    Returns:\n        float: The area of the circle\n    \"\"\"\n    # Using math module for pi constant\n    import math\n    \n    # Area formula: π × r²\n    area = math.pi * (radius ** 2)\n    \n    return area\n\n\n# Main program execution\nif __name__ == \"__main__\":\n    # Get radius from user\n    user_radius = float(input(\"Enter circle radius: \"))\n    \n    # Calculate and display area\n    circle_area = calculate_circle_area(user_radius)\n    print(f\"Area of circle with radius {user_radius} is {circle_area:.2f}\")\n\n# Good variable names vs bad ones\n# Good:\nstudent_count = 25\naverage_score = 85.5\n\n# Bad (avoid):\nn = 25          # What does n mean?\nsc = 85.5       # Unclear abbreviation",
+          "real_world_example": "In professional software development, comments and coding standards are crucial for team collaboration. Companies like Google and Facebook have extensive style guides that all developers must follow. Well-commented code allows new team members to understand existing code quickly, reduces bugs, and makes maintenance easier. Open-source projects rely heavily on good documentation and comments so that contributors worldwide can understand and improve the code.",
+          "interactive_tasks": [
+            "Add appropriate comments to an uncommented code snippet",
+            "Rewrite a piece of code following PEP 8 naming conventions",
+            "Write a function with a proper docstring explaining its purpose and parameters"
+          ],
+          "quiz": [
+            {
+              "question": "What is the purpose of comments in code?",
+              "options": ["To make code run faster", "To explain code to human readers", "To hide code from users", "To fix errors in code"],
+              "answer": "To explain code to human readers",
+              "reasoning": "Comments help developers understand the purpose and logic behind code sections."
+            },
+            {
+              "question": "Which symbol is used for single-line comments in Python?",
+              "options": ["//", "#", "--", "/*"],
+              "answer": "#",
+              "reasoning": "The hash symbol # is used for single-line comments in Python."
+            },
+            {
+              "question": "What are multi-line comments typically called in Python?",
+              "options": ["Block comments", "Docstrings", "Multi-comments", "String comments"],
+              "answer": "Docstrings",
+              "reasoning": "Multi-line strings using triple quotes are called docstrings and serve as documentation."
+            },
+            {
+              "question": "Which PEP defines Python's style guide?",
+              "options": ["PEP 8", "PEP 20", "PEP 257", "PEP 484"],
+              "answer": "PEP 8",
+              "reasoning": "PEP 8 is the official style guide for Python code, covering naming, formatting, and other conventions."
+            },
+            {
+              "question": "What naming convention does PEP 8 recommend for variables?",
+              "options": ["camelCase", "PascalCase", "snake_case", "kebab-case"],
+              "answer": "snake_case",
+              "reasoning": "PEP 8 recommends snake_case (lowercase with underscores) for variable and function names."
+            },
+            {
+              "question": "When should you generally avoid writing comments?",
+              "options": ["When code is self-explanatory", "In complex algorithms", "For function documentation", "When working in teams"],
+              "answer": "When code is self-explanatory",
+              "reasoning": "Well-written code with clear variable names can often explain itself without needing comments."
+            },
+            {
+              "question": "What is the recommended maximum line length in PEP 8?",
+              "options": ["80 characters", "100 characters", "120 characters", "No limit"],
+              "answer": "79 characters",
+              "reasoning": "PEP 8 recommends limiting lines to 79 characters for readability in various editors."
+            }
+          ]
+        },
+        {
+          "title": "Day 8 – Conditional Statements (if, elif, else)",
+          "definition": "Conditional statements allow your program to make decisions and execute different code blocks based on whether conditions are true or false.",
+          "explanation": "Conditional statements are like the decision-making parts of your program - they let your code choose different paths based on conditions. Think of it like a choose-your-own-adventure book: 'IF you turn left, you find treasure. ELIF you turn right, you meet a dragon. ELSE, you stay where you are.' The 'if' statement checks a condition, 'elif' (else if) checks additional conditions if the first was false, and 'else' provides a default option when all conditions are false. This is how programs become smart and responsive!",
+          "code_example": "# Basic if statement\nage = 18\n\nif age >= 18:\n    print(\"You are an adult!\")\n    print(\"You can vote.\")\n\nprint(\"\\n--- Age Checker ---\")\n\n# if-elif-else structure\nuser_age = 15\n\nif user_age < 13:\n    print(\"You are a child.\")\nelif user_age < 20:\n    print(\"You are a teenager.\")\nelif user_age < 65:\n    print(\"You are an adult.\")\nelse:\n    print(\"You are a senior citizen.\")\n\nprint(\"\\n--- Grade Calculator ---\")\n\n# Nested if statements\nscore = 85\n\nif score >= 90:\n    grade = \"A\"\n    if score >= 95:\n        grade += \"+\"\n    else:\n        grade += \"-\"\nelif score >= 80:\n    grade = \"B\"\n    if score >= 85:\n        grade += \"+\"\n    else:\n        grade += \"-\"\nelif score >= 70:\n    grade = \"C\"\nelse:\n    grade = \"F\"\n\nprint(f\"Score: {score}, Grade: {grade}\")\n\n# Multiple conditions with logical operators\nprint(\"\\n--- Movie Ticket Price ---\")\nage = 25\nis_student = False\n\nif age < 12 or age >= 65:\n    ticket_price = 8\nelif is_student and age < 25:\n    ticket_price = 10\nelse:\n    ticket_price = 15\n\nprint(f\"Ticket price: ${ticket_price}\")",
+          "real_world_example": "Conditional statements are everywhere in real applications. Social media platforms use them to determine what content to show you based on your preferences. Banking apps use conditionals to check if you have sufficient funds before processing transactions. Games use them to determine game states - if health <= 0, game over. Even traffic light systems use conditionals to change signals based on time of day and sensor inputs.",
+          "interactive_tasks": [
+            "Write a program that checks if a number is positive, negative, or zero",
+            "Create a simple login system that checks username and password",
+            "Write a program that determines if a year is a leap year"
+          ],
+          "quiz": [
+            {
+              "question": "Which keyword is used for 'else if' in Python?",
+              "options": ["elseif", "elif", "else if", "elsif"],
+              "answer": "elif",
+              "reasoning": "Python uses 'elif' as the shorthand for 'else if' in conditional statements."
+            },
+            {
+              "question": "What is required for code to be inside an if block?",
+              "options": ["Braces {}", "Parentheses ()", "Indentation", "Semicolons ;"],
+              "answer": "Indentation",
+              "reasoning": "Python uses indentation (usually 4 spaces) to define code blocks, including if statements."
+            },
+            {
+              "question": "How many else blocks can an if statement have?",
+              "options": ["Only one", "As many as needed", "Two", "None"],
+              "answer": "Only one",
+              "reasoning": "An if-elif-else structure can have only one else block, which serves as the default case."
+            },
+            {
+              "question": "What will this code output: if True: print(\"A\") else: print(\"B\")",
+              "options": ["A", "B", "AB", "Error"],
+              "answer": "A",
+              "reasoning": "Since the condition is True, the if block executes and prints \"A\"."
+            },
+            {
+              "question": "Which operator has higher precedence: 'and' or 'or'?",
+              "options": ["and", "or", "They have equal precedence", "It depends"],
+              "answer": "and",
+              "reasoning": "The 'and' operator has higher precedence than 'or', similar to multiplication over addition."
+            },
+            {
+              "question": "What is the result of: if 5: print(\"Yes\")",
+              "options": ["Yes", "No output", "Error", "5"],
+              "answer": "Yes",
+              "reasoning": "In Python, non-zero numbers are considered True in boolean contexts."
+            },
+            {
+              "question": "How do you check if a variable is None?",
+              "options": ["if variable == None", "if variable is None", "if !variable", "if variable = None"],
+              "answer": "if variable is None",
+              "reasoning": "The 'is' operator is preferred for comparing with None in Python."
+            }
+          ]
+        },
+        {
+          "title": "Day 9 – Loops (for loops)",
+          "definition": "For loops allow you to execute a block of code repeatedly for each item in a sequence, such as a list, string, or range of numbers.",
+          "explanation": "For loops are like having a helpful robot that repeats tasks for you. Imagine you have a list of friends and you want to send each one a birthday message. Instead of writing the same code 10 times, you use a for loop that says 'for each friend in my friends list, send a birthday message.' The loop automatically goes through each item one by one. For loops are perfect when you know exactly how many times you want to repeat something, or when you want to process each item in a collection.",
+          "code_example": "# Basic for loop with range\nprint(\"Counting from 1 to 5:\")\nfor i in range(1, 6):\n    print(i)\n\nprint(\"\\n--- Multiplication Table ---\")\n# Multiplication table using nested loops\nfor i in range(1, 6):\n    for j in range(1, 6):\n        print(f\"{i} × {j} = {i * j}\")\n    print()  # Empty line between tables\n\nprint(\"--- Looping through a list ---\")\n# Looping through a list\nfruits = [\"apple\", \"banana\", \"cherry\", \"date\"]\n\nprint(\"My favorite fruits:\")\nfor fruit in fruits:\n    print(f\"- {fruit}\")\n\nprint(\"\\n--- Looping with index ---\")\n# Looping with index using enumerate\nfor index, fruit in enumerate(fruits):\n    print(f\"Fruit {index + 1}: {fruit}\")\n\nprint(\"\\n--- Looping through strings ---\")\n# Looping through characters in a string\nword = \"Python\"\nfor letter in word:\n    print(letter.upper())\n\nprint(\"\\n--- Using range with step ---\")\n# Counting by 2s\nprint(\"Even numbers from 0 to 10:\")\nfor num in range(0, 11, 2):\n    print(num)\n\nprint(\"\\n--- Loop with else ---\")\n# For loop with else clause\nfor i in range(3):\n    print(f\"Loop iteration {i}\")\nelse:\n    print(\"Loop completed successfully!\")",
+          "real_world_example": "For loops are used extensively in real-world applications. Web servers use loops to handle multiple incoming requests. Data analysis tools use loops to process each record in a dataset. Image editing software uses nested loops to process each pixel in an image. Even your phone's contact app uses loops to display each contact in your list. Game engines use loops to update the position of every object in the game world each frame.",
+          "interactive_tasks": [
+            "Write a program that prints the first 10 even numbers",
+            "Create a loop that calculates the factorial of a number",
+            "Write a program that takes a list of numbers and prints each number squared"
+          ],
+          "quiz": [
+            {
+              "question": "What does range(5) generate?",
+              "options": ["[0, 1, 2, 3, 4]", "[1, 2, 3, 4, 5]", "[5]", "[0, 1, 2, 3, 4, 5]"],
+              "answer": "[0, 1, 2, 3, 4]",
+              "reasoning": "range(5) generates numbers from 0 up to (but not including) 5."
+            },
+            {
+              "question": "How do you loop through both index and value in a list?",
+              "options": ["for i, value in list", "for i in enumerate(list)", "for i, value in enumerate(list)", "for index, item in list"],
+              "answer": "for i, value in enumerate(list)",
+              "reasoning": "The enumerate() function returns both index and value when iterating."
+            },
+            {
+              "question": "What is the output of: for i in range(2): print(i)",
+              "options": ["0 1", "1 2", "0\\n1", "1\\n2"],
+              "answer": "0\\n1",
+              "reasoning": "The loop prints 0 and 1 on separate lines."
+            },
+            {
+              "question": "Which function is used to iterate through a sequence with index?",
+              "options": ["index()", "iterate()", "enumerate()", "counter()"],
+              "answer": "enumerate()",
+              "reasoning": "enumerate() adds counter to an iterable and returns it as enumerate object."
+            },
+            {
+              "question": "What does range(1, 10, 2) generate?",
+              "options": ["Even numbers 2-10", "Odd numbers 1-9", "All numbers 1-10", "Numbers 1, 2, 10"],
+              "answer": "Odd numbers 1-9",
+              "reasoning": "range(1, 10, 2) starts at 1, stops before 10, steps by 2: 1, 3, 5, 7, 9."
+            },
+            {
+              "question": "How do you loop backwards?",
+              "options": ["range(start, stop, -1)", "range(stop, start, -1)", "range(start, stop).reverse()", "backwards.range(start, stop)"],
+              "answer": "range(start, stop, -1)",
+              "reasoning": "Using a negative step value allows looping backwards through a range."
+            },
+            {
+              "question": "When does the else clause in a for loop execute?",
+              "options": ["When loop is broken", "Always after loop", "Only if loop completes normally", "When an error occurs"],
+              "answer": "Only if loop completes normally",
+              "reasoning": "The else clause in a for loop executes only if the loop completes without hitting a break statement."
+            }
+          ]
+        },
+        {
+          "title": "Day 10 – Loops (while loops)",
+          "definition": "While loops repeatedly execute a block of code as long as a given condition remains true, making them ideal for situations where you don't know how many iterations you'll need.",
+          "explanation": "While loops are like telling someone 'Keep walking while you can still see the path.' The loop continues as long as the condition is true, and stops immediately when the condition becomes false. Unlike for loops that work with known sequences, while loops are perfect for situations where you don't know exactly how many times you need to repeat something. Think of a game where you want to keep playing 'while the player has lives remaining' or a program that asks for input 'while the user hasn't entered quit'.",
+          "code_example": "# Basic while loop\nprint(\"Countdown from 5:\")\ncount = 5\nwhile count > 0:\n    print(count)\n    count -= 1  # Decrement count\nprint(\"Blast off!\")\n\nprint(\"\\n--- User Input Loop ---\")\n# While loop with user input\nuser_input = \"\"\nwhile user_input.lower() != \"quit\":\n    user_input = input(\"Enter a word (type 'quit' to exit): \")\n    if user_input.lower() != \"quit\":\n        print(f\"You entered: {user_input}\")\n\nprint(\"\\n--- Number Guessing Game ---\")\n# Simple guessing game\nimport random\n\nsecret_number = random.randint(1, 10)\nguesses = 0\nmax_guesses = 3\n\nprint(\"I'm thinking of a number between 1 and 10!\")\n\nwhile guesses < max_guesses:\n    guess = int(input(\"Your guess: \"))\n    guesses += 1\n    \n    if guess == secret_number:\n        print(f\"Congratulations! You guessed it in {guesses} tries!\")\n        break\n    elif guess < secret_number:\n        print(\"Too low!\")\n    else:\n        print(\"Too high!\")\n    \n    remaining = max_guesses - guesses\n    if remaining > 0:\n        print(f\"You have {remaining} guesses left.\")\nelse:\n    print(f\"Sorry! The number was {secret_number}.\")\n\nprint(\"\\n--- Infinite Loop Prevention ---\")\n# Always make sure while loops can end!\n# This would be bad (don't run this):\n# while True:\n#     print(\"This runs forever!\")\n\n# Instead, use a condition that will eventually become false\ncounter = 0\nwhile counter < 100:\n    counter += 1\n    # Some useful work here",
+          "real_world_example": "While loops are essential in many real applications. Video games use while loops to keep the game running 'while the game is not over.' Web servers use while loops to keep listening for incoming requests 'while the server is running.' Music players use while loops to play songs 'while the playlist has more tracks.' Even your computer's operating system uses while loops to keep running 'while the computer is powered on.'",
+          "interactive_tasks": [
+            "Write a program that keeps asking for numbers until the user enters 0, then prints the sum",
+            "Create a password checker that gives 3 attempts before locking",
+            "Write a program that generates random numbers until it generates a specific target number"
+          ],
+          "quiz": [
+            {
+              "question": "When does a while loop stop executing?",
+              "options": ["After a fixed number of iterations", "When the condition becomes false", "When it reaches a break statement", "Both when condition becomes false and with break"],
+              "answer": "Both when condition becomes false and with break",
+              "reasoning": "While loops stop when their condition evaluates to False or when a break statement is encountered."
+            },
+            {
+              "question": "What is the main risk with while loops?",
+              "options": ["They are too slow", "They can create infinite loops", "They use too much memory", "They only work with numbers"],
+              "answer": "They can create infinite loops",
+              "reasoning": "If the loop condition never becomes false, a while loop will run forever."
+            },
+            {
+              "question": "How do you immediately exit a while loop?",
+              "options": ["exit()", "stop", "break", "return"],
+              "answer": "break",
+              "reasoning": "The break statement immediately exits the current loop."
+            },
+            {
+              "question": "What does the continue statement do in a while loop?",
+              "options": ["Exits the loop", "Skips to next iteration", "Restarts the loop", "Pauses the loop"],
+              "answer": "Skips to next iteration",
+              "reasoning": "continue skips the rest of the current iteration and moves to the next one."
+            },
+            {
+              "question": "Which loop is better when you know how many iterations you need?",
+              "options": ["while loop", "for loop", "Both are equally good", "It depends"],
+              "answer": "for loop",
+              "reasoning": "For loops are generally better when you know the number of iterations in advance."
+            },
+            {
+              "question": "What is the output: x=1; while x<5: print(x); x+=1",
+              "options": ["1 2 3 4", "1 2 3 4 5", "2 3 4 5", "1 2 3"],
+              "answer": "1 2 3 4",
+              "reasoning": "The loop prints 1, 2, 3, 4 (stops when x becomes 5)."
+            },
+            {
+              "question": "How do you create an infinite while loop intentionally?",
+              "options": ["while 1", "while True", "while forever", "while 0==0"],
+              "answer": "while True",
+              "reasoning": "while True creates an infinite loop since True is always true."
+            }
+          ]
+        },
+        {
+          "title": "Day 11 – Break and Continue",
+          "definition": "Break and continue are loop control statements that allow you to alter the normal flow of loops - break exits the loop entirely, while continue skips to the next iteration.",
+          "explanation": "Think of break and continue as emergency controls for your loops. Break is like a fire alarm - when it goes off, everyone immediately leaves the building (exits the loop). Continue is like skipping a song in a playlist - you move to the next one without finishing the current song. These tools give you fine control over loop execution, allowing you to handle special cases without complex nested if statements. They're like having an 'emergency exit' and 'skip button' for your loops!",
+          "code_example": "# Using break to exit loops early\nprint(\"--- Break Example: Finding First Even Number ---\")\nnumbers = [1, 3, 5, 8, 9, 11, 14]\n\nfor num in numbers:\n    if num % 2 == 0:\n        print(f\"Found first even number: {num}\")\n        break\n    print(f\"Checking {num} - odd\")\nelse:\n    print(\"No even numbers found\")\n\nprint(\"\\n--- Continue Example: Skipping Odd Numbers ---\")\n# Using continue to skip certain iterations\nprint(\"Even numbers only:\")\nfor i in range(1, 11):\n    if i % 2 != 0:  # If odd\n        continue     # Skip to next iteration\n    print(i)\n\nprint(\"\\n--- Practical Example: Input Validation ---\")\n# Break and continue in while loop\nwhile True:\n    user_input = input(\"\\nEnter a number between 1-100 (or 'quit' to exit): \")\n    \n    if user_input.lower() == \"quit\":\n        print(\"Goodbye!\")\n        break\n    \n    if not user_input.isdigit():\n        print(\"Please enter a valid number!\")\n        continue\n    \n    number = int(user_input)\n    \n    if number < 1 or number > 100:\n        print(\"Number must be between 1 and 100!\")\n        continue\n    \n    print(f\"You entered a valid number: {number}\")\n    # Process the valid number here\n\nprint(\"\\n--- Nested Loops with Break ---\")\n# Break only exits the innermost loop\nfor i in range(3):\n    for j in range(3):\n        if i == 1 and j == 1:\n            print(\"Breaking inner loop at i=1, j=1\")\n            break\n        print(f\"i={i}, j={j}\")\n\nprint(\"\\n--- Search Example ---\")\n# Searching for an item and breaking when found\nshopping_list = [\"milk\", \"eggs\", \"bread\", \"cheese\"]\nitem_to_find = \"bread\"\n\nfor item in shopping_list:\n    if item == item_to_find:\n        print(f\"Found {item_to_find}!\")\n        break\n    print(f\"Looking for {item_to_find}, found {item}\")\nelse:\n    print(f\"{item_to_find} not found in shopping list\")",
+          "real_world_example": "Break and continue are used extensively in real applications. File processors use break to stop reading when they find the needed information. Game engines use continue to skip updating invisible or inactive objects. Web servers use break to stop processing a request when an error occurs. Data validation systems use continue to skip invalid records. Search algorithms use break to stop searching once the target is found, saving processing time.",
+          "interactive_tasks": [
+            "Write a program that finds the first number divisible by 7 in a list",
+            "Create a loop that prints numbers 1-20 but skips numbers divisible by 3",
+            "Write a password checker that breaks after 3 failed attempts"
+          ],
+          "quiz": [
+            {
+              "question": "What does the break statement do?",
+              "options": ["Skips current iteration", "Exits the entire loop", "Pauses the loop", "Restarts the loop"],
+              "answer": "Exits the entire loop",
+              "reasoning": "Break immediately terminates the loop and continues with the code after the loop."
+            },
+            {
+              "question": "What does the continue statement do?",
+              "options": ["Exits the program", "Skips to next iteration", "Breaks the loop", "Stops all loops"],
+              "answer": "Skips to next iteration",
+              "reasoning": "Continue skips the remaining code in the current iteration and moves to the next one."
+            },
+            {
+              "question": "In nested loops, which loop does break exit?",
+              "options": ["All loops", "Only the innermost loop", "Only the outermost loop", "A random loop"],
+              "answer": "Only the innermost loop",
+              "reasoning": "Break only exits the loop it's directly inside of, not any outer loops."
+            },
+            {
+              "question": "When is the else clause of a loop executed?",
+              "options": ["Always", "When break is called", "When loop completes normally", "On errors"],
+              "answer": "When loop completes normally",
+              "reasoning": "The else clause executes only if the loop finishes without encountering a break."
+            },
+            {
+              "question": "What is the output: for i in range(3): if i==1: continue; print(i)",
+              "options": ["0 1 2", "0 2", "1 2", "0 1"],
+              "answer": "0 2",
+              "reasoning": "When i=1, continue skips the print, so only 0 and 2 are printed."
+            },
+            {
+              "question": "How can you exit multiple nested loops at once?",
+              "options": ["Use multiple breaks", "Use return or raise exception", "Python doesn't allow this", "Use exit()"],
+              "answer": "Use return or raise exception",
+              "reasoning": "To exit multiple loops, you can return from a function or raise an exception."
+            },
+            {
+              "question": "Which statement is more appropriate for skipping invalid data?",
+              "options": ["break", "continue", "pass", "return"],
+              "answer": "continue",
+              "reasoning": "Continue is perfect for skipping over items that don't meet certain criteria while continuing to process others."
+            }
+          ]
+        },
+        {
+          "title": "Day 12 – Mini Challenge Project",
+          "definition": "A comprehensive practice project that combines all the concepts learned so far - variables, operators, conditionals, and loops - to build a complete, functional program.",
+          "explanation": "Today we're putting everything together! Think of this like your first complete recipe where you use all the cooking skills you've learned. We'll build a Number Guessing Game that uses variables to store the secret number, loops to handle multiple guesses, conditionals to check if the guess is correct, and input/output to interact with the user. This is your chance to see how all the pieces fit together to create something fun and functional. Don't worry if it seems challenging - we'll build it step by step!",
+          "code_example": "import random\n\nprint(\"🎯 Welcome to the Number Guessing Game!\")\nprint(\"=\" * 40)\n\n# Game configuration\nMAX_ATTEMPTS = 5\nMIN_NUMBER = 1\nMAX_NUMBER = 20\n\ntotal_games = 0\ntotal_wins = 0\n\nwhile True:\n    # Start a new game\n    total_games += 1\n    secret_number = random.randint(MIN_NUMBER, MAX_NUMBER)\n    attempts = 0\n    \n    print(f\"\\n--- Game {total_games} ---\")\n    print(f\"I'm thinking of a number between {MIN_NUMBER} and {MAX_NUMBER}.\")\n    print(f\"You have {MAX_ATTEMPTS} attempts to guess it!\")\n    \n    # Guessing loop\n    while attempts < MAX_ATTEMPTS:\n        attempts += 1\n        remaining_attempts = MAX_ATTEMPTS - attempts\n        \n        # Get user input with validation\n        while True:\n            try:\n                guess = int(input(f\"\\nAttempt {attempts}/{MAX_ATTEMPTS}: Enter your guess: \"))\n                if guess < MIN_NUMBER or guess > MAX_NUMBER:\n                    print(f\"Please enter a number between {MIN_NUMBER} and {MAX_NUMBER}.\")\n                    continue\n                break\n            except ValueError:\n                print(\"Please enter a valid number!\")\n        \n        # Check the guess\n        if guess == secret_number:\n            print(f\"🎉 Congratulations! You guessed it in {attempts} attempts!\")\n            total_wins += 1\n            break\n        elif guess < secret_number:\n            print(\"📈 Too low!\", end=\" \")\n        else:\n            print(\"📉 Too high!\", end=\" \")\n        \n        # Give hints\n        if remaining_attempts > 0:\n            print(f\"You have {remaining_attempts} attempt{'s' if remaining_attempts > 1 else ''} left.\")\n            \n            # Additional hints after first attempt\n            if attempts >= 2:\n                difference = abs(secret_number - guess)\n                if difference <= 2:\n                    print(\"🔥 You're very close!\")\n                elif difference <= 5:\n                    print(\"💡 You're getting warm!\")\n    else:\n        print(f\"\\n💔 Game over! The number was {secret_number}.\")\n    \n    # Game statistics\n    win_rate = (total_wins / total_games) * 100\n    print(f\"\\n📊 Statistics: {total_wins}/{total_games} games won ({win_rate:.1f}% win rate)\")\n    \n    # Ask to play again\n    play_again = input(\"\\nWould you like to play again? (yes/no): \").lower().strip()\n    if play_again not in ['yes', 'y', 'yeah', 'yep']:\n        print(\"\\nThanks for playing! Goodbye! 👋\")\n        break\n\nprint(\"\\n\" + \"=\" * 40)\nprint(\"Final Score:\")\nprint(f\"Games played: {total_games}\")\nprint(f\"Games won: {total_wins}\")\nprint(f\"Win rate: {win_rate:.1f}%\")\nprint(\"=\" * 40)",
+          "real_world_example": "This mini-project demonstrates the same programming patterns used in real applications. Game development uses similar logic for player interactions. Business applications use similar validation for user input. The statistics tracking is similar to analytics in apps. The menu system and game loop structure are found in many interactive programs from ATMs to mobile apps.",
+          "interactive_tasks": [
+            "Add a difficulty system with different number ranges and attempt limits",
+            "Implement a scoring system that gives more points for fewer attempts",
+            "Add a high score feature that saves the best performance"
+          ],
+          "quiz": [
+            {
+              "question": "What is the purpose of the random.randint() function?",
+              "options": ["Generate random decimal", "Generate random integer in range", "Round numbers", "Calculate random math"],
+              "answer": "Generate random integer in range",
+              "reasoning": "random.randint(a, b) returns a random integer N such that a <= N <= b."
+            },
+            {
+              "question": "Why do we use try-except for input?",
+              "options": ["To make code faster", "To handle invalid input gracefully", "To generate random numbers", "To exit the program"],
+              "answer": "To handle invalid input gracefully",
+              "reasoning": "Try-except prevents crashes when users enter non-numeric values."
+            },
+            {
+              "question": "What does the while True loop accomplish?",
+              "options": ["Creates infinite loop", "Runs game multiple times", "Validates input", "All of the above"],
+              "answer": "All of the above",
+              "reasoning": "While True with break statements handles multiple games and input validation."
+            },
+            {
+              "question": "How is the win rate calculated?",
+              "options": ["wins/games", "(wins/games)*100", "games/wins", "wins*100"],
+              "answer": "(wins/games)*100",
+              "reasoning": "Win rate percentage = (wins ÷ total games) × 100."
+            },
+            {
+              "question": "What programming concept is used for giving 'too high/too low' feedback?",
+              "options": ["Loops", "Conditionals", "Variables", "Functions"],
+              "answer": "Conditionals",
+              "reasoning": "If-elif statements check if the guess is correct, too high, or too low."
+            },
+            {
+              "question": "Why do we use constants like MAX_ATTEMPTS?",
+              "options": ["Make code readable", "Easy to change game settings", "Follow best practices", "All of the above"],
+              "answer": "All of the above",
+              "reasoning": "Constants make code more maintainable, readable, and easy to modify."
+            },
+            {
+              "question": "What happens when attempts >= MAX_ATTEMPTS?",
+              "options": ["Game continues", "Player wins", "Game ends", "New game starts"],
+              "answer": "Game ends",
+              "reasoning": "When attempts reach the maximum, the player loses and the game ends."
+            }
+          ]
+        },
+        {
+          "title": "Day 13 – Functions and Parameters",
+          "definition": "Functions are reusable blocks of code that perform specific tasks, and parameters are the inputs that functions can accept to make them more flexible and powerful.",
+          "explanation": "Functions are like kitchen appliances - you don't need to know how a blender works internally, you just put ingredients in and get a smoothie out. Functions let you package code into reusable units that you can call whenever needed. Parameters are like the recipe ingredients - they allow the same function to work with different inputs. Think of a 'make_sandwich' function that takes parameters for bread type and filling. This way, you can make many different sandwiches without rewriting the same instructions each time!",
+          "code_example": "# Basic function definition and call\ndef greet():\n    \"\"\"A simple function that greets the user\"\"\"\n    print(\"Hello! Welcome to Python programming!\")\n\n# Calling the function\ngreet()\n\nprint(\"\\n--- Functions with Parameters ---\")\n\n# Function with parameters\ndef greet_person(name, time_of_day=\"day\"):\n    \"\"\"Greet a person with optional time of day\"\"\"\n    print(f\"Good {time_of_day}, {name}!\")\n\n# Calling with different arguments\ngreet_person(\"Alice\")\ngreet_person(\"Bob\", \"morning\")\ngreet_person(\"Charlie\", \"evening\")\n\nprint(\"\\n--- Functions with Return Values ---\")\n\n# Function that returns a value\ndef add_numbers(a, b):\n    \"\"\"Add two numbers and return the result\"\"\"\n    result = a + b\n    return result\n\n# Using the return value\nsum1 = add_numbers(5, 3)\nsum2 = add_numbers(10, 20)\nprint(f\"5 + 3 = {sum1}\")\nprint(f\"10 + 20 = {sum2}\")\n\nprint(\"\\n--- Multiple Return Values ---\")\n\n# Function returning multiple values\ndef calculate_circle(radius):\n    \"\"\"Calculate area and circumference of a circle\"\"\"\n    import math\n    area = math.pi * radius ** 2\n    circumference = 2 * math.pi * radius\n    return area, circumference\n\n# Unpacking multiple return values\ncircle_area, circle_circumference = calculate_circle(5)\nprint(f\"Circle with radius 5:\")\nprint(f\"Area: {circle_area:.2f}\")\nprint(f\"Circumference: {circle_circumference:.2f}\")\n\nprint(\"\\n--- Default Parameters ---\")\n\n# Function with default parameter values\ndef create_email(username, domain=\"gmail.com\"):\n    \"\"\"Create email address with optional domain\"\"\"\n    email = f\"{username}@{domain}\"\n    return email\n\n# Using default and custom domains\nemail1 = create_email(\"john.doe\")\nemail2 = create_email(\"jane.smith\", \"company.com\")\nprint(f\"Email 1: {email1}\")\nprint(f\"Email 2: {email2}\")\n\nprint(\"\\n--- Keyword Arguments ---\")\n\n# Using keyword arguments for clarity\ndef describe_pet(pet_name, animal_type=\"dog\"):\n    \"\"\"Describe a pet\"\"\"\n    print(f\"I have a {animal_type} named {pet_name}.\")\n\n# Different ways to call the function\ndescribe_pet(\"Buddy\")\ndescribe_pet(pet_name=\"Whiskers\", animal_type=\"cat\")\ndescribe_pet(animal_type=\"hamster\", pet_name=\"Nibbles\")",
+          "real_world_example": "Functions are fundamental in all software development. Web frameworks use functions to handle page requests. Data science libraries use functions for calculations and visualizations. Game engines use functions for character movement and collision detection. Even simple apps use functions to organize code - for example, a calculator app has functions for each operation (add, subtract, multiply, divide) that can be reused throughout the app.",
+          "interactive_tasks": [
+            "Write a function that converts temperature between Celsius and Fahrenheit",
+            "Create a function that checks if a number is prime and returns True or False",
+            "Write a function that takes a list of numbers and returns their average"
+          ],
+          "quiz": [
+            {
+              "question": "What keyword is used to define a function?",
+              "options": ["function", "def", "define", "func"],
+              "answer": "def",
+              "reasoning": "The 'def' keyword is used to define functions in Python."
+            },
+            {
+              "question": "What is a parameter?",
+              "options": ["Function output", "Function input", "Function name", "Return value"],
+              "answer": "Function input",
+              "reasoning": "Parameters are the variables listed in the function definition that receive input values."
+            },
+            {
+              "question": "What does the return statement do?",
+              "options": ["Prints a value", "Ends the program", "Sends a value back", "Creates a variable"],
+              "answer": "Sends a value back",
+              "reasoning": "Return sends a value back to the code that called the function."
+            },
+            {
+              "question": "What is the difference between parameter and argument?",
+              "options": ["No difference", "Parameter is in definition, argument is in call", "Argument is in definition, parameter is in call", "Parameters are for numbers, arguments for text"],
+              "answer": "Parameter is in definition, argument is in call",
+              "reasoning": "Parameters are the variables in the function definition, arguments are the actual values passed when calling."
+            },
+            {
+              "question": "Can a function return multiple values?",
+              "options": ["No", "Yes, as a tuple", "Only with special syntax", "Only two values"],
+              "answer": "Yes, as a tuple",
+              "reasoning": "Functions can return multiple values as a tuple, which can be unpacked."
+            },
+            {
+              "question": "What are default parameters?",
+              "options": ["Parameters that can't be changed", "Parameters with predefined values", "Required parameters", "The first parameters"],
+              "answer": "Parameters with predefined values",
+              "reasoning": "Default parameters have values that are used if no argument is provided."
+            },
+            {
+              "question": "What is the purpose of keyword arguments?",
+              "options": ["Make code run faster", "Specify arguments by parameter name", "Create required arguments", "Hide arguments"],
+              "answer": "Specify arguments by parameter name",
+              "reasoning": "Keyword arguments allow you to specify which parameter gets which value, making calls clearer."
+            }
+          ]
+        },
+        {
+          "title": "Day 14 – Lists and List Operations",
+          "definition": "Lists are ordered, mutable collections of items that can hold elements of different data types, making them one of Python's most versatile and commonly used data structures.",
+          "explanation": "Think of lists as shopping lists or playlists - they're ordered collections where you can add, remove, and rearrange items. Unlike variables that hold single values, lists can hold multiple values in a specific order. You can think of them like a train where each carriage can hold different types of cargo (numbers, text, even other lists!). Lists are 'mutable' which means you can change them after creation - add new items, remove existing ones, or modify any item directly.",
+          "code_example": "# Creating lists\nprint(\"--- Creating Lists ---\")\n\n# Empty list\nempty_list = []\n\n# List of numbers\nnumbers = [1, 2, 3, 4, 5]\n\n# List of strings\nfruits = [\"apple\", \"banana\", \"cherry\"]\n\n# Mixed data types\nmixed = [1, \"hello\", 3.14, True]\n\n# List of lists (2D list)\nmatrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\n\nprint(\"Numbers:\", numbers)\nprint(\"Fruits:\", fruits)\nprint(\"Mixed:\", mixed)\nprint(\"Matrix:\", matrix)\n\nprint(\"\\n--- Accessing List Elements ---\")\n\n# Access by index (0-based)\nprint(\"First fruit:\", fruits[0])\nprint(\"Second fruit:\", fruits[1])\nprint(\"Last fruit:\", fruits[-1])  # Negative index from end\n\n# Slicing lists\nprint(\"First two fruits:\", fruits[0:2])\nprint(\"All fruits from index 1:\", fruits[1:])\nprint(\"Every second number:\", numbers[::2])\n\nprint(\"\\n--- Modifying Lists ---\")\n\n# Changing elements\nfruits[1] = \"blueberry\"\nprint(\"Updated fruits:\", fruits)\n\n# Adding elements\nfruits.append(\"orange\")  # Add to end\nprint(\"After append:\", fruits)\n\nfruits.insert(1, \"mango\")  # Insert at specific position\nprint(\"After insert:\", fruits)\n\n# Removing elements\nremoved_fruit = fruits.pop()  # Remove from end\nprint(f\"Removed: {removed_fruit}, Remaining: {fruits}\")\n\nfruits.remove(\"blueberry\")  # Remove specific value\nprint(\"After remove:\", fruits)\n\nprint(\"\\n--- List Operations ---\")\n\n# Concatenation\nmore_fruits = [\"grape\", \"kiwi\"]\nall_fruits = fruits + more_fruits\nprint(\"Combined fruits:\", all_fruits)\n\n# Repetition\ndouble_numbers = numbers * 2\nprint(\"Doubled numbers:\", double_numbers)\n\n# Membership check\nprint(\"Is 'apple' in fruits?\", \"apple\" in fruits)\nprint(\"Is 'pineapple' in fruits?\", \"pineapple\" in fruits)\n\n# Length\nprint(\"Number of fruits:\", len(all_fruits))\n\nprint(\"\\n--- List Methods ---\")\n\n# Sorting\nnumbers = [3, 1, 4, 1, 5, 9, 2]\nnumbers.sort()\nprint(\"Sorted numbers:\", numbers)\n\n# Reversing\nnumbers.reverse()\nprint(\"Reversed numbers:\", numbers)\n\n# Counting\nprint(\"Count of 1:\", numbers.count(1))\n\n# Finding index\nprint(\"Index of 5:\", numbers.index(5))\n\nprint(\"\\n--- List Comprehension ---\")\n\n# Create new list by transforming elements\nsquares = [x**2 for x in range(1, 6)]\nprint(\"Squares:\", squares)\n\n# Filter elements\neven_numbers = [x for x in range(10) if x % 2 == 0]\nprint(\"Even numbers:\", even_numbers)",
+          "real_world_example": "Lists are used everywhere in programming. Social media apps use lists to store user posts, friends, and notifications. E-commerce sites use lists for shopping carts, product catalogs, and order history. Games use lists for player inventories, high scores, and level data. Data analysis tools use lists to store datasets and calculation results. Even your phone's contact list is essentially a list of dictionaries!",
+          "interactive_tasks": [
+            "Create a list of 5 favorite movies and print each one with its index",
+            "Write a function that finds the largest number in a list",
+            "Create a program that removes duplicates from a list"
+          ],
+          "quiz": [
+            {
+              "question": "How do you access the first element of a list?",
+              "options": ["list[1]", "list[0]", "list.first", "list(0)"],
+              "answer": "list[0]",
+              "reasoning": "Python uses 0-based indexing, so the first element is at index 0."
+            },
+            {
+              "question": "Which method adds an element to the end of a list?",
+              "options": ["add()", "append()", "insert()", "push()"],
+              "answer": "append()",
+              "reasoning": "The append() method adds an element to the end of a list."
+            },
+            {
+              "question": "What does my_list[-1] return?",
+              "options": ["First element", "Last element", "Error", "The list reversed"],
+              "answer": "Last element",
+              "reasoning": "Negative indices count from the end, so -1 is the last element."
+            },
+            {
+              "question": "How do you remove an element by value?",
+              "options": ["pop()", "delete()", "remove()", "discard()"],
+              "answer": "remove()",
+              "reasoning": "remove() deletes the first occurrence of the specified value."
+            },
+            {
+              "question": "What is the result of [1, 2, 3] + [4, 5]?",
+              "options": ["[1, 2, 3, 4, 5]", "[5, 7, 3]", "[1, 2, 3][4, 5]", "Error"],
+              "answer": "[1, 2, 3, 4, 5]",
+              "reasoning": "The + operator concatenates lists together."
+            },
+            {
+              "question": "Which method inserts an element at a specific position?",
+              "options": ["add()", "append()", "insert()", "place()"],
+              "answer": "insert()",
+              "reasoning": "insert(index, element) adds an element at the specified index."
+            },
+            {
+              "question": "What does len([1, 2, 3]) return?",
+              "options": ["3", "6", "[1, 2, 3]", "1"],
+              "answer": "3",
+              "reasoning": "len() returns the number of elements in the list."
+            }
+          ]
+        },
+        {
+          "title": "Day 15 – Dictionaries and Key-Value Pairs",
+          "definition": "Dictionaries are unordered collections of key-value pairs that allow you to store and retrieve data using unique keys rather than numerical indices.",
+          "explanation": "Think of dictionaries like a real dictionary or a contact list - you look up information using a specific word (key) rather than a page number. Each entry has a word (key) and its definition (value). Dictionaries are incredibly flexible because you can use almost any data type as a key, and they provide very fast lookups. Unlike lists where you access elements by position, dictionaries let you access values by meaningful keys. They're perfect for storing structured data where each piece of information has a specific label.",
+          "code_example": "# Creating dictionaries\nprint(\"--- Creating Dictionaries ---\")\n\n# Empty dictionary\nempty_dict = {}\n\n# Dictionary with string keys\nstudent = {\n    \"name\": \"Alice\",\n    \"age\": 20,\n    \"major\": \"Computer Science\",\n    \"gpa\": 3.8\n}\n\n# Dictionary with different data types as values\nperson = {\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\",\n    \"age\": 30,\n    \"is_student\": False,\n    \"courses\": [\"Math\", \"Physics\", \"Chemistry\"]\n}\n\nprint(\"Student:\", student)\nprint(\"Person:\", person)\n\nprint(\"\\n--- Accessing Dictionary Values ---\")\n\n# Access by key\nprint(\"Student name:\", student[\"name\"])\nprint(\"Student age:\", student[\"age\"])\n\n# Using get() method (safer)\nprint(\"Student major:\", student.get(\"major\"))\nprint(\"Student height:\", student.get(\"height\"))  # Returns None\nprint(\"Student height with default:\", student.get(\"height\", \"Not specified\"))\n\nprint(\"\\n--- Modifying Dictionaries ---\")\n\n# Adding new key-value pairs\nstudent[\"year\"] = \"Sophomore\"\nprint(\"After adding year:\", student)\n\n# Modifying existing values\nstudent[\"gpa\"] = 3.9\nprint(\"After updating GPA:\", student)\n\n# Removing elements\ndel student[\"year\"]\nprint(\"After deleting year:\", student)\n\nremoved_value = student.pop(\"age\")\nprint(f\"Removed age: {removed_value}\")\nprint(\"After pop:\", student)\n\nprint(\"\\n--- Dictionary Methods ---\")\n\n# Get all keys\nprint(\"Keys:\", student.keys())\n\n# Get all values\nprint(\"Values:\", student.values())\n\n# Get all key-value pairs\nprint(\"Items:\", student.items())\n\n# Check if key exists\nprint(\"Has 'name':\", \"name\" in student)\nprint(\"Has 'height':\", \"height\" in student)\n\nprint(\"\\n--- Looping Through Dictionaries ---\")\n\n# Loop through keys\nprint(\"Student information:\")\nfor key in student:\n    print(f\"  {key}: {student[key]}\")\n\n# Loop through key-value pairs\nprint(\"\\nStudent details:\")\nfor key, value in student.items():\n    print(f\"  {key}: {value}\")\n\nprint(\"\\n--- Nested Dictionaries ---\")\n\n# Dictionary containing other dictionaries\nschool = {\n    \"student1\": {\"name\": \"Alice\", \"grade\": \"A\"},\n    \"student2\": {\"name\": \"Bob\", \"grade\": \"B\"},\n    \"student3\": {\"name\": \"Charlie\", \"grade\": \"A\"}\n}\n\nprint(\"School data:\", school)\nprint(\"Student2's name:\", school[\"student2\"][\"name\"])\n\nprint(\"\\n--- Dictionary Comprehension ---\")\n\n# Create dictionary from list\nnumbers = [1, 2, 3, 4, 5]\nsquares_dict = {x: x**2 for x in numbers}\nprint(\"Squares dictionary:\", squares_dict)\n\n# Filter dictionary\neven_squares = {k: v for k, v in squares_dict.items() if v % 2 == 0}\nprint(\"Even squares:\", even_squares)",
+          "real_world_example": "Dictionaries are used extensively in real applications. JSON data (common in web APIs) is essentially dictionary-based. Configuration files store settings as key-value pairs. Database records are often represented as dictionaries. Web frameworks use dictionaries for request parameters and session data. Even Python's object system uses dictionaries internally to store object attributes. Social media profiles, product information in e-commerce, and user preferences in apps are all perfect use cases for dictionaries.",
+          "interactive_tasks": [
+            "Create a dictionary to store information about your favorite book",
+            "Write a function that counts how many times each word appears in a sentence",
+            "Create a phone book dictionary and implement search functionality"
+          ],
+          "quiz": [
+            {
+              "question": "How are dictionaries different from lists?",
+              "options": ["Dictionaries are ordered", "Dictionaries use keys instead of indices", "Lists can store more data", "Dictionaries are faster for all operations"],
+              "answer": "Dictionaries use keys instead of indices",
+              "reasoning": "Dictionaries access values using keys, while lists use numerical indices."
+            },
+            {
+              "question": "What happens if you try to access a non-existent key with []?",
+              "options": ["Returns None", "Returns empty string", "Raises KeyError", "Creates the key"],
+              "answer": "Raises KeyError",
+              "reasoning": "Using [] with a non-existent key raises KeyError, unlike get() which returns None."
+            },
+            {
+              "question": "Which method safely gets a value with a default?",
+              "options": ["get()", "retrieve()", "fetch()", "obtain()"],
+              "answer": "get()",
+              "reasoning": "get(key, default) returns the default value if key doesn't exist."
+            },
+            {
+              "question": "How do you add a new key-value pair?",
+              "options": ["add()", "insert()", "Using assignment", "append()"],
+              "answer": "Using assignment",
+              "reasoning": "Use dict[key] = value to add or update key-value pairs."
+            },
+            {
+              "question": "What does dict.items() return?",
+              "options": ["List of keys", "List of values", "List of key-value tuples", "Dictionary copy"],
+              "answer": "List of key-value tuples",
+              "reasoning": "items() returns a view of all key-value pairs as tuples."
+            },
+            {
+              "question": "Can dictionary keys be mutable?",
+              "options": ["Yes", "No, they must be immutable", "Only strings", "Only numbers"],
+              "answer": "No, they must be immutable",
+              "reasoning": "Dictionary keys must be immutable types like strings, numbers, or tuples."
+            },
+            {
+              "question": "How do you check if a key exists?",
+              "options": ["key in dict", "dict.has(key)", "dict.contains(key)", "key.exists(dict)"],
+              "answer": "key in dict",
+              "reasoning": "Use 'key in dict' to check if a key exists in the dictionary."
+            }
+          ]
+        },
+        {
+          "title": "Day 16 – String Manipulation",
+          "definition": "String manipulation involves working with text data - creating, modifying, searching, and formatting strings using Python's built-in string methods and operations.",
+          "explanation": "Strings are like sentences in a book - they're sequences of characters that we can read, modify, and analyze. Python provides powerful tools for working with text, from simple operations like changing case to complex pattern matching. Think of string manipulation like editing a document: you can change words, find and replace text, check spelling, and format the layout. Whether you're processing user input, generating reports, or analyzing text data, string manipulation is an essential skill for any programmer.",
+          "code_example": "# Basic string operations\nprint(\"--- Basic String Operations ---\")\n\n# Creating strings\nsingle_quotes = 'Hello'\ndouble_quotes = \"World\"\nmulti_line = \"\"\"This is a\nmulti-line\nstring\"\"\"\n\nprint(single_quotes)\nprint(double_quotes)\nprint(multi_line)\n\n# String concatenation\nfull_greeting = single_quotes + \" \" + double_quotes\nprint(\"Concatenated:\", full_greeting)\n\n# String repetition\nlaugh = \"ha\" * 3\nprint(\"Repetition:\", laugh)\n\n# String length\nmessage = \"Python Programming\"\nprint(f\"Length of '{message}': {len(message)}\")\n\nprint(\"\\n--- String Indexing and Slicing ---\")\n\n# Accessing characters\nword = \"Python\"\nprint(\"First character:\", word[0])\nprint(\"Last character:\", word[-1])\nprint(\"Second to last:\", word[-2])\n\n# String slicing\nprint(\"First three:\", word[0:3])\nprint(\"From index 2:\", word[2:])\nprint(\"Every second character:\", word[::2])\nprint(\"Reversed:\", word[::-1])\n\nprint(\"\\n--- String Methods ---\")\n\ntext = \"  hello World!  \"\n\n# Case conversion\nprint(\"Original:\", f\"'{text}'\")\nprint(\"Upper case:\", f\"'{text.upper()}'\")\nprint(\"Lower case:\", f\"'{text.lower()}'\")\nprint(\"Title case:\", f\"'{text.title()}'\")\nprint(\"Capitalize:\", f\"'{text.capitalize()}'\")\n\n# Whitespace handling\nprint(\"Stripped:\", f\"'{text.strip()}'\")\nprint(\"Left stripped:\", f\"'{text.lstrip()}'\")\nprint(\"Right stripped:\", f\"'{text.rstrip()}'\")\n\n# Searching and checking\nsentence = \"The quick brown fox jumps over the lazy dog\"\n\nprint(\"\\n--- Searching in Strings ---\")\nprint(\"Starts with 'The':\", sentence.startswith(\"The\"))\nprint(\"Ends with 'dog':\", sentence.endswith(\"dog\"))\nprint(\"Contains 'fox':\", \"fox\" in sentence)\nprint(\"Index of 'brown':\", sentence.find(\"brown\"))\nprint(\"Count of 'the':\", sentence.count(\"the\"))\n\n# Replacement and splitting\nprint(\"\\n--- Replacement and Splitting ---\")\nprint(\"Replace 'fox' with 'cat':\", sentence.replace(\"fox\", \"cat\"))\n\nwords = sentence.split()\nprint(\"Split into words:\", words)\n\ncsv_data = \"apple,banana,cherry,date\"\nfruits = csv_data.split(\",\")\nprint(\"Split CSV:\", fruits)\n\n# Joining\njoined_sentence = \"-\".join(words)\nprint(\"Joined with hyphens:\", joined_sentence)\n\nprint(\"\\n--- String Formatting ---\")\n\n# Old style formatting\nname = \"Alice\"\nage = 25\nprint(\"Hello %s, you are %d years old.\" % (name, age))\n\n# str.format() method\nprint(\"Hello {}, you are {} years old.\".format(name, age))\nprint(\"Hello {1}, you are {0} years old.\".format(age, name))\n\n# f-strings (Python 3.6+)\nprint(f\"Hello {name}, you are {age} years old.\")\nprint(f\"Next year you will be {age + 1} years old.\")\n\n# Formatting numbers\nprice = 19.99\nprint(f\"Price: ${price:.2f}\")\npercentage = 0.4567\nprint(f\"Percentage: {percentage:.1%}\")\n\nprint(\"\\n--- Useful String Checks ---\")\n\ntest_string = \"Hello123\"\nprint(f\"'{test_string}' is alpha:\", test_string.isalpha())\nprint(f\"'{test_string}' is alnum:\", test_string.isalnum())\nprint(f\"'{test_string}' is digit:\", test_string.isdigit())\nprint(f\"'{test_string}' is lower:\", test_string.islower())\nprint(f\"'{test_string}' is upper:\", test_string.isupper())",
+          "real_world_example": "String manipulation is crucial in countless real-world applications. Web forms use it to validate and clean user input. Search engines use it to process queries and match results. Social media platforms use it to detect hashtags and mentions. Data analysis tools use it to clean and process text data. Even your phone's autocorrect and predictive text rely heavily on string manipulation algorithms. Email clients use it to parse addresses and filter spam.",
+          "interactive_tasks": [
+            "Write a program that reverses a string without using [::-1]",
+            "Create a function that counts vowels and consonants in a string",
+            "Write a program that converts a string to proper case (first letter of each word capitalized)"
+          ],
+          "quiz": [
+            {
+              "question": "How do you get the length of a string?",
+              "options": ["string.length", "len(string)", "string.size", "length(string)"],
+              "answer": "len(string)",
+              "reasoning": "The len() function returns the number of characters in a string."
+            },
+            {
+              "question": "What does string.strip() do?",
+              "options": ["Removes spaces from both ends", "Removes all spaces", "Adds spaces", "Splits the string"],
+              "answer": "Removes spaces from both ends",
+              "reasoning": "strip() removes whitespace from both the beginning and end of a string."
+            },
+            {
+              "question": "How do you check if a string contains another string?",
+              "options": ["string.find()", "string.contains()", "in operator", "string.search()"],
+              "answer": "in operator",
+              "reasoning": "Use 'substring in string' to check if a string contains another string."
+            },
+            {
+              "question": "What does string.split() return?",
+              "options": ["A string", "A list of characters", "A list of words", "A dictionary"],
+              "answer": "A list of words",
+              "reasoning": "split() returns a list of the words in the string, using whitespace as delimiter."
+            },
+            {
+              "question": "How do you replace parts of a string?",
+              "options": ["string.replace()", "string.substitute()", "string.change()", "string.swap()"],
+              "answer": "string.replace()",
+              "reasoning": "replace(old, new) replaces all occurrences of old with new in the string."
+            },
+            {
+              "question": "What is the result of \"hello\".upper()?",
+              "options": ["HELLO", "hello", "Hello", "hELLO"],
+                "answer": "HELLO",
+                "reasoning": "upper() converts all characters in the string to uppercase."
+                },
+                {
+                  "question": "How do you format strings with variables in Python 3.6+?",
+                  "options": ["% formatting", ".format() method", "f-strings", "All of the above"],
+                  "answer": "All of the above",
+                  "reasoning": "Python supports multiple string formatting methods, with f-strings being the newest and most convenient."
+                }
+              ]
+            },
+            {
+              "title": "Day 17 – Introduction to Object-Oriented Programming",
+              "definition": "Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects containing both data (attributes) and behavior (methods), modeling real-world entities.",
+              "explanation": "Think of OOP like building with LEGO blocks. Each LEGO piece is an object with specific properties (color, size, shape) and capabilities (how it connects to other pieces). In OOP, we create blueprints called 'classes' that define what properties and behaviors objects will have. Then we create actual objects from these blueprints. This approach helps organize complex code, makes it reusable, and models the real world more naturally. Instead of just writing functions that manipulate data, we create objects that contain both data and the functions that work with that data.",
+              "code_example": "# Basic class definition\nprint(\"--- Basic Class and Object ---\")\n\nclass Dog:\n    \"\"\"A simple Dog class\"\"\"\n    \n    # Class attribute (shared by all instances)\n    species = \"Canis familiaris\"\n    \n    def __init__(self, name, age):\n        \"\"\"Initialize dog with name and age\"\"\"\n        # Instance attributes (unique to each instance)\n        self.name = name\n        self.age = age\n    \n    def bark(self):\n        \"\"\"Make the dog bark\"\"\"\n        return f\"{self.name} says Woof!\"\n    \n    def describe(self):\n        \"\"\"Describe the dog\"\"\"\n        return f\"{self.name} is {self.age} years old and is a {self.species}\"\n\n# Creating objects (instances)\ndog1 = Dog(\"Buddy\", 3)\ndog2 = Dog(\"Lucy\", 5)\n\n# Using objects\nprint(dog1.bark())\nprint(dog2.bark())\nprint(dog1.describe())\nprint(dog2.describe())\n\n# Accessing attributes\nprint(f\"\\n{dog1.name} is {dog1.age} years old\")\nprint(f\"Both dogs are {Dog.species}\")\n\nprint(\"\\n--- Bank Account Example ---\")\n\nclass BankAccount:\n    \"\"\"A simple bank account class\"\"\"\n    \n    def __init__(self, account_holder, initial_balance=0):\n        self.account_holder = account_holder\n        self.balance = initial_balance\n        self.account_number = id(self)  # Simple unique ID\n    \n    def deposit(self, amount):\n        \"\"\"Deposit money into account\"\"\"\n        if amount > 0:\n            self.balance += amount\n            return f\"Deposited ${amount}. New balance: ${self.balance}\"\n        else:\n            return \"Deposit amount must be positive\"\n    \n    def withdraw(self, amount):\n        \"\"\"Withdraw money from account\"\"\"\n        if amount > 0:\n            if amount <= self.balance:\n                self.balance -= amount\n                return f\"Withdrew ${amount}. New balance: ${self.balance}\"\n            else:\n                return \"Insufficient funds\"\n        else:\n            return \"Withdrawal amount must be positive\"\n    \n    def get_balance(self):\n        \"\"\"Get current balance\"\"\"\n        return f\"Balance: ${self.balance}\"\n    \n    def __str__(self):\n        \"\"\"String representation of the account\"\"\"\n        return f\"Account #{self.account_number}: {self.account_holder} - Balance: ${self.balance}\"\n\n# Using the BankAccount class\naccount1 = BankAccount(\"Alice\", 1000)\naccount2 = BankAccount(\"Bob\", 500)\n\nprint(account1)\nprint(account2)\n\nprint(\"\\n--- Performing Transactions ---\")\nprint(account1.deposit(200))\nprint(account1.withdraw(50))\nprint(account1.withdraw(2000))  # Should fail\n\nprint(account1.get_balance())\n\nprint(\"\\n--- Student Class Example ---\")\n\nclass Student:\n    \"\"\"A student class with course enrollment\"\"\"\n    \n    def __init__(self, name, student_id):\n        self.name = name\n        self.student_id = student_id\n        self.courses = []\n        self.grades = {}\n    \n    def enroll(self, course_name):\n        \"\"\"Enroll in a course\"\"\"\n        if course_name not in self.courses:\n            self.courses.append(course_name)\n            return f\"Enrolled in {course_name}\"\n        else:\n            return f\"Already enrolled in {course_name}\"\n    \n    def add_grade(self, course_name, grade):\n        \"\"\"Add a grade for a course\"\"\"\n        if course_name in self.courses:\n            self.grades[course_name] = grade\n            return f\"Added grade {grade} for {course_name}\"\n        else:\n            return f\"Not enrolled in {course_name}\"\n    \n    def get_gpa(self):\n        \"\"\"Calculate GPA\"\"\"\n        if not self.grades:\n            return 0.0\n        \n        grade_points = {\n            'A': 4.0, 'B': 3.0, 'C': 2.0, 'D': 1.0, 'F': 0.0\n        }\n        \n        total_points = sum(grade_points.get(grade, 0) for grade in self.grades.values())\n        return total_points / len(self.grades)\n    \n    def __str__(self):\n        return f\"Student: {self.name} (ID: {self.student_id})\"\n\n# Using Student class\nstudent = Student(\"John Doe\", \"S12345\")\nprint(student)\n\nprint(student.enroll(\"Math\"))\nprint(student.enroll(\"Science\"))\nprint(student.add_grade(\"Math\", \"A\"))\nprint(student.add_grade(\"Science\", \"B\"))\n\nprint(f\"GPA: {student.get_gpa():.2f}\")\nprint(f\"Courses: {student.courses}\")\nprint(f\"Grades: {student.grades}\")",
+              "real_world_example": "OOP is used in virtually all modern software. GUI applications use objects for windows, buttons, and menus. Game development uses objects for characters, items, and environments. Web frameworks use objects for requests, responses, and database models. Even the Python language itself is built using OOP - strings, lists, and dictionaries are all objects with methods. Banking systems use account objects, e-commerce sites use product and shopping cart objects, and social media platforms use user and post objects.",
+              "interactive_tasks": [
+                "Create a Rectangle class with methods to calculate area and perimeter",
+                "Write a Car class with attributes for make, model, year and methods to display info",
+                "Create a Book class that tracks title, author, and reading status"
+              ],
+              "quiz": [
+                {
+                  "question": "What is a class in OOP?",
+                  "options": ["A single object", "A blueprint for creating objects", "A function", "A variable"],
+                  "answer": "A blueprint for creating objects",
+                  "reasoning": "A class defines the properties and methods that objects of that type will have."
+                },
+                {
+                  "question": "What is an object?",
+                  "options": ["A class", "An instance of a class", "A method", "A variable"],
+                  "answer": "An instance of a class",
+                  "reasoning": "An object is a specific instance created from a class blueprint."
+                },
+                {
+                  "question": "What is the purpose of the __init__ method?",
+                  "options": ["To delete objects", "To initialize object attributes", "To print objects", "To compare objects"],
+                  "answer": "To initialize object attributes",
+                  "reasoning": "__init__ is the constructor method that sets up new objects with initial values."
+                },
+                {
+                  "question": "What does 'self' refer to in a class method?",
+                  "options": ["The class itself", "The current object instance", "The parent class", "The method name"],
+                  "answer": "The current object instance",
+                  "reasoning": "Self refers to the specific object instance that the method is being called on."
+                },
+                {
+                  "question": "What is the difference between class and instance attributes?",
+                  "options": ["No difference", "Class attributes are shared, instance are unique", "Instance attributes are shared, class are unique", "Only class attributes exist"],
+                  "answer": "Class attributes are shared, instance are unique",
+                  "reasoning": "Class attributes are shared by all instances, while instance attributes are specific to each object."
+                },
+                {
+                  "question": "What is a method in OOP?",
+                  "options": ["A variable in a class", "A function defined in a class", "A class itself", "An object"],
+                  "answer": "A function defined in a class",
+                  "reasoning": "Methods are functions that are defined inside a class and operate on object data."
+                },
+                {
+                  "question": "What is encapsulation in OOP?",
+                  "options": ["Breaking code into pieces", "Bundling data and methods together", "Creating multiple classes", "Inheriting from parent classes"],
+                  "answer": "Bundling data and methods together",
+                  "reasoning": "Encapsulation means keeping data and the methods that operate on that data together in one unit (object)."
+                }
+              ]
+            },
+            {
+              "title": "Day 18 – Inheritance and Polymorphism",
+              "definition": "Inheritance allows a class to inherit attributes and methods from another class, while polymorphism enables objects of different classes to be treated as objects of a common superclass.",
+              "explanation": "Think of inheritance like a family tree. Children inherit characteristics from their parents but can also have their own unique traits. In programming, inheritance lets you create new classes based on existing ones, reusing code and establishing relationships. Polymorphism is like different animals making sounds - a dog says 'woof', a cat says 'meow', but both are 'making sound'. This allows you to write flexible code that works with objects of different types as long as they share a common interface. Together, these concepts make code more organized, reusable, and flexible.",
+              "code_example": "# Basic inheritance\nprint(\"--- Basic Inheritance ---\")\n\nclass Animal:\n    \"\"\"Base class for all animals\"\"\"\n    \n    def __init__(self, name, species):\n        self.name = name\n        self.species = species\n    \n    def speak(self):\n        \"\"\"Make animal sound\"\"\"\n        return \"Some generic animal sound\"\n    \n    def describe(self):\n        return f\"{self.name} is a {self.species}\"\n\nclass Dog(Animal):  # Dog inherits from Animal\n    \"\"\"Dog class - inherits from Animal\"\"\"\n    \n    def __init__(self, name, breed):\n        # Call parent class constructor\n        super().__init__(name, \"Dog\")\n        self.breed = breed\n    \n    # Override the speak method\n    def speak(self):\n        return \"Woof!\"\n    \n    def describe(self):\n        # Extend parent method\n        base_description = super().describe()\n        return f\"{base_description} of breed {self.breed}\"\n\nclass Cat(Animal):  # Cat inherits from Animal\n    \"\"\"Cat class - inherits from Animal\"\"\"\n    \n    def __init__(self, name, color):\n        super().__init__(name, \"Cat\")\n        self.color = color\n    \n    # Override the speak method\n    def speak(self):\n        return \"Meow!\"\n    \n    def describe(self):\n        base_description = super().describe()\n        return f\"{base_description} with {self.color} fur\"\n\n# Using the classes\ndog = Dog(\"Buddy\", \"Golden Retriever\")\ncat = Cat(\"Whiskers\", \"orange\")\n\nprint(dog.describe())\nprint(cat.describe())\n\nprint(f\"{dog.name} says: {dog.speak()}\")\nprint(f\"{cat.name} says: {cat.speak()}\")\n\nprint(\"\\n--- Polymorphism Example ---\")\n\n# Polymorphism in action\nanimals = [dog, cat]\n\nprint(\"All animals speaking:\")\nfor animal in animals:\n    print(f\"{animal.name} says: {animal.speak()}\")\n\nprint(\"\\n--- Multiple Inheritance ---\")\n\nclass Flyable:\n    \"\"\"Mixin class for flying ability\"\"\"\n    \n    def fly(self):\n        return \"I can fly!\"\n\nclass Swimmable:\n    \"\"\"Mixin class for swimming ability\"\"\"\n    \n    def swim(self):\n        return \"I can swim!\"\n\nclass Duck(Animal, Flyable, Swimmable):\n    \"\"\"Duck class inherits from Animal, Flyable, and Swimmable\"\"\"\n    \n    def __init__(self, name):\n        super().__init__(name, \"Duck\")\n    \n    def speak(self):\n        return \"Quack!\"\n\n# Using multiple inheritance\nduck = Duck(\"Daffy\")\nprint(f\"{duck.name}: {duck.speak()}\")\nprint(duck.fly())\nprint(duck.swim())\n\nprint(\"\\n--- Method Resolution Order (MRO) ---\")\n\n# Check method resolution order\nprint(\"Duck MRO:\", Duck.__mro__)\n\nprint(\"\\n--- Abstract Base Class Example ---\")\n\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    \"\"\"Abstract base class for shapes\"\"\"\n    \n    @abstractmethod\n    def area(self):\n        \"\"\"Calculate area - must be implemented by subclasses\"\"\"\n        pass\n    \n    @abstractmethod\n    def perimeter(self):\n        \"\"\"Calculate perimeter - must be implemented by subclasses\"\"\"\n        pass\n\nclass Rectangle(Shape):\n    \"\"\"Rectangle class implementing Shape interface\"\"\"\n    \n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height\n    \n    def perimeter(self):\n        return 2 * (self.width + self.height)\n\nclass Circle(Shape):\n    \"\"\"Circle class implementing Shape interface\"\"\"\n    \n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        import math\n        return math.pi * self.radius ** 2\n    \n    def perimeter(self):\n        import math\n        return 2 * math.pi * self.radius\n\n# Using polymorphic behavior\nshapes = [Rectangle(4, 5), Circle(3)]\n\nprint(\"\\nShape areas and perimeters:\")\nfor shape in shapes:\n    print(f\"Area: {shape.area():.2f}, Perimeter: {shape.perimeter():.2f}\")\n\nprint(\"\\n--- isinstance() and issubclass() ---\")\n\n# Type checking\nprint(f\"dog is Animal: {isinstance(dog, Animal)}\")\nprint(f\"dog is Dog: {isinstance(dog, Dog)}\")\nprint(f\"Dog is subclass of Animal: {issubclass(Dog, Animal)}\")\nprint(f\"Dog is subclass of Cat: {issubclass(Dog, Cat)}\")",
+              "real_world_example": "Inheritance and polymorphism are fundamental in software development. GUI frameworks use inheritance to create specialized widgets from basic ones. Game engines use inheritance for game objects (characters, items, enemies). Web frameworks use inheritance for different types of requests and responses. Database ORMs use inheritance to map different types of database records. Even in business applications, you might have a base Employee class with Manager, Developer, and Designer subclasses, each with specialized behavior but sharing common employee functionality.",
+              "interactive_tasks": [
+                "Create a Vehicle base class with Car and Motorcycle subclasses",
+                "Implement a BankAccount hierarchy with SavingsAccount and CheckingAccount",
+                "Create a Shape hierarchy with different area calculation methods"
+              ],
+              "quiz": [
+                {
+                  "question": "What is inheritance in OOP?",
+                  "options": ["Copying code", "A class deriving from another class", "Creating multiple objects", "Deleting classes"],
+                  "answer": "A class deriving from another class",
+                  "reasoning": "Inheritance allows a class to inherit attributes and methods from a parent class."
+                },
+                {
+                  "question": "What is polymorphism?",
+                  "options": ["Multiple inheritance", "Objects of different types being treated similarly", "Creating many objects", "Inheriting from multiple classes"],
+                  "answer": "Objects of different types being treated similarly",
+                  "reasoning": "Polymorphism allows objects of different classes to be used interchangeably if they implement the same interface."
+                },
+                {
+                  "question": "What does super() do?",
+                  "options": ["Calls the parent class method", "Creates a super class", "Makes a class superior", "Deletes the parent class"],
+                  "answer": "Calls the parent class method",
+                  "reasoning": "super() is used to call methods from the parent class in the child class."
+                },
+                {
+                  "question": "What is method overriding?",
+                  "options": ["Creating a new method", "Changing a parent class method in child class", "Deleting a method", "Copying a method"],
+                  "answer": "Changing a parent class method in child class",
+                  "reasoning": "Method overriding means providing a different implementation of a method in the child class."
+                },
+                {
+                  "question": "What is multiple inheritance?",
+                  "options": ["A class with multiple methods", "A class inheriting from multiple parents", "Multiple objects from one class", "Inheriting multiple times"],
+                  "answer": "A class inheriting from multiple parents",
+                  "reasoning": "Multiple inheritance allows a class to inherit from more than one parent class."
+                },
+                {
+                  "question": "What is an abstract class?",
+                  "options": ["A class that can't be instantiated", "A very complex class", "A class with no methods", "A class that inherits from everything"],
+                  "answer": "A class that can't be instantiated",
+                  "reasoning": "Abstract classes define interfaces but cannot be instantiated directly - they must be subclassed."
+                },
+                {
+                  "question": "What is the purpose of @abstractmethod?",
+                  "options": ["To make methods faster", "To force subclasses to implement the method", "To hide methods", "To delete methods"],
+                  "answer": "To force subclasses to implement the method",
+                  "reasoning": "@abstractmethod decorator marks methods that must be implemented by concrete subclasses."
+                }
+              ]
+            },
+            {
+              "title": "Day 19 – File Handling",
+              "definition": "File handling involves reading from and writing to files on your computer's storage, allowing programs to persist data between executions and work with external data sources.",
+              "explanation": "Think of file handling like using a notebook. You can write information in the notebook (writing to a file), read what you wrote earlier (reading from a file), add new notes (appending to a file), or even tear out pages (deleting files). Files let your programs remember information even after they close, share data with other programs, and work with large datasets. Whether it's saving user preferences, processing log files, or working with configuration files, file handling is essential for most real-world applications.",
+              "code_example": "# Basic file operations\nprint(\"--- Writing to Files ---\")\n\n# Writing to a file\nwith open(\"example.txt\", \"w\") as file:\n    file.write(\"Hello, World!\\n\")\n    file.write(\"This is a second line.\\n\")\n    file.write(\"And this is the third line.\\n\")\n\nprint(\"File 'example.txt' created and written to.\")\n\nprint(\"\\n--- Reading from Files ---\")\n\n# Reading entire file\nwith open(\"example.txt\", \"r\") as file:\n    content = file.read()\n    print(\"Entire file content:\")\n    print(content)\n\n# Reading line by line\nprint(\"Reading line by line:\")\nwith open(\"example.txt\", \"r\") as file:\n    for line_num, line in enumerate(file, 1):\n        print(f\"Line {line_num}: {line.strip()}\")\n\n# Reading all lines into a list\nwith open(\"example.txt\", \"r\") as file:\n    lines = file.readlines()\n    print(f\"\\nAll lines as list: {lines}\")\n\nprint(\"\\n--- Appending to Files ---\")\n\n# Appending to existing file\nwith open(\"example.txt\", \"a\") as file:\n    file.write(\"This line was appended later.\\n\")\n    file.write(\"So was this one!\\n\")\n\nprint(\"Content after appending:\")\nwith open(\"example.txt\", \"r\") as file:\n    print(file.read())\n\nprint(\"\\n--- Working with CSV Files ---\")\n\nimport csv\n\n# Writing CSV data\nwith open(\"students.csv\", \"w\", newline='') as csvfile:\n    writer = csv.writer(csvfile)\n    writer.writerow([\"Name\", \"Age\", \"Grade\"])\n    writer.writerow([\"Alice\", \"20\", \"A\"])\n    writer.writerow([\"Bob\", \"19\", \"B\"])\n    writer.writerow([\"Charlie\", \"21\", \"A-\"])\n\nprint(\"CSV file 'students.csv' created.\")\n\n# Reading CSV data\nprint(\"\\nReading CSV file:\")\nwith open(\"students.csv\", \"r\") as csvfile:\n    reader = csv.reader(csvfile)\n    for row in reader:\n        print(row)\n\nprint(\"\\n--- Working with JSON Files ---\")\n\nimport json\n\n# Data to save as JSON\nstudent_data = {\n    \"students\": [\n        {\"name\": \"Alice\", \"age\": 20, \"courses\": [\"Math\", \"Science\"]},\n        {\"name\": \"Bob\", \"age\": 19, \"courses\": [\"History\", \"Art\"]},\n        {\"name\": \"Charlie\", \"age\": 21, \"courses\": [\"Physics\", \"Chemistry\"]}\n    ]\n}\n\n# Writing JSON to file\nwith open(\"students.json\", \"w\") as jsonfile:\n    json.dump(student_data, jsonfile, indent=2)\n\nprint(\"JSON file 'students.json' created.\")\n\n# Reading JSON from file\nwith open(\"students.json\", \"r\") as jsonfile:\n    loaded_data = json.load(jsonfile)\n    print(\"\\nLoaded JSON data:\")\n    print(json.dumps(loaded_data, indent=2))\n\nprint(\"\\n--- File Operations ---\")\n\nimport os\n\n# Check if file exists\nprint(f\"'example.txt' exists: {os.path.exists('example.txt')}\")\nprint(f\"'students.csv' exists: {os.path.exists('students.csv')}\")\nprint(f\"'nonexistent.txt' exists: {os.path.exists('nonexistent.txt')}\")\n\n# Get file size\nif os.path.exists(\"example.txt\"):\n    size = os.path.getsize(\"example.txt\")\n    print(f\"\\nFile 'example.txt' size: {size} bytes\")\n\n# List files in current directory\nprint(\"\\nFiles in current directory:\")\nfor file in os.listdir('.'):\n    if os.path.isfile(file):\n        print(f\"  {file}\")\n\nprint(\"\\n--- Error Handling with Files ---\")\n\n# Safe file reading with error handling\ntry:\n    with open(\"nonexistent.txt\", \"r\") as file:\n        content = file.read()\nexcept FileNotFoundError:\n    print(\"Error: File not found!\")\nexcept PermissionError:\n    print(\"Error: Permission denied!\")\nexcept Exception as e:\n    print(f\"Unexpected error: {e}\")\n\nprint(\"\\n--- Context Manager Benefits ---\")\n\n# Demonstrating that files are automatically closed\nfile = open(\"example.txt\", \"r\")\nprint(f\"File closed: {file.closed}\")\nfile.close()\nprint(f\"File closed after manual close: {file.closed}\")\n\n# With statement automatically closes file\nwith open(\"example.txt\", \"r\") as file:\n    print(f\"File closed inside with block: {file.closed}\")\n\nprint(f\"File closed after with block: {file.closed}\")",
+              "real_world_example": "File handling is crucial in countless real applications. Word processors use it to save and open documents. Web browsers use it to cache web pages and store bookmarks. Database systems use files to store data persistently. Games use files to save progress and settings. Mobile apps use files to store user data and preferences. Data analysis tools read data from CSV and JSON files. Even system logs are written to files for later analysis.",
+              "interactive_tasks": [
+                "Create a program that reads a text file and counts how many times each word appears",
+                "Write a contact manager that saves and loads contacts from a JSON file",
+                "Create a simple log system that appends messages with timestamps to a log file"
+              ],
+              "quiz": [
+                {
+                  "question": "Which mode opens a file for reading?",
+                  "options": ["'w'", "'r'", "'a'", "'x'"],
+                  "answer": "'r'",
+                  "reasoning": "'r' mode opens a file for reading (default mode)."
+                },
+                {
+                  "question": "What does the 'with' statement provide?",
+                  "options": ["Faster file access", "Automatic file closing", "Better file names", "Larger file sizes"],
+                  "answer": "Automatic file closing",
+                  "reasoning": "The with statement ensures files are properly closed even if exceptions occur."
+                },
+                {
+                  "question": "Which method reads the entire file content as a string?",
+                  "options": ["readline()", "read()", "readlines()", "get()"],
+                  "answer": "read()",
+                  "reasoning": "read() returns the entire file content as a single string."
+                },
+                {
+                  "question": "What mode would you use to add to an existing file?",
+                  "options": ["'w'", "'r'", "'a'", "'+'"],
+                  "answer": "'a'",
+                  "reasoning": "'a' mode opens the file for appending, adding to the end without overwriting."
+                },
+                {
+                  "question": "What does file.readlines() return?",
+                  "options": ["A string", "A list of strings", "A dictionary", "A single character"],
+                  "answer": "A list of strings",
+                  "reasoning": "readlines() returns a list where each element is a line from the file."
+                },
+                {
+                  "question": "Which module is used for working with CSV files?",
+                  "options": ["json", "csv", "os", "file"],
+                  "answer": "csv",
+                  "reasoning": "The csv module provides functionality for reading and writing CSV files."
+                },
+                {
+                  "question": "What happens if you open a non-existent file in 'r' mode?",
+                  "options": ["It creates the file", "It raises FileNotFoundError", "It returns None", "It opens in 'w' mode"],
+                  "answer": "It raises FileNotFoundError",
+                  "reasoning": "Opening a non-existent file in read mode raises FileNotFoundError."
+                }
+              ]
+            },
+            {
+              "title": "Day 20 – Exception Handling",
+              "definition": "Exception handling is the process of responding to and managing errors that occur during program execution, preventing crashes and providing graceful error recovery.",
+              "explanation": "Think of exception handling like having a safety net when walking a tightrope. Even if you slip (an error occurs), the safety net catches you (exception handler) and you can recover instead of falling (program crashing). Exceptions are Python's way of saying 'something unexpected happened.' Instead of letting your program crash and burn, you can catch these exceptions and handle them gracefully - maybe by showing a friendly error message, trying an alternative approach, or cleaning up resources. This makes your programs more robust and user-friendly.",
+              "code_example": "# Basic exception handling\nprint(\"--- Basic Try-Except ---\")\n\n# Handling division by zero\ntry:\n    numerator = 10\n    denominator = 0\n    result = numerator / denominator\n    print(f\"Result: {result}\")\nexcept ZeroDivisionError:\n    print(\"Error: Cannot divide by zero!\")\n\n# Handling multiple exceptions\nprint(\"\\n--- Multiple Exceptions ---\")\n\ntry:\n    number = int(input(\"Enter a number: \"))\n    result = 100 / number\n    print(f\"100 divided by {number} is {result}\")\nexcept ValueError:\n    print(\"Error: That's not a valid number!\")\nexcept ZeroDivisionError:\n    print(\"Error: Cannot divide by zero!\")\n\nprint(\"\\n--- Catching All Exceptions ---\")\n\n# Generic exception handling (use cautiously)\ntry:\n    risky_value = int(\"not_a_number\")\nexcept Exception as e:\n    print(f\"An error occurred: {e}\")\n    print(f\"Error type: {type(e).__name__}\")\n\nprint(\"\\n--- Else and Finally Clauses ---\")\n\n# Using else and finally\ndef safe_divide(a, b):\n    try:\n        result = a / b\n    except ZeroDivisionError:\n        print(\"Division by zero attempted!\")\n        return None\n    except TypeError:\n        print(\"Invalid types for division!\")\n        return None\n    else:\n        print(\"Division completed successfully!\")\n        return result\n    finally:\n        print(\"This always runs, whether there was an error or not.\")\n\n# Test the function\nprint(\"Testing safe_divide:\")\nprint(f\"Result: {safe_divide(10, 2)}\")\nprint()\nprint(f\"Result: {safe_divide(10, 0)}\")\nprint()\nprint(f\"Result: {safe_divide(10, '2')}\")\n\nprint(\"\\n--- Raising Exceptions ---\")\n\n# Raising custom exceptions\ndef calculate_age(birth_year):\n    if birth_year < 1900 or birth_year > 2023:\n        raise ValueError(\"Birth year must be between 1900 and 2023\")\n    return 2023 - birth_year\n\n# Using the function with exception handling\ntry:\n    age = calculate_age(1850)\n    print(f\"Age: {age}\")\nexcept ValueError as e:\n    print(f\"Invalid input: {e}\")\n\ntry:\n    age = calculate_age(1990)\n    print(f\"Age: {age}\")\nexcept ValueError as e:\n    print(f\"Invalid input: {e}\")\n\nprint(\"\\n--- Custom Exceptions ---\")\n\n# Creating custom exception classes\nclass InsufficientFundsError(Exception):\n    \"\"\"Exception raised when there are insufficient funds\"\"\"\n    def __init__(self, balance, amount):\n        self.balance = balance\n        self.amount = amount\n        self.message = f\"Insufficient funds: ${balance} available, but ${amount} requested\"\n        super().__init__(self.message)\n\nclass BankAccount:\n    def __init__(self, balance=0):\n        self.balance = balance\n    \n    def withdraw(self, amount):\n        if amount > self.balance:\n            raise InsufficientFundsError(self.balance, amount)\n        self.balance -= amount\n        return self.balance\n\n# Using custom exceptions\naccount = BankAccount(100)\n\ntry:\n    account.withdraw(50)\n    print(\"Withdrawal successful!\")\n    print(f\"New balance: ${account.balance}\")\n    \n    account.withdraw(100)  # This should raise an exception\n    print(\"Withdrawal successful!\")\nexcept InsufficientFundsError as e:\n    print(f\"Withdrawal failed: {e}\")\n\nprint(\"\\n--- File Operations with Exception Handling ---\")\n\n# Robust file handling with exceptions\ndef read_file_safely(filename):\n    \"\"\"Safely read a file with comprehensive error handling\"\"\"\n    try:\n        with open(filename, 'r') as file:\n            content = file.read()\n        return content\n    except FileNotFoundError:\n        return f\"Error: File '{filename}' not found.\"\n    except PermissionError:\n        return f\"Error: Permission denied to read '{filename}'.\"\n    except IOError as e:\n        return f\"Error reading file: {e}\"\n    except Exception as e:\n        return f\"Unexpected error: {e}\"\n\n# Test the safe file reader\nprint(\"Testing safe file reader:\")\nprint(read_file_safely(\"example.txt\"))  # Should work\nprint(read_file_safely(\"nonexistent.txt\"))  # Should show error\n\nprint(\"\\n--- Assertions for Debugging ---\")\n\n# Using assertions for debugging\ndef calculate_discount(price, discount_percent):\n    \"\"\"Calculate discounted price with validation\"\"\"\n    assert price >= 0, \"Price cannot be negative\"\n    assert 0 <= discount_percent <= 100, \"Discount must be between 0 and 100\"\n    \n    discounted_price = price * (1 - discount_percent / 100)\n    return discounted_price\n\n# Test assertions\ntry:\n    result = calculate_discount(100, 20)\n    print(f\"Discounted price: ${result:.2f}\")\n    \n    # This should trigger assertion error\n    result = calculate_discount(-50, 20)\n    print(f\"Discounted price: ${result:.2f}\")\nexcept AssertionError as e:\n    print(f\"Assertion error: {e}\")",
+              "real_world_example": "Exception handling is critical in all professional software. Web applications use it to handle invalid user input and database connection issues. Mobile apps use it to manage network failures and storage problems. Financial systems use it for transaction validation and security checks. Game engines use it to recover from rendering errors and asset loading failures. Even operating systems use exception handling to manage hardware errors and resource conflicts. Proper exception handling separates amateur code from professional, robust applications.",
+              "interactive_tasks": [
+                "Write a function that safely converts user input to numbers with error handling",
+                "Create a file reader that handles all possible file-related exceptions",
+                "Implement a calculator with comprehensive error handling for invalid operations"
+              ],
+              "quiz": [
+                {
+                  "question": "What is the purpose of try-except blocks?",
+                  "options": ["To make code faster", "To handle potential errors gracefully", "To skip code execution", "To create infinite loops"],
+                  "answer": "To handle potential errors gracefully",
+                  "reasoning": "Try-except blocks catch and handle exceptions, preventing program crashes."
+                },
+                {
+                  "question": "What does the 'else' clause do in try-except?",
+                  "options": ["Runs if an exception occurs", "Runs if no exception occurs", "Always runs", "Runs before try block"],
+                  "answer": "Runs if no exception occurs",
+                  "reasoning": "The else clause executes only if the try block completes without raising an exception."
+                },
+                {
+                  "question": "When does the 'finally' clause execute?",
+                  "options": ["Only if no exceptions", "Only if exceptions occur", "Always, regardless of exceptions", "Never"],
+                  "answer": "Always, regardless of exceptions",
+                  "reasoning": "The finally clause always executes, making it ideal for cleanup code."
+                },
+                {
+                  "question": "What is the purpose of the 'raise' keyword?",
+                  "options": ["To ignore exceptions", "To create new exceptions", "To handle exceptions", "To skip code"],
+                  "answer": "To create new exceptions",
+                  "reasoning": "The raise keyword is used to throw (raise) exceptions intentionally."
+                },
+                {
+                  "question": "What happens if an exception is not caught?",
+                  "options": ["It is ignored", "Program continues normally", "Program crashes with traceback", "It is logged automatically"],
+                  "answer": "Program crashes with traceback",
+                  "reasoning": "Uncaught exceptions cause the program to terminate and display a traceback."
+                },
+                {
+                  "question": "How do you create a custom exception?",
+                  "options": ["By creating a class that inherits from Exception", "Using the custom_exception keyword", "By writing any function", "You can't create custom exceptions"],
+                  "answer": "By creating a class that inherits from Exception",
+                  "reasoning": "Custom exceptions are created by defining new classes that inherit from Exception or its subclasses."
+                },
+                {
+                  "question": "What is the difference between Exception and BaseException?",
+                  "options": ["No difference", "Exception is for built-in errors, BaseException for custom", "BaseException is base class, Exception is for most user exceptions", "Exception is base class, BaseException for system errors"],
+                  "answer": "BaseException is base class, Exception is for most user exceptions",
+                  "reasoning": "BaseException is the base class for all exceptions, while Exception is the base class for most user-facing exceptions."
+                }
+              ]
+            },
+            {
+              "title": "Day 21 – Modules and Packages",
+              "definition": "Modules are Python files containing code that can be imported and used in other programs, while packages are collections of modules organized in directories, enabling code organization and reuse.",
+              "explanation": "Think of modules like chapters in a book and packages like the entire book series. Modules help you organize related code into separate files, making your programs more manageable. Packages take this further by grouping related modules together. This is like having a 'utilities' folder for helper functions, a 'data' folder for data processing code, and a 'ui' folder for user interface code. Using modules and packages helps you avoid giant, hard-to-maintain files and promotes code reuse across multiple projects. It's the Python way of staying organized!",
+              "code_example": "# Using built-in modules\nprint(\"--- Using Built-in Modules ---\")\n\n# Import entire module\nimport math\n\nprint(\"Math module functions:\")\nprint(f\"Square root of 16: {math.sqrt(16)}\")\nprint(f\"Value of pi: {math.pi}\")\nprint(f\"Cosine of 60 degrees: {math.cos(math.radians(60)):.2f}\")\n\n# Import specific functions\nfrom random import randint, choice\n\nprint(\"\\nRandom module examples:\")\nprint(f\"Random number between 1-10: {randint(1, 10)}\")\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(f\"Random fruit: {choice(fruits)}\")\n\n# Import with alias\nimport datetime as dt\n\nprint(\"\\nDatetime examples:\")\ncurrent_time = dt.datetime.now()\nprint(f\"Current date and time: {current_time}\")\nprint(f\"Formatted date: {current_time.strftime('%Y-%m-%d')}\")\n\nprint(\"\\n--- Creating and Using Custom Modules ---\")\n\n# Let's create a simple custom module in code\n# In practice, this would be in a separate file\n\n# This simulates a file called 'calculator.py'\nclass Calculator:\n    \"\"\"A simple calculator module\"\"\"\n    \n    @staticmethod\n    def add(a, b):\n        return a + b\n    \n    @staticmethod\n    def subtract(a, b):\n        return a - b\n    \n    @staticmethod\n    def multiply(a, b):\n        return a * b\n    \n    @staticmethod\n    def divide(a, b):\n        if b == 0:\n            raise ValueError(\"Cannot divide by zero\")\n        return a / b\n\n# This simulates a file called 'greetings.py'\ndef hello(name):\n    return f\"Hello, {name}!\"\n\ndef goodbye(name):\n    return f\"Goodbye, {name}!\"\n\n# Using our \"modules\"\nprint(\"Using custom calculator module:\")\ncalc = Calculator()\nprint(f\"5 + 3 = {calc.add(5, 3)}\")\nprint(f\"10 - 4 = {calc.subtract(10, 4)}\")\nprint(f\"6 × 7 = {calc.multiply(6, 7)}\")\nprint(f\"15 ÷ 3 = {calc.divide(15, 3)}\")\n\nprint(\"\\nUsing greetings module:\")\nprint(hello(\"Alice\"))\nprint(goodbye(\"Bob\"))\n\nprint(\"\\n--- Working with Packages ---\")\n\n# Demonstrating package structure\n# In practice, this would be actual files and directories:\n# my_package/\n#   __init__.py\n#   module1.py\n#   module2.py\n#   subpackage/\n#     __init__.py\n#     module3.py\n\nprint(\"Package structure example:\")\nprint(\"\"\"\nmy_package/\n    __init__.py\n    utils.py\n    data_processor.py\n    subpackage/\n        __init__.py\n        helpers.py\n\"\"\")\n\nprint(\"\\n--- Special Module Attributes ---\")\n\n# Exploring module properties\nprint(\"Math module attributes:\")\nprint(f\"Module name: {math.__name__}\")\nprint(f\"File location: {math.__file__}\")\n\n# Listing available functions in a module\nprint(\"\\nAvailable functions in math module:\")\nmath_functions = [func for func in dir(math) if not func.startswith('_')]\nprint(math_functions[:10])  # Show first 10\n\nprint(\"\\n--- Standard Library Modules ---\")\n\n# os module for operating system interactions\nimport os\n\nprint(\"OS module examples:\")\nprint(f\"Current working directory: {os.getcwd()}\")\nprint(f\"OS name: {os.name}\")\n\n# sys module for system-specific parameters\nimport sys\n\nprint(\"\\nSYS module examples:\")\nprint(f\"Python version: {sys.version}\")\nprint(f\"Platform: {sys.platform}\")\n\n# collections module for specialized container datatypes\nfrom collections import Counter, defaultdict\n\nprint(\"\\nCollections module examples:\")\nwords = [\"apple\", \"banana\", \"apple\", \"cherry\", \"banana\", \"apple\"]\nword_count = Counter(words)\nprint(f\"Word counts: {word_count}\")\n\n# Using defaultdict\ndefault_dict = defaultdict(int)\nfor word in words:\n    default_dict[word] += 1\nprint(f\"DefaultDict: {dict(default_dict)}\")\n\nprint(\"\\n--- Import Best Practices ---\")\n\n# Good import practices\nprint(\"Import best practices:\")\nprint(\"1. Import at the top of the file\")\nprint(\"2. Group imports: standard library, third-party, local\")\nprint(\"3. Use specific imports when possible\")\nprint(\"4. Use aliases for long module names\")\n\n# Example of organized imports\nprint(\"\\nExample of organized imports:\")\nprint(\"\"\"\n# Standard library imports\nimport os\nimport sys\nfrom datetime import datetime\n\n# Third-party imports\nimport requests\nimport numpy as np\n\n# Local application imports\nfrom my_module import my_function\nfrom my_package.utils import helper_function\n\"\"\")\n\nprint(\"\\n--- Checking Module Availability ---\")\n\n# Safely importing modules that might not be available\ntry:\n    import numpy as np\n    print(\"NumPy is available!\")\n    # Use numpy here\nexcept ImportError:\n    print(\"NumPy is not installed. Using alternative approach.\")\n    # Fallback code here\n\ntry:\n    import pandas as pd\n    print(\"Pandas is available!\")\nexcept ImportError:\n    print(\"Pandas is not installed.\")",
+              "real_world_example": "Modules and packages are fundamental to Python development. Large frameworks like Django (web development) and Pandas (data analysis) are organized as packages. Data scientists use modules like NumPy and Matplotlib for scientific computing. Web developers use requests for HTTP calls and BeautifulSoup for web scraping. Even Python's standard library contains hundreds of modules for everything from file handling (os, sys) to data processing (csv, json) to internet protocols (urllib, smtplib). This modular approach is why Python has such a rich ecosystem.",
+              "interactive_tasks": [
+                "Create a custom math_utils module with functions for area calculations",
+                "Write a program that uses multiple standard library modules to solve a problem",
+                "Create a simple package with multiple modules and import between them"
+              ],
+              "quiz": [
+                {
+                  "question": "What is a Python module?",
+                  "options": ["A single function", "A Python file containing code", "A data type", "A programming error"],
+                  "answer": "A Python file containing code",
+                  "reasoning": "A module is a Python file that contains functions, classes, and variables that can be imported."
+                },
+                {
+                  "question": "What is the purpose of __init__.py in a package?",
+                  "options": ["It's required to make a directory a Python package", "It contains package documentation", "It makes the package faster", "It's optional and has no purpose"],
+                  "answer": "It's required to make a directory a Python package",
+                  "reasoning": "The __init__.py file (can be empty) tells Python that the directory should be treated as a package."
+                },
+                {
+                  "question": "How do you import a specific function from a module?",
+                  "options": ["import function from module", "from module import function", "module.import(function)", "import module.function"],
+                  "answer": "from module import function",
+                  "reasoning": "Use 'from module import function' to import specific functions directly."
+                },
+                {
+                  "question": "What does 'import numpy as np' do?",
+                  "options": ["Imports a function called np", "Imports numpy with alias np", "Imports only the np part of numpy", "Creates a new module called np"],
+                  "answer": "Imports numpy with alias np",
+                  "reasoning": "The 'as' keyword creates an alias, allowing you to use 'np' instead of 'numpy'."
+                },
+                {
+                  "question": "Which of these is NOT a standard library module?",
+                  "options": ["math", "random", "requests", "datetime"],
+                  "answer": "requests",
+                  "reasoning": "Requests is a third-party module for HTTP requests, not part of the standard library."
+                },
+                {
+                  "question": "What is the main advantage of using modules?",
+                  "options": ["They make code run faster", "They help organize and reuse code", "They reduce memory usage", "They automatically fix bugs"],
+                  "answer": "They help organize and reuse code",
+                  "reasoning": "Modules allow code organization into logical units and promote code reuse across projects."
+                },
+                {
+                  "question": "How can you see all available names in a module?",
+                  "options": ["module.list()", "dir(module)", "module.names()", "list(module)"],
+                  "answer": "dir(module)",
+                  "reasoning": "The dir() function returns a list of all names defined in a module."
+                }
+              ]
+            },
+            {
+              "title": "Day 22 – Final Project: Student Management System",
+              "definition": "A comprehensive Student Management System that combines all Python concepts learned throughout the course - OOP, file handling, exception handling, and data structures - into a complete, functional application.",
+              "explanation": "This is your graduation project! We're building a complete Student Management System that demonstrates everything you've learned. Think of it like assembling a complex machine where each part (classes, files, exceptions) has to work together perfectly. We'll create a system that can add students, enroll them in courses, record grades, calculate GPAs, and persist all this data to files. This project will show you how all the individual concepts come together to create a real, usable application. Don't worry - we'll build it step by step, and you'll be amazed at what you can create!",
+              "code_example": "import json\nimport os\nfrom datetime import datetime\n\nclass Student:\n    \"\"\"Represents a student in the system\"\"\"\n    \n    def __init__(self, student_id, name, email):\n        self.student_id = student_id\n        self.name = name\n        self.email = email\n        self.courses = {}  # {course_name: grade}\n        self.enrollment_date = datetime.now().strftime(\"%Y-%m-%d %H:%M:%S\")\n    \n    def enroll_in_course(self, course_name):\n        \"\"\"Enroll student in a course\"\"\"\n        if course_name not in self.courses:\n            self.courses[course_name] = None  # No grade yet\n            return True\n        return False\n    \n    def assign_grade(self, course_name, grade):\n        \"\"\"Assign a grade to a course\"\"\"\n        if course_name in self.courses:\n            self.courses[course_name] = grade\n            return True\n        return False\n    \n    def calculate_gpa(self):\n        \"\"\"Calculate student's GPA\"\"\"\n        if not self.courses:\n            return 0.0\n        \n        grade_points = {\n            'A': 4.0, 'B': 3.0, 'C': 2.0, 'D': 1.0, 'F': 0.0\n        }\n        \n        total_points = 0\n        graded_courses = 0\n        \n        for grade in self.courses.values():\n            if grade is not None:  # Only count courses with grades\n                total_points += grade_points.get(grade, 0)\n                graded_courses += 1\n        \n        return total_points / graded_courses if graded_courses > 0 else 0.0\n    \n    def to_dict(self):\n        \"\"\"Convert student to dictionary for JSON serialization\"\"\"\n        return {\n            'student_id': self.student_id,\n            'name': self.name,\n            'email': self.email,\n            'courses': self.courses,\n            'enrollment_date': self.enrollment_date\n        }\n    \n    @classmethod\n    def from_dict(cls, data):\n        \"\"\"Create student from dictionary\"\"\"\n        student = cls(data['student_id'], data['name'], data['email'])\n        student.courses = data['courses']\n        student.enrollment_date = data['enrollment_date']\n        return student\n    \n    def __str__(self):\n        return f\"Student {self.student_id}: {self.name} ({self.email})\"\n\n\nclass StudentManagementSystem:\n    \"\"\"Main system class for managing students\"\"\"\n    \n    def __init__(self, data_file=\"students_data.json\"):\n        self.data_file = data_file\n        self.students = {}\n        self.load_data()\n    \n    def load_data(self):\n        \"\"\"Load student data from file\"\"\"\n        try:\n            if os.path.exists(self.data_file):\n                with open(self.data_file, 'r') as file:\n                    data = json.load(file)\n                    for student_data in data.values():\n                        student = Student.from_dict(student_data)\n                        self.students[student.student_id] = student\n                print(f\"Loaded {len(self.students)} students from file.\")\n            else:\n                print(\"No existing data file found. Starting fresh.\")\n        except Exception as e:\n            print(f\"Error loading data: {e}\")\n    \n    def save_data(self):\n        \"\"\"Save student data to file\"\"\"\n        try:\n            data = {sid: student.to_dict() for sid, student in self.students.items()}\n            with open(self.data_file, 'w') as file:\n                json.dump(data, file, indent=2)\n            print(\"Data saved successfully.\")\n        except Exception as e:\n            print(f\"Error saving data: {e}\")\n    \n    def add_student(self, student_id, name, email):\n        \"\"\"Add a new student to the system\"\"\"\n        if student_id in self.students:\n            print(\"Error: Student ID already exists!\")\n            return False\n        \n        self.students[student_id] = Student(student_id, name, email)\n        print(f\"Student {name} added successfully!\")\n        return True\n    \n    def remove_student(self, student_id):\n        \"\"\"Remove a student from the system\"\"\"\n        if student_id in self.students:\n            student_name = self.students[student_id].name\n            del self.students[student_id]\n            print(f\"Student {student_name} removed successfully!\")\n            return True\n        else:\n            print(\"Error: Student not found!\")\n            return False\n    \n    def enroll_student(self, student_id, course_name):\n        \"\"\"Enroll a student in a course\"\"\"\n        if student_id in self.students:\n            if self.students[student_id].enroll_in_course(course_name):\n                print(f\"Student enrolled in {course_name} successfully!\")\n                return True\n            else:\n                print(\"Error: Student already enrolled in this course!\")\n                return False\n        else:\n            print(\"Error: Student not found!\")\n            return False\n    \n    def assign_grade(self, student_id, course_name, grade):\n        \"\"\"Assign a grade to a student for a course\"\"\"\n        if student_id in self.students:\n            if self.students[student_id].assign_grade(course_name, grade):\n                print(f\"Grade {grade} assigned for {course_name} successfully!\")\n                return True\n            else:\n                print(\"Error: Student not enrolled in this course!\")\n                return False\n        else:\n            print(\"Error: Student not found!\")\n            return False\n    \n    def display_student(self, student_id):\n        \"\"\"Display detailed information about a student\"\"\"\n        if student_id in self.students:\n            student = self.students[student_id]\n            print(\"\\n\" + \"=\"*50)\n            print(f\"Student ID: {student.student_id}\")\n            print(f\"Name: {student.name}\")\n            print(f\"Email: {student.email}\")\n            print(f\"Enrollment Date: {student.enrollment_date}\")\n            print(f\"GPA: {student.calculate_gpa():.2f}\")\n            print(\"\\nCourses:\")\n            for course, grade in student.courses.items():\n                grade_display = grade if grade else \"No grade\"\n                print(f\"  - {course}: {grade_display}\")\n            print(\"=\"*50)\n        else:\n            print(\"Error: Student not found!\")\n    \n    def display_all_students(self):\n        \"\"\"Display all students in the system\"\"\"\n        if not self.students:\n            print(\"No students in the system.\")\n            return\n        \n        print(\"\\n\" + \"=\"*50)\n        print(\"ALL STUDENTS\")\n        print(\"=\"*50)\n        \n        for student in self.students.values():\n            print(f\"{student.student_id}: {student.name} | GPA: {student.calculate_gpa():.2f} | Courses: {len(student.courses)}\")\n    \n    def get_student_statistics(self):\n        \"\"\"Display system statistics\"\"\"\n        total_students = len(self.students)\n        \n        if total_students == 0:\n            print(\"No students in the system.\")\n            return\n        \n        # Calculate average GPA\n        total_gpa = sum(student.calculate_gpa() for student in self.students.values())\n        average_gpa = total_gpa / total_students\n        \n        # Count courses per student\n        total_courses = sum(len(student.courses) for student in self.students.values())\n        average_courses = total_courses / total_students\n        \n        print(\"\\n\" + \"=\"*50)\n        print(\"SYSTEM STATISTICS\")\n        print(\"=\"*50)\n        print(f\"Total Students: {total_students}\")\n        print(f\"Average GPA: {average_gpa:.2f}\")\n        print(f\"Total Courses: {total_courses}\")\n        print(f\"Average Courses per Student: {average_courses:.1f}\")\n\n\ndef main():\n    \"\"\"Main program interface\"\"\"\n    system = StudentManagementSystem()\n    \n    while True:\n        print(\"\\n\" + \"=\"*50)\n        print(\"STUDENT MANAGEMENT SYSTEM\")\n        print(\"=\"*50)\n        print(\"1. Add Student\")\n        print(\"2. Remove Student\")\n        print(\"3. Enroll in Course\")\n        print(\"4. Assign Grade\")\n        print(\"5. View Student Details\")\n        print(\"6. View All Students\")\n        print(\"7. View Statistics\")\n        print(\"8. Save and Exit\")\n        print(\"=\"*50)\n        \n        choice = input(\"Enter your choice (1-8): \").strip()\n        \n        try:\n            if choice == \"1\":\n                student_id = input(\"Enter Student ID: \").strip()\n                name = input(\"Enter Student Name: \").strip()\n                email = input(\"Enter Student Email: \").strip()\n                system.add_student(student_id, name, email)\n            \n            elif choice == \"2\":\n                student_id = input(\"Enter Student ID to remove: \").strip()\n                system.remove_student(student_id)\n            \n            elif choice == \"3\":\n                student_id = input(\"Enter Student ID: \").strip()\n                course_name = input(\"Enter Course Name: \").strip()\n                system.enroll_student(student_id, course_name)\n            \n            elif choice == \"4\":\n                student_id = input(\"Enter Student ID: \").strip()\n                course_name = input(\"Enter Course Name: \").strip()\n                grade = input(\"Enter Grade (A/B/C/D/F): \").strip().upper()\n                system.assign_grade(student_id, course_name, grade)\n            \n            elif choice == \"5\":\n                student_id = input(\"Enter Student ID: \").strip()\n                system.display_student(student_id)\n            \n            elif choice == \"6\":\n                system.display_all_students()\n            \n            elif choice == \"7\":\n                system.get_student_statistics()\n            \n            elif choice == \"8\":\n                system.save_data()\n                print(\"Thank you for using Student Management System!\")\n                break\n            \n            else:\n                print(\"Invalid choice! Please enter a number between 1-8.\")\n        \n        except Exception as e:\n            print(f\"An error occurred: {e}\")\n\n\n# Run the program\nif __name__ == \"__main__\":\n    main()",
+              "real_world_example": "This Student Management System demonstrates patterns used in real-world applications. Educational institutions use similar systems for student records. The data persistence mechanism is similar to how applications save user preferences. The menu-driven interface is common in business applications. The statistics feature mirrors analytics in professional systems. The error handling and input validation are essential in all production software. This project showcases how object-oriented design, file I/O, and user interfaces come together in practical applications.",
+              "interactive_tasks": [
+                "Add a feature to search students by name or email",
+                "Implement course management with course descriptions and credits",
+                "Add data validation for email format and grade inputs",
+                "Create a report generation feature that exports student data to CSV"
+              ],
+              "quiz": [
+                {
+                  "question": "What design pattern is used for the StudentManagementSystem class?",
+                  "options": ["Singleton", "Factory", "Facade", "Observer"],
+                  "answer": "Facade",
+                  "reasoning": "The StudentManagementSystem acts as a facade, providing a simple interface to complex student management operations."
+                },
+                {
+                  "question": "Why do we use JSON for data storage?",
+                  "options": ["It's the fastest format", "It's human-readable and widely supported", "It uses less storage", "It's the only format Python supports"],
+                  "answer": "It's human-readable and widely supported",
+                  "reasoning": "JSON is human-readable, easy to debug, and has excellent support across programming languages."
+                },
+                {
+                  "question": "What is the purpose of the to_dict() and from_dict() methods?",
+                  "options": ["To make objects faster", "To convert between objects and JSON-serializable data", "To delete object data", "To compare objects"],
+                  "answer": "To convert between objects and JSON-serializable data",
+                  "reasoning": "These methods handle the conversion between Python objects and JSON data for storage and retrieval."
+                },
+                {
+                  "question": "How does the system handle duplicate student IDs?",
+                  "options": ["It allows duplicates", "It automatically generates new IDs", "It prevents addition with error message", "It merges the students"],
+                  "answer": "It prevents addition with error message",
+                  "reasoning": "The system checks if student ID already exists and shows an error message if duplicates are detected."
+                },
+                {
+                  "question": "What happens to data when the program closes?",
+                  "options": ["It's lost forever", "It's automatically saved to file", "It must be manually saved before closing", "It's saved in memory only"],
+                  "answer": "It must be manually saved before closing",
+                  "reasoning": "Users must choose 'Save and Exit' to persist changes; otherwise, data since last save is lost."
+                },
+                {
+                  "question": "How is the GPA calculated?",
+                  "options": ["Simple average of all grades", "Using grade points and only counting graded courses", "Based on course difficulty", "Random calculation"],
+                  "answer": "Using grade points and only counting graded courses",
+                  "reasoning": "GPA uses standard grade points (A=4.0, B=3.0, etc.) and only includes courses with assigned grades."
+                },
+                {
+                  "question": "What exception handling strategy is used?",
+                  "options": ["No exception handling", "Only for file operations", "Comprehensive try-except in main loop", "Exceptions are ignored"],
+                  "answer": "Comprehensive try-except in main loop",
+                  "reasoning": "The main loop has a broad try-except to catch any unexpected errors and prevent crashes."
+                }
+              ]
+            }
+          ]
+        }

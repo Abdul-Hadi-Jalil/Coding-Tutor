@@ -1,0 +1,3501 @@
+{
+  "courses": [
+    {
+      "id": "python_basics",
+      "title": "Python for Beginners",
+      "language": "Python",
+      "description": "A 30-day beginner-friendly Python course that teaches coding fundamentals through hands-on practice.",
+      "days": [
+        {
+          "day": 1,
+          "title": "Introduction to Python",
+          "content": "Welcome to Python! Python is a popular programming language known for its simple, readable syntax. It's used for web development, data analysis, artificial intelligence, and more. Today, we'll write our first Python program. In Python, we use the print() function to display text on the screen. Anything inside the parentheses will be printed. For example, print('Hello') would display Hello.",
+          "interactive_task": "Write a Python program that prints your name.",
+          "quiz": [
+            {
+              "question": "Who created Python?",
+              "options": ["Guido van Rossum", "James Gosling", "Dennis Ritchie", "Bjarne Stroustrup"],
+              "answer": "Guido van Rossum"
+            },
+            {
+              "question": "What function is used to display text in Python?",
+              "options": ["display()", "show()", "print()", "echo()"],
+              "answer": "print()"
+            },
+            {
+              "question": "Which of these is a correct Python print statement?",
+              "options": ["print 'Hello'", "print(Hello)", "print('Hello')", "echo('Hello')"],
+              "answer": "print('Hello')"
+            },
+            {
+              "question": "Python is known for being:",
+              "options": ["Fast to compile", "Easy to read", "Only for web development", "A hardware language"],
+              "answer": "Easy to read"
+            },
+            {
+              "question": "What symbol is used for comments in Python?",
+              "options": ["//", "/*", "#", "--"],
+              "answer": "#"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Variables and Data Types",
+          "content": "Variables are like containers that store data. In Python, you create a variable by giving it a name and assigning a value with the = sign. Python has different data types: strings (text), integers (whole numbers), floats (decimal numbers), and booleans (True/False). For example: name = 'Alice' creates a string variable, age = 25 creates an integer variable.",
+          "interactive_task": "Create two variables: one for your favorite food (string) and one for your age (integer), then print them.",
+          "quiz": [
+            {
+              "question": "Which symbol is used to assign values to variables in Python?",
+              "options": ["==", "=", ":=", "+="],
+              "answer": "="
+            },
+            {
+              "question": "What data type would 3.14 be classified as?",
+              "options": ["Integer", "String", "Float", "Boolean"],
+              "answer": "Float"
+            },
+            {
+              "question": "Which of these is a valid variable name in Python?",
+              "options": ["1st_var", "my-var", "_myvar", "var name"],
+              "answer": "_myvar"
+            },
+            {
+              "question": "What data type represents True or False values?",
+              "options": ["String", "Integer", "Boolean", "Float"],
+              "answer": "Boolean"
+            },
+            {
+              "question": "Which of these creates a string variable?",
+              "options": ["name = John", "name = 'John'", "name = 25", "name = True"],
+              "answer": "name = 'John'"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Basic Operators",
+          "content": "Operators are symbols that perform operations on variables and values. Python has arithmetic operators (+, -, *, /, %) for math operations, and comparison operators (==, !=, >, <, >=, <=) for comparing values. For example: 5 + 3 equals 8, and 10 > 5 evaluates to True.",
+          "interactive_task": "Create two number variables and use arithmetic operators to calculate their sum, difference, and product.",
+          "quiz": [
+            {
+              "question": "What does the % operator do in Python?",
+              "options": ["Percentage", "Division", "Multiplication", "Modulus (remainder)"],
+              "answer": "Modulus (remainder)"
+            },
+            {
+              "question": "Which operator checks if two values are equal?",
+              "options": ["=", "==", "!=", "==="],
+              "answer": "=="
+            },
+            {
+              "question": "What is the result of 10 / 3 in Python?",
+              "options": ["3", "3.333...", "1", "Error"],
+              "answer": "3.333..."
+            },
+            {
+              "question": "Which operator would you use to check if a number is greater than 5?",
+              "options": ["==", ">", "<", ">="],
+              "answer": ">"
+            },
+            {
+              "question": "What does the != operator mean?",
+              "options": ["Equal to", "Not equal to", "Approximately equal", "Less than"],
+              "answer": "Not equal to"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "String Operations",
+          "content": "Strings are sequences of characters. You can perform various operations on strings like concatenation (joining strings with +), repetition (with *), and accessing individual characters. Python also has many built-in string methods like .upper(), .lower(), .strip() to modify strings. For example: 'hello' + 'world' becomes 'helloworld', and 'hello'.upper() becomes 'HELLO'.",
+          "interactive_task": "Create two string variables and concatenate them. Then convert the result to uppercase.",
+          "quiz": [
+            {
+              "question": "How do you concatenate two strings in Python?",
+              "options": ["&", "+", "concat", "join"],
+              "answer": "+"
+            },
+            {
+              "question": "What does 'hello'.upper() return?",
+              "options": ["HELLO", "hello", "Hello", "hELLO"],
+              "answer": "HELLO"
+            },
+            {
+              "question": "Which method removes whitespace from the beginning and end of a string?",
+              "options": [".clean()", ".remove()", ".strip()", ".trim()"],
+              "answer": ".strip()"
+            },
+            {
+              "question": "What is the result of 'hi' * 3?",
+              "options": ["hihihi", "hi3", "Error", "hi hi hi"],
+              "answer": "hihihi"
+            },
+            {
+              "question": "How do you access the first character of a string variable 'name'?",
+              "options": ["name[0]", "name[1]", "name.first", "name(0)"],
+              "answer": "name[0]"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Lists and Basic List Operations",
+          "content": "Lists are collections of items in Python. You create a list by placing items inside square brackets [], separated by commas. Lists can contain different data types. You can access list items by their index (position), with the first item at index 0. For example: fruits = ['apple', 'banana', 'cherry'] creates a list, and fruits[0] returns 'apple'.",
+          "interactive_task": "Create a list of your three favorite hobbies and print the second hobby in the list.",
+          "quiz": [
+            {
+              "question": "How do you create an empty list in Python?",
+              "options": ["[]", "{}", "()", "list"],
+              "answer": "[]"
+            },
+            {
+              "question": "What index is the first item in a list?",
+              "options": ["0", "1", "first", "start"],
+              "answer": "0"
+            },
+            {
+              "question": "Which method adds an item to the end of a list?",
+              "options": [".add()", ".append()", ".insert()", ".push()"],
+              "answer": ".append()"
+            },
+            {
+              "question": "How do you get the number of items in a list?",
+              "options": [".count()", ".size()", ".length()", "len()"],
+              "answer": "len()"
+            },
+            {
+              "question": "What does fruits[1] return if fruits = ['apple', 'banana', 'cherry']?",
+              "options": ["apple", "banana", "cherry", "Error"],
+              "answer": "banana"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "If Statements",
+          "content": "If statements allow your program to make decisions. They execute code only when a condition is True. The basic structure is: if condition: followed by indented code. You can also add elif (else if) for additional conditions, and else for when all conditions are False. For example: if age >= 18: print('Adult') else: print('Minor')",
+          "interactive_task": "Write a program that checks if a number is positive, negative, or zero and prints the result.",
+          "quiz": [
+            {
+              "question": "What keyword starts a conditional statement in Python?",
+              "options": ["when", "if", "check", "condition"],
+              "answer": "if"
+            },
+            {
+              "question": "How do you add an alternative condition to an if statement?",
+              "options": ["elseif", "elif", "else if", "or"],
+              "answer": "elif"
+            },
+            {
+              "question": "What is used to group code blocks in Python?",
+              "options": ["Braces {}", "Parentheses ()", "Indentation", "Brackets []"],
+              "answer": "Indentation"
+            },
+            {
+              "question": "Which operator checks if a number is greater than or equal to 10?",
+              "options": [">10", ">=10", "=>10", ">==10"],
+              "answer": ">=10"
+            },
+            {
+              "question": "What will be printed if x = 5 and we run: if x > 3: print('Big') else: print('Small')?",
+              "options": ["Big", "Small", "Nothing", "Error"],
+              "answer": "Big"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "For Loops",
+          "content": "For loops let you repeat code a specific number of times or iterate over items in a collection. The basic syntax is: for item in collection: followed by indented code. For example: for fruit in fruits: print(fruit) would print each fruit in the fruits list. You can also use range() to generate a sequence of numbers to loop through.",
+          "interactive_task": "Use a for loop to print each number from 1 to 5.",
+          "quiz": [
+            {
+              "question": "What keyword is used to create a for loop in Python?",
+              "options": ["for", "loop", "while", "repeat"],
+              "answer": "for"
+            },
+            {
+              "question": "What does range(5) generate?",
+              "options": ["Numbers 1 to 5", "Numbers 0 to 4", "Numbers 1 to 4", "Numbers 0 to 5"],
+              "answer": "Numbers 0 to 4"
+            },
+            {
+              "question": "How do you iterate through each character in a string?",
+              "options": ["for char in string:", "for each char in string:", "loop string:", "iterate string:"],
+              "answer": "for char in string:"
+            },
+            {
+              "question": "What will this code print: for i in range(3): print(i)",
+              "options": ["0 1 2", "1 2 3", "3 3 3", "Error"],
+              "answer": "0 1 2"
+            },
+            {
+              "question": "Which function is commonly used with for loops to generate number sequences?",
+              "options": ["sequence()", "numbers()", "range()", "generate()"],
+              "answer": "range()"
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "title": "While Loops",
+          "content": "While loops repeat code as long as a condition remains True. The syntax is: while condition: followed by indented code. Unlike for loops that run a specific number of times, while loops continue until the condition becomes False. Be careful to avoid infinite loops by ensuring the condition eventually becomes False.",
+          "interactive_task": "Use a while loop to print numbers from 1 to 3.",
+          "quiz": [
+            {
+              "question": "What keyword is used to create a while loop?",
+              "options": ["for", "while", "loop", "repeat"],
+              "answer": "while"
+            },
+            {
+              "question": "When does a while loop stop executing?",
+              "options": ["After 100 iterations", "When the condition becomes False", "When it reaches a break statement", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What is an infinite loop?",
+              "options": ["A loop that never ends", "A loop that runs once", "A loop with no condition", "A loop that only runs at night"],
+              "answer": "A loop that never ends"
+            },
+            {
+              "question": "How can you manually exit a loop?",
+              "options": ["exit", "stop", "break", "end"],
+              "answer": "break"
+            },
+            {
+              "question": "What will this code do: while True: print('Hello')",
+              "options": ["Print Hello once", "Print Hello forever", "Cause an error", "Print Hello 100 times"],
+              "answer": "Print Hello forever"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Functions Basics",
+          "content": "Functions are reusable blocks of code that perform specific tasks. You define a function using the def keyword, followed by the function name and parentheses. Functions can take parameters (inputs) and return values. For example: def greet(name): return 'Hello ' + name creates a function that takes a name and returns a greeting.",
+          "interactive_task": "Create a function that takes two numbers as parameters and returns their sum.",
+          "quiz": [
+            {
+              "question": "What keyword is used to define a function in Python?",
+              "options": ["function", "def", "define", "func"],
+              "answer": "def"
+            },
+            {
+              "question": "What are the inputs to a function called?",
+              "options": ["Variables", "Parameters", "Inputs", "Arguments"],
+              "answer": "Parameters"
+            },
+            {
+              "question": "What keyword is used to return a value from a function?",
+              "options": ["return", "output", "send", "give"],
+              "answer": "return"
+            },
+            {
+              "question": "How do you call a function named 'calculate'?",
+              "options": ["call calculate()", "calculate", "calculate()", "run calculate()"],
+              "answer": "calculate()"
+            },
+            {
+              "question": "What happens if a function doesn't have a return statement?",
+              "options": ["It returns None", "It returns 0", "It causes an error", "It returns True"],
+              "answer": "It returns None"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Dictionaries",
+          "content": "Dictionaries store data as key-value pairs. You create a dictionary with curly braces {} and separate keys and values with colons. Each key must be unique, and you can access values using their keys. For example: person = {'name': 'Alice', 'age': 30} creates a dictionary, and person['name'] returns 'Alice'.",
+          "interactive_task": "Create a dictionary to store information about yourself (name, age, city) and print your name from the dictionary.",
+          "quiz": [
+            {
+              "question": "How do you create an empty dictionary?",
+              "options": ["[]", "{}", "()", "dict"],
+              "answer": "{}"
+            },
+            {
+              "question": "How do you access the value associated with key 'age' in a dictionary?",
+              "options": ["dict.age", "dict['age']", "dict{age}", "dict('age')"],
+              "answer": "dict['age']"
+            },
+            {
+              "question": "What happens if you try to access a key that doesn't exist in a dictionary?",
+              "options": ["It returns None", "It returns 0", "It causes a KeyError", "It creates the key"],
+              "answer": "It causes a KeyError"
+            },
+            {
+              "question": "Which method adds a new key-value pair to a dictionary?",
+              "options": [".add()", ".insert()", ".append()", "Assignment like dict[key] = value"],
+              "answer": "Assignment like dict[key] = value"
+            },
+            {
+              "question": "How do you get all the keys from a dictionary?",
+              "options": [".keys()", ".get_keys()", ".all_keys()", ".key_list()"],
+              "answer": ".keys()"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "title": "Tuples and Sets",
+          "content": "Tuples are like lists but immutable (cannot be changed after creation). You create tuples with parentheses (). Sets are unordered collections of unique items. You create sets with curly braces {}. Sets automatically remove duplicates. For example: coordinates = (10, 20) creates a tuple, and colors = {'red', 'blue', 'green'} creates a set.",
+          "interactive_task": "Create a tuple with three of your favorite numbers and a set with three favorite colors.",
+          "quiz": [
+            {
+              "question": "How do you create a tuple with one item?",
+              "options": ["(item)", "(item,)", "[item]", "{item}"],
+              "answer": "(item,)"
+            },
+            {
+              "question": "What is the main difference between tuples and lists?",
+              "options": ["Tuples are faster", "Tuples are immutable", "Tuples can't store numbers", "Tuples use curly braces"],
+              "answer": "Tuples are immutable"
+            },
+            {
+              "question": "What happens if you try to add duplicate items to a set?",
+              "options": ["It causes an error", "The duplicates are ignored", "It becomes a list", "It sorts the items"],
+              "answer": "The duplicates are ignored"
+            },
+            {
+              "question": "Which data structure would you use for coordinates that shouldn't change?",
+              "options": ["List", "Dictionary", "Tuple", "Set"],
+              "answer": "Tuple"
+            },
+            {
+              "question": "How do you add an item to a set?",
+              "options": [".append()", ".add()", ".insert()", ".push()"],
+              "answer": ".add()"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "title": "List Comprehensions",
+          "content": "List comprehensions provide a concise way to create lists. They consist of brackets containing an expression followed by a for clause, and optionally more for or if clauses. For example: squares = [x**2 for x in range(5)] creates [0, 1, 4, 9, 16]. They're more readable and often faster than traditional loops.",
+          "interactive_task": "Use a list comprehension to create a list of even numbers from 0 to 10.",
+          "quiz": [
+            {
+              "question": "What is the basic structure of a list comprehension?",
+              "options": ["[expression for item in iterable]", "(expression for item in iterable)", "{expression for item in iterable}", "<expression for item in iterable>"],
+              "answer": "[expression for item in iterable]"
+            },
+            {
+              "question": "How would you add a condition to only include even numbers?",
+              "options": ["[x for x in range(10) if x % 2 == 0]", "[x for x in range(10) where x % 2 == 0]", "[x for x in range(10) when x % 2 == 0]", "[x for x in range(10) condition x % 2 == 0]"],
+              "answer": "[x for x in range(10) if x % 2 == 0]"
+            },
+            {
+              "question": "What does [x.upper() for x in ['a', 'b', 'c']] create?",
+              "options": ["['A', 'B', 'C']", "['a', 'b', 'c']", "[A, B, C]", "Error"],
+              "answer": "['A', 'B', 'C']"
+            },
+            {
+              "question": "Which is more readable for simple transformations?",
+              "options": ["For loops", "While loops", "List comprehensions", "They are equally readable"],
+              "answer": "List comprehensions"
+            },
+            {
+              "question": "What does [x for x in 'hello'] create?",
+              "options": ["['h', 'e', 'l', 'l', 'o']", "['hello']", "[104, 101, 108, 108, 111]", "Error"],
+              "answer": "['h', 'e', 'l', 'l', 'o']"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "title": "Error Handling with Try-Except",
+          "content": "Errors are inevitable in programming, but we can handle them gracefully using try-except blocks. Code that might cause an error goes in the try block, and error handling code goes in the except block. For example: try: number = int('abc') except ValueError: print('That is not a valid number!')",
+          "interactive_task": "Write a program that tries to convert user input to a number, and handles the ValueError if the input is not a number.",
+          "quiz": [
+            {
+              "question": "What keyword starts the block where you put code that might cause an error?",
+              "options": ["try", "catch", "except", "error"],
+              "answer": "try"
+            },
+            {
+              "question": "What keyword handles specific types of errors?",
+              "options": ["handle", "except", "catch", "error"],
+              "answer": "except"
+            },
+            {
+              "question": "What happens if an error occurs in the try block?",
+              "options": ["Program crashes", "Execution moves to except block", "Error is ignored", "Program restarts"],
+              "answer": "Execution moves to except block"
+            },
+            {
+              "question": "Which exception occurs when converting a non-numeric string to int?",
+              "options": ["TypeError", "ValueError", "ConversionError", "NumberError"],
+              "answer": "ValueError"
+            },
+            {
+              "question": "What can you use to get information about the error?",
+              "options": ["error.info", "except Error as e", "get_error()", "error_message()"],
+              "answer": "except Error as e"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "title": "File Handling - Reading Files",
+          "content": "Python can read from and write to files on your computer. To read a file, you use the open() function with the file path and mode 'r' for reading. Always close files after using them, or use the with statement which automatically closes the file. For example: with open('file.txt', 'r') as file: content = file.read()",
+          "interactive_task": "Create a text file with some content, then write a Python program to read and print its contents.",
+          "quiz": [
+            {
+              "question": "What function is used to open a file?",
+              "options": ["open()", "read()", "file()", "load()"],
+              "answer": "open()"
+            },
+            {
+              "question": "What mode is used for reading files?",
+              "options": ["'r'", "'w'", "'a'", "'read'"],
+              "answer": "'r'"
+            },
+            {
+              "question": "Why is the 'with' statement recommended for file handling?",
+              "options": ["It's faster", "It automatically closes the file", "It handles errors", "It reads larger files"],
+              "answer": "It automatically closes the file"
+            },
+            {
+              "question": "Which method reads the entire file content as a string?",
+              "options": [".read()", ".readline()", ".readall()", ".get()"],
+              "answer": ".read()"
+            },
+            {
+              "question": "What happens if you try to open a file that doesn't exist in read mode?",
+              "options": ["It creates the file", "It returns an empty string", "It raises FileNotFoundError", "It returns None"],
+              "answer": "It raises FileNotFoundError"
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "title": "File Handling - Writing Files",
+          "content": "To write to files, use mode 'w' (write) or 'a' (append). 'w' overwrites the entire file, while 'a' adds to the end of the file. Use the write() method to add content. Remember that write() doesn't automatically add newlines - you need to add \\n if you want them. For example: with open('file.txt', 'w') as file: file.write('Hello World!')",
+          "interactive_task": "Write a program that asks for user's name and writes it to a file.",
+          "quiz": [
+            {
+              "question": "What mode is used for writing to a file (overwriting existing content)?",
+              "options": ["'r'", "'w'", "'a'", "'x'"],
+              "answer": "'w'"
+            },
+            {
+              "question": "What mode is used for appending to a file?",
+              "options": ["'r'", "'w'", "'a'", "'add'"],
+              "answer": "'a'"
+            },
+            {
+              "question": "What method is used to write content to a file?",
+              "options": [".write()", ".append()", ".add()", ".put()"],
+              "answer": ".write()"
+            },
+            {
+              "question": "What happens to existing content when you open a file in 'w' mode?",
+              "options": ["It is preserved", "It is deleted", "It is appended to", "It is copied"],
+              "answer": "It is deleted"
+            },
+            {
+              "question": "How do you write multiple lines to a file?",
+              "options": ["Use multiple write() calls", "Use writelines()", "Both A and B", "You can't write multiple lines"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "title": "Introduction to Classes and Objects",
+          "content": "Classes are blueprints for creating objects. Objects have attributes (data) and methods (functions). You define a class with the class keyword. The __init__ method is a special method that runs when an object is created. For example: class Dog: def __init__(self, name): self.name = name creates a Dog class with a name attribute.",
+          "interactive_task": "Create a simple Person class with name and age attributes, then create an object of that class.",
+          "quiz": [
+            {
+              "question": "What keyword is used to define a class?",
+              "options": ["class", "def", "object", "blueprint"],
+              "answer": "class"
+            },
+            {
+              "question": "What is the special method called that runs when an object is created?",
+              "options": ["__init__", "__start__", "__new__", "__create__"],
+              "answer": "__init__"
+            },
+            {
+              "question": "What does 'self' refer to in a class method?",
+              "options": ["The class itself", "The current object", "The parent class", "It's just a convention"],
+              "answer": "The current object"
+            },
+            {
+              "question": "How do you create an object from a class?",
+              "options": ["ClassName()", "new ClassName()", "ClassName.create()", "object(ClassName)"],
+              "answer": "ClassName()"
+            },
+            {
+              "question": "What are the functions inside a class called?",
+              "options": ["Functions", "Methods", "Actions", "Behaviors"],
+              "answer": "Methods"
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "title": "Class Methods and Attributes",
+          "content": "Classes can have instance attributes (unique to each object) and class attributes (shared by all objects). Methods can be instance methods (work with object data), class methods (work with the class), or static methods (don't need object or class data). Instance methods take self as first parameter, class methods take cls.",
+          "interactive_task": "Add a method to your Person class that introduces the person (e.g., 'Hello, my name is...').",
+          "quiz": [
+            {
+              "question": "What is the first parameter of an instance method?",
+              "options": ["this", "self", "cls", "object"],
+              "answer": "self"
+            },
+            {
+              "question": "What decorator is used for class methods?",
+              "options": ["@classmethod", "@staticmethod", "@instancemethod", "@method"],
+              "answer": "@classmethod"
+            },
+            {
+              "question": "What is the first parameter of a class method?",
+              "options": ["this", "self", "cls", "class"],
+              "answer": "cls"
+            },
+            {
+              "question": "Which type of attribute is shared by all objects of a class?",
+              "options": ["Instance attribute", "Class attribute", "Local attribute", "Global attribute"],
+              "answer": "Class attribute"
+            },
+            {
+              "question": "What decorator is used for static methods?",
+              "options": ["@classmethod", "@staticmethod", "@instancemethod", "@nomethod"],
+              "answer": "@staticmethod"
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "title": "Inheritance",
+          "content": "Inheritance allows a class to inherit attributes and methods from another class. The class being inherited from is called the parent or base class, and the class that inherits is called the child or derived class. This promotes code reuse. For example: class Student(Person): would create a Student class that inherits from Person.",
+          "interactive_task": "Create a Student class that inherits from your Person class and adds a grade attribute.",
+          "quiz": [
+            {
+              "question": "How do you specify that a class inherits from another class?",
+              "options": ["class Child: Parent", "class Child(Parent)", "class Child extends Parent", "class Child inherits Parent"],
+              "answer": "class Child(Parent)"
+            },
+            {
+              "question": "What is the parent class also called?",
+              "options": ["Super class", "Base class", "Both A and B", "Main class"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "How can a child class access parent class methods?",
+              "options": ["Using parent.method()", "Using super().method()", "Using self.parent.method()", "It can't access them"],
+              "answer": "Using super().method()"
+            },
+            {
+              "question": "What is method overriding?",
+              "options": ["Creating a new method", "Changing a parent method in the child class", "Deleting a method", "Calling a method multiple times"],
+              "answer": "Changing a parent method in the child class"
+            },
+            {
+              "question": "What does isinstance() check?",
+              "options": ["If an object is a class", "If an object is an instance of a class", "If a class exists", "If two classes are related"],
+              "answer": "If an object is an instance of a class"
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "title": "Modules and Importing",
+          "content": "Modules are Python files that contain code you can use in other programs. You can import entire modules or specific functions/classes from modules. Python has many built-in modules like math, random, and datetime. For example: import math lets you use math.sqrt(4), and from math import sqrt lets you use sqrt(4) directly.",
+          "interactive_task": "Import the math module and use it to calculate the square root of 16.",
+          "quiz": [
+            {
+              "question": "What keyword is used to import a module?",
+              "options": ["import", "include", "require", "use"],
+              "answer": "import"
+            },
+            {
+              "question": "How do you import only the sqrt function from math?",
+              "options": ["import sqrt from math", "from math import sqrt", "import math.sqrt", "include sqrt from math"],
+              "answer": "from math import sqrt"
+            },
+            {
+              "question": "What module would you use for random numbers?",
+              "options": ["random", "math", "numbers", "generate"],
+              "answer": "random"
+            },
+            {
+              "question": "How do you give a module an alias when importing?",
+              "options": ["import math as m", "import math -> m", "alias math m", "math as m"],
+              "answer": "import math as m"
+            },
+            {
+              "question": "What does from module import * do?",
+              "options": ["Imports all functions/classes", "Imports the module", "Causes an error", "Imports only main functions"],
+              "answer": "Imports all functions/classes"
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "title": "Working with Dates and Times",
+          "content": "The datetime module provides classes for working with dates and times. datetime.date for dates, datetime.time for times, and datetime.datetime for both. You can create date objects, get current date/time, and perform calculations with dates. For example: from datetime import datetime; today = datetime.now()",
+          "interactive_task": "Write a program that prints the current date and time.",
+          "quiz": [
+            {
+              "question": "Which module is used for working with dates and times?",
+              "options": ["time", "date", "datetime", "calendar"],
+              "answer": "datetime"
+            },
+            {
+              "question": "How do you get the current date and time?",
+              "options": ["datetime.current()", "datetime.today()", "datetime.now()", "datetime.today_now()"],
+              "answer": "datetime.now()"
+            },
+            {
+              "question": "What does datetime.date.today() return?",
+              "options": ["Current date", "Current time", "Current date and time", "Today's weekday"],
+              "answer": "Current date"
+            },
+            {
+              "question": "How do you create a specific date?",
+              "options": ["date(2023, 12, 25)", "datetime.date(2023, 12, 25)", "new date(2023, 12, 25)", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What method formats a date as a string?",
+              "options": [".format()", ".strftime()", ".tostring()", ".string()"],
+              "answer": ".strftime()"
+            }
+          ]
+        },
+        {
+          "day": 21,
+          "title": "Working with JSON Data",
+          "content": "JSON (JavaScript Object Notation) is a popular data format. Python's json module can convert between JSON strings and Python objects. json.loads() converts JSON string to Python object, json.dumps() converts Python object to JSON string. This is useful for working with APIs and configuration files.",
+          "interactive_task": "Create a Python dictionary and convert it to a JSON string, then convert it back to a dictionary.",
+          "quiz": [
+            {
+              "question": "Which module is used for working with JSON in Python?",
+              "options": ["json", "xml", "data", "format"],
+              "answer": "json"
+            },
+            {
+              "question": "What does json.loads() do?",
+              "options": ["Converts JSON string to Python object", "Converts Python object to JSON string", "Loads JSON from file", "Saves JSON to file"],
+              "answer": "Converts JSON string to Python object"
+            },
+            {
+              "question": "What does json.dumps() do?",
+              "options": ["Converts JSON string to Python object", "Converts Python object to JSON string", "Loads JSON from file", "Saves JSON to file"],
+              "answer": "Converts Python object to JSON string"
+            },
+            {
+              "question": "Which Python data type is most similar to a JSON object?",
+              "options": ["List", "Tuple", "Dictionary", "Set"],
+              "answer": "Dictionary"
+            },
+            {
+              "question": "How do you read JSON from a file?",
+              "options": ["json.read()", "json.load()", "json.get()", "json.from_file()"],
+              "answer": "json.load()"
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "title": "Virtual Environments",
+          "content": "Virtual environments keep dependencies required by different projects separate. They allow you to work on multiple projects with different package versions without conflicts. Use python -m venv myenv to create a virtual environment, then activate it. Install packages with pip while the environment is active.",
+          "interactive_task": "Create a virtual environment and install the requests library using pip.",
+          "quiz": [
+            {
+              "question": "What is the main purpose of virtual environments?",
+              "options": ["Make Python faster", "Isolate project dependencies", "Create virtual machines", "Improve security"],
+              "answer": "Isolate project dependencies"
+            },
+            {
+              "question": "What command creates a virtual environment?",
+              "options": ["python create venv", "python -m venv", "venv create", "virtualenv new"],
+              "answer": "python -m venv"
+            },
+            {
+              "question": "How do you activate a virtual environment on Windows?",
+              "options": ["./venv/Scripts/activate", "source venv/bin/activate", "activate venv", "venv activate"],
+              "answer": "./venv/Scripts/activate"
+            },
+            {
+              "question": "What tool is used to install packages in Python?",
+              "options": ["npm", "pip", "install", "get"],
+              "answer": "pip"
+            },
+            {
+              "question": "Where are packages installed when a virtual environment is active?",
+              "options": ["Global Python installation", "In the virtual environment folder", "In system folders", "They are not installed"],
+              "answer": "In the virtual environment folder"
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "title": "Basic Algorithms - Linear Search",
+          "content": "Algorithms are step-by-step procedures for solving problems. Linear search is a simple algorithm that checks each element in a list until it finds the target. It's easy to implement but can be slow for large lists. For example: for item in list: if item == target: return True",
+          "interactive_task": "Implement a linear search function that takes a list and a target value, and returns True if the target is in the list.",
+          "quiz": [
+            {
+              "question": "What is the time complexity of linear search?",
+              "options": ["O(1)", "O(log n)", "O(n)", "O(n²)"],
+              "answer": "O(n)"
+            },
+            {
+              "question": "How many comparisons does linear search make in the worst case?",
+              "options": ["1", "n/2", "n", "n²"],
+              "answer": "n"
+            },
+            {
+              "question": "When is linear search a good choice?",
+              "options": ["For large sorted lists", "For small lists or unsorted data", "When you need maximum speed", "For mathematical calculations"],
+              "answer": "For small lists or unsorted data"
+            },
+            {
+              "question": "What does linear search return if the target is not found?",
+              "options": ["True", "False", "0", "-1"],
+              "answer": "False"
+            },
+            {
+              "question": "Can linear search work on unsorted lists?",
+              "options": ["Yes", "No", "Only if numbers", "Only if strings"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "title": "Basic Algorithms - Bubble Sort",
+          "content": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. It's not efficient for large lists but is easy to understand.",
+          "interactive_task": "Implement bubble sort to sort a list of numbers in ascending order.",
+          "quiz": [
+            {
+              "question": "What is the time complexity of bubble sort?",
+              "options": ["O(n)", "O(n log n)", "O(n²)", "O(1)"],
+              "answer": "O(n²)"
+            },
+            {
+              "question": "How does bubble sort work?",
+              "options": ["By dividing the list", "By swapping adjacent elements", "By selecting the minimum element", "By using a pivot"],
+              "answer": "By swapping adjacent elements"
+            },
+            {
+              "question": "When is bubble sort a good choice?",
+              "options": ["For large datasets", "When you need the fastest sort", "For educational purposes or small lists", "For already sorted data"],
+              "answer": "For educational purposes or small lists"
+            },
+            {
+              "question": "What is the best-case time complexity of bubble sort?",
+              "options": ["O(n)", "O(n log n)", "O(n²)", "O(1)"],
+              "answer": "O(n)"
+            },
+            {
+              "question": "How many passes does bubble sort need in the worst case?",
+              "options": ["1", "n", "n-1", "n²"],
+              "answer": "n-1"
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "title": "Working with APIs - Requests",
+          "content": "APIs (Application Programming Interfaces) allow programs to communicate. The requests library is used to make HTTP requests in Python. You can GET data from APIs, POST data to them, and more. For example: response = requests.get('https://api.example.com/data') gets data from an API.",
+          "interactive_task": "Use the requests library to get data from a public API (like jsonplaceholder.typicode.com) and print the response.",
+          "quiz": [
+            {
+              "question": "What library is commonly used for HTTP requests in Python?",
+              "options": ["http", "requests", "urllib", "api"],
+              "answer": "requests"
+            },
+            {
+              "question": "What method is used to get data from an API?",
+              "options": [".get()", ".fetch()", ".request()", ".call()"],
+              "answer": ".get()"
+            },
+            {
+              "question": "What does response.json() do?",
+              "options": ["Converts response to JSON string", "Parses JSON response to Python object", "Sends JSON data", "Checks if response is JSON"],
+              "answer": "Parses JSON response to Python object"
+            },
+            {
+              "question": "What status code indicates success?",
+              "options": ["200", "404", "500", "301"],
+              "answer": "200"
+            },
+            {
+              "question": "How do you check if a request was successful?",
+              "options": ["response.success", "response.ok", "response.status == 200", "Both B and C"],
+              "answer": "Both B and C"
+            }
+          ]
+        },
+        {
+          "day": 26,
+          "title": "List Manipulation Techniques",
+          "content": "Python offers many ways to manipulate lists beyond basic operations. You can slice lists with [start:end:step], use methods like .sort(), .reverse(), .count(), .index(), and combine lists with + or .extend(). List slicing creates a new list with specified elements.",
+          "interactive_task": "Create a list of numbers, then use slicing to get every second element and reverse the list.",
+          "quiz": [
+            {
+              "question": "What does my_list[1:4] return?",
+              "options": ["Elements at index 1, 2, 3", "Elements at index 1, 2, 3, 4", "First 4 elements", "Elements 1 through 4"],
+              "answer": "Elements at index 1, 2, 3"
+            },
+            {
+              "question": "How do you reverse a list in place?",
+              "options": ["list.reverse()", "reversed(list)", "list[::-1]", "Both A and C"],
+              "answer": "list.reverse()"
+            },
+            {
+              "question": "What does my_list[-1] return?",
+              "options": ["First element", "Last element", "Error", "All elements"],
+              "answer": "Last element"
+            },
+            {
+              "question": "How do you find the index of an element in a list?",
+              "options": [".find()", ".index()", ".search()", ".locate()"],
+              "answer": ".index()"
+            },
+            {
+              "question": "What does my_list[::2] do?",
+              "options": ["Reverses the list", "Gets every second element", "Gets first two elements", "Doubles the list"],
+              "answer": "Gets every second element"
+            }
+          ]
+        },
+        {
+          "day": 27,
+          "title": "Dictionary Methods and Operations",
+          "content": "Dictionaries have many useful methods beyond basic access. .get() safely retrieves values (returns None if key doesn't exist), .items() returns key-value pairs, .update() merges dictionaries, and dictionary comprehensions create dictionaries concisely. These make dictionary manipulation powerful and efficient.",
+          "interactive_task": "Use dictionary comprehension to create a dictionary where keys are numbers 1-5 and values are their squares.",
+          "quiz": [
+            {
+              "question": "What does dict.get(key) return if the key doesn't exist?",
+              "options": ["Raises KeyError", "Returns None", "Returns 0", "Creates the key"],
+              "answer": "Returns None"
+            },
+            {
+              "question": "How do you get all key-value pairs as tuples?",
+              "options": [".keys()", ".values()", ".items()", ".pairs()"],
+              "answer": ".items()"
+            },
+            {
+              "question": "What is the syntax for dictionary comprehension?",
+              "options": ["{key: value for item in iterable}", "[key: value for item in iterable]", "(key: value for item in iterable)", "{for key, value in iterable}"],
+              "answer": "{key: value for item in iterable}"
+            },
+            {
+              "question": "How do you remove a key from a dictionary?",
+              "options": [".remove()", ".delete()", "del dict[key]", "Both B and C"],
+              "answer": "del dict[key]"
+            },
+            {
+              "question": "What does dict.update(other_dict) do?",
+              "options": ["Compares two dictionaries", "Merges other_dict into dict", "Creates a new dictionary", "Checks if keys match"],
+              "answer": "Merges other_dict into dict"
+            }
+          ]
+        },
+        {
+          "day": 28,
+          "title": "Working with External Libraries",
+          "content": "Python's strength comes from its vast ecosystem of external libraries. You can install libraries using pip, import them in your code, and leverage their functionality. Popular libraries include requests for HTTP, pandas for data analysis, matplotlib for plotting, and numpy for numerical computing.",
+          "interactive_task": "Install and use the matplotlib library to create a simple line plot.",
+          "quiz": [
+            {
+              "question": "How do you install a library using pip?",
+              "options": ["pip get library", "pip install library", "python install library", "install library"],
+              "answer": "pip install library"
+            },
+            {
+              "question": "Which library is used for data analysis with DataFrames?",
+              "options": ["numpy", "pandas", "matplotlib", "scipy"],
+              "answer": "pandas"
+            },
+            {
+              "question": "Which library is used for creating plots and charts?",
+              "options": ["numpy", "pandas", "matplotlib", "plot"],
+              "answer": "matplotlib"
+            },
+            {
+              "question": "What does import pandas as pd do?",
+              "options": ["Imports pandas with alias pd", "Imports only pd from pandas", "Imports all pandas functions", "Checks if pandas is installed"],
+              "answer": "Imports pandas with alias pd"
+            },
+            {
+              "question": "Where can you find Python packages to install?",
+              "options": ["Python Package Index (PyPI)", "GitHub", "Python website", "All of the above"],
+              "answer": "Python Package Index (PyPI)"
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "title": "Debugging Techniques",
+          "content": "Debugging is finding and fixing errors in code. Basic techniques include using print statements to track variable values, reading error messages carefully, and using Python's built-in debugger (pdb). The pdb module lets you set breakpoints, step through code, and inspect variables.",
+          "interactive_task": "Write a function with a bug and use print statements to debug it.",
+          "quiz": [
+            {
+              "question": "What is the simplest debugging technique?",
+              "options": ["Using a debugger", "Adding print statements", "Reading documentation", "Asking for help"],
+              "answer": "Adding print statements"
+            },
+            {
+              "question": "How do you import the Python debugger?",
+              "options": ["import debug", "import pdb", "import breakpoint", "import debugger"],
+              "answer": "import pdb"
+            },
+            {
+              "question": "How do you set a breakpoint in code?",
+              "options": ["pdb.break()", "pdb.set_trace()", "breakpoint()", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What does 'n' do in pdb?",
+              "options": ["Next line", "New variable", "No operation", "Exit debugger"],
+              "answer": "Next line"
+            },
+            {
+              "question": "What should you do first when you encounter an error?",
+              "options": ["Ignore it", "Read the error message", "Restart the program", "Delete the code"],
+              "answer": "Read the error message"
+            }
+          ]
+        },
+        {
+          "day": 30,
+          "title": "Final Project - Building a Simple Application",
+          "content": "Let's combine everything we've learned to build a simple contact management system. We'll create classes for contacts, use lists to store them, implement functions to add, view, and search contacts, and save/load data from a file. This project will reinforce all the Python concepts covered in this course.",
+          "interactive_task": "Build a contact management system that can add contacts, view all contacts, search for contacts by name, and save/load contacts from a file.",
+          "quiz": [
+            {
+              "question": "What Python concept is most useful for storing contact information?",
+              "options": ["Lists", "Dictionaries", "Classes", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "Which file handling mode should you use to save contacts?",
+              "options": ["'r'", "'w'", "'a'", "'x'"],
+              "answer": "'w'"
+            },
+            {
+              "question": "What data structure is best for searching contacts by name?",
+              "options": ["List", "Dictionary", "Set", "Tuple"],
+              "answer": "Dictionary"
+            },
+            {
+              "question": "Which algorithm could you use to search for contacts?",
+              "options": ["Bubble sort", "Linear search", "Binary search", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What should you use to handle errors when loading contacts?",
+              "options": ["if statements", "try-except blocks", "print statements", "Ignore errors"],
+              "answer": "try-except blocks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "javascript_basics",
+      "title": "JavaScript for Beginners",
+      "language": "JavaScript",
+      "description": "A 25-day beginner-friendly JavaScript course that teaches web programming fundamentals through hands-on practice.",
+      "days": [
+        {
+          "day": 1,
+          "title": "Introduction to JavaScript",
+          "content": "JavaScript is a programming language that makes web pages interactive. It runs in web browsers and can manipulate HTML and CSS. Unlike Python, JavaScript uses semicolons at the end of statements and curly braces {} for code blocks. You can write JavaScript directly in HTML files or in separate .js files.",
+          "interactive_task": "Write JavaScript code that displays an alert with the message 'Hello World!'",
+          "quiz": [
+            {
+              "question": "Where does JavaScript primarily run?",
+              "options": ["On servers", "In web browsers", "On mobile devices", "All of the above"],
+              "answer": "In web browsers"
+            },
+            {
+              "question": "What is the correct way to display a message in an alert box?",
+              "options": ["alert('Hello')", "message('Hello')", "display('Hello')", "show('Hello')"],
+              "answer": "alert('Hello')"
+            },
+            {
+              "question": "Which symbol is used for comments in JavaScript?",
+              "options": ["#", "//", "/*", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What file extension do JavaScript files use?",
+              "options": [".java", ".js", ".javascript", ".script"],
+              "answer": ".js"
+            },
+            {
+              "question": "JavaScript is mainly used for:",
+              "options": ["Server-side programming", "Making web pages interactive", "Database management", "Mobile app development only"],
+              "answer": "Making web pages interactive"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Variables and Data Types",
+          "content": "JavaScript variables can be declared with var, let, or const. let and const are modern and preferred. JavaScript has dynamic typing - variables can hold different data types. Basic data types include: String (text), Number (integers and decimals), Boolean (true/false), undefined, and null.",
+          "interactive_task": "Declare variables for your name (string), age (number), and whether you like programming (boolean), then log them to the console.",
+          "quiz": [
+            {
+              "question": "Which keyword creates a variable that cannot be reassigned?",
+              "options": ["var", "let", "const", "static"],
+              "answer": "const"
+            },
+            {
+              "question": "What is the result of typeof 42?",
+              "options": ["'string'", "'number'", "'integer'", "'float'"],
+              "answer": "'number'"
+            },
+            {
+              "question": "Which of these is a valid variable name?",
+              "options": ["1stName", "first-name", "firstName", "first name"],
+              "answer": "firstName"
+            },
+            {
+              "question": "What does const do?",
+              "options": ["Makes the value constant", "Makes the variable constant", "Both A and B", "Creates a function"],
+              "answer": "Makes the variable constant"
+            },
+            {
+              "question": "What is the value of a declared but unassigned variable?",
+              "options": ["null", "0", "undefined", "''"],
+              "answer": "undefined"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Operators and Expressions",
+          "content": "JavaScript has arithmetic operators (+, -, *, /, %), comparison operators (==, ===, !=, !==, >, <), and logical operators (&&, ||, !). The === operator checks both value and type, while == only checks value (and performs type conversion). For example: 5 == '5' is true, but 5 === '5' is false.",
+          "interactive_task": "Create two variables with numbers and use operators to calculate their sum, check if they're equal, and check if both are greater than 0.",
+          "quiz": [
+            {
+              "question": "What does the % operator do?",
+              "options": ["Percentage", "Division", "Modulus (remainder)", "Multiplication"],
+              "answer": "Modulus (remainder)"
+            },
+            {
+              "question": "Which operator checks both value and type?",
+              "options": ["==", "===", "=", "!=="],
+              "answer": "==="
+            },
+            {
+              "question": "What is the result of 10 + '5' in JavaScript?",
+              "options": ["15", "'105'", "Error", "105"],
+              "answer": "'105'"
+            },
+            {
+              "question": "Which logical operator means 'AND'?",
+              "options": ["&&", "||", "!", "AND"],
+              "answer": "&&"
+            },
+            {
+              "question": "What does the ! operator do?",
+              "options": ["Addition", "Negation", "Comparison", "Concatenation"],
+              "answer": "Negation"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Conditional Statements",
+          "content": "JavaScript uses if, else if, and else for conditional logic. The syntax uses parentheses for the condition and curly braces for the code blocks. You can also use the ternary operator for simple conditions: condition ? valueIfTrue : valueIfFalse.",
+          "interactive_task": "Write a program that checks if a number is positive, negative, or zero and logs the result.",
+          "quiz": [
+            {
+              "question": "What keyword starts a conditional statement?",
+              "options": ["when", "if", "check", "condition"],
+              "answer": "if"
+            },
+            {
+              "question": "How do you write 'else if' in JavaScript?",
+              "options": ["elseif", "else if", "elif", "elseif()"],
+              "answer": "else if"
+            },
+            {
+              "question": "What is the syntax of the ternary operator?",
+              "options": ["condition ? then : else", "if condition then value else value", "condition : value ? value", "condition ?? value : value"],
+              "answer": "condition ? then : else"
+            },
+            {
+              "question": "Which symbol is used for code blocks in JavaScript?",
+              "options": ["Indentation", "Parentheses ()", "Curly braces {}", "Brackets []"],
+              "answer": "Curly braces {}"
+            },
+            {
+              "question": "What will be logged if x = 0: if (x) { console.log('Truthy') } else { console.log('Falsy') }?",
+              "options": ["Truthy", "Falsy", "0", "Error"],
+              "answer": "Falsy"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Functions",
+          "content": "Functions are reusable blocks of code. In JavaScript, you can define functions with the function keyword or with arrow functions. Functions can take parameters and return values. Function declarations are hoisted (can be called before they're defined), but function expressions are not.",
+          "interactive_task": "Create a function that takes two numbers as parameters and returns their sum.",
+          "quiz": [
+            {
+              "question": "What keyword is used to define a function?",
+              "options": ["def", "function", "func", "fn"],
+              "answer": "function"
+            },
+            {
+              "question": "What is the arrow function syntax?",
+              "options": ["() => {}", "function => {}", "-> {}", "=> {}"],
+              "answer": "() => {}"
+            },
+            {
+              "question": "How do you return a value from a function?",
+              "options": ["return", "output", "send", "give"],
+              "answer": "return"
+            },
+            {
+              "question": "What is hoisting?",
+              "options": ["Lifting heavy objects", "Moving declarations to the top", "A type of function", "A JavaScript error"],
+              "answer": "Moving declarations to the top"
+            },
+            {
+              "question": "How do you call a function named greet?",
+              "options": ["call greet()", "greet", "greet()", "run greet()"],
+              "answer": "greet()"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Arrays",
+          "content": "Arrays are ordered collections of items. You create arrays with square brackets [] and access elements by their index (starting at 0). JavaScript arrays can hold mixed data types and have many useful methods like .push(), .pop(), .shift(), .unshift(), and .length property.",
+          "interactive_task": "Create an array of your three favorite foods and log the second item.",
+          "quiz": [
+            {
+              "question": "How do you create an empty array?",
+              "options": ["[]", "{}", "()", "array()"],
+              "answer": "[]"
+            },
+            {
+              "question": "What index is the first item in an array?",
+              "options": ["0", "1", "first", "start"],
+              "answer": "0"
+            },
+            {
+              "question": "Which method adds an item to the end of an array?",
+              "options": [".add()", ".push()", ".append()", ".insert()"],
+              "answer": ".push()"
+            },
+            {
+              "question": "How do you get the number of items in an array?",
+              "options": [".count()", ".size()", ".length", ".items()"],
+              "answer": ".length"
+            },
+            {
+              "question": "What does .pop() do?",
+              "options": ["Adds an item", "Removes the first item", "Removes the last item", "Shows all items"],
+              "answer": "Removes the last item"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Objects",
+          "content": "Objects store data as key-value pairs. You create objects with curly braces {} and access properties with dot notation or bracket notation. Objects can contain functions as methods. For example: let person = {name: 'Alice', age: 30, greet: function() { console.log('Hello!'); }}",
+          "interactive_task": "Create an object representing yourself with name, age, and a method that introduces you.",
+          "quiz": [
+            {
+              "question": "How do you create an empty object?",
+              "options": ["[]", "{}", "()", "object()"],
+              "answer": "{}"
+            },
+            {
+              "question": "How do you access the name property of a person object?",
+              "options": ["person.name", "person['name']", "person(name)", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What are functions inside objects called?",
+              "options": ["Functions", "Methods", "Actions", "Behaviors"],
+              "answer": "Methods"
+            },
+            {
+              "question": "How do you add a new property to an object?",
+              "options": ["object.add(property)", "object.new = value", "object.property = value", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What keyword refers to the current object in a method?",
+              "options": ["this", "self", "object", "current"],
+              "answer": "this"
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Loops - For and While",
+          "content": "Loops repeat code. JavaScript has for loops (for a specific number of iterations), while loops (while a condition is true), and do-while loops (execute at least once). For loops are commonly used with arrays. The syntax is: for (let i = 0; i < 5; i++) { console.log(i); }",
+          "interactive_task": "Use a for loop to log numbers from 1 to 5.",
+          "quiz": [
+            {
+              "question": "What are the three parts of a for loop?",
+              "options": ["start, condition, increment", "begin, check, update", "initialization, condition, iteration", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "When does a while loop stop?",
+              "options": ["After 100 iterations", "When condition becomes false", "When it reaches a break", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What does i++ mean?",
+              "options": ["i = i + 1", "i = i - 1", "i = 0", "i = i * 1"],
+              "answer": "i = i + 1"
+            },
+            {
+              "question": "How do you exit a loop early?",
+              "options": ["exit", "stop", "break", "end"],
+              "answer": "break"
+            },
+            {
+              "question": "What loop always executes at least once?",
+              "options": ["for", "while", "do-while", "for-in"],
+              "answer": "do-while"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Array Methods",
+          "content": "JavaScript arrays have powerful methods for manipulation. .forEach() executes a function for each item, .map() creates a new array by transforming each item, .filter() creates a new array with items that pass a test, and .find() returns the first item that passes a test. These are often used with arrow functions.",
+          "interactive_task": "Use .map() to create a new array where each number in [1,2,3] is doubled.",
+          "quiz": [
+            {
+              "question": "What does .map() do?",
+              "options": ["Changes the original array", "Creates a new transformed array", "Filters the array", "Finds an element"],
+              "answer": "Creates a new transformed array"
+            },
+            {
+              "question": "Which method returns only elements that pass a test?",
+              "options": [".forEach()", ".map()", ".filter()", ".find()"],
+              "answer": ".filter()"
+            },
+            {
+              "question": "What does .forEach() return?",
+              "options": ["A new array", "The original array", "undefined", "The first element"],
+              "answer": "undefined"
+            },
+            {
+              "question": "Which method finds the first element that matches a condition?",
+              "options": [".forEach()", ".map()", ".filter()", ".find()"],
+              "answer": ".find()"
+            },
+            {
+              "question": "How do you use .map() with an arrow function?",
+              "options": ["array.map(x => x*2)", "array.map(function(x) {return x*2})", "array.map(x * 2)", "Both A and B"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "title": "DOM Manipulation - Selecting Elements",
+          "content": "The DOM (Document Object Model) represents the HTML document as objects that JavaScript can manipulate. You can select elements using document.getElementById(), document.querySelector(), and document.querySelectorAll(). Once selected, you can change their content, styles, and attributes.",
+          "interactive_task": "Select an HTML element by its ID and change its text content.",
+          "quiz": [
+            {
+              "question": "What does DOM stand for?",
+              "options": ["Document Object Model", "Data Object Model", "Digital Output Method", "Document Order Management"],
+              "answer": "Document Object Model"
+            },
+            {
+              "question": "How do you select an element by its ID?",
+              "options": ["document.getElementByID()", "document.getElementById()", "document.queryElement()", "document.selectId()"],
+              "answer": "document.getElementById()"
+            },
+            {
+              "question": "What does document.querySelector() return?",
+              "options": ["All matching elements", "The first matching element", "An array of elements", "The document itself"],
+              "answer": "The first matching element"
+            },
+            {
+              "question": "How do you change the text of an element?",
+              "options": [".text", ".content", ".textContent", ".value"],
+              "answer": ".textContent"
+            },
+            {
+              "question": "What does document.querySelectorAll() return?",
+              "options": ["A single element", "An array-like object of elements", "The first element", "The HTML document"],
+              "answer": "An array-like object of elements"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "title": "DOM Manipulation - Modifying Elements",
+          "content": "After selecting DOM elements, you can modify them in many ways: change content with .textContent or .innerHTML, modify styles with .style.property, change attributes with .setAttribute(), and add/remove classes with .classList.add()/.classList.remove(). You can also create new elements with document.createElement().",
+          "interactive_task": "Change the background color of an element and add a CSS class to it.",
+          "quiz": [
+            {
+              "question": "How do you change an element's background color?",
+              "options": ["element.style.backgroundColor", "element.color.background", "element.background", "element.css.background"],
+              "answer": "element.style.backgroundColor"
+            },
+            {
+              "question": "What's the difference between textContent and innerHTML?",
+              "options": ["No difference", "textContent is faster", "innerHTML parses HTML", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "How do you add a CSS class to an element?",
+              "options": [".addClass()", ".classList.add()", ".className.add()", ".addClassName()"],
+              "answer": ".classList.add()"
+            },
+            {
+              "question": "How do you create a new div element?",
+              "options": ["document.newElement('div')", "document.createElement('div')", "new Div()", "document.div()"],
+              "answer": "document.createElement('div')"
+            },
+            {
+              "question": "How do you add a created element to the page?",
+              "options": [".add()", ".append()", ".appendChild()", ".insert()"],
+              "answer": ".appendChild()"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "title": "Events",
+          "content": "Events are actions that happen in the browser, like clicks, key presses, or page loads. You can listen for events using .addEventListener() and run code when they occur. The event object passed to the handler contains information about the event. Common events include 'click', 'keydown', 'mouseover', and 'submit'.",
+          "interactive_task": "Add a click event listener to a button that shows an alert when clicked.",
+          "quiz": [
+            {
+              "question": "How do you add an event listener?",
+              "options": [".addEventListener()", ".onEvent()", ".listen()", ".event()"],
+              "answer": ".addEventListener()"
+            },
+            {
+              "question": "What is the first parameter of addEventListener?",
+              "options": ["The event type", "The handler function", "Options object", "The element"],
+              "answer": "The event type"
+            },
+            {
+              "question": "What event occurs when a button is clicked?",
+              "options": ["'press'", "'click'", "'button'", "'select'"],
+              "answer": "'click'"
+            },
+            {
+              "question": "How do you prevent a form from submitting?",
+              "options": ["event.stop()", "event.preventDefault()", "event.cancel()", "form.stopSubmit()"],
+              "answer": "event.preventDefault()"
+            },
+            {
+              "question": "What property tells which key was pressed?",
+              "options": ["event.key", "event.which", "event.keyCode", "All of the above"],
+              "answer": "All of the above"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "title": "String Methods",
+          "content": "JavaScript strings have many useful methods. .toUpperCase() and .toLowerCase() change case, .trim() removes whitespace, .includes() checks if a string contains another string, .slice() extracts parts of a string, and .split() divides a string into an array. Strings are immutable - these methods return new strings.",
+          "interactive_task": "Take a string with extra spaces, trim it, and convert it to uppercase.",
+          "quiz": [
+            {
+              "question": "What does 'hello'.toUpperCase() return?",
+              "options": ["'HELLO'", "'hello'", "'Hello'", "'hELLO'"],
+              "answer": "'HELLO'"
+            },
+            {
+              "question": "Which method removes spaces from both ends?",
+              "options": [".clean()", ".trim()", ".strip()", ".removeSpaces()"],
+              "answer": ".trim()"
+            },
+            {
+              "question": "What does 'hello'.includes('ell') return?",
+              "options": ["true", "false", "'ell'", "2"],
+              "answer": "true"
+            },
+            {
+              "question": "What does 'hello'.slice(1, 4) return?",
+              "options": ["'ell'", "'hello'", "'hel'", "'ello'"],
+              "answer": "'ell'"
+            },
+            {
+              "question": "What does 'a,b,c'.split(',') return?",
+              "options": ["['a,b,c']", "['a', 'b', 'c']", "'abc'", "['a', 'b,c']"],
+              "answer": "['a', 'b', 'c']"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "title": "Number and Math Methods",
+          "content": "JavaScript has a Math object with mathematical functions and constants. Math.round() rounds to nearest integer, Math.floor() rounds down, Math.ceil() rounds up, Math.random() returns a random number between 0-1, and Math.max()/Math.min() find largest/smallest numbers. Numbers also have methods like .toFixed() for formatting.",
+          "interactive_task": "Generate a random number between 1 and 10 and round it to the nearest integer.",
+          "quiz": [
+            {
+              "question": "How do you generate a random number between 0 and 1?",
+              "options": ["Math.random()", "random()", "Math.rnd()", "Number.random()"],
+              "answer": "Math.random()"
+            },
+            {
+              "question": "What does Math.floor(3.7) return?",
+              "options": ["3", "4", "3.7", "3.0"],
+              "answer": "3"
+            },
+            {
+              "question": "How do you round 2.5 to the nearest integer?",
+              "options": ["Math.round(2.5)", "Math.floor(2.5)", "Math.ceil(2.5)", "2.5.round()"],
+              "answer": "Math.round(2.5)"
+            },
+            {
+              "question": "What does (3.14159).toFixed(2) return?",
+              "options": ["3.14", "'3.14'", "3.14159", "3"],
+              "answer": "'3.14'"
+            },
+            {
+              "question": "How do you find the larger of two numbers?",
+              "options": ["Math.larger(a, b)", "Math.max(a, b)", "a.max(b)", "max(a, b)"],
+              "answer": "Math.max(a, b)"
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "title": "Date and Time",
+          "content": "The Date object handles dates and times in JavaScript. Create dates with new Date(), which gives the current date/time, or with specific parameters. You can get components with methods like .getFullYear(), .getMonth(), .getDate(), .getHours(), etc. Dates can be formatted as strings with .toString() or .toLocaleString().",
+          "interactive_task": "Create a Date object for your birthday and log it in a readable format.",
+          "quiz": [
+            {
+              "question": "How do you create a Date object with the current date/time?",
+              "options": ["Date()", "new Date()", "Date.now()", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What does .getMonth() return for January?",
+              "options": ["0", "1", "January", "JAN"],
+              "answer": "0"
+            },
+            {
+              "question": "How do you get the full year (4 digits)?",
+              "options": [".getYear()", ".getFullYear()", ".year()", ".getFullYear(4)"],
+              "answer": ".getFullYear()"
+            },
+            {
+              "question": "What does .toLocaleString() do?",
+              "options": ["Formats for current locale", "Converts to string", "Gets local time", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "How do you create a date for a specific year, month, day?",
+              "options": ["new Date(2023, 0, 1)", "new Date('2023-01-01')", "Date.create(2023, 1, 1)", "Both A and B"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "title": "Error Handling with Try-Catch",
+          "content": "JavaScript handles errors with try-catch blocks. Code that might throw an error goes in the try block, and error handling code goes in the catch block. You can also use a finally block that runs regardless of whether an error occurred. This prevents your program from crashing when errors happen.",
+          "interactive_task": "Write code that tries to parse JSON and catches any errors that occur.",
+          "quiz": [
+            {
+              "question": "What keyword starts the error-prone code block?",
+              "options": ["try", "catch", "error", "handle"],
+              "answer": "try"
+            },
+            {
+              "question": "What keyword handles the error?",
+              "options": ["try", "catch", "error", "finally"],
+              "answer": "catch"
+            },
+            {
+              "question": "What block always executes?",
+              "options": ["try", "catch", "finally", "always"],
+              "answer": "finally"
+            },
+            {
+              "question": "How do you throw a custom error?",
+              "options": ["throw", "error", "new Error()", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "What happens if an error occurs in the try block?",
+              "options": ["Program crashes", "Execution moves to catch block", "Error is ignored", "Program restarts"],
+              "answer": "Execution moves to catch block"
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "title": "Local Storage",
+          "content": "The localStorage API allows you to store data in the browser that persists between sessions. Data is stored as key-value pairs (both must be strings). Use localStorage.setItem(key, value) to save, localStorage.getItem(key) to retrieve, and localStorage.removeItem(key) to delete. Data remains until cleared by the user or your code.",
+          "interactive_task": "Save your name to localStorage, then retrieve and display it.",
+          "quiz": [
+            {
+              "question": "How do you save data to localStorage?",
+              "options": ["localStorage.save()", "localStorage.setItem()", "localStorage.store()", "localStorage.add()"],
+              "answer": "localStorage.setItem()"
+            },
+            {
+              "question": "What data types can localStorage store?",
+              "options": ["Only strings", "Strings and numbers", "Any data type", "Only numbers"],
+              "answer": "Only strings"
+            },
+            {
+              "question": "How do you retrieve data from localStorage?",
+              "options": ["localStorage.get()", "localStorage.getItem()", "localStorage.retrieve()", "localStorage.data()"],
+              "answer": "localStorage.getItem()"
+            },
+            {
+              "question": "How do you remove an item from localStorage?",
+              "options": ["localStorage.delete()", "localStorage.remove()", "localStorage.removeItem()", "localStorage.clearItem()"],
+              "answer": "localStorage.removeItem()"
+            },
+            {
+              "question": "How long does localStorage data persist?",
+              "options": ["Until browser closes", "Until tab closes", "Until manually cleared", "1 week"],
+              "answer": "Until manually cleared"
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "title": "JSON in JavaScript",
+          "content": "JSON (JavaScript Object Notation) is closely related to JavaScript objects. Use JSON.stringify() to convert JavaScript objects to JSON strings, and JSON.parse() to convert JSON strings back to JavaScript objects. This is useful for storing objects in localStorage or sending data to servers.",
+          "interactive_task": "Create a JavaScript object, convert it to JSON string, then parse it back to an object.",
+          "quiz": [
+            {
+              "question": "How do you convert an object to a JSON string?",
+              "options": ["JSON.toString()", "JSON.stringify()", "object.toJSON()", "stringify()"],
+              "answer": "JSON.stringify()"
+            },
+            {
+              "question": "How do you parse a JSON string to an object?",
+              "options": ["JSON.parse()", "JSON.fromString()", "parseJSON()", "object.parse()"],
+              "answer": "JSON.parse()"
+            },
+            {
+              "question": "What happens if you try to parse invalid JSON?",
+              "options": ["Returns null", "Returns undefined", "Throws an error", "Returns the string"],
+              "answer": "Throws an error"
+            },
+            {
+              "question": "Can JSON represent functions?",
+              "options": ["Yes", "No", "Only arrow functions", "Only in JavaScript"],
+              "answer": "No"
+            },
+            {
+              "question": "What's the main use of JSON in web development?",
+              "options": ["Styling", "Data exchange", "Animation", "Validation"],
+              "answer": "Data exchange"
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "title": "Fetch API - Getting Data",
+          "content": "The Fetch API is used to make HTTP requests to servers. fetch(url) returns a Promise that resolves to the Response object. You need to call .json() on the response to get the actual data. Fetch uses modern Promise syntax and is cleaner than older XMLHttpRequest.",
+          "interactive_task": "Use fetch to get data from a public API and log the response.",
+          "quiz": [
+            {
+              "question": "What does fetch() return?",
+              "options": ["The data", "A Promise", "An object", "A string"],
+              "answer": "A Promise"
+            },
+            {
+              "question": "How do you extract JSON from a fetch response?",
+              "options": ["response.data", "response.json()", "response.getJSON()", "JSON.parse(response)"],
+              "answer": "response.json()"
+            },
+            {
+              "question": "What is a Promise?",
+              "options": ["A guarantee", "An object representing future completion", "A type of function", "An error handler"],
+              "answer": "An object representing future completion"
+            },
+            {
+              "question": "How do you handle errors in fetch?",
+              "options": [".catch()", "try-catch", "Both A and B", "fetch doesn't throw errors"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What HTTP method does fetch use by default?",
+              "options": ["POST", "GET", "PUT", "DELETE"],
+              "answer": "GET"
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "title": "Async/Await",
+          "content": "Async/await is syntactic sugar for working with Promises. Mark a function as async to use await inside it. await pauses execution until the Promise resolves, making asynchronous code look synchronous. This is cleaner than .then() chains and easier to read and write.",
+          "interactive_task": "Rewrite a fetch call using async/await instead of .then().",
+          "quiz": [
+            {
+              "question": "What keyword makes a function asynchronous?",
+              "options": ["async", "await", "promise", "async/await"],
+              "answer": "async"
+            },
+            {
+              "question": "What does await do?",
+              "options": ["Pauses execution", "Creates a Promise", "Throws an error", "Returns immediately"],
+              "answer": "Pauses execution"
+            },
+            {
+              "question": "Can you use await outside an async function?",
+              "options": ["Yes", "No", "Only in browsers", "Only in Node.js"],
+              "answer": "No"
+            },
+            {
+              "question": "How do you handle errors with async/await?",
+              "options": [".catch()", "try-catch", "Both A and B", "You can't handle errors"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What does an async function always return?",
+              "options": ["A Promise", "The awaited value", "undefined", "null"],
+              "answer": "A Promise"
+            }
+          ]
+        },
+        {
+          "day": 21,
+          "title": "Array Destructuring",
+          "content": "Destructuring allows you to extract values from arrays or properties from objects into distinct variables. For arrays, use square brackets on the left side: const [first, second] = [1, 2]. You can skip elements, use rest pattern (...), and provide default values. This makes code cleaner and more readable.",
+          "interactive_task": "Use array destructuring to extract the first two values from an array.",
+          "quiz": [
+            {
+              "question": "What syntax is used for array destructuring?",
+              "options": ["{}", "[]", "()", "<>"],
+              "answer": "[]"
+            },
+            {
+              "question": "How do you skip the second element?",
+              "options": ["[first, , third]", "[first, skip, third]", "[first, null, third]", "[first, undefined, third]"],
+              "answer": "[first, , third]"
+            },
+            {
+              "question": "What does the rest operator (...) do?",
+              "options": ["Creates an array", "Collects remaining elements", "Spreads elements", "Both B and C"],
+              "answer": "Collects remaining elements"
+            },
+            {
+              "question": "How do you provide a default value?",
+              "options": ["[first = 0]", "[first: 0]", "[first ? 0]", "[first || 0]"],
+              "answer": "[first = 0]"
+            },
+            {
+              "question": "What will [a, b] = [1, 2, 3] assign to a and b?",
+              "options": ["a=1, b=2", "a=1, b=[2,3]", "a=[1,2], b=3", "Error"],
+              "answer": "a=1, b=2"
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "title": "Object Destructuring",
+          "content": "Object destructuring extracts properties from objects into variables. Use curly braces on the left side: const {name, age} = person. You can rename variables, provide default values, and use nested destructuring. This is very useful when working with function parameters and API responses.",
+          "interactive_task": "Destructure an object to extract specific properties, renaming one of them.",
+          "quiz": [
+            {
+              "question": "What syntax is used for object destructuring?",
+              "options": ["{}", "[]", "()", "<>"],
+              "answer": "{}"
+            },
+            {
+              "question": "How do you rename a property during destructuring?",
+              "options": ["{name: firstName}", "{name as firstName}", "{name -> firstName}", "{firstName = name}"],
+              "answer": "{name: firstName}"
+            },
+            {
+              "question": "How do you provide a default value?",
+              "options": ["{name = 'Anonymous'}", "{name: 'Anonymous'}", "{name ? 'Anonymous'}", "{name || 'Anonymous'}"],
+              "answer": "{name = 'Anonymous'}"
+            },
+            {
+              "question": "Can you destructure nested objects?",
+              "options": ["Yes", "No", "Only one level deep", "Only with arrays"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What is a common use for object destructuring?",
+              "options": ["Function parameters", "Looping", "Error handling", "All of the above"],
+              "answer": "Function parameters"
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "title": "Template Literals",
+          "content": "Template literals (backticks ``) allow embedded expressions and multi-line strings. Use ${expression} to insert values directly into strings. This is much cleaner than string concatenation with +. Template literals also preserve whitespace and line breaks, making them ideal for HTML templates and long strings.",
+          "interactive_task": "Use template literals to create a string that includes variables for name and age.",
+          "quiz": [
+            {
+              "question": "What characters define template literals?",
+              "options": ["''", "\"\"", "``", "[]"],
+              "answer": "``"
+            },
+            {
+              "question": "How do you insert a variable into a template literal?",
+              "options": ["${variable}", "#{variable}", "{{variable}}", "$[variable]"],
+              "answer": "${variable}"
+            },
+            {
+              "question": "Can template literals span multiple lines?",
+              "options": ["Yes", "No", "Only with \\n", "Only in specific browsers"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What is the advantage over string concatenation?",
+              "options": ["More readable", "Easier to write", "Better performance", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "Can you use expressions inside ${}?",
+              "options": ["Yes", "No", "Only variables", "Only simple expressions"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "title": "Arrow Functions Deep Dive",
+          "content": "Arrow functions (=>) have concise syntax and don't have their own this, arguments, super, or new.target. They're best for non-method functions and callbacks. The syntax varies: single parameter doesn't need parentheses, single expression doesn't need braces or return, but multiple parameters or statements do.",
+          "interactive_task": "Convert a regular function to an arrow function.",
+          "quiz": [
+            {
+              "question": "What is the main difference in 'this' behavior?",
+              "options": ["Arrow functions have their own this", "Arrow functions inherit this from surrounding scope", "Arrow functions can't use this", "No difference"],
+              "answer": "Arrow functions inherit this from surrounding scope"
+            },
+            {
+              "question": "How do you write an arrow function with one parameter?",
+              "options": ["(x) => {}", "x => {}", "[x] => {}", "{x} => {}"],
+              "answer": "x => {}"
+            },
+            {
+              "question": "When can you omit curly braces and return?",
+              "options": ["Always", "Never", "With single expression", "With single parameter"],
+              "answer": "With single expression"
+            },
+            {
+              "question": "Can arrow functions be used as constructors?",
+              "options": ["Yes", "No", "Only with new", "Only in strict mode"],
+              "answer": "No"
+            },
+            {
+              "question": "Where are arrow functions most commonly used?",
+              "options": ["As methods", "As constructors", "As callbacks", "As class definitions"],
+              "answer": "As callbacks"
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "title": "Final Project - Interactive Web App",
+          "content": "Let's build a simple task manager web app. We'll use DOM manipulation to create, display, and delete tasks; localStorage to persist data; events for user interactions; and modern JavaScript features like arrow functions and template literals. This project will combine all the concepts we've learned.",
+          "interactive_task": "Build a task manager that allows adding tasks, marking them complete, deleting them, and persisting the data in localStorage.",
+          "quiz": [
+            {
+              "question": "What DOM method would you use to create new task elements?",
+              "options": ["document.createElement()", "document.write()", "innerHTML", "document.newElement()"],
+              "answer": "document.createElement()"
+            },
+            {
+              "question": "How would you store tasks between sessions?",
+              "options": ["Variables", "localStorage", "Cookies", "Session storage"],
+              "answer": "localStorage"
+            },
+            {
+              "question": "What event would you listen for when adding a task?",
+              "options": ["'click'", "'submit'", "'keypress'", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "How would you format task HTML cleanly?",
+              "options": ["String concatenation", "Template literals", "document.write()", "CSS only"],
+              "answer": "Template literals"
+            },
+            {
+              "question": "What JavaScript feature makes callback functions cleaner?",
+              "options": ["Arrow functions", "Regular functions", "For loops", "If statements"],
+              "answer": "Arrow functions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "java_basics",
+      "title": "Java for Beginners",
+      "language": "Java",
+      "description": "A 25-day beginner-friendly Java course that teaches object-oriented programming fundamentals through hands-on practice.",
+      "days": [
+        {
+          "day": 1,
+          "title": "Introduction to Java",
+          "content": "Java is a powerful, object-oriented programming language known for its 'write once, run anywhere' capability. Java code is compiled to bytecode that runs on the Java Virtual Machine (JVM). Every Java program must have a class with a main method: public static void main(String[] args). Java is strongly typed and uses semicolons to end statements.",
+          "interactive_task": "Write a Java program that prints 'Hello World' to the console.",
+          "quiz": [
+            {
+              "question": "Who created Java?",
+              "options": ["James Gosling", "Guido van Rossum", "Bjarne Stroustrup", "Dennis Ritchie"],
+              "answer": "James Gosling"
+            },
+            {
+              "question": "What is the entry point of a Java program?",
+              "options": ["start() method", "main() method", "run() method", "init() method"],
+              "answer": "main() method"
+            },
+            {
+              "question": "What does JVM stand for?",
+              "options": ["Java Virtual Machine", "Java Variable Method", "Java Version Manager", "Java Visual Module"],
+              "answer": "Java Virtual Machine"
+            },
+            {
+              "question": "Which keyword defines a class in Java?",
+              "options": ["class", "Class", "object", "struct"],
+              "answer": "class"
+            },
+            {
+              "question": "What is the correct signature for the main method?",
+              "options": ["public static void main(String[] args)", "public void main(String[] args)", "static void main(String[] args)", "public static main(String[] args)"],
+              "answer": "public static void main(String[] args)"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Variables and Data Types",
+          "content": "Java is statically typed, meaning you must declare variable types. Primitive data types include: int (whole numbers), double (decimal numbers), boolean (true/false), char (single characters). Reference types include String (text). Variables are declared with type name = value;. For example: int age = 25; String name = 'Alice';",
+          "interactive_task": "Declare variables for your name (String), age (int), and whether you're a student (boolean), then print them.",
+          "quiz": [
+            {
+              "question": "Which data type would you use for whole numbers?",
+              "options": ["double", "int", "String", "boolean"],
+              "answer": "int"
+            },
+            {
+              "question": "How do you declare a variable in Java?",
+              "options": ["type name = value;", "name = value type;", "variable name type value;", "name : type = value;"],
+              "answer": "type name = value;"
+            },
+            {
+              "question": "Which is a valid variable name?",
+              "options": ["1stName", "first-name", "firstName", "first name"],
+              "answer": "firstName"
+            },
+            {
+              "question": "What is the default value of a boolean?",
+              "options": ["true", "false", "0", "null"],
+              "answer": "false"
+            },
+            {
+              "question": "Which data type stores text?",
+              "options": ["char", "String", "Text", "str"],
+              "answer": "String"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "Operators",
+          "content": "Java has arithmetic operators (+, -, *, /, %), comparison operators (==, !=, >, <, >=, <=), and logical operators (&&, ||, !). The + operator can also concatenate strings. Java follows operator precedence rules - multiplication and division happen before addition and subtraction. Use parentheses to control order.",
+          "interactive_task": "Create two number variables and use operators to calculate their sum, product, and check if the first is greater than the second.",
+          "quiz": [
+            {
+              "question": "What does the % operator do?",
+              "options": ["Percentage", "Division", "Modulus (remainder)", "Multiplication"],
+              "answer": "Modulus (remainder)"
+            },
+            {
+              "question": "Which operator checks if two values are equal?",
+              "options": ["=", "==", "===", "equals"],
+              "answer": "=="
+            },
+            {
+              "question": "What is the result of 10 / 3 in Java?",
+              "options": ["3", "3.333...", "1", "3.0"],
+              "answer": "3"
+            },
+            {
+              "question": "Which logical operator means 'AND'?",
+              "options": ["&&", "||", "!", "AND"],
+              "answer": "&&"
+            },
+            {
+              "question": "What does 'Hello ' + 'World' produce?",
+              "options": ["'HelloWorld'", "'Hello World'", "Error", "'Hello' + 'World'"],
+              "answer": "'Hello World'"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "Conditional Statements",
+          "content": "Java uses if, else if, and else for conditional logic. The condition must be a boolean expression. Code blocks are defined with curly braces {}. You can also use the ternary operator: condition ? valueIfTrue : valueIfFalse. Switch statements are useful for multiple discrete values.",
+          "interactive_task": "Write a program that checks if a number is positive, negative, or zero and prints the result.",
+          "quiz": [
+            {
+              "question": "What keyword starts a conditional statement?",
+              "options": ["when", "if", "check", "condition"],
+              "answer": "if"
+            },
+            {
+              "question": "What type must the condition be?",
+              "options": ["int", "String", "boolean", "Any type"],
+              "answer": "boolean"
+            },
+            {
+              "question": "How do you write multiple conditions?",
+              "options": ["if, if, if", "if, else if, else", "if, elseif, else", "if, or if, or else"],
+              "answer": "if, else if, else"
+            },
+            {
+              "question": "What is the syntax of the ternary operator?",
+              "options": ["condition ? then : else", "if condition then value else value", "condition : value ? value", "condition ?? value : value"],
+              "answer": "condition ? then : else"
+            },
+            {
+              "question": "When would you use a switch statement?",
+              "options": ["For range checks", "For multiple discrete values", "For boolean conditions", "For mathematical operations"],
+              "answer": "For multiple discrete values"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "Loops",
+          "content": "Java has for loops (specific number of iterations), while loops (while condition is true), and do-while loops (execute at least once). For loops have initialization, condition, and iteration parts. While loops check condition before execution, do-while check after. Use break to exit loops and continue to skip to next iteration.",
+          "interactive_task": "Use a for loop to print numbers from 1 to 5.",
+          "quiz": [
+            {
+              "question": "What are the three parts of a for loop?",
+              "options": ["start, condition, increment", "begin, check, update", "initialization, condition, iteration", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "When does a while loop check its condition?",
+              "options": ["Before each iteration", "After each iteration", "Only once", "Never"],
+              "answer": "Before each iteration"
+            },
+            {
+              "question": "What does i++ mean?",
+              "options": ["i = i + 1", "i = i - 1", "i = 0", "i = i * 1"],
+              "answer": "i = i + 1"
+            },
+            {
+              "question": "How do you exit a loop early?",
+              "options": ["exit", "stop", "break", "end"],
+              "answer": "break"
+            },
+            {
+              "question": "Which loop always executes at least once?",
+              "options": ["for", "while", "do-while", "for-each"],
+              "answer": "do-while"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "Arrays",
+          "content": "Arrays store multiple values of the same type. Declare arrays with type[] name or type name[]. Create arrays with new type[size] or with initializer {value1, value2}. Access elements with [index] starting at 0. Arrays have a .length property. Java arrays are fixed-size once created.",
+          "interactive_task": "Create an array of three favorite numbers and print the second number.",
+          "quiz": [
+            {
+              "question": "How do you declare an integer array?",
+              "options": ["int[] numbers", "int numbers[]", "array int numbers", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What index is the first element in an array?",
+              "options": ["0", "1", "first", "start"],
+              "answer": "0"
+            },
+            {
+              "question": "How do you create an array with values 1, 2, 3?",
+              "options": ["new int[]{1, 2, 3}", "{1, 2, 3}", "int[3]{1, 2, 3}", "Both A and B"],
+              "answer": "new int[]{1, 2, 3}"
+            },
+            {
+              "question": "How do you get the length of an array?",
+              "options": [".length()", ".size()", ".length", ".count()"],
+              "answer": ".length"
+            },
+            {
+              "question": "Can you change the size of an array after creation?",
+              "options": ["Yes", "No", "Only with resize()", "Only for String arrays"],
+              "answer": "No"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "Methods",
+          "content": "Methods are functions defined inside classes. They have a return type (or void if no return), name, parameters, and a body. Methods can be called on objects or statically. Use the return keyword to return a value. Method parameters are passed by value in Java.",
+          "interactive_task": "Create a method that takes two numbers and returns their sum.",
+          "quiz": [
+            {
+              "question": "What keyword is used if a method doesn't return anything?",
+              "options": ["null", "void", "empty", "none"],
+              "answer": "void"
+            },
+            {
+              "question": "How do you return a value from a method?",
+              "options": ["return", "output", "send", "give"],
+              "answer": "return"
+            },
+            {
+              "question": "What are the parts of a method declaration?",
+              "options": ["Return type, name, parameters", "Name only", "Return type and name", "Name and parameters"],
+              "answer": "Return type, name, parameters"
+            },
+            {
+              "question": "How do you call a method named calculate?",
+              "options": ["call calculate()", "calculate", "calculate()", "run calculate()"],
+              "answer": "calculate()"
+            },
+            {
+              "question": "Are Java parameters passed by reference or value?",
+              "options": ["Reference", "Value", "Both", "It depends on the type"],
+              "answer": "Value"
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Classes and Objects",
+          "content": "Classes are blueprints for objects. Objects are instances of classes. Define a class with class ClassName { }. Classes contain fields (variables) and methods. Create objects with new ClassName(). Access object members with dot notation. Each object has its own copy of instance fields.",
+          "interactive_task": "Create a simple Person class with name and age fields, then create an object of that class.",
+          "quiz": [
+            {
+              "question": "What keyword creates an object?",
+              "options": ["new", "create", "object", "init"],
+              "answer": "new"
+            },
+            {
+              "question": "How do you access an object's field?",
+              "options": ["object.field", "object->field", "object[field]", "field(object)"],
+              "answer": "object.field"
+            },
+            {
+              "question": "What is the relationship between class and object?",
+              "options": ["Class is instance of object", "Object is instance of class", "They are the same", "No relationship"],
+              "answer": "Object is instance of class"
+            },
+            {
+              "question": "Where are classes defined?",
+              "options": ["In methods", "In .java files", "In the main method", "In variables"],
+              "answer": "In .java files"
+            },
+            {
+              "question": "Can one class have multiple objects?",
+              "options": ["Yes", "No", "Only in some cases", "Only if static"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Constructors",
+          "content": "Constructors are special methods that initialize new objects. They have the same name as the class and no return type. If you don't define a constructor, Java provides a default no-argument constructor. You can overload constructors with different parameters. Use this() to call another constructor from the same class.",
+          "interactive_task": "Add a constructor to your Person class that initializes name and age.",
+          "quiz": [
+            {
+              "question": "What is the name of a constructor?",
+              "options": ["Anything", "Same as class", "Constructor", "init"],
+              "answer": "Same as class"
+            },
+            {
+              "question": "What is the return type of a constructor?",
+              "options": ["void", "The class type", "None", "int"],
+              "answer": "None"
+            },
+            {
+              "question": "When is the default constructor provided?",
+              "options": ["Always", "Never", "Only if no constructors defined", "Only for some classes"],
+              "answer": "Only if no constructors defined"
+            },
+            {
+              "question": "What is constructor overloading?",
+              "options": ["Making constructors heavier", "Having multiple constructors", "Extending constructors", "Making constructors static"],
+              "answer": "Having multiple constructors"
+            },
+            {
+              "question": "How do you call another constructor?",
+              "options": ["super()", "this()", "constructor()", "call()"],
+              "answer": "this()"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "title": "Access Modifiers",
+          "content": "Access modifiers control visibility of classes, fields, and methods. public: accessible from anywhere, private: only within the same class, protected: within package and subclasses, and default (no modifier): within package only. Good practice: make fields private and provide public getter/setter methods.",
+          "interactive_task": "Make the fields in your Person class private and add public getter methods.",
+          "quiz": [
+            {
+              "question": "Which modifier allows access from anywhere?",
+              "options": ["private", "public", "protected", "default"],
+              "answer": "public"
+            },
+            {
+              "question": "Which modifier is most restrictive?",
+              "options": ["private", "public", "protected", "default"],
+              "answer": "private"
+            },
+            {
+              "question": "What is the default access (no modifier)?",
+              "options": ["private", "public", "protected", "Package-private"],
+              "answer": "Package-private"
+            },
+            {
+              "question": "Why make fields private?",
+              "options": ["For encapsulation", "For better performance", "To make code shorter", "It's required"],
+              "answer": "For encapsulation"
+            },
+            {
+              "question": "What are getter and setter methods?",
+              "options": ["Methods to get and set private fields", "Special constructors", "Static methods", "Utility methods"],
+              "answer": "Methods to get and set private fields"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "title": "Inheritance",
+          "content": "Inheritance allows a class to inherit fields and methods from another class. Use extends keyword: class Child extends Parent. The child class (subclass) inherits from the parent class (superclass). Java supports single inheritance (one parent only). Use super() to call parent constructor and super.method() to call parent methods.",
+          "interactive_task": "Create a Student class that extends your Person class and adds a grade field.",
+          "quiz": [
+            {
+              "question": "What keyword is used for inheritance?",
+              "options": ["extends", "inherits", "super", "parent"],
+              "answer": "extends"
+            },
+            {
+              "question": "How many parents can a class have in Java?",
+              "options": ["One", "Multiple", "None", "Unlimited"],
+              "answer": "One"
+            },
+            {
+              "question": "What does super() call?",
+              "options": ["The current class constructor", "The parent class constructor", "A static method", "The main method"],
+              "answer": "The parent class constructor"
+            },
+            {
+              "question": "What is method overriding?",
+              "options": ["Creating a new method", "Changing a parent method in child", "Deleting a method", "Making a method static"],
+              "answer": "Changing a parent method in child"
+            },
+            {
+              "question": "Can private methods be inherited?",
+              "options": ["Yes", "No", "Only if final", "Only in same package"],
+              "answer": "No"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "title": "Polymorphism",
+          "content": "Polymorphism means 'many forms'. In Java, a reference variable of a superclass can refer to objects of its subclasses. This allows writing flexible code that works with different types. Method overriding enables runtime polymorphism - the JVM decides which method to call based on the actual object type at runtime.",
+          "interactive_task": "Create a method in Person that is overridden in Student, then call it polymorphically.",
+          "quiz": [
+            {
+              "question": "What does polymorphism mean?",
+              "options": ["Many classes", "Many forms", "Many methods", "Many objects"],
+              "answer": "Many forms"
+            },
+            {
+              "question": "Can a Parent reference hold a Child object?",
+              "options": ["Yes", "No", "Only if cast", "Only for interfaces"],
+              "answer": "Yes"
+            },
+            {
+              "question": "When is the method to call determined in polymorphism?",
+              "options": ["Compile time", "Runtime", "Never", "When writing code"],
+              "answer": "Runtime"
+            },
+            {
+              "question": "What is required for polymorphism to work?",
+              "options": ["Method overriding", "Method overloading", "Static methods", "Private methods"],
+              "answer": "Method overriding"
+            },
+            {
+              "question": "What is the difference between overriding and overloading?",
+              "options": ["Overriding: same method different classes, Overloading: same class different parameters", "They are the same", "Overloading is for constructors only", "Overriding is for fields only"],
+              "answer": "Overriding: same method different classes, Overloading: same class different parameters"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "title": "Abstract Classes and Methods",
+          "content": "Abstract classes cannot be instantiated and may contain abstract methods (without implementation). Use abstract keyword for both abstract classes and methods. Subclasses must implement all abstract methods or be abstract themselves. Abstract classes are useful for defining common interfaces while leaving implementation details to subclasses.",
+          "interactive_task": "Create an abstract Shape class with an abstract area() method, then create a concrete Circle class that extends it.",
+          "quiz": [
+            {
+              "question": "Can you create an object of an abstract class?",
+              "options": ["Yes", "No", "Only with new", "Only in main method"],
+              "answer": "No"
+            },
+            {
+              "question": "What keyword defines an abstract class?",
+              "options": ["abstract", "virtual", "base", "interface"],
+              "answer": "abstract"
+            },
+            {
+              "question": "What must subclasses do with abstract methods?",
+              "options": ["Ignore them", "Implement them", "Make them private", "Delete them"],
+              "answer": "Implement them"
+            },
+            {
+              "question": "Can abstract classes have concrete methods?",
+              "options": ["Yes", "No", "Only static methods", "Only private methods"],
+              "answer": "Yes"
+            },
+            {
+              "question": "When would you use an abstract class?",
+              "options": ["For utility classes", "When you want to share code but require specific implementations", "For final classes", "For data storage only"],
+              "answer": "When you want to share code but require specific implementations"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "title": "Interfaces",
+          "content": "Interfaces define contracts that classes must implement. All interface methods are implicitly public and abstract (before Java 8). Classes implement interfaces with implements keyword. A class can implement multiple interfaces. Interfaces can have constants (public static final fields) and default methods (Java 8+).",
+          "interactive_task": "Create a Drawable interface with a draw() method, and make your Circle class implement it.",
+          "quiz": [
+            {
+              "question": "What keyword defines an interface?",
+              "options": ["interface", "abstract", "class", "contract"],
+              "answer": "interface"
+            },
+            {
+              "question": "What keyword implements an interface?",
+              "options": ["extends", "implements", "uses", "inherits"],
+              "answer": "implements"
+            },
+            {
+              "question": "How many interfaces can a class implement?",
+              "options": ["One", "Multiple", "None", "Unlimited"],
+              "answer": "Multiple"
+            },
+            {
+              "question": "What are interface methods by default?",
+              "options": ["private", "public abstract", "protected", "package-private"],
+              "answer": "public abstract"
+            },
+            {
+              "question": "Can interfaces have fields?",
+              "options": ["Yes, but only constants", "No", "Yes, any fields", "Only static fields"],
+              "answer": "Yes, but only constants"
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "title": "Exception Handling",
+          "content": "Exceptions are events that disrupt normal program flow. Java uses try-catch-finally blocks for exception handling. Code that might throw exceptions goes in try block. Catch blocks handle specific exceptions. Finally block always executes. Checked exceptions must be handled or declared, unchecked exceptions (RuntimeException) don't.",
+          "interactive_task": "Write code that tries to parse a string to integer and catches the NumberFormatException.",
+          "quiz": [
+            {
+              "question": "What keyword starts the exception-prone code block?",
+              "options": ["try", "catch", "error", "handle"],
+              "answer": "try"
+            },
+            {
+              "question": "What keyword handles the exception?",
+              "options": ["try", "catch", "error", "finally"],
+              "answer": "catch"
+            },
+            {
+              "question": "What block always executes?",
+              "options": ["try", "catch", "finally", "always"],
+              "answer": "finally"
+            },
+            {
+              "question": "How do you throw an exception?",
+              "options": ["throw", "throws", "exception", "Both A and B"],
+              "answer": "throw"
+            },
+            {
+              "question": "What is the difference between checked and unchecked exceptions?",
+              "options": ["Checked must be handled, unchecked don't", "Unchecked must be handled, checked don't", "No difference", "Checked are for files, unchecked for math"],
+              "answer": "Checked must be handled, unchecked don't"
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "title": "Collections - ArrayList",
+          "content": "ArrayList is a resizable array implementation of the List interface. It grows automatically as needed. ArrayLists can only hold objects, not primitives (use wrapper classes). Common methods: .add(), .get(), .remove(), .size(), .contains(). ArrayLists maintain insertion order and allow duplicates.",
+          "interactive_task": "Create an ArrayList of strings, add some names, and print them using a loop.",
+          "quiz": [
+            {
+              "question": "How do you import ArrayList?",
+              "options": ["import java.util.ArrayList;", "import java.ArrayList;", "include java.util.ArrayList", "using java.util.ArrayList;"],
+              "answer": "import java.util.ArrayList;"
+            },
+            {
+              "question": "How do you create an ArrayList of Strings?",
+              "options": ["ArrayList<String> list = new ArrayList<>();", "ArrayList list = new ArrayList();", "List<String> list = new ArrayList<>();", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "How do you add an element to ArrayList?",
+              "options": [".add()", ".put()", ".insert()", ".append()"],
+              "answer": ".add()"
+            },
+            {
+              "question": "How do you get an element by index?",
+              "options": [".get()", ".element()", ".at()", "[]"],
+              "answer": ".get()"
+            },
+            {
+              "question": "Can ArrayLists hold primitives directly?",
+              "options": ["Yes", "No", "Only int and double", "Only with special syntax"],
+              "answer": "No"
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "title": "Collections - HashMap",
+          "content": "HashMap stores key-value pairs and allows fast retrieval by key. Keys must be unique, values can duplicate. HashMap doesn't maintain order. Common methods: .put(key, value), .get(key), .remove(key), .containsKey(key), .keySet(), .values(). Use wrapper classes for primitive keys/values.",
+          "interactive_task": "Create a HashMap that maps student names to their grades, then look up a grade by name.",
+          "quiz": [
+            {
+              "question": "How do you create a HashMap?",
+              "options": ["HashMap<Key, Value> map = new HashMap<>();", "HashMap map = new HashMap();", "Map<Key, Value> map = new HashMap<>();", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "How do you add a key-value pair?",
+              "options": [".add()", ".put()", ".insert()", ".set()"],
+              "answer": ".put()"
+            },
+            {
+              "question": "What happens if you put with an existing key?",
+              "options": ["Error", "The value is replaced", "Nothing", "A new entry is added"],
+              "answer": "The value is replaced"
+            },
+            {
+              "question": "How do you get all keys?",
+              "options": [".keys()", ".keySet()", ".getKeys()", ".allKeys()"],
+              "answer": ".keySet()"
+            },
+            {
+              "question": "Does HashMap maintain order?",
+              "options": ["Yes", "No", "Only insertion order", "Only for String keys"],
+              "answer": "No"
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "title": "File Handling - Reading Files",
+          "content": "Java provides several ways to read files. Use BufferedReader with FileReader for text files, or Files.readAllLines() for simple cases. Always close resources with try-with-resources to avoid leaks. File operations can throw IOException, which must be handled.",
+          "interactive_task": "Write a program that reads a text file and prints its contents.",
+          "quiz": [
+            {
+              "question": "What exception do file operations throw?",
+              "options": ["FileException", "IOException", "FileNotFoundException", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What is try-with-resources?",
+              "options": ["A way to automatically close resources", "A type of exception", "A file reading method", "A collection type"],
+              "answer": "A way to automatically close resources"
+            },
+            {
+              "question": "How do you read all lines from a file easily?",
+              "options": ["Files.readAllLines()", "File.readAll()", "BufferedReader.readAll()", "File.getAllLines()"],
+              "answer": "Files.readAllLines()"
+            },
+            {
+              "question": "What class is commonly used for reading text files?",
+              "options": ["BufferedReader", "FileReader", "Scanner", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "Where is Files class located?",
+              "options": ["java.io", "java.nio.file", "java.util", "java.file"],
+              "answer": "java.nio.file"
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "title": "File Handling - Writing Files",
+          "content": "To write files, use BufferedWriter with FileWriter, or Files.write() for simple cases. You can append to existing files or overwrite them. Use try-with-resources to ensure files are closed properly. Remember to handle IOException when working with files.",
+          "interactive_task": "Write a program that writes your name and age to a text file.",
+          "quiz": [
+            {
+              "question": "How do you write to a file with BufferedWriter?",
+              "options": [".write()", ".print()", ".output()", ".put()"],
+              "answer": ".write()"
+            },
+            {
+              "question": "How do you append to a file instead of overwriting?",
+              "options": ["Set append=true in FileWriter", "Use .append() method", "It always appends", "You can't append"],
+              "answer": "Set append=true in FileWriter"
+            },
+            {
+              "question": "What does Files.write() do?",
+              "options": ["Reads a file", "Writes lines to a file", "Copies files", "Deletes files"],
+              "answer": "Writes lines to a file"
+            },
+            {
+              "question": "How do you create a new line in a file?",
+              "options": ["\\n", "newLine()", "Both A and B", "lineBreak()"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What happens if the file doesn't exist when writing?",
+              "options": ["Error", "It is created", "Nothing", "Depends on the method"],
+              "answer": "It is created"
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "title": "String Methods",
+          "content": "String is immutable in Java. Common methods: .length(), .charAt(index), .substring(start, end), .toUpperCase(), .toLowerCase(), .trim(), .equals(), .contains(), .startsWith(), .endsWith(). Use StringBuilder for efficient string manipulation when many changes are needed.",
+          "interactive_task": "Take a string with extra spaces, trim it, convert to uppercase, and check if it contains 'JAVA'.",
+          "quiz": [
+            {
+              "question": "Are Java strings mutable?",
+              "options": ["Yes", "No", "Sometimes", "Only with new keyword"],
+              "answer": "No"
+            },
+            {
+              "question": "How do you compare strings for equality?",
+              "options": ["==", ".equals()", ".compare()", "Both A and B"],
+              "answer": ".equals()"
+            },
+            {
+              "question": "What does 'hello'.substring(1, 4) return?",
+              "options": ["'ell'", "'hello'", "'hel'", "'ello'"],
+              "answer": "'ell'"
+            },
+            {
+              "question": "Which class is better for many string manipulations?",
+              "options": ["String", "StringBuilder", "StringBuffer", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "What does .trim() do?",
+              "options": ["Removes spaces from both ends", "Removes all spaces", "Trims to certain length", "Removes vowels"],
+              "answer": "Removes spaces from both ends"
+            }
+          ]
+        },
+        {
+          "day": 21,
+          "title": "Static Members",
+          "content": "Static members belong to the class rather than instances. Static variables are shared by all instances. Static methods can be called without creating an object. Use static for utility methods and constants. Static blocks run when the class is loaded. You cannot access instance members from static context.",
+          "interactive_task": "Add a static counter to your Person class that tracks how many Person objects have been created.",
+          "quiz": [
+            {
+              "question": "What keyword makes a member static?",
+              "options": ["static", "final", "constant", "shared"],
+              "answer": "static"
+            },
+            {
+              "question": "How do you call a static method?",
+              "options": ["object.method()", "Class.method()", "method()", "Both A and B"],
+              "answer": "Class.method()"
+            },
+            {
+              "question": "Are static variables shared?",
+              "options": ["Yes", "No", "Only in same package", "Only if public"],
+              "answer": "Yes"
+            },
+            {
+              "question": "Can static methods access instance variables?",
+              "options": ["Yes", "No", "Only if public", "Only through objects"],
+              "answer": "Only through objects"
+            },
+            {
+              "question": "What is a common use of static?",
+              "options": ["For constants", "For utility methods", "For main method", "All of the above"],
+              "answer": "All of the above"
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "title": "Packages and Import",
+          "content": "Packages organize related classes and avoid naming conflicts. Declare a package at the top of a file: package com.example.mypackage;. Import classes from other packages with import package.Classname; or import package.*;. Java has many built-in packages like java.lang (automatically imported), java.util, java.io.",
+          "interactive_task": "Create a class in a package and import it in another class.",
+          "quiz": [
+            {
+              "question": "Where is the package declaration placed?",
+              "options": ["First line of file", "After imports", "Anywhere", "In the class"],
+              "answer": "First line of file"
+            },
+            {
+              "question": "How do you import all classes from a package?",
+              "options": ["import package.*;", "import package.all;", "import package;", "include package.*;"],
+              "answer": "import package.*;"
+            },
+            {
+              "question": "Which package is automatically imported?",
+              "options": ["java.util", "java.io", "java.lang", "java.net"],
+              "answer": "java.lang"
+            },
+            {
+              "question": "What is the purpose of packages?",
+              "options": ["Organization", "Avoid naming conflicts", "Access control", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "How are packages related to directories?",
+              "options": ["No relation", "Packages match directory structure", "Directories match package structure", "Both B and C"],
+              "answer": "Both B and C"
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "title": "Enums",
+          "content": "Enums define a fixed set of constants. They are type-safe and can have fields, methods, and constructors. Enums are implicitly final and extend java.lang.Enum. Use enums instead of integer constants for better readability and type safety. Enums can be used in switch statements.",
+          "interactive_task": "Create an enum for days of the week and use it in a switch statement.",
+          "quiz": [
+            {
+              "question": "What keyword defines an enum?",
+              "options": ["enum", "Enum", "constants", "final"],
+              "answer": "enum"
+            },
+            {
+              "question": "Are enums type-safe?",
+              "options": ["Yes", "No", "Sometimes", "Only if final"],
+              "answer": "Yes"
+            },
+            {
+              "question": "Can enums have methods?",
+              "options": ["Yes", "No", "Only static methods", "Only private methods"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What do enums extend?",
+              "options": ["Object", "Enum", "Both A and B", "Nothing"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "When should you use enums?",
+              "options": ["For fixed set of constants", "For mathematical constants", "For user input", "For file names"],
+              "answer": "For fixed set of constants"
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "title": "Generics",
+          "content": "Generics provide type safety at compile time. They allow you to write classes, interfaces, and methods that work with different types. Use angle brackets <T> to declare type parameters. Generics prevent ClassCastException and eliminate casting. Common uses: Collections like List<String>, Map<Integer, String>.",
+          "interactive_task": "Create a generic Box class that can hold any type of object.",
+          "quiz": [
+            {
+              "question": "What symbols are used for generics?",
+              "options": ["<>", "{}", "[]", "()"],
+              "answer": "<>"
+            },
+            {
+              "question": "What is the main benefit of generics?",
+              "options": ["Type safety", "Better performance", "Smaller code", "Easier syntax"],
+              "answer": "Type safety"
+            },
+            {
+              "question": "Can primitives be used in generics?",
+              "options": ["Yes", "No", "Only int and double", "Only with wrapper classes"],
+              "answer": "Only with wrapper classes"
+            },
+            {
+              "question": "What is type erasure?",
+              "options": ["Removing generic type information at runtime", "Deleting types", "A compiler error", "A collection type"],
+              "answer": "Removing generic type information at runtime"
+            },
+            {
+              "question": "Where are generics commonly used?",
+              "options": ["Collections", "Streams", "Both A and B", "Nowhere"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "title": "Final Project - Student Management System",
+          "content": "Let's build a simple student management system. We'll use classes for Student and Course, ArrayLists for storage, file I/O for persistence, and a simple menu system. This project will combine OOP principles, collections, file handling, and user input.",
+          "interactive_task": "Build a student management system that can add students, list all students, save to file, and load from file.",
+          "quiz": [
+            {
+              "question": "What collection would you use to store students?",
+              "options": ["Array", "ArrayList", "HashMap", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "How would you make the Student class properly encapsulated?",
+              "options": ["Make fields public", "Make fields private with getters/setters", "Use only static fields", "Don't use fields"],
+              "answer": "Make fields private with getters/setters"
+            },
+            {
+              "question": "What file format would be simplest for storage?",
+              "options": ["Binary", "XML", "Text file", "JSON"],
+              "answer": "Text file"
+            },
+            {
+              "question": "How would you handle different types of students?",
+              "options": ["Use inheritance", "Use multiple arrays", "Use different classes for each", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "What principle allows adding new student types easily?",
+              "options": ["Polymorphism", "Encapsulation", "Inheritance", "All of the above"],
+              "answer": "All of the above"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sql_basics",
+      "title": "SQL for Beginners",
+      "language": "SQL",
+      "description": "A 25-day beginner-friendly SQL course that teaches database fundamentals through hands-on practice.",
+      "days": [
+        {
+          "day": 1,
+          "title": "Introduction to Databases and SQL",
+          "content": "SQL (Structured Query Language) is used to manage and query relational databases. A database stores data in tables with rows and columns. Each table has a name and columns with specific data types. SQL has different types of commands: DDL (Data Definition Language) for structure, DML (Data Manipulation Language) for data, and DQL (Data Query Language) for querying.",
+          "interactive_task": "Write a SQL comment explaining what you want to learn about databases.",
+          "quiz": [
+            {
+              "question": "What does SQL stand for?",
+              "options": ["Structured Query Language", "Simple Question Language", "Structured Question Language", "Standard Query Logic"],
+              "answer": "Structured Query Language"
+            },
+            {
+              "question": "How is data organized in a relational database?",
+              "options": ["In tables with rows and columns", "In documents", "In graphs", "In arrays"],
+              "answer": "In tables with rows and columns"
+            },
+            {
+              "question": "Which SQL command type is used for querying data?",
+              "options": ["DDL", "DML", "DQL", "DCL"],
+              "answer": "DQL"
+            },
+            {
+              "question": "What is a row in a database table called?",
+              "options": ["Column", "Record", "Field", "Cell"],
+              "answer": "Record"
+            },
+            {
+              "question": "What is a column in a database table called?",
+              "options": ["Row", "Record", "Field", "Entry"],
+              "answer": "Field"
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "title": "Creating Databases and Tables",
+          "content": "Use CREATE DATABASE to create a new database and CREATE TABLE to create tables. When creating tables, specify column names and data types like INT (integer), VARCHAR (variable-length string), DATE, etc. The PRIMARY KEY uniquely identifies each record. Use USE database_name to select a database.",
+          "interactive_task": "Create a database called 'school' and a 'students' table with id, name, and age columns.",
+          "quiz": [
+            {
+              "question": "Which command creates a new database?",
+              "options": ["CREATE DATABASE", "NEW DATABASE", "MAKE DATABASE", "DATABASE CREATE"],
+              "answer": "CREATE DATABASE"
+            },
+            {
+              "question": "What data type would you use for a person's name?",
+              "options": ["INT", "VARCHAR", "DATE", "BOOLEAN"],
+              "answer": "VARCHAR"
+            },
+            {
+              "question": "What is a primary key?",
+              "options": ["A foreign key", "A unique identifier for each record", "The first column", "A required field"],
+              "answer": "A unique identifier for each record"
+            },
+            {
+              "question": "How do you select a database to use?",
+              "options": ["SELECT DATABASE", "USE DATABASE", "OPEN DATABASE", "DATABASE USE"],
+              "answer": "USE DATABASE"
+            },
+            {
+              "question": "Which keyword makes a column auto-increment?",
+              "options": ["AUTOINCREMENT", "AUTO_INCREMENT", "INCREMENT", "IDENTITY"],
+              "answer": "AUTO_INCREMENT"
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "title": "INSERT Statement",
+          "content": "The INSERT statement adds new records to a table. Specify the table name, column names (optional if inserting all columns), and values. String values must be enclosed in single quotes. Use INSERT INTO table_name (column1, column2) VALUES (value1, value2); to insert specific columns, or omit column names to insert all columns in order.",
+          "interactive_task": "Insert three student records into your students table.",
+          "quiz": [
+            {
+              "question": "Which statement adds data to a table?",
+              "options": ["ADD", "INSERT", "CREATE", "UPDATE"],
+              "answer": "INSERT"
+            },
+            {
+              "question": "How are string values enclosed in SQL?",
+              "options": ["Double quotes", "Single quotes", "Backticks", "No quotes"],
+              "answer": "Single quotes"
+            },
+            {
+              "question": "What happens if you omit column names in INSERT?",
+              "options": ["Error", "You must provide values for all columns", "Only first column is inserted", "Default values are used"],
+              "answer": "You must provide values for all columns"
+            },
+            {
+              "question": "Can you insert multiple rows with one INSERT statement?",
+              "options": ["Yes", "No", "Only in some databases", "Only with stored procedures"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What is the correct syntax for INSERT?",
+              "options": ["INSERT table VALUES (values)", "INSERT INTO table VALUES (values)", "INSERT table (columns) VALUES (values)", "Both B and C"],
+              "answer": "Both B and C"
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "title": "SELECT Statement",
+          "content": "SELECT retrieves data from tables. Use SELECT * to get all columns or specify column names. FROM specifies the table. You can use WHERE to filter results. The basic syntax is: SELECT column1, column2 FROM table_name;. Use ORDER BY to sort results and LIMIT to restrict the number of rows returned.",
+          "interactive_task": "Write a SELECT statement to get all students from your students table.",
+          "quiz": [
+            {
+              "question": "Which statement retrieves data from a table?",
+              "options": ["GET", "SELECT", "RETRIEVE", "FIND"],
+              "answer": "SELECT"
+            },
+            {
+              "question": "What does SELECT * mean?",
+              "options": ["Select first column", "Select all columns", "Select primary key", "Select random columns"],
+              "answer": "Select all columns"
+            },
+            {
+              "question": "Which clause specifies the table to query?",
+              "options": ["TABLE", "FROM", "WHERE", "IN"],
+              "answer": "FROM"
+            },
+            {
+              "question": "How do you sort results by a column?",
+              "options": ["SORT BY", "ORDER BY", "ARRANGE BY", "GROUP BY"],
+              "answer": "ORDER BY"
+            },
+            {
+              "question": "How do you limit the number of rows returned?",
+              "options": ["LIMIT", "TOP", "ROWS", "Both A and B"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "title": "WHERE Clause",
+          "content": "The WHERE clause filters records based on conditions. Use comparison operators: =, != or <>, >, <, >=, <=. For multiple conditions, use AND, OR, and parentheses for grouping. Use LIKE for pattern matching with % (any characters) and _ (single character). IS NULL checks for null values.",
+          "interactive_task": "Select students who are older than 20 from your students table.",
+          "quiz": [
+            {
+              "question": "Which clause filters records in SQL?",
+              "options": ["FILTER", "WHERE", "HAVING", "CONDITION"],
+              "answer": "WHERE"
+            },
+            {
+              "question": "Which operator checks for equality?",
+              "options": ["==", "=", "===", "EQUALS"],
+              "answer": "="
+            },
+            {
+              "question": "What does % represent in LIKE patterns?",
+              "options": ["Single character", "Any number of characters", "Percent sign", "Zero characters"],
+              "answer": "Any number of characters"
+            },
+            {
+              "question": "How do you check for null values?",
+              "options": ["= NULL", "IS NULL", "== NULL", "NULL"],
+              "answer": "IS NULL"
+            },
+            {
+              "question": "Which logical operator requires all conditions to be true?",
+              "options": ["AND", "OR", "NOT", "XOR"],
+              "answer": "AND"
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "title": "UPDATE Statement",
+          "content": "UPDATE modifies existing records in a table. Use SET to specify new values and WHERE to identify which records to update. Always use WHERE with UPDATE unless you want to update all records. The syntax is: UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;",
+          "interactive_task": "Update the age of a specific student in your students table.",
+          "quiz": [
+            {
+              "question": "Which statement modifies existing records?",
+              "options": ["MODIFY", "UPDATE", "CHANGE", "ALTER"],
+              "answer": "UPDATE"
+            },
+            {
+              "question": "Which clause specifies which records to update?",
+              "options": ["SET", "WHERE", "FILTER", "CONDITION"],
+              "answer": "WHERE"
+            },
+            {
+              "question": "What happens if you omit WHERE in UPDATE?",
+              "options": ["Nothing", "Only first record is updated", "All records are updated", "Error"],
+              "answer": "All records are updated"
+            },
+            {
+              "question": "How do you update multiple columns?",
+              "options": ["Multiple SET clauses", "Comma-separated in SET", "Multiple UPDATE statements", "You can't update multiple columns"],
+              "answer": "Comma-separated in SET"
+            },
+            {
+              "question": "Can you update a primary key?",
+              "options": ["Yes", "No", "Only if unique", "Only in some databases"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "title": "DELETE Statement",
+          "content": "DELETE removes records from a table. Use WHERE to specify which records to delete. Without WHERE, all records are deleted (but the table structure remains). The syntax is: DELETE FROM table_name WHERE condition;. Use TRUNCATE TABLE to delete all records faster, but it cannot be rolled back.",
+          "interactive_task": "Delete a specific student from your students table.",
+          "quiz": [
+            {
+              "question": "Which statement removes records from a table?",
+              "options": ["REMOVE", "DELETE", "DROP", "ERASE"],
+              "answer": "DELETE"
+            },
+            {
+              "question": "What happens if you omit WHERE in DELETE?",
+              "options": ["Nothing", "Only first record is deleted", "All records are deleted", "Error"],
+              "answer": "All records are deleted"
+            },
+            {
+              "question": "What is the difference between DELETE and TRUNCATE?",
+              "options": ["No difference", "TRUNCATE is faster but can't be rolled back", "DELETE is faster", "TRUNCATE removes table structure"],
+              "answer": "TRUNCATE is faster but can't be rolled back"
+            },
+            {
+              "question": "How do you delete all records from a table?",
+              "options": ["DELETE FROM table", "TRUNCATE TABLE", "Both A and B", "DROP TABLE"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "Can you delete a record that doesn't exist?",
+              "options": ["Yes, it causes an error", "Yes, but no rows affected", "No, it causes an error", "No, but it warns you"],
+              "answer": "Yes, but no rows affected"
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "title": "Data Types",
+          "content": "SQL data types define what kind of data a column can hold. Common types: INT (integer), DECIMAL/NUMERIC (exact numbers), VARCHAR (variable-length strings), CHAR (fixed-length strings), DATE (date without time), DATETIME/TIMESTAMP (date and time), BOOLEAN (true/false). Choose appropriate types for your data to save space and ensure validity.",
+          "interactive_task": "Create a table with different data types: integer, string, decimal, and date.",
+          "quiz": [
+            {
+              "question": "Which data type would you use for a price?",
+              "options": ["INT", "VARCHAR", "DECIMAL", "BOOLEAN"],
+              "answer": "DECIMAL"
+            },
+            {
+              "question": "What is the difference between CHAR and VARCHAR?",
+              "options": ["No difference", "CHAR is fixed length, VARCHAR is variable", "VARCHAR is fixed length, CHAR is variable", "CHAR is for numbers, VARCHAR for text"],
+              "answer": "CHAR is fixed length, VARCHAR is variable"
+            },
+            {
+              "question": "Which type stores true/false values?",
+              "options": ["BOOL", "BOOLEAN", "BIT", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "What does INT(11) mean?",
+              "options": ["11 bytes", "Display width of 11", "Maximum value 11", "11 bits"],
+              "answer": "Display width of 11"
+            },
+            {
+              "question": "Which type would you use for a birth date?",
+              "options": ["DATETIME", "DATE", "TIMESTAMP", "TIME"],
+              "answer": "DATE"
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "title": "Constraints",
+          "content": "Constraints enforce rules on data. Common constraints: PRIMARY KEY (unique identifier), FOREIGN KEY (references another table), NOT NULL (value required), UNIQUE (all values different), CHECK (custom condition), DEFAULT (default value). Constraints ensure data integrity and relationships between tables.",
+          "interactive_task": "Add NOT NULL constraint to the name column and a CHECK constraint to ensure age is positive.",
+          "quiz": [
+            {
+              "question": "Which constraint ensures a column cannot have NULL?",
+              "options": ["NOT NULL", "REQUIRED", "MANDATORY", "NO NULL"],
+              "answer": "NOT NULL"
+            },
+            {
+              "question": "What does a PRIMARY KEY constraint do?",
+              "options": ["Makes column required", "Makes values unique and not null", "Links to another table", "Sets default value"],
+              "answer": "Makes values unique and not null"
+            },
+            {
+              "question": "Which constraint links to another table?",
+              "options": ["PRIMARY KEY", "FOREIGN KEY", "LINK", "REFERENCE"],
+              "answer": "FOREIGN KEY"
+            },
+            {
+              "question": "How do you set a default value?",
+              "options": ["DEFAULT", "SET DEFAULT", "DEFAULT VALUE", "BY DEFAULT"],
+              "answer": "DEFAULT"
+            },
+            {
+              "question": "Can a table have multiple UNIQUE constraints?",
+              "options": ["Yes", "No", "Only one", "Only for primary key"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "title": "ORDER BY",
+          "content": "ORDER BY sorts the result set by one or more columns. Use ASC for ascending order (default) or DESC for descending order. You can sort by multiple columns by separating them with commas. The syntax is: SELECT columns FROM table ORDER BY column1 ASC, column2 DESC;",
+          "interactive_task": "Select all students ordered by age in descending order.",
+          "quiz": [
+            {
+              "question": "Which clause sorts query results?",
+              "options": ["SORT BY", "ORDER BY", "ARRANGE BY", "GROUP BY"],
+              "answer": "ORDER BY"
+            },
+            {
+              "question": "What is the default sort order?",
+              "options": ["ASC", "DESC", "RANDOM", "No default"],
+              "answer": "ASC"
+            },
+            {
+              "question": "How do you sort by multiple columns?",
+              "options": ["Multiple ORDER BY clauses", "Comma-separated columns", "AND between columns", "You can't sort by multiple columns"],
+              "answer": "Comma-separated columns"
+            },
+            {
+              "question": "What does DESC do?",
+              "options": ["Sorts descending", "Describes the table", "Deletes records", "Displays structure"],
+              "answer": "Sorts descending"
+            },
+            {
+              "question": "Can you sort by a column not in SELECT?",
+              "options": ["Yes", "No", "Only if indexed", "Only in some databases"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "title": "Aggregate Functions",
+          "content": "Aggregate functions perform calculations on multiple rows and return a single value. Common functions: COUNT() counts rows, SUM() adds values, AVG() calculates average, MAX() finds maximum, MIN() finds minimum. Use GROUP BY with aggregates to calculate values for groups of rows.",
+          "interactive_task": "Calculate the average age of all students.",
+          "quiz": [
+            {
+              "question": "Which function counts rows?",
+              "options": ["SUM()", "COUNT()", "TOTAL()", "NUMBER()"],
+              "answer": "COUNT()"
+            },
+            {
+              "question": "What does AVG() do?",
+              "options": ["Finds average", "Adds values", "Finds maximum", "Counts distinct values"],
+              "answer": "Finds average"
+            },
+            {
+              "question": "Which function finds the largest value?",
+              "options": ["MAX()", "LARGEST()", "TOP()", "BIGGEST()"],
+              "answer": "MAX()"
+            },
+            {
+              "question": "What does COUNT(*) count?",
+              "options": ["All rows", "Non-null rows", "Distinct values", "First column only"],
+              "answer": "All rows"
+            },
+            {
+              "question": "Can you use multiple aggregate functions in one query?",
+              "options": ["Yes", "No", "Only two", "Only if they are the same"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "title": "GROUP BY",
+          "content": "GROUP BY groups rows that have the same values in specified columns. It's used with aggregate functions to calculate values for each group. The HAVING clause filters groups (similar to WHERE for rows). GROUP BY comes after WHERE and before ORDER BY.",
+          "interactive_task": "Count how many students you have at each age.",
+          "quiz": [
+            {
+              "question": "What does GROUP BY do?",
+              "options": ["Groups similar rows", "Sorts rows", "Filters rows", "Combines tables"],
+              "answer": "Groups similar rows"
+            },
+            {
+              "question": "Which clause filters groups?",
+              "options": ["WHERE", "HAVING", "FILTER", "GROUP WHERE"],
+              "answer": "HAVING"
+            },
+            {
+              "question": "Can you use WHERE and HAVING in the same query?",
+              "options": ["Yes", "No", "Only in subqueries", "Only with JOIN"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What is the difference between WHERE and HAVING?",
+              "options": ["WHERE filters rows, HAVING filters groups", "No difference", "HAVING is for aggregates only", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "Can you group by multiple columns?",
+              "options": ["Yes", "No", "Only two columns", "Only if they are indexed"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "title": "JOIN Basics",
+          "content": "JOIN combines rows from two or more tables based on related columns. INNER JOIN returns only matching rows from both tables. LEFT JOIN returns all rows from the left table and matching rows from the right table. RIGHT JOIN is the opposite of LEFT JOIN. FULL JOIN returns all rows when there's a match in either table.",
+          "interactive_task": "Create a courses table and use INNER JOIN to show students and their courses.",
+          "quiz": [
+            {
+              "question": "Which JOIN returns only matching rows?",
+              "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+              "answer": "INNER JOIN"
+            },
+            {
+              "question": "Which JOIN returns all rows from the left table?",
+              "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+              "answer": "LEFT JOIN"
+            },
+            {
+              "question": "What is used to specify the join condition?",
+              "options": ["WHERE", "ON", "USING", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "How many tables can you join in one query?",
+              "options": ["Two", "Multiple", "One", "Unlimited"],
+              "answer": "Multiple"
+            },
+            {
+              "question": "What is a Cartesian product?",
+              "options": ["A type of JOIN", "All possible combinations of rows", "A mathematical operation", "Both A and B"],
+              "answer": "Both A and B"
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "title": "ALTER TABLE",
+          "content": "ALTER TABLE modifies an existing table structure. You can: ADD a new column, DROP a column, MODIFY/ALTER a column's data type, ADD/DROP constraints, RENAME a column or table. The syntax varies by database system. Always backup data before altering table structure.",
+          "interactive_task": "Add an email column to your students table.",
+          "quiz": [
+            {
+              "question": "Which statement modifies table structure?",
+              "options": ["MODIFY TABLE", "ALTER TABLE", "CHANGE TABLE", "UPDATE TABLE"],
+              "answer": "ALTER TABLE"
+            },
+            {
+              "question": "How do you add a new column?",
+              "options": ["ADD COLUMN", "NEW COLUMN", "CREATE COLUMN", "INSERT COLUMN"],
+              "answer": "ADD COLUMN"
+            },
+            {
+              "question": "Can you change a column's data type?",
+              "options": ["Yes", "No", "Only to compatible types", "Only if empty"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What happens to data when you drop a column?",
+              "options": ["It is saved", "It is deleted", "It is moved to another table", "It becomes hidden"],
+              "answer": "It is deleted"
+            },
+            {
+              "question": "Can you rename a table?",
+              "options": ["Yes", "No", "Only if empty", "Only with special permissions"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "title": "Indexes",
+          "content": "Indexes improve query performance by creating a quick lookup structure. They're like book indexes - they help find data faster without scanning the entire table. CREATE INDEX creates an index, DROP INDEX removes it. Primary keys are automatically indexed. Don't over-index as indexes slow down INSERT/UPDATE/DELETE.",
+          "interactive_task": "Create an index on the email column of your students table.",
+          "quiz": [
+            {
+              "question": "What is the main purpose of indexes?",
+              "options": ["Save storage space", "Improve query performance", "Enforce constraints", "Backup data"],
+              "answer": "Improve query performance"
+            },
+            {
+              "question": "Which statement creates an index?",
+              "options": ["CREATE INDEX", "MAKE INDEX", "ADD INDEX", "INDEX CREATE"],
+              "answer": "CREATE INDEX"
+            },
+            {
+              "question": "Are primary keys automatically indexed?",
+              "options": ["Yes", "No", "Only in some databases", "Only if unique"],
+              "answer": "Yes"
+            },
+            {
+              "question": "What is a downside of indexes?",
+              "options": ["They use storage space", "They slow down data modification", "They can become fragmented", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "On which columns should you create indexes?",
+              "options": ["All columns", "Columns frequently used in WHERE", "Primary keys only", "Foreign keys only"],
+              "answer": "Columns frequently used in WHERE"
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "title": "Subqueries",
+          "content": "Subqueries (nested queries) are queries within queries. They can be used in SELECT, FROM, WHERE, and HAVING clauses. Subqueries must be enclosed in parentheses. They can return a single value, multiple values, or a table. Use EXISTS to check if a subquery returns any rows.",
+          "interactive_task": "Use a subquery to find students who are older than the average age.",
+          "quiz": [
+            {
+              "question": "What is a subquery?",
+              "options": ["A small query", "A query within another query", "A simple query", "A quick query"],
+              "answer": "A query within another query"
+            },
+            {
+              "question": "Where can subqueries be used?",
+              "options": ["Only in WHERE", "In SELECT, FROM, WHERE", "Only in SELECT", "Anywhere in a query"],
+              "answer": "In SELECT, FROM, WHERE"
+            },
+            {
+              "question": "How are subqueries enclosed?",
+              "options": ["Braces {}", "Brackets []", "Parentheses ()", "Quotes ''"],
+              "answer": "Parentheses ()"
+            },
+            {
+              "question": "What does EXISTS check?",
+              "options": ["If a subquery returns any rows", "If a table exists", "If a column exists", "If a value exists"],
+              "answer": "If a subquery returns any rows"
+            },
+            {
+              "question": "Can subqueries be correlated?",
+              "options": ["Yes", "No", "Only in WHERE", "Only with JOIN"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "title": "Views",
+          "content": "Views are virtual tables based on the result of a SQL query. They don't store data themselves but display data from underlying tables. CREATE VIEW creates a view, DROP VIEW removes it. Views can simplify complex queries, enhance security by hiding columns, and provide logical data organization.",
+          "interactive_task": "Create a view that shows student names and ages only.",
+          "quiz": [
+            {
+              "question": "What is a view?",
+              "options": ["A physical table", "A virtual table based on a query", "A table index", "A query result"],
+              "answer": "A virtual table based on a query"
+            },
+            {
+              "question": "Which statement creates a view?",
+              "options": ["CREATE VIEW", "MAKE VIEW", "DEFINE VIEW", "VIEW CREATE"],
+              "answer": "CREATE VIEW"
+            },
+            {
+              "question": "Do views store data?",
+              "options": ["Yes", "No", "Sometimes", "Only materialized views"],
+              "answer": "No"
+            },
+            {
+              "question": "What is a benefit of using views?",
+              "options": ["Simplify complex queries", "Enhance security", "Both A and B", "Improve performance"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "Can you update data through a view?",
+              "options": ["Yes, always", "No, never", "Sometimes, with restrictions", "Only if the view has one table"],
+              "answer": "Sometimes, with restrictions"
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "title": "String Functions",
+          "content": "SQL provides functions for string manipulation. Common functions: CONCAT() joins strings, LENGTH() returns string length, UPPER()/LOWER() change case, TRIM() removes spaces, SUBSTRING() extracts part of string, REPLACE() replaces text. These functions help clean and transform string data.",
+          "interactive_task": "Use string functions to display student names in uppercase and calculate name lengths.",
+          "quiz": [
+            {
+              "question": "Which function joins strings?",
+              "options": ["JOIN()", "CONCAT()", "COMBINE()", "MERGE()"],
+              "answer": "CONCAT()"
+            },
+            {
+              "question": "What does LENGTH() return?",
+              "options": ["String length", "Table size", "Number of rows", "Column count"],
+              "answer": "String length"
+            },
+            {
+              "question": "How do you convert text to uppercase?",
+              "options": ["UPPER()", "TOUPPER()", "UCASE()", "Both A and C"],
+              "answer": "Both A and C"
+            },
+            {
+              "question": "What does SUBSTRING('Hello', 2, 3) return?",
+              "options": ["'ell'", "'Hel'", "'llo'", "'Hello'"],
+              "answer": "'ell'"
+            },
+            {
+              "question": "Which function removes leading and trailing spaces?",
+              "options": ["CLEAN()", "TRIM()", "STRIP()", "REMOVE()"],
+              "answer": "TRIM()"
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "title": "Date Functions",
+          "content": "Date functions manipulate and extract information from dates. Common functions: NOW()/CURDATE() get current date/time, DATE_FORMAT() formats dates, DATEDIFF() calculates difference between dates, DATE_ADD()/DATE_SUB() add/subtract time intervals, EXTRACT() gets specific parts (year, month, day).",
+          "interactive_task": "Calculate how many days until each student's next birthday.",
+          "quiz": [
+            {
+              "question": "Which function gets the current date?",
+              "options": ["NOW()", "CURDATE()", "TODAY()", "Both A and B"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What does DATEDIFF() do?",
+              "options": ["Formats dates", "Calculates difference between dates", "Adds dates", "Extracts date parts"],
+              "answer": "Calculates difference between dates"
+            },
+            {
+              "question": "How do you add 7 days to a date?",
+              "options": ["DATE_ADD(date, INTERVAL 7 DAY)", "date + 7", "ADD_DAYS(date, 7)", "All of the above"],
+              "answer": "DATE_ADD(date, INTERVAL 7 DAY)"
+            },
+            {
+              "question": "What does EXTRACT(YEAR FROM date) return?",
+              "options": ["The year", "The month", "The day", "The time"],
+              "answer": "The year"
+            },
+            {
+              "question": "Which function formats a date as a string?",
+              "options": ["FORMAT_DATE()", "DATE_FORMAT()", "TO_CHAR()", "Both B and C"],
+              "answer": "Both B and C"
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "title": "NULL Functions",
+          "content": "NULL represents missing or unknown data. Use IS NULL and IS NOT NULL to check for NULL. Functions for handling NULL: COALESCE() returns first non-NULL value, IFNULL()/ISNULL() return specified value if NULL, NULLIF() returns NULL if values are equal. Be careful with NULL in comparisons and calculations.",
+          "interactive_task": "Use COALESCE to display a default value for NULL ages.",
+          "quiz": [
+            {
+              "question": "What does NULL represent?",
+              "options": ["Zero", "Empty string", "Missing or unknown data", "False"],
+              "answer": "Missing or unknown data"
+            },
+            {
+              "question": "How do you check for NULL values?",
+              "options": ["= NULL", "IS NULL", "== NULL", "NULL"],
+              "answer": "IS NULL"
+            },
+            {
+              "question": "What does COALESCE do?",
+              "options": ["Returns first non-NULL value", "Converts to NULL", "Checks for NULL", "Ignores NULL"],
+              "answer": "Returns first non-NULL value"
+            },
+            {
+              "question": "What is the result of any comparison with NULL?",
+              "options": ["True", "False", "NULL", "Error"],
+              "answer": "NULL"
+            },
+            {
+              "question": "What does NULLIF(a, b) do?",
+              "options": ["Returns NULL if a=b", "Returns a if a=b", "Returns b if a=NULL", "Returns NULL if a≠b"],
+              "answer": "Returns NULL if a=b"
+            }
+          ]
+        },
+        {
+          "day": 21,
+          "title": "Transactions",
+          "content": "Transactions group multiple SQL operations into a single unit of work. They follow ACID properties: Atomicity (all or nothing), Consistency (valid state), Isolation (concurrent operations don't interfere), Durability (changes persist). Use BEGIN TRANSACTION, COMMIT to save changes, ROLLBACK to undo changes.",
+          "interactive_task": "Use a transaction to update multiple student records atomically.",
+          "quiz": [
+            {
+              "question": "What do transactions ensure?",
+              "options": ["Better performance", "Data integrity", "Smaller storage", "Faster queries"],
+              "answer": "Data integrity"
+            },
+            {
+              "question": "What does COMMIT do?",
+              "options": ["Starts a transaction", "Saves changes", "Undoes changes", "Ends a connection"],
+              "answer": "Saves changes"
+            },
+            {
+              "question": "What does ROLLBACK do?",
+              "options": ["Starts a transaction", "Saves changes", "Undoes changes", "Shows changes"],
+              "answer": "Undoes changes"
+            },
+            {
+              "question": "What does ACID stand for?",
+              "options": ["Atomic, Consistent, Isolated, Durable", "Automatic, Complete, Independent, Direct", "Always, Correct, Instant, Done", "Action, Check, Implement, Done"],
+              "answer": "Atomic, Consistent, Isolated, Durable"
+            },
+            {
+              "question": "When would you use transactions?",
+              "options": ["For single INSERT", "For related operations that must succeed or fail together", "For all queries", "For SELECT only"],
+              "answer": "For related operations that must succeed or fail together"
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "title": "Stored Procedures",
+          "content": "Stored procedures are prepared SQL code that can be saved and reused. They can accept parameters and return results. CREATE PROCEDURE creates a procedure, CALL executes it. Procedures improve performance (precompiled), enhance security, and reduce network traffic. They can contain complex logic with variables and control flow.",
+          "interactive_task": "Create a stored procedure that returns all students older than a specified age.",
+          "quiz": [
+            {
+              "question": "What is a stored procedure?",
+              "options": ["A table", "A saved SQL query that can be reused", "A database", "A view"],
+              "answer": "A saved SQL query that can be reused"
+            },
+            {
+              "question": "Which statement creates a procedure?",
+              "options": ["CREATE PROCEDURE", "MAKE PROCEDURE", "DEFINE PROCEDURE", "PROCEDURE CREATE"],
+              "answer": "CREATE PROCEDURE"
+            },
+            {
+              "question": "How do you execute a stored procedure?",
+              "options": ["EXECUTE", "CALL", "RUN", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "What is a benefit of stored procedures?",
+              "options": ["Improved performance", "Enhanced security", "Reduced network traffic", "All of the above"],
+              "answer": "All of the above"
+            },
+            {
+              "question": "Can stored procedures accept parameters?",
+              "options": ["Yes", "No", "Only in some databases", "Only output parameters"],
+              "answer": "Yes"
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "title": "Normalization",
+          "content": "Normalization organizes data to reduce redundancy and improve integrity. First Normal Form (1NF): atomic values, no repeating groups. Second Normal Form (2NF): 1NF + no partial dependencies (all non-key attributes depend on whole primary key). Third Normal Form (3NF): 2NF + no transitive dependencies (non-key attributes depend only on primary key).",
+          "interactive_task": "Identify normalization issues in a sample table and suggest improvements.",
+          "quiz": [
+            {
+              "question": "What is the goal of normalization?",
+              "options": ["Make tables smaller", "Reduce redundancy and improve integrity", "Speed up queries", "Simplify table names"],
+              "answer": "Reduce redundancy and improve integrity"
+            },
+            {
+              "question": "What does 1NF require?",
+              "options": ["Atomic values", "No repeating groups", "Both A and B", "No NULL values"],
+              "answer": "Both A and B"
+            },
+            {
+              "question": "What is a partial dependency?",
+              "options": ["A column that depends on part of a composite key", "A column that depends on another column", "A foreign key", "A primary key"],
+              "answer": "A column that depends on part of a composite key"
+            },
+            {
+              "question": "What is a transitive dependency?",
+              "options": ["A -> B -> C where A determines C through B", "A direct dependency", "A foreign key relationship", "A primary key constraint"],
+              "answer": "A -> B -> C where A determines C through B"
+            },
+            {
+              "question": "Is normalization always good?",
+              "options": ["Yes", "No, it can slow down some queries", "No, it increases storage", "No, it makes programming harder"],
+              "answer": "No, it can slow down some queries"
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "title": "Backup and Restore",
+          "content": "Regular backups protect against data loss. Use mysqldump for MySQL, pg_dump for PostgreSQL, or database-specific tools. Backups can be full (all data), differential (changes since last full), or incremental (changes since last backup). Test restores regularly. Consider backup frequency based on data importance and change rate.",
+          "interactive_task": "Write the commands to backup and restore your school database.",
+          "quiz": [
+            {
+              "question": "Why are backups important?",
+              "options": ["To improve performance", "To protect against data loss", "To save storage space", "To organize data"],
+              "answer": "To protect against data loss"
+            },
+            {
+              "question": "What is a full backup?",
+              "options": ["Backup of all data", "Backup of changes only", "Backup of structure only", "Backup of one table"],
+              "answer": "Backup of all data"
+            },
+            {
+              "question": "How often should you test restores?",
+              "options": ["Never", "Regularly", "Only when needed", "Once a year"],
+              "answer": "Regularly"
+            },
+            {
+              "question": "What tool is commonly used for MySQL backups?",
+              "options": ["mysqlbackup", "mysqldump", "mysqlsave", "mysqlcopy"],
+              "answer": "mysqldump"
+            },
+            {
+              "question": "What factors determine backup frequency?",
+              "options": ["Data importance", "How often data changes", "Available storage", "All of the above"],
+              "answer": "All of the above"
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "title": "Final Project - Library Database",
+          "content": "Design and implement a library database with books, members, and loans. Create normalized tables, insert sample data, and write queries to: find available books, show member borrowing history, calculate overdue books, and generate reports. This project combines database design, SQL queries, and real-world problem solving.",
+          "interactive_task": "Create a complete library database with books, members, loans tables and write queries to manage the library.",
+          "quiz": [
+            {
+              "question": "What tables would you need for a library system?",
+              "options": ["books, members, loans", "books only", "books and authors", "members only"],
+              "answer": "books, members, loans"
+            },
+            {
+              "question": "How would you track which books are borrowed?",
+              "options": ["With a status column in books", "With a loans table", "With a borrowed_books table", "Both B and C"],
+              "answer": "Both B and C"
+            },
+            {
+              "question": "How would you find overdue books?",
+              "options": ["Compare due date to current date", "Check a status field", "Ask the librarian", "You can't track this"],
+              "answer": "Compare due date to current date"
+            },
+            {
+              "question": "What relationship exists between members and books?",
+              "options": ["One-to-one", "One-to-many", "Many-to-many", "No relationship"],
+              "answer": "Many-to-many"
+            },
+            {
+              "question": "How would you prevent the same book being loaned twice?",
+              "options": ["With a unique constraint", "With application logic", "With a check in loans table", "All of the above"],
+              "answer": "All of the above"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

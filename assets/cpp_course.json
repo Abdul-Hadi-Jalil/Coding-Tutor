@@ -1,0 +1,1825 @@
+{
+    "course_title": "C++ Beginner Level",
+    "days": [
+        {
+            "title": "Day 1 – Introduction to C++",
+            "definition": "C++ is a powerful, high-performance programming language created as an extension of the C language.",
+            "explanation": "C++ is like giving you the blueprint and the tools to build a high-performance engine from scratch. It gives you a lot of control over system resources and memory, which is why it's used where performance is critical. C++ is a cross-platform language that can be used to create high-performance applications. It was developed by Bjarne Stroustrup and has been updated several times (C++11, C++14, C++17, C++20, C++23) to add new features. It is an object-oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs. You can find C++ in operating systems, game development, browsers, and embedded systems.",
+            "code_example": "// Your first C++ program\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Hello World!\";\n    return 0;\n}",
+            "real_world_example": "C++ is the backbone of performance-critical applications. The entire Adobe Creative Suite (Photoshop, Illustrator) is built with C++. Major web browsers like Chrome and Firefox use C++ for their rendering engines. Even the Unreal Engine, one of the most powerful game engines in the world, is written in C++.",
+            "interactive_tasks": [
+                "Write a program that prints 'Hello World!' to the screen.",
+                "Modify the Hello World program to also print your name on a new line.",
+                "Write a program that calculates and prints the result of 10 + 5."
+            ],
+            "quiz": [
+                {
+                    "question": "What is C++ an extension of?",
+                    "options": [
+                        "Java",
+                        "Python",
+                        "The C language",
+                        "Assembly"
+                    ],
+                    "answer": "The C language",
+                    "reasoning": "C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs as an enhancement to the C language."
+                },
+                {
+                    "question": "Which of these is a key characteristic of C++?",
+                    "options": [
+                        "Automatic memory management only",
+                        "High-level abstraction only",
+                        "Direct hardware control and high performance",
+                        "It can only be used for web development"
+                    ],
+                    "answer": "Direct hardware control and high performance",
+                    "reasoning": "C++ provides low-level memory manipulation capabilities along with high-level features, making it suitable for systems programming where performance is key."
+                },
+                {
+                    "question": "What is the correct extension for a C++ source file?",
+                    "options": [
+                        ".c",
+                        ".py",
+                        ".cpp",
+                        ".java"
+                    ],
+                    "answer": ".cpp",
+                    "reasoning": "The standard and most common file extension for a C++ source file is .cpp."
+                },
+                {
+                    "question": "Which of these is NOT a common use case for C++?",
+                    "options": [
+                        "Game Development",
+                        "Operating Systems",
+                        "Web Browser Engines",
+                        "Simple website frontends (like HTML/CSS)"
+                    ],
+                    "answer": "Simple website frontends (like HTML/CSS)",
+                    "reasoning": "C++ is used for the complex backend engines of browsers, but the frontend that users see is built with HTML, CSS, and JavaScript."
+                },
+                {
+                    "question": "What is the output of: `cout << \"5 + 2 = \" << 5 + 2 << endl;`",
+                    "options": [
+                        "7",
+                        "5 + 2 = 7",
+                        "52",
+                        "5 + 2 = 5 + 2"
+                    ],
+                    "answer": "5 + 2 = 7",
+                    "reasoning": "The `cout` object streams the text \"5 + 2 = \" followed by the calculated result of the expression 5+2, which is 7."
+                },
+                {
+                    "question": "What is the purpose of `#include <iostream>`?",
+                    "options": [
+                        "To perform mathematical operations",
+                        "To include the input/output stream library",
+                        "To define the main function",
+                        "To create graphical user interfaces"
+                    ],
+                    "answer": "To include the input/output stream library",
+                    "reasoning": "The `#include <iostream>` directive tells the preprocessor to include the contents of the iostream library, which is needed for input/output operations like `cout` and `cin`."
+                },
+                {
+                    "question": "What does the `main()` function represent in a C++ program?",
+                    "options": [
+                        "The point where the program ends",
+                        "An optional function for organization",
+                        "The starting point of program execution",
+                        "A function that only handles output"
+                    ],
+                    "answer": "The starting point of program execution",
+                    "reasoning": "Every C++ program must have exactly one `main()` function. The operating system calls this function to begin the program's execution."
+                }
+            ]
+        },
+        {
+            "title": "Day 2 – C++ Syntax and Output",
+            "definition": "Understanding the basic structure of a C++ program and how to produce output.",
+            "explanation": "Every C++ program has a specific structure. The `#include <iostream>` line includes a library that allows for input and output. The `using namespace std;` line lets us use names from the standard library without typing `std::` every time. The `int main()` function is where your program starts executing. Inside the curly braces `{}`, you write your instructions. The `cout` object is used with the `<<` operator to print text and numbers to the screen. Every statement in C++ must end with a semicolon `;`.",
+            "code_example": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Printing text and numbers\n    cout << \"Hello World!\" << endl;\n    cout << \"This is a number: \" << 42 << endl;\n    cout << \"And this is math: \" << 5 + 3 << endl;\n    return 0;\n}",
+            "real_world_example": "Every application, from a simple calculator to a complex video game, starts with fundamental output. When a game shows your score on the screen or a banking app displays your account balance, it's using output principles similar to `cout`.",
+            "interactive_tasks": [
+                "Write a program that prints your name, age, and favorite color on separate lines.",
+                "Create a program that prints the result of 15 multiplied by 8.",
+                "Write code that prints a simple shopping list with three items."
+            ],
+            "quiz": [
+                {
+                    "question": "Which symbol is used to end a C++ statement?",
+                    "options": [
+                        ".",
+                        ",",
+                        ";",
+                        ":"
+                    ],
+                    "answer": ";",
+                    "reasoning": "Every C++ statement must end with a semicolon (;) to indicate the end of the instruction."
+                },
+                {
+                    "question": "What is the purpose of the `cout` object?",
+                    "options": [
+                        "To get user input",
+                        "To perform mathematical calculations",
+                        "To output text to the screen",
+                        "To include libraries"
+                    ],
+                    "answer": "To output text to the screen",
+                    "reasoning": "The `cout` object, together with the insertion operator `<<`, is used to output values and print text."
+                },
+                {
+                    "question": "How do you insert a new line in the output?",
+                    "options": [
+                        "Using 'newline'",
+                        "Using '\\n' or endl",
+                        "Using 'break'",
+                        "Using 'next'"
+                    ],
+                    "answer": "Using '\\n' or endl",
+                    "reasoning": "Both `\\n` character and `endl` manipulator are used to insert a new line in the output."
+                },
+                {
+                    "question": "What will this code output: `cout << \"2 + 2\";`",
+                    "options": [
+                        "4",
+                        "2 + 2",
+                        "22",
+                        "Nothing, it has an error"
+                    ],
+                    "answer": "2 + 2",
+                    "reasoning": "The text inside double quotes is printed as-is. To calculate 2+2, you would write `cout << 2 + 2;` without quotes."
+                },
+                {
+                    "question": "Which of the following is the correct way to print a number?",
+                    "options": [
+                        "cout << '5';",
+                        "cout << \"5\";",
+                        "cout << 5;",
+                        "Both 2 and 3 are correct"
+                    ],
+                    "answer": "Both 2 and 3 are correct",
+                    "reasoning": "`cout << \"5\";` prints the character '5' as text, while `cout << 5;` prints the number 5. Both will display 5 on the screen."
+                },
+                {
+                    "question": "What does the `endl` manipulator do?",
+                    "options": [
+                        "Ends the program",
+                        "Inserts a new line and flushes the output buffer",
+                        "Is an abbreviation for 'end loop'",
+                        "Prints the word 'endl' to the screen"
+                    ],
+                    "answer": "Inserts a new line and flushes the output buffer",
+                    "reasoning": "The `endl` manipulator inserts a new line character and ensures the output is displayed immediately."
+                },
+                {
+                    "question": "What is the correct way to print multiple items with cout?",
+                    "options": [
+                        "cout << \"Hello\" << \"World\";",
+                        "cout \"Hello\" \"World\";",
+                        "cout -> \"Hello\" -> \"World\";",
+                        "cout (\"Hello\") (\"World\");"
+                    ],
+                    "answer": "cout << \"Hello\" << \"World\";",
+                    "reasoning": "Multiple items can be chained together using the insertion operator `<<`."
+                }
+            ]
+        },
+        {
+            "title": "Day 3 – C++ Strings",
+            "definition": "Strings are used for storing text/characters in C++ programs.",
+            "explanation": "In C++, strings are objects that represent sequences of characters. To use strings, you need to include the `<string>` library. Strings can store words, sentences, or any text content and are surrounded by double quotes. You can concatenate strings using the `+` operator or the `append()` function. The `length()` function returns the number of characters in a string. You can access individual characters using index positions starting from 0. Special characters like quotes and newlines require escape sequences with a backslash (\\).",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    // Creating and using strings\n    string greeting = \"Hello\";\n    string name = \"John\";\n    \n    // Concatenation\n    string message = greeting + \" \" + name;\n    cout << message << endl;\n    \n    // String length\n    cout << \"Length: \" << message.length() << endl;\n    \n    // Accessing characters\n    cout << \"First character: \" << message[0] << endl;\n    \n    // Escape characters\n    cout << \"We are the so-called \\\"Vikings\\\" from the north.\" << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Strings are used everywhere in programming - from storing usernames and passwords in login systems, to handling text messages in chat applications, to processing documents in word processors. When you type a search query in a browser, it's stored as a string.",
+            "interactive_tasks": [
+                "Create a program that stores your first and last name in separate strings, then combines them with a space.",
+                "Write a program that calculates and prints the length of a sentence you provide.",
+                "Create a string with special characters (quotes and newlines) and print it correctly."
+            ],
+            "quiz": [
+                {
+                    "question": "Which header file is required to use the string data type in C++?",
+                    "options": [
+                        "<iostream>",
+                        "<string>",
+                        "<cstring>",
+                        "<text>"
+                    ],
+                    "answer": "<string>",
+                    "reasoning": "The <string> library is required to use the standard string data type in C++."
+                },
+                {
+                    "question": "What is the result of: string result = \"Hello\" + \" World\";",
+                    "options": [
+                        "Hello World",
+                        "Hello+World",
+                        "Compilation error",
+                        "HelloWorld"
+                    ],
+                    "answer": "Compilation error",
+                    "reasoning": "You cannot concatenate two string literals directly with +. You need at least one string variable."
+                },
+                {
+                    "question": "Which function returns the number of characters in a string?",
+                    "options": [
+                        "size()",
+                        "length()",
+                        "Both size() and length()",
+                        "count()"
+                    ],
+                    "answer": "Both size() and length()",
+                    "reasoning": "Both size() and length() functions return the number of characters in a string and are interchangeable."
+                },
+                {
+                    "question": "What does myString[0] access?",
+                    "options": [
+                        "The last character",
+                        "The first character",
+                        "The string length",
+                        "The entire string"
+                    ],
+                    "answer": "The first character",
+                    "reasoning": "String indexes start at 0, so myString[0] accesses the first character."
+                },
+                {
+                    "question": "Which escape sequence is used for a new line?",
+                    "options": [
+                        "\\n",
+                        "\\t",
+                        "\\\"",
+                        "\\\\"
+                    ],
+                    "answer": "\\n",
+                    "reasoning": "The \\n escape sequence creates a new line in the output."
+                },
+                {
+                    "question": "What is the purpose of the getline() function?",
+                    "options": [
+                        "To read a single word",
+                        "To read an entire line of text including spaces",
+                        "To convert numbers to strings",
+                        "To find a substring"
+                    ],
+                    "answer": "To read an entire line of text including spaces",
+                    "reasoning": "getline(cin, variable) reads an entire line of input, including spaces, unlike cin which stops at the first space."
+                },
+                {
+                    "question": "How do you create a C-style string?",
+                    "options": [
+                        "string text = \"Hello\";",
+                        "char text[] = \"Hello\";",
+                        "char text = 'Hello';",
+                        "char* text = \"Hello\";"
+                    ],
+                    "answer": "char text[] = \"Hello\";",
+                    "reasoning": "C-style strings are created using char arrays, like char text[] = \"Hello\";"
+                }
+            ]
+        },
+        {
+            "title": "Day 4 – C++ Math and Booleans",
+            "definition": "Mathematical operations and boolean logic for decision making in C++.",
+            "explanation": "C++ provides extensive mathematical capabilities through built-in operators and the <cmath> library. Boolean data types represent true/false values and are essential for conditional logic. The bool type can store either true (1) or false (0). Math functions include max(), min(), sqrt(), round(), and log(). Boolean values can be displayed as 1/0 or as true/false using the boolalpha manipulator.",
+            "code_example": "#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main() {\n    // Math operations\n    cout << \"Max of 5 and 10: \" << max(5, 10) << endl;\n    cout << \"Min of 5 and 10: \" << min(5, 10) << endl;\n    cout << \"Square root of 64: \" << sqrt(64) << endl;\n    cout << \"2.6 rounded: \" << round(2.6) << endl;\n    \n    // Boolean examples\n    bool isSunny = true;\n    bool isRaining = false;\n    \n    cout << \"Is it sunny? \" << isSunny << endl; // Outputs 1\n    cout << \"Is it raining? \" << isRaining << endl; // Outputs 0\n    \n    // Using boolalpha\n    cout << boolalpha;\n    cout << \"Is it sunny? \" << isSunny << endl; // Outputs true\n    cout << \"Is it raining? \" << isRaining << endl; // Outputs false\n    \n    return 0;\n}",
+            "real_world_example": "Math functions are used in games for physics calculations, in finance for interest calculations, and in data science for statistical analysis. Booleans are used everywhere from login systems (valid/invalid credentials) to game mechanics (alive/dead, win/lose conditions) to system monitoring (online/offline status).",
+            "interactive_tasks": [
+                "Write a program that calculates and prints the square root of 144.",
+                "Create a program that finds the maximum of three numbers using max() function.",
+                "Create two boolean variables and print them both with and without boolalpha."
+            ],
+            "quiz": [
+                {
+                    "question": "Which library is needed for mathematical functions like sqrt() and round()?",
+                    "options": [
+                        "<math>",
+                        "<cmath>",
+                        "<iostream>",
+                        "<algorithm>"
+                    ],
+                    "answer": "<cmath>",
+                    "reasoning": "The <cmath> library contains mathematical functions like sqrt(), round(), log(), etc."
+                },
+                {
+                    "question": "What is the output of: cout << min(8, 3);",
+                    "options": [
+                        "8",
+                        "3",
+                        "5",
+                        "11"
+                    ],
+                    "answer": "3",
+                    "reasoning": "The min() function returns the smaller of the two values, which is 3."
+                },
+                {
+                    "question": "How do you display boolean values as 'true' and 'false' instead of 1 and 0?",
+                    "options": [
+                        "Use truefalse keyword",
+                        "Use boolalpha manipulator",
+                        "Use string conversion",
+                        "It's not possible"
+                    ],
+                    "answer": "Use boolalpha manipulator",
+                    "reasoning": "The boolalpha manipulator tells cout to display boolean values as words instead of numbers."
+                },
+                {
+                    "question": "What is the value of: bool result = (10 > 5);",
+                    "options": [
+                        "true",
+                        "false",
+                        "10",
+                        "5"
+                    ],
+                    "answer": "true",
+                    "reasoning": "The expression 10 > 5 evaluates to true, so result becomes true."
+                },
+                {
+                    "question": "Which function calculates the square root of a number?",
+                    "options": [
+                        "root()",
+                        "sqrt()",
+                        "square()",
+                        "pow()"
+                    ],
+                    "answer": "sqrt()",
+                    "reasoning": "The sqrt() function from <cmath> calculates the square root of a number."
+                },
+                {
+                    "question": "What does round(3.2) return?",
+                    "options": [
+                        "3.2",
+                        "3",
+                        "4",
+                        "3.0"
+                    ],
+                    "answer": "3",
+                    "reasoning": "The round() function rounds to the nearest integer, so 3.2 rounds down to 3."
+                },
+                {
+                    "question": "How do you return to displaying booleans as 1 and 0 after using boolalpha?",
+                    "options": [
+                        "Use noboolalpha",
+                        "Use resetbool",
+                        "Restart the program",
+                        "It stays permanently"
+                    ],
+                    "answer": "Use noboolalpha",
+                    "reasoning": "The noboolalpha manipulator returns cout to the default behavior of displaying booleans as 1 and 0."
+                }
+            ]
+        },
+        {
+            "title": "Day 5 – C++ Conditional Statements",
+            "definition": "Using if, else if, else, and switch statements to make decisions in code.",
+            "explanation": "Conditional statements allow your program to make decisions and execute different code blocks based on conditions. The if statement runs code if a condition is true. else if checks additional conditions if previous ones are false. else provides a default case when all conditions are false. The ternary operator (?:) provides a shorthand for simple if-else statements. Logical operators (&&, ||, !) combine multiple conditions. Switch statements are efficient for checking multiple values of the same variable.",
+            "code_example": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int age = 20;\n    int score = 85;\n    \n    // if-else if-else\n    if (age < 13) {\n        cout << \"Child\" << endl;\n    } else if (age < 20) {\n        cout << \"Teenager\" << endl;\n    } else {\n        cout << \"Adult\" << endl;\n    }\n    \n    // Ternary operator\n    string result = (score >= 60) ? \"Pass\" : \"Fail\";\n    cout << \"Result: \" << result << endl;\n    \n    // Logical operators\n    bool hasID = true;\n    if (age >= 18 && hasID) {\n        cout << \"Access granted\" << endl;\n    }\n    \n    // Switch statement\n    int day = 3;\n    switch (day) {\n        case 1: cout << \"Monday\"; break;\n        case 2: cout << \"Tuesday\"; break;\n        case 3: cout << \"Wednesday\"; break;\n        default: cout << \"Other day\";\n    }\n    \n    return 0;\n}",
+            "real_world_example": "Conditional statements are used in authentication systems (valid/invalid password), e-commerce (applying discounts based on purchase amount), games (checking win/lose conditions), and navigation apps (choosing routes based on traffic conditions).",
+            "interactive_tasks": [
+                "Write a program that checks if a number is positive, negative, or zero.",
+                "Create a program that uses a switch statement to convert number grades to letter grades.",
+                "Write a program that uses logical operators to check if a person is eligible to vote (18+ and citizen)."
+            ],
+            "quiz": [
+                {
+                    "question": "Which keyword is used to specify a block of code when the if condition is false?",
+                    "options": [
+                        "elseif",
+                        "else if",
+                        "else",
+                        "otherwise"
+                    ],
+                    "answer": "else",
+                    "reasoning": "The else keyword specifies the code block to execute when the if condition is false."
+                },
+                {
+                    "question": "What is the syntax of the ternary operator?",
+                    "options": [
+                        "condition ? valueTrue : valueFalse",
+                        "if condition then valueTrue else valueFalse",
+                        "condition : valueTrue ? valueFalse",
+                        "valueTrue ? valueFalse : condition"
+                    ],
+                    "answer": "condition ? valueTrue : valueFalse",
+                    "reasoning": "The ternary operator uses the syntax: condition ? expression_if_true : expression_if_false"
+                },
+                {
+                    "question": "Which logical operator means 'AND'?",
+                    "options": [
+                        "&&",
+                        "||",
+                        "!",
+                        "AND"
+                    ],
+                    "answer": "&&",
+                    "reasoning": "The && operator returns true only if both conditions are true."
+                },
+                {
+                    "question": "What happens if you forget the break statement in a switch case?",
+                    "options": [
+                        "Compilation error",
+                        "Only that case executes",
+                        "Execution falls through to the next case",
+                        "The program crashes"
+                    ],
+                    "answer": "Execution falls through to the next case",
+                    "reasoning": "Without break, execution will continue to the next case statements (fall-through behavior)."
+                },
+                {
+                    "question": "What does the ! operator do?",
+                    "options": [
+                        "AND operation",
+                        "OR operation",
+                        "NOT operation (logical negation)",
+                        "Addition operation"
+                    ],
+                    "answer": "NOT operation (logical negation)",
+                    "reasoning": "The ! operator reverses a boolean value (true becomes false, false becomes true)."
+                },
+                {
+                    "question": "When is the default case in a switch statement executed?",
+                    "options": [
+                        "Always first",
+                        "When no other case matches",
+                        "When break is missing",
+                        "Only if specified with if"
+                    ],
+                    "answer": "When no other case matches",
+                    "reasoning": "The default case runs when none of the other case values match the switch expression."
+                },
+                {
+                    "question": "Which is the correct way to check if x is between 10 and 20?",
+                    "options": [
+                        "if (10 < x < 20)",
+                        "if (x > 10 && x < 20)",
+                        "if (x > 10 || x < 20)",
+                        "if (x > 10 ! x < 20)"
+                    ],
+                    "answer": "if (x > 10 && x < 20)",
+                    "reasoning": "You need to use && to check that both conditions are true simultaneously."
+                }
+            ]
+        },
+        {
+            "title": "Day 6 – C++ Loops",
+            "definition": "Loops execute a block of code repeatedly as long as a specified condition is true.",
+            "explanation": "Loops are essential for automating repetitive tasks in programming. C++ provides several types of loops: while loops check the condition before execution, do-while loops execute at least once before checking the condition, for loops are ideal when you know exactly how many iterations you need, and foreach loops (range-based for loops) simplify iterating through collections. You can control loop execution with break (exit immediately) and continue (skip to next iteration). Nested loops allow you to place loops inside other loops for complex patterns.",
+            "code_example": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // While loop\n    cout << \"While loop:\" << endl;\n    int i = 0;\n    while (i < 3) {\n        cout << i << \" \";\n        i++;\n    }\n    \n    // Do-while loop\n    cout << \"\\n\\nDo-while loop:\" << endl;\n    int j = 0;\n    do {\n        cout << j << \" \";\n        j++;\n    } while (j < 3);\n    \n    // For loop\n    cout << \"\\n\\nFor loop:\" << endl;\n    for (int k = 0; k < 3; k++) {\n        cout << k << \" \";\n    }\n    \n    // Break and continue\n    cout << \"\\n\\nBreak and continue:\" << endl;\n    for (int m = 0; m < 5; m++) {\n        if (m == 2) continue; // Skip 2\n        if (m == 4) break;    // Stop at 4\n        cout << m << \" \";\n    }\n    \n    return 0;\n}",
+            "real_world_example": "Loops are used everywhere: processing user input until valid data is entered, reading files line by line, calculating running totals in financial applications, rendering frames in games, iterating through database records, and running simulations that require repeated calculations.",
+            "interactive_tasks": [
+                "Write a program that uses a while loop to print numbers from 1 to 10.",
+                "Create a program that uses a for loop to calculate the sum of numbers from 1 to 100.",
+                "Write a program that uses a do-while loop to ask for user input until they enter 'quit'."
+            ],
+            "quiz": [
+                {
+                    "question": "Which loop always executes at least once?",
+                    "options": [
+                        "while loop",
+                        "for loop",
+                        "do-while loop",
+                        "foreach loop"
+                    ],
+                    "answer": "do-while loop",
+                    "reasoning": "The do-while loop executes the code block first, then checks the condition, ensuring it runs at least once."
+                },
+                {
+                    "question": "What is the purpose of the break statement in a loop?",
+                    "options": [
+                        "Skip the current iteration",
+                        "Exit the loop immediately",
+                        "Restart the loop",
+                        "Continue to the next iteration"
+                    ],
+                    "answer": "Exit the loop immediately",
+                    "reasoning": "The break statement terminates the loop entirely and continues with the code after the loop."
+                },
+                {
+                    "question": "Which loop is best when you know exactly how many iterations you need?",
+                    "options": [
+                        "while loop",
+                        "do-while loop",
+                        "for loop",
+                        "All are equally good"
+                    ],
+                    "answer": "for loop",
+                    "reasoning": "For loops are specifically designed for cases where you know the exact number of iterations in advance."
+                },
+                {
+                    "question": "What does the continue statement do?",
+                    "options": [
+                        "Exits the entire loop",
+                        "Skips the current iteration and continues with the next",
+                        "Restarts the loop from the beginning",
+                        "Pauses the loop temporarily"
+                    ],
+                    "answer": "Skips the current iteration and continues with the next",
+                    "reasoning": "The continue statement skips the remaining code in the current iteration and moves to the next iteration."
+                },
+                {
+                    "question": "What is the output of this code: for(int i=0; i<3; i++) { if(i==1) continue; cout << i; }",
+                    "options": [
+                        "012",
+                        "02",
+                        "01",
+                        "12"
+                    ],
+                    "answer": "02",
+                    "reasoning": "When i=1, continue skips the output, so only 0 and 2 are printed."
+                },
+                {
+                    "question": "Which part of a for loop is executed only once?",
+                    "options": [
+                        "The condition check",
+                        "The increment statement",
+                        "The initialization statement",
+                        "The loop body"
+                    ],
+                    "answer": "The initialization statement",
+                    "reasoning": "The initialization statement (first part) is executed only once at the beginning of the for loop."
+                },
+                {
+                    "question": "What happens if you forget the increment in a while loop?",
+                    "options": [
+                        "The loop runs faster",
+                        "The loop becomes an infinite loop",
+                        "The loop runs only once",
+                        "It causes a compilation error"
+                    ],
+                    "answer": "The loop becomes an infinite loop",
+                    "reasoning": "Without incrementing the loop variable, the condition never becomes false, creating an infinite loop."
+                }
+            ]
+        },
+        {
+            "title": "Day 7 – C++ Arrays",
+            "definition": "Arrays store multiple values of the same type in a single variable.",
+            "explanation": "Arrays are collections of elements stored in contiguous memory locations. Each element can be accessed using an index starting from 0. Arrays have a fixed size that must be known at compile time, unless you use dynamic arrays. You can loop through arrays using for loops, while loops, or range-based for loops (foreach). The sizeof() operator helps determine the array size in bytes, and by dividing by the size of one element, you can find the number of elements. Multi-dimensional arrays (arrays of arrays) are useful for representing tables, matrices, or grids.",
+            "code_example": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // One-dimensional array\n    int numbers[5] = {10, 20, 30, 40, 50};\n    \n    cout << \"Array elements:\" << endl;\n    for (int i = 0; i < 5; i++) {\n        cout << \"numbers[\" << i << \"] = \" << numbers[i] << endl;\n    }\n    \n    // Using sizeof to get array length\n    int length = sizeof(numbers) / sizeof(numbers[0]);\n    cout << \"\\nArray length: \" << length << endl;\n    \n    // Range-based for loop (foreach)\n    cout << \"\\nUsing foreach:\" << endl;\n    for (int num : numbers) {\n        cout << num << \" \";\n    }\n    \n    // Two-dimensional array\n    cout << \"\\n\\n2D Array:\" << endl;\n    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};\n    for (int i = 0; i < 2; i++) {\n        for (int j = 0; j < 3; j++) {\n            cout << matrix[i][j] << \" \";\n        }\n        cout << endl;\n    }\n    \n    return 0;\n}",
+            "real_world_example": "Arrays are fundamental in programming: storing student grades in a classroom management system, holding pixel data in image processing, managing inventory items in e-commerce systems, storing game levels or maps, and processing sensor readings in IoT devices.",
+            "interactive_tasks": [
+                "Create an array of 5 strings containing names and print them using a loop.",
+                "Write a program that finds the maximum value in an integer array.",
+                "Create a 2D array representing a 3x3 tic-tac-toe board and initialize it with empty spaces."
+            ],
+            "quiz": [
+                {
+                    "question": "What is the index of the first element in an array?",
+                    "options": [
+                        "0",
+                        "1",
+                        "-1",
+                        "first"
+                    ],
+                    "answer": "0",
+                    "reasoning": "Array indexing in C++ starts at 0, so the first element is at index 0."
+                },
+                {
+                    "question": "How do you calculate the number of elements in an array?",
+                    "options": [
+                        "sizeof(array)",
+                        "sizeof(array) / sizeof(array[0])",
+                        "array.length()",
+                        "array.size()"
+                    ],
+                    "answer": "sizeof(array) / sizeof(array[0])",
+                    "reasoning": "This divides the total size of the array by the size of one element to get the number of elements."
+                },
+                {
+                    "question": "What happens if you try to access array[5] in a 5-element array?",
+                    "options": [
+                        "It returns 0",
+                        "It causes a compilation error",
+                        "It accesses memory outside the array (undefined behavior)",
+                        "It returns the last element"
+                    ],
+                    "answer": "It accesses memory outside the array (undefined behavior)",
+                    "reasoning": "Accessing beyond array bounds leads to undefined behavior - it might crash, return garbage, or seem to work."
+                },
+                {
+                    "question": "Which loop is specifically designed for iterating through arrays?",
+                    "options": [
+                        "while loop",
+                        "do-while loop",
+                        "for loop",
+                        "Range-based for loop (foreach)"
+                    ],
+                    "answer": "Range-based for loop (foreach)",
+                    "reasoning": "The range-based for loop (foreach) is specifically designed for clean iteration through arrays and other containers."
+                },
+                {
+                    "question": "How do you declare a 2D array with 2 rows and 3 columns?",
+                    "options": [
+                        "int array[2,3];",
+                        "int array[2][3];",
+                        "int array(2,3);",
+                        "int array{2,3};"
+                    ],
+                    "answer": "int array[2][3];",
+                    "reasoning": "Multi-dimensional arrays use separate brackets for each dimension: type name[rows][columns];"
+                },
+                {
+                    "question": "What is the main limitation of C++ arrays?",
+                    "options": [
+                        "They can only store numbers",
+                        "They have fixed size",
+                        "They are slow",
+                        "They can't be sorted"
+                    ],
+                    "answer": "They have fixed size",
+                    "reasoning": "Once created, the size of a C++ array cannot be changed, which is why vectors are often preferred for dynamic sizing."
+                },
+                {
+                    "question": "What does this code output: int arr[] = {1,2,3}; cout << arr[1];",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "Error"
+                    ],
+                    "answer": "2",
+                    "reasoning": "arr[1] accesses the second element (index 1), which has value 2."
+                }
+            ]
+        },
+        {
+            "title": "Day 8 – C++ Structures and Enums",
+            "definition": "Structures group related variables; enums define named constant values.",
+            "explanation": "Structures (struct) allow you to create custom data types that group multiple related variables of different types. Each variable in a structure is called a member. Structures are useful for representing real-world objects like students, cars, or employees. Enumerations (enum) define a set of named integer constants, making code more readable and maintainable. They're perfect for representing fixed sets of values like days of the week, colors, or status codes. Both structures and enums help organize code and make it more self-documenting.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Structure definition\nstruct Student {\n    string name;\n    int age;\n    char grade;\n    double gpa;\n};\n\n// Enum definition\nenum Weekday {\n    MONDAY,\n    TUESDAY,\n    WEDNESDAY,\n    THURSDAY,\n    FRIDAY,\n    SATURDAY,\n    SUNDAY\n};\n\nint main() {\n    // Using structure\n    Student student1;\n    student1.name = \"Alice\";\n    student1.age = 20;\n    student1.grade = 'A';\n    student1.gpa = 3.8;\n    \n    cout << \"Student: \" << student1.name << endl;\n    cout << \"Age: \" << student1.age << endl;\n    cout << \"Grade: \" << student1.grade << endl;\n    cout << \"GPA: \" << student1.gpa << endl;\n    \n    // Using enum\n    Weekday today = WEDNESDAY;\n    cout << \"\\nToday is day number: \" << today << endl;\n    \n    // Enum in switch statement\n    switch(today) {\n        case MONDAY:\n            cout << \"Start of the week!\" << endl;\n            break;\n        case WEDNESDAY:\n            cout << \"Middle of the week!\" << endl;\n            break;\n        case FRIDAY:\n            cout << \"Weekend is near!\" << endl;\n            break;\n        default:\n            cout << \"Regular day\" << endl;\n    }\n    \n    return 0;\n}",
+            "real_world_example": "Structures are used to represent database records, game characters with multiple attributes, geometric shapes with properties, and configuration settings. Enums are used for menu options, error codes, state machines, color palettes, and any scenario where you have a fixed set of related constants.",
+            "interactive_tasks": [
+                "Create a structure to represent a Book with title, author, and year published, then create and display a book instance.",
+                "Define an enum for traffic light colors (RED, YELLOW, GREEN) and write a program that simulates light changes.",
+                "Create a structure for a Rectangle with width and height, and add a function to calculate its area."
+            ],
+            "quiz": [
+                {
+                    "question": "What keyword is used to define a structure?",
+                    "options": [
+                        "structure",
+                        "struct",
+                        "class",
+                        "object"
+                    ],
+                    "answer": "struct",
+                    "reasoning": "The struct keyword is used to define a structure in C++."
+                },
+                {
+                    "question": "How do you access a member of a structure?",
+                    "options": [
+                        "Using -> operator",
+                        "Using . operator",
+                        "Using :: operator",
+                        "Using [] brackets"
+                    ],
+                    "answer": "Using . operator",
+                    "reasoning": "The dot operator (.) is used to access members of a structure variable."
+                },
+                {
+                    "question": "What is the default value of the first item in an enum?",
+                    "options": [
+                        "0",
+                        "1",
+                        "-1",
+                        "It depends on the enum"
+                    ],
+                    "answer": "0",
+                    "reasoning": "By default, the first enum item has value 0, and each subsequent item increases by 1."
+                },
+                {
+                    "question": "What is the main advantage of using enums over plain integers?",
+                    "options": [
+                        "They use less memory",
+                        "They make code more readable and self-documenting",
+                        "They are faster",
+                        "They can store more values"
+                    ],
+                    "answer": "They make code more readable and self-documenting",
+                    "reasoning": "Enums give meaningful names to constants, making code easier to understand and maintain."
+                },
+                {
+                    "question": "Can a structure contain different data types?",
+                    "options": [
+                        "No, only the same type",
+                        "Yes, any combination of types",
+                        "Only numeric types",
+                        "Only primitive types"
+                    ],
+                    "answer": "Yes, any combination of types",
+                    "reasoning": "Structures can contain members of different data types (int, string, double, etc.)."
+                },
+                {
+                    "question": "What happens if you assign a custom value to an enum item?",
+                    "options": [
+                        "The following items continue incrementing from that value",
+                        "All items must be assigned custom values",
+                        "It causes a compilation error",
+                        "The enum becomes invalid"
+                    ],
+                    "answer": "The following items continue incrementing from that value",
+                    "reasoning": "If you assign a custom value, subsequent items will have values incremented by 1 from that point."
+                },
+                {
+                    "question": "What is a named structure?",
+                    "options": [
+                        "A structure with a name that can be used as a type",
+                        "A structure where all members have names",
+                        "A structure that contains only strings",
+                        "A structure with a specific naming convention"
+                    ],
+                    "answer": "A structure with a name that can be used as a type",
+                    "reasoning": "A named structure has an identifier after struct keyword, allowing you to create variables of that type anywhere."
+                }
+            ]
+        },
+        {
+            "title": "Day 9 – C++ Pointers and Memory Management",
+            "definition": "Pointers store memory addresses; memory management controls dynamic memory allocation.",
+            "explanation": "Pointers are variables that store memory addresses rather than values directly. The & operator gets a variable's address, while the * operator dereferences a pointer to access the value at that address. Pointers are powerful for dynamic memory allocation, array manipulation, and function parameter passing. Memory management involves using new to allocate memory dynamically and delete to free it. Proper memory management prevents memory leaks and ensures efficient resource usage. References are aliases for existing variables and provide safer alternative to pointers in many cases.",
+            "code_example": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Basic pointers\n    int number = 42;\n    int* ptr = &number;\n    \n    cout << \"Value of number: \" << number << endl;\n    cout << \"Address of number: \" << &number << endl;\n    cout << \"Value of ptr: \" << ptr << endl;\n    cout << \"Value at ptr: \" << *ptr << endl;\n    \n    // Modifying through pointer\n    *ptr = 100;\n    cout << \"\\nAfter modification: \" << number << endl;\n    \n    // Dynamic memory allocation\n    int* dynamicPtr = new int;\n    *dynamicPtr = 200;\n    cout << \"\\nDynamic value: \" << *dynamicPtr << endl;\n    delete dynamicPtr; // Clean up\n    \n    // Dynamic array\n    int size = 3;\n    int* arr = new int[size];\n    for (int i = 0; i < size; i++) {\n        arr[i] = (i + 1) * 10;\n    }\n    \n    cout << \"\\nDynamic array: \";\n    for (int i = 0; i < size; i++) {\n        cout << arr[i] << \" \";\n    }\n    \n    delete[] arr; // Clean up array\n    \n    // References\n    int original = 50;\n    int& ref = original;\n    ref = 75;\n    cout << \"\\n\\nAfter reference modification: \" << original << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Pointers are essential in system programming, game development (managing game objects), data structures (linked lists, trees), and operating systems. Memory management is crucial for applications that handle large amounts of data, like database systems, video editors, and web servers where efficient memory usage directly impacts performance.",
+            "interactive_tasks": [
+                "Create a program that uses pointers to swap the values of two variables.",
+                "Write a program that dynamically allocates an array based on user input and fills it with values.",
+                "Create a function that takes a pointer parameter and modifies the value it points to."
+            ],
+            "quiz": [
+                {
+                    "question": "What does the & operator do when used with a variable?",
+                    "options": [
+                        "Creates a reference",
+                        "Gets the memory address",
+                        "Dereferences a pointer",
+                        "Performs bitwise AND"
+                    ],
+                    "answer": "Gets the memory address",
+                    "reasoning": "The & operator returns the memory address of a variable when used in this context."
+                },
+                {
+                    "question": "What is the purpose of the * operator in pointer declaration?",
+                    "options": [
+                        "It multiplies values",
+                        "It indicates a pointer variable",
+                        "It dereferences a pointer",
+                        "It creates an array"
+                    ],
+                    "answer": "It indicates a pointer variable",
+                    "reasoning": "In declaration, * indicates that the variable is a pointer (e.g., int* ptr;)."
+                },
+                {
+                    "question": "What happens if you forget to use delete after new?",
+                    "options": [
+                        "The program crashes immediately",
+                        "It causes a compilation error",
+                        "It creates a memory leak",
+                        "The memory is automatically freed"
+                    ],
+                    "answer": "It creates a memory leak",
+                    "reasoning": "Forgetting delete means the allocated memory is never returned to the system, causing a memory leak."
+                },
+                {
+                    "question": "How do you free memory allocated for an array?",
+                    "options": [
+                        "delete array;",
+                        "delete[] array;",
+                        "free(array);",
+                        "remove array;"
+                    ],
+                    "answer": "delete[] array;",
+                    "reasoning": "The delete[] operator is used to free memory allocated for arrays with new[]."
+                },
+                {
+                    "question": "What is a reference in C++?",
+                    "options": [
+                        "A pointer that cannot be reassigned",
+                        "An alias for an existing variable",
+                        "A copy of a variable",
+                        "A constant pointer"
+                    ],
+                    "answer": "An alias for an existing variable",
+                    "reasoning": "A reference is an alternative name for an existing variable; it must be initialized when declared and cannot be reassigned."
+                },
+                {
+                    "question": "What is the main difference between pointers and references?",
+                    "options": [
+                        "References use less memory",
+                        "Pointers can be reassigned, references cannot",
+                        "References are faster",
+                        "Pointers can only point to integers"
+                    ],
+                    "answer": "Pointers can be reassigned, references cannot",
+                    "reasoning": "A pointer can be changed to point to different addresses, while a reference always refers to the same variable it was initialized with."
+                },
+                {
+                    "question": "When should you use dynamic memory allocation?",
+                    "options": [
+                        "For all variables",
+                        "Only when the size is unknown at compile time",
+                        "Only for large variables",
+                        "Never, it's dangerous"
+                    ],
+                    "answer": "Only when the size is unknown at compile time",
+                    "reasoning": "Dynamic allocation is useful when you don't know how much memory you'll need until runtime, like with user-determined array sizes."
+                }
+            ]
+        },
+        {
+            "title": "Day 10 – C++ Functions Basics",
+            "definition": "Functions are reusable blocks of code that perform specific tasks when called.",
+            "explanation": "Functions are fundamental building blocks in C++ that allow you to organize code into reusable units. A function consists of a declaration (return type, name, parameters) and a definition (the code body). Functions can take parameters as input and return values as output. The main advantages of using functions are code reusability, better organization, easier debugging, and modular programming. Functions must be declared before they are used, which is why you often see function declarations above main() and definitions below.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Function declaration\nvoid greetUser(string name);\nint addNumbers(int a, int b);\n\nint main() {\n    // Calling functions\n    greetUser(\"Alice\");\n    greetUser(\"Bob\");\n    \n    int result = addNumbers(5, 3);\n    cout << \"5 + 3 = \" << result << endl;\n    \n    return 0;\n}\n\n// Function definitions\nvoid greetUser(string name) {\n    cout << \"Hello, \" << name << \"!\" << endl;\n}\n\nint addNumbers(int a, int b) {\n    return a + b;\n}",
+            "real_world_example": "Functions are used everywhere in programming: mathematical calculations in scientific software, input validation in forms, data processing in business applications, game mechanics in video games, and API endpoints in web services. They help break complex problems into manageable pieces.",
+            "interactive_tasks": [
+                "Create a function that takes a temperature in Celsius and returns it in Fahrenheit.",
+                "Write a function that checks if a number is even and returns a boolean value.",
+                "Create a function that prints a multiplication table for a given number."
+            ],
+            "quiz": [
+                {
+                    "question": "What keyword indicates a function doesn't return a value?",
+                    "options": [
+                        "int",
+                        "void",
+                        "string",
+                        "null"
+                    ],
+                    "answer": "void",
+                    "reasoning": "The void keyword is used when a function doesn't return any value."
+                },
+                {
+                    "question": "Where should you place function declarations?",
+                    "options": [
+                        "After main()",
+                        "Before main()",
+                        "Inside main()",
+                        "In a separate file only"
+                    ],
+                    "answer": "Before main()",
+                    "reasoning": "Function declarations should be placed before main() so the compiler knows about them when they're called in main()."
+                },
+                {
+                    "question": "What is the difference between a parameter and an argument?",
+                    "options": [
+                        "Parameters are in declaration, arguments are in call",
+                        "Arguments are in declaration, parameters are in call",
+                        "They are the same thing",
+                        "Parameters are return values, arguments are inputs"
+                    ],
+                    "answer": "Parameters are in declaration, arguments are in call",
+                    "reasoning": "Parameters are the variables in the function declaration, while arguments are the actual values passed when calling the function."
+                },
+                {
+                    "question": "How do you call a function named 'calculate'?",
+                    "options": [
+                        "calculate;",
+                        "calculate[];",
+                        "calculate();",
+                        "call calculate;"
+                    ],
+                    "answer": "calculate();",
+                    "reasoning": "Functions are called using their name followed by parentheses, which may contain arguments."
+                },
+                {
+                    "question": "What happens if you call a function before declaring it?",
+                    "options": [
+                        "It works fine",
+                        "Compilation error",
+                        "Runtime error",
+                        "The function runs twice"
+                    ],
+                    "answer": "Compilation error",
+                    "reasoning": "The compiler needs to know about a function before it's called, so undeclared functions cause compilation errors."
+                },
+                {
+                    "question": "Which of these is a valid function declaration?",
+                    "options": [
+                        "function myFunc()",
+                        "void myFunc()",
+                        "myFunc() void",
+                        "def myFunc()"
+                    ],
+                    "answer": "void myFunc()",
+                    "reasoning": "Valid function declarations start with return type, then function name, then parentheses."
+                },
+                {
+                    "question": "What is the purpose of the return statement?",
+                    "options": [
+                        "To end the program",
+                        "To send a value back from the function",
+                        "To print output",
+                        "To declare variables"
+                    ],
+                    "answer": "To send a value back from the function",
+                    "reasoning": "The return statement sends a value back to the code that called the function and exits the function."
+                }
+            ]
+        },
+        {
+            "title": "Day 11 – C++ Function Parameters and Return Values",
+            "definition": "Advanced function concepts including default parameters, multiple parameters, and return values.",
+            "explanation": "Functions can accept multiple parameters of different types and return values using the return keyword. Default parameters allow functions to have optional arguments with predefined values. When a function has multiple parameters, the order of arguments in the function call must match the order of parameters in the declaration. Return values can be of any data type and are specified in the function declaration. Functions can also return nothing (void). Understanding parameter passing and return values is crucial for writing flexible and reusable functions.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Function with multiple parameters\nvoid displayInfo(string name, int age, string city = \"Unknown\") {\n    cout << \"Name: \" << name << endl;\n    cout << \"Age: \" << age << endl;\n    cout << \"City: \" << city << endl;\n    cout << \"---\" << endl;\n}\n\n// Function with return value\ndouble calculateArea(double length, double width) {\n    return length * width;\n}\n\n// Function that returns a string\nstring getGrade(int score) {\n    if (score >= 90) return \"A\";\n    else if (score >= 80) return \"B\";\n    else if (score >= 70) return \"C\";\n    else return \"F\";\n}\n\nint main() {\n    // Using default parameter\n    displayInfo(\"Alice\", 25);\n    displayInfo(\"Bob\", 30, \"New York\");\n    \n    // Using return values\n    double area = calculateArea(5.5, 3.2);\n    cout << \"Area: \" << area << endl;\n    \n    string grade = getGrade(85);\n    cout << \"Grade: \" << grade << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Default parameters are used in GUI libraries for optional styling, in database functions for default query parameters, and in game engines for default settings. Return values are essential for calculations, data validation, and any function that needs to provide results to the caller.",
+            "interactive_tasks": [
+                "Create a function with default parameters that calculates simple interest with optional rate.",
+                "Write a function that takes three numbers and returns the largest one.",
+                "Create a function that converts seconds to hours, minutes, and seconds and returns a formatted string."
+            ],
+            "quiz": [
+                {
+                    "question": "How do you specify a default parameter value?",
+                    "options": [
+                        "parameter = value",
+                        "parameter : value",
+                        "parameter -> value",
+                        "parameter == value"
+                    ],
+                    "answer": "parameter = value",
+                    "reasoning": "Default parameters are specified using the equals sign: type parameter = defaultValue"
+                },
+                {
+                    "question": "Where must default parameters be placed in the parameter list?",
+                    "options": [
+                        "At the beginning",
+                        "At the end",
+                        "Anywhere",
+                        "They can't be mixed with regular parameters"
+                    ],
+                    "answer": "At the end",
+                    "reasoning": "Default parameters must come after all non-default parameters in the parameter list."
+                },
+                {
+                    "question": "What happens if you call a function with fewer arguments than parameters?",
+                    "options": [
+                        "It uses default values for missing parameters",
+                        "Compilation error",
+                        "Runtime error",
+                        "It uses zero for missing parameters"
+                    ],
+                    "answer": "Compilation error",
+                    "reasoning": "Unless default values are specified, you must provide arguments for all parameters."
+                },
+                {
+                    "question": "How many values can a function return?",
+                    "options": [
+                        "Only one",
+                        "Up to three",
+                        "Unlimited",
+                        "None"
+                    ],
+                    "answer": "Only one",
+                    "reasoning": "A function can only return one value directly, but you can return multiple values using structures, arrays, or reference parameters."
+                },
+                {
+                    "question": "What is the return type of this function: string getName() { return \"John\"; }",
+                    "options": [
+                        "void",
+                        "int",
+                        "string",
+                        "char"
+                    ],
+                    "answer": "string",
+                    "reasoning": "The function declaration specifies string as the return type."
+                },
+                {
+                    "question": "Can a function have multiple return statements?",
+                    "options": [
+                        "No, only one",
+                        "Yes, but only in different conditions",
+                        "Yes, unlimited",
+                        "No, it causes errors"
+                    ],
+                    "answer": "Yes, but only in different conditions",
+                    "reasoning": "A function can have multiple return statements as long as they are in different conditional branches."
+                },
+                {
+                    "question": "What happens if a non-void function doesn't return a value?",
+                    "options": [
+                        "It returns 0 automatically",
+                        "Compilation error",
+                        "Undefined behavior",
+                        "It returns a random value"
+                    ],
+                    "answer": "Undefined behavior",
+                    "reasoning": "If a function is declared to return a value but doesn't, the behavior is undefined and can cause crashes or incorrect results."
+                }
+            ]
+        },
+        {
+            "title": "Day 12 – C++ Advanced Function Concepts",
+            "definition": "Pass by reference, function overloading, recursion, and other advanced function topics.",
+            "explanation": "C++ provides powerful function features beyond basic parameters and returns. Pass by reference allows functions to modify original variables, which is essential for operations like swapping values. Function overloading enables multiple functions with the same name but different parameters. Recursion allows functions to call themselves, useful for problems that can be broken down into smaller similar problems. Variable scope determines where variables are accessible, with local variables existing only within their function and global variables accessible everywhere. Lambda functions provide a way to create anonymous functions inline.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Pass by reference example\nvoid swapNumbers(int &a, int &b) {\n    int temp = a;\n    a = b;\n    b = temp;\n}\n\n// Function overloading examples\nint multiply(int a, int b) {\n    return a * b;\n}\n\ndouble multiply(double a, double b) {\n    return a * b;\n}\n\nint multiply(int a, int b, int c) {\n    return a * b * c;\n}\n\n// Recursion example\nint factorial(int n) {\n    if (n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\n// Global variable\nint globalCounter = 0;\n\nvoid incrementCounter() {\n    globalCounter++;\n    int localVar = 5; // Local variable\n    cout << \"Local: \" << localVar << \", Global: \" << globalCounter << endl;\n}\n\nint main() {\n    // Pass by reference\n    int x = 5, y = 10;\n    cout << \"Before swap: x=\" << x << \", y=\" << y << endl;\n    swapNumbers(x, y);\n    cout << \"After swap: x=\" << x << \", y=\" << y << endl;\n    \n    // Function overloading\n    cout << \"multiply(3, 4): \" << multiply(3, 4) << endl;\n    cout << \"multiply(2.5, 1.5): \" << multiply(2.5, 1.5) << endl;\n    cout << \"multiply(2, 3, 4): \" << multiply(2, 3, 4) << endl;\n    \n    // Recursion\n    cout << \"factorial(5): \" << factorial(5) << endl;\n    \n    // Variable scope\n    incrementCounter();\n    incrementCounter();\n    \n    // Lambda function\n    auto greet = [](string name) {\n        cout << \"Hello, \" << name << \"!\" << endl;\n    };\n    \n    greet(\"World\");\n    \n    return 0;\n}",
+            "real_world_example": "Pass by reference is used in sorting algorithms, matrix operations, and any function that needs to modify its inputs. Function overloading is common in mathematical libraries (different numeric types), I/O operations (different data types), and constructors. Recursion is used in tree traversal, mathematical sequences, and divide-and-conquer algorithms. Lambda functions are popular in event handling, sorting with custom comparators, and asynchronous programming.",
+            "interactive_tasks": [
+                "Create a function that uses pass by reference to reverse an array in place.",
+                "Write overloaded functions to calculate the area of different shapes (circle, rectangle, triangle).",
+                "Create a recursive function to calculate the nth Fibonacci number."
+            ],
+            "quiz": [
+                {
+                    "question": "What symbol is used for pass by reference?",
+                    "options": [
+                        "*",
+                        "&",
+                        "@",
+                        "#"
+                    ],
+                    "answer": "&",
+                    "reasoning": "The ampersand (&) symbol is used in parameter declarations to indicate pass by reference."
+                },
+                {
+                    "question": "What is function overloading?",
+                    "options": [
+                        "Functions with the same name but different implementations",
+                        "Functions that run too many times",
+                        "Functions that are too large",
+                        "Functions that call themselves"
+                    ],
+                    "answer": "Functions with the same name but different implementations",
+                    "reasoning": "Function overloading allows multiple functions with the same name but different parameter types or counts."
+                },
+                {
+                    "question": "What is the key requirement for recursion to work properly?",
+                    "options": [
+                        "A base case that stops the recursion",
+                        "At least 10 recursive calls",
+                        "Only numeric parameters",
+                        "No return values"
+                    ],
+                    "answer": "A base case that stops the recursion",
+                    "reasoning": "Recursive functions must have a base case that stops the recursion, otherwise they would call themselves infinitely."
+                },
+                {
+                    "question": "Where is a local variable accessible?",
+                    "options": [
+                        "Throughout the entire program",
+                        "Only within the function where it's declared",
+                        "In all functions in the same file",
+                        "In the main function only"
+                    ],
+                    "answer": "Only within the function where it's declared",
+                    "reasoning": "Local variables have function scope and are only accessible within the function where they are declared."
+                },
+                {
+                    "question": "What is a lambda function?",
+                    "options": [
+                        "A named function with complex logic",
+                        "An anonymous function defined inline",
+                        "A function that always returns void",
+                        "A recursive function"
+                    ],
+                    "answer": "An anonymous function defined inline",
+                    "reasoning": "Lambda functions are anonymous functions that can be defined directly in the code where they're needed."
+                },
+                {
+                    "question": "What happens if a recursive function lacks a proper base case?",
+                    "options": [
+                        "It runs faster",
+                        "It causes infinite recursion and stack overflow",
+                        "It returns zero",
+                        "It becomes iterative"
+                    ],
+                    "answer": "It causes infinite recursion and stack overflow",
+                    "reasoning": "Without a base case, a recursive function will call itself indefinitely until the call stack is exhausted."
+                },
+                {
+                    "question": "How can you distinguish overloaded functions?",
+                    "options": [
+                        "By their return type only",
+                        "By their parameter types and/or count",
+                        "By their names",
+                        "By their variable names"
+                    ],
+                    "answer": "By their parameter types and/or count",
+                    "reasoning": "Overloaded functions are distinguished by having different parameter types, counts, or both (the return type alone is not sufficient)."
+                }
+            ]
+        },
+        {
+            "title": "Day 14 – C++ OOP Fundamentals",
+            "definition": "Object-Oriented Programming (OOP) organizes code around objects containing both data and functions.",
+            "explanation": "OOP is a programming paradigm that uses objects and classes to structure software. The key principles are encapsulation, inheritance, and polymorphism. Classes act as blueprints for objects, defining their attributes (data) and methods (functions). Objects are instances of classes that contain actual data. OOP helps create modular, reusable, and maintainable code by grouping related data and behavior together. The DRY (Don't Repeat Yourself) principle is a key benefit of OOP, reducing code duplication through inheritance and reuse.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Class definition\nclass Car {\n  public:             // Access specifier\n    // Attributes\n    string brand;\n    string model;\n    int year;\n    \n    // Method defined inside class\n    void displayInfo() {\n        cout << brand << \" \" << model << \" (\" << year << \")\" << endl;\n    }\n    \n    // Method declaration\n    void honk();\n};\n\n// Method definition outside class\nvoid Car::honk() {\n    cout << \"Beep beep!\" << endl;\n}\n\nint main() {\n    // Creating objects\n    Car car1;\n    car1.brand = \"Toyota\";\n    car1.model = \"Camry\";\n    car1.year = 2022;\n    \n    Car car2;\n    car2.brand = \"Honda\";\n    car2.model = \"Civic\";\n    car2.year = 2023;\n    \n    // Using methods\n    car1.displayInfo();\n    car1.honk();\n    \n    car2.displayInfo();\n    car2.honk();\n    \n    return 0;\n}",
+            "real_world_example": "OOP is used in GUI frameworks (buttons, windows as objects), game development (characters, items as objects), database systems (records as objects), and web development (user sessions, form handlers as objects). Real-world examples include banking systems (accounts as objects), e-commerce (products, carts as objects), and social media (posts, users as objects).",
+            "interactive_tasks": [
+                "Create a Book class with title, author, and year attributes, and a method to display book information.",
+                "Create a BankAccount class with accountNumber, balance, and methods for deposit and withdrawal.",
+                "Create a Rectangle class with width and height attributes, and methods to calculate area and perimeter."
+            ],
+            "quiz": [
+                {
+                    "question": "What does OOP stand for?",
+                    "options": [
+                        "Object-Oriented Programming",
+                        "Object-Option Programming",
+                        "Oriented-Object Programming",
+                        "Operation Object Programming"
+                    ],
+                    "answer": "Object-Oriented Programming",
+                    "reasoning": "OOP stands for Object-Oriented Programming, a programming paradigm based on objects containing data and methods."
+                },
+                {
+                    "question": "What is a class in C++?",
+                    "options": [
+                        "A blueprint for creating objects",
+                        "A single object instance",
+                        "A function that returns objects",
+                        "A data type for integers"
+                    ],
+                    "answer": "A blueprint for creating objects",
+                    "reasoning": "A class is a user-defined type that serves as a blueprint for creating objects with similar properties and behaviors."
+                },
+                {
+                    "question": "What is an object?",
+                    "options": [
+                        "A blueprint for classes",
+                        "An instance of a class",
+                        "A type of function",
+                        "A variable declaration"
+                    ],
+                    "answer": "An instance of a class",
+                    "reasoning": "An object is a concrete instance created from a class, containing actual data and capable of performing actions."
+                },
+                {
+                    "question": "What does the DRY principle mean?",
+                    "options": [
+                        "Don't Repeat Yourself",
+                        "Do Repeat Yourself",
+                        "Data Recovery Yield",
+                        "Dynamic Runtime Yield"
+                    ],
+                    "answer": "Don't Repeat Yourself",
+                    "reasoning": "DRY stands for 'Don't Repeat Yourself' - a principle aimed at reducing code duplication through reuse."
+                },
+                {
+                    "question": "Which operator is used to define a method outside its class?",
+                    "options": [
+                        ".",
+                        "->",
+                        "::",
+                        ":"
+                    ],
+                    "answer": "::",
+                    "reasoning": "The scope resolution operator (::) is used to define class methods outside the class definition."
+                },
+                {
+                    "question": "What is the default access specifier for class members?",
+                    "options": [
+                        "public",
+                        "private",
+                        "protected",
+                        "internal"
+                    ],
+                    "answer": "private",
+                    "reasoning": "If no access specifier is specified, class members are private by default in C++."
+                },
+                {
+                    "question": "How do you access an object's attributes and methods?",
+                    "options": [
+                        "Using the :: operator",
+                        "Using the . operator",
+                        "Using the -> operator",
+                        "Using the : operator"
+                    ],
+                    "answer": "Using the . operator",
+                    "reasoning": "The dot operator (.) is used to access an object's members (attributes and methods)."
+                }
+            ]
+        },
+        {
+            "title": "Day 15 – C++ Constructors and Encapsulation",
+            "definition": "Constructors initialize objects; encapsulation protects data through access control.",
+            "explanation": "Constructors are special methods that automatically run when objects are created, used to initialize object attributes. Constructor overloading allows multiple constructors with different parameters. Encapsulation is the practice of making class data private and providing public methods (getters/setters) to access and modify it. This protects data from invalid changes and ensures controlled access. Access specifiers (public, private, protected) control member visibility. Friend functions can access private members but are not class members.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\nclass BankAccount {\nprivate:\n    string accountNumber;\n    double balance;\n    \npublic:\n    // Constructor overloading\n    BankAccount() {  // Default constructor\n        accountNumber = \"Unknown\";\n        balance = 0.0;\n    }\n    \n    BankAccount(string accNum, double initialBalance) {  // Parameterized constructor\n        accountNumber = accNum;\n        balance = initialBalance;\n    }\n    \n    // Getter methods\n    string getAccountNumber() {\n        return accountNumber;\n    }\n    \n    double getBalance() {\n        return balance;\n    }\n    \n    // Setter methods with validation\n    void setBalance(double newBalance) {\n        if (newBalance >= 0) {\n            balance = newBalance;\n        } else {\n            cout << \"Error: Balance cannot be negative!\" << endl;\n        }\n    }\n    \n    // Business methods\n    void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n            cout << \"Deposited: $\" << amount << endl;\n        } else {\n            cout << \"Error: Deposit amount must be positive!\" << endl;\n        }\n    }\n    \n    void withdraw(double amount) {\n        if (amount > 0 && amount <= balance) {\n            balance -= amount;\n            cout << \"Withdrawn: $\" << amount << endl;\n        } else {\n            cout << \"Error: Invalid withdrawal amount!\" << endl;\n        }\n    }\n    \n    // Friend function declaration\n    friend void displayAccountDetails(BankAccount account);\n};\n\n// Friend function definition\nvoid displayAccountDetails(BankAccount account) {\n    cout << \"Friend Function - Account: \" << account.accountNumber \n         << \", Balance: $\" << account.balance << endl;\n}\n\nint main() {\n    // Using different constructors\n    BankAccount account1;  // Default constructor\n    BankAccount account2(\"ACC123\", 1000.0);  // Parameterized constructor\n    \n    // Using encapsulation\n    account1.deposit(500.0);\n    account2.withdraw(200.0);\n    \n    cout << \"Account 1 Balance: $\" << account1.getBalance() << endl;\n    cout << \"Account 2 Balance: $\" << account2.getBalance() << endl;\n    \n    // Using friend function\n    displayAccountDetails(account2);\n    \n    return 0;\n}",
+            "real_world_example": "Constructors are used everywhere: creating database connections with connection strings, initializing game characters with starting stats, setting up GUI components with default properties. Encapsulation protects sensitive data like passwords, financial information, and user credentials in applications. Friend functions are used in operator overloading and when external functions need special access to private data.",
+            "interactive_tasks": [
+                "Create a Student class with private attributes and public getters/setters, plus a constructor.",
+                "Create a Circle class with radius as private attribute and methods to calculate area and circumference.",
+                "Create a Date class with day, month, year as private attributes and validation in setters."
+            ],
+            "quiz": [
+                {
+                    "question": "What is a constructor?",
+                    "options": [
+                        "A function that destroys objects",
+                        "A special method that initializes objects",
+                        "A method that returns values",
+                        "A function that prints object data"
+                    ],
+                    "answer": "A special method that initializes objects",
+                    "reasoning": "Constructors are special methods that automatically run when objects are created to initialize their state."
+                },
+                {
+                    "question": "What is constructor overloading?",
+                    "options": [
+                        "Having multiple constructors with different parameters",
+                        "Making constructors run faster",
+                        "Creating too many objects",
+                        "Inheriting constructors from parent classes"
+                    ],
+                    "answer": "Having multiple constructors with different parameters",
+                    "reasoning": "Constructor overloading means having multiple constructors in the same class with different parameter lists."
+                },
+                {
+                    "question": "What is the main purpose of encapsulation?",
+                    "options": [
+                        "To make code run faster",
+                        "To protect data and control access",
+                        "To create more objects",
+                        "To inherit from multiple classes"
+                    ],
+                    "answer": "To protect data and control access",
+                    "reasoning": "Encapsulation protects data by making it private and providing controlled access through public methods."
+                },
+                {
+                    "question": "What are getters and setters?",
+                    "options": [
+                        "Methods to get and set private attributes",
+                        "Functions to create and destroy objects",
+                        "Operators for mathematical operations",
+                        "Variables for storing temporary data"
+                    ],
+                    "answer": "Methods to get and set private attributes",
+                    "reasoning": "Getters (accessors) return private attribute values, setters (mutators) modify them with validation."
+                },
+                {
+                    "question": "What is a friend function?",
+                    "options": [
+                        "A function that is friendly to all classes",
+                        "A function that can access private members but isn't a class member",
+                        "A function that only works with public members",
+                        "A function that creates friendships between objects"
+                    ],
+                    "answer": "A function that can access private members but isn't a class member",
+                    "reasoning": "Friend functions are external functions granted special access to a class's private members."
+                },
+                {
+                    "question": "Which access specifier makes members accessible only within the class?",
+                    "options": [
+                        "public",
+                        "private",
+                        "protected",
+                        "internal"
+                    ],
+                    "answer": "private",
+                    "reasoning": "Private members are only accessible within the class where they are declared."
+                },
+                {
+                    "question": "What happens if you don't define any constructor?",
+                    "options": [
+                        "Compilation error",
+                        "Runtime error",
+                        "A default constructor is provided",
+                        "Objects cannot be created"
+                    ],
+                    "answer": "A default constructor is provided",
+                    "reasoning": "If no constructors are defined, C++ provides a default constructor that takes no parameters."
+                }
+            ]
+        },
+        {
+            "title": "Day 16 – C++ Inheritance and Polymorphism",
+            "definition": "Inheritance allows classes to reuse code; polymorphism enables different behaviors through common interfaces.",
+            "explanation": "Inheritance creates a parent-child relationship between classes, allowing child classes to inherit attributes and methods from parent classes. This promotes code reuse and establishes hierarchical relationships. Polymorphism means 'many forms' - it allows objects of different classes to be treated as objects of a common parent class. Virtual functions enable runtime polymorphism, where the appropriate method is called based on the actual object type rather than the reference type. Access specifiers in inheritance control what gets inherited and how.",
+            "code_example": "#include <iostream>\n#include <string>\nusing namespace std;\n\n// Base class\nclass Animal {\nprotected:\n    string name;\n    int age;\n    \npublic:\n    Animal(string n, int a) : name(n), age(a) {}\n    \n    // Virtual function for polymorphism\n    virtual void makeSound() {\n        cout << \"Some generic animal sound\" << endl;\n    }\n    \n    void sleep() {\n        cout << name << \" is sleeping\" << endl;\n    }\n    \n    // Virtual destructor for proper cleanup\n    virtual ~Animal() {}\n};\n\n// Derived class - Single inheritance\nclass Dog : public Animal {\nprivate:\n    string breed;\n    \npublic:\n    Dog(string n, int a, string b) : Animal(n, a), breed(b) {}\n    \n    // Override base class method\n    void makeSound() override {\n        cout << name << \" says: Woof! Woof!\" << endl;\n    }\n    \n    void fetch() {\n        cout << name << \" is fetching the ball\" << endl;\n    }\n};\n\n// Another derived class\nclass Cat : public Animal {\nprivate:\n    string color;\n    \npublic:\n    Cat(string n, int a, string c) : Animal(n, a), color(c) {}\n    \n    // Override base class method\n    void makeSound() override {\n        cout << name << \" says: Meow! Meow!\" << endl;\n    }\n    \n    void climb() {\n        cout << name << \" is climbing a tree\" << endl;\n    }\n};\n\n// Multilevel inheritance\nclass Puppy : public Dog {\npublic:\n    Puppy(string n, int a, string b) : Dog(n, a, b) {}\n    \n    void makeSound() override {\n        cout << name << \" says: Yip! Yip!\" << endl;\n    }\n};\n\nint main() {\n    // Creating objects of different types\n    Dog myDog(\"Buddy\", 3, \"Golden Retriever\");\n    Cat myCat(\"Whiskers\", 2, \"Gray\");\n    Puppy myPuppy(\"Max\", 1, \"Labrador\");\n    \n    // Using inherited methods\n    myDog.sleep();\n    myCat.sleep();\n    \n    // Polymorphism in action\n    Animal* animals[3];\n    animals[0] = &myDog;\n    animals[1] = &myCat;\n    animals[2] = &myPuppy;\n    \n    cout << \"\\nPolymorphism demonstration:\" << endl;\n    for (int i = 0; i < 3; i++) {\n        animals[i]->makeSound();  // Calls the appropriate version\n    }\n    \n    // Specific class methods\n    myDog.fetch();\n    myCat.climb();\n    \n    return 0;\n}",
+            "real_world_example": "Inheritance is used in GUI frameworks (Button, Checkbox inherit from Widget), game development (Player, Enemy inherit from Character), and business applications (Manager, Employee inherit from Person). Polymorphism enables plugin architectures, where different implementations can be swapped seamlessly. Virtual functions are crucial in frameworks and libraries where base classes define interfaces that derived classes implement.",
+            "interactive_tasks": [
+                "Create a Vehicle base class and Car, Motorcycle derived classes with different implementations.",
+                "Create a Shape base class with virtual area() method, and Circle, Rectangle derived classes.",
+                "Create a Person base class and Student, Teacher derived classes with additional properties."
+            ],
+            "quiz": [
+                {
+                    "question": "What is inheritance in C++?",
+                    "options": [
+                        "Creating multiple objects from one class",
+                        "A class reusing attributes and methods from another class",
+                        "Making all class members public",
+                        "Creating friend functions"
+                    ],
+                    "answer": "A class reusing attributes and methods from another class",
+                    "reasoning": "Inheritance allows a derived class to inherit and extend the functionality of a base class."
+                },
+                {
+                    "question": "What symbol is used for inheritance?",
+                    "options": [
+                        ".",
+                        "->",
+                        ":",
+                        "::"
+                    ],
+                    "answer": ":",
+                    "reasoning": "The colon (:) is used in class declaration to specify inheritance: class Derived : public Base"
+                },
+                {
+                    "question": "What is polymorphism?",
+                    "options": [
+                        "Creating multiple classes",
+                        "The ability to take many forms",
+                        "Inheriting from multiple classes",
+                        "Making all methods virtual"
+                    ],
+                    "answer": "The ability to take many forms",
+                    "reasoning": "Polymorphism allows objects of different types to be treated as objects of a common base type."
+                },
+                {
+                    "question": "What keyword makes a function polymorphic?",
+                    "options": [
+                        "override",
+                        "virtual",
+                        "polymorphic",
+                        "dynamic"
+                    ],
+                    "answer": "virtual",
+                    "reasoning": "The virtual keyword in the base class enables runtime polymorphism through function overriding."
+                },
+                {
+                    "question": "What is the purpose of the override keyword?",
+                    "options": [
+                        "To make functions run faster",
+                        "To explicitly indicate a function overrides a base class virtual function",
+                        "To inherit from multiple classes",
+                        "To create abstract classes"
+                    ],
+                    "answer": "To explicitly indicate a function overrides a base class virtual function",
+                    "reasoning": "The override keyword explicitly indicates that a function is intended to override a virtual function from the base class."
+                },
+                {
+                    "question": "What is multilevel inheritance?",
+                    "options": [
+                        "A class inheriting from multiple base classes",
+                        "A class derived from another derived class",
+                        "Inheriting only methods but not attributes",
+                        "Creating multiple inheritance levels in one class"
+                    ],
+                    "answer": "A class derived from another derived class",
+                    "reasoning": "Multilevel inheritance occurs when a class is derived from another derived class (grandparent → parent → child)."
+                },
+                {
+                    "question": "Why should destructors in base classes be virtual?",
+                    "options": [
+                        "To make them faster",
+                        "To ensure proper cleanup of derived class objects",
+                        "To enable inheritance",
+                        "To allow method overriding"
+                    ],
+                    "answer": "To ensure proper cleanup of derived class objects",
+                    "reasoning": "Virtual destructors ensure that when deleting through a base class pointer, the derived class destructor is called properly."
+                }
+            ]
+        },
+        {
+            "title": "Day 17 – C++ Templates and Advanced Features",
+            "definition": "Templates enable generic programming; files and date/time provide I/O and time manipulation capabilities.",
+            "explanation": "Templates allow writing code that works with any data type, promoting code reuse and type safety. Function templates create generic functions, while class templates create generic classes. File handling enables reading from and writing to files using fstream classes. Date and time functionality provides tools for working with timestamps, formatting dates, and measuring time intervals. These advanced features make C++ suitable for systems programming, applications requiring file I/O, and time-sensitive operations.",
+            "code_example": "#include <iostream>\n#include <fstream>\n#include <string>\n#include <ctime>\nusing namespace std;\n\n// Function template\ntemplate <typename T>\nT findMax(T a, T b) {\n    return (a > b) ? a : b;\n}\n\n// Class template\ntemplate <typename T>\nclass Container {\nprivate:\n    T value;\n    \npublic:\n    Container(T v) : value(v) {}\n    \n    T getValue() {\n        return value;\n    }\n    \n    void setValue(T v) {\n        value = v;\n    }\n    \n    void display() {\n        cout << \"Value: \" << value << endl;\n    }\n};\n\n// Template with multiple parameters\ntemplate <typename T1, typename T2>\nclass Pair {\npublic:\n    T1 first;\n    T2 second;\n    \n    Pair(T1 f, T2 s) : first(f), second(s) {}\n    \n    void display() {\n        cout << \"(\" << first << \", \" << second << \")\" << endl;\n    }\n};\n\nvoid demonstrateFiles() {\n    // Writing to a file\n    ofstream outFile(\"example.txt\");\n    if (outFile.is_open()) {\n        outFile << \"Hello, File Handling!\" << endl;\n        outFile << \"This is a second line.\" << endl;\n        outFile.close();\n        cout << \"File written successfully!\" << endl;\n    }\n    \n    // Reading from a file\n    ifstream inFile(\"example.txt\");\n    string line;\n    cout << \"\\nFile contents:\" << endl;\n    if (inFile.is_open()) {\n        while (getline(inFile, line)) {\n            cout << line << endl;\n        }\n        inFile.close();\n    }\n}\n\nvoid demonstrateDateTime() {\n    // Current date and time\n    time_t now = time(0);\n    cout << \"\\nCurrent timestamp: \" << now << endl;\n    cout << \"Local time: \" << ctime(&now);\n    \n    // Formatting date\n    tm* localTime = localtime(&now);\n    char buffer[80];\n    strftime(buffer, 80, \"%Y-%m-%d %H:%M:%S\", localTime);\n    cout << \"Formatted: \" << buffer << endl;\n    \n    // Measuring time\n    clock_t start = clock();\n    // Simulate some work\n    for (int i = 0; i < 1000000; i++) {}\n    clock_t end = clock();\n    double duration = double(end - start) / CLOCKS_PER_SEC;\n    cout << \"Operation took: \" << duration << \" seconds\" << endl;\n}\n\nint main() {\n    // Using function templates\n    cout << \"Max of 5 and 10: \" << findMax(5, 10) << endl;\n    cout << \"Max of 3.14 and 2.71: \" << findMax(3.14, 2.71) << endl;\n    cout << \"Max of 'a' and 'z': \" << findMax('a', 'z') << endl;\n    \n    // Using class templates\n    Container<int> intContainer(42);\n    Container<string> strContainer(\"Hello Templates\");\n    Container<double> doubleContainer(3.14159);\n    \n    cout << \"\\nContainers:\" << endl;\n    intContainer.display();\n    strContainer.display();\n    doubleContainer.display();\n    \n    // Using multiple parameter template\n    Pair<string, int> person(\"John\", 25);\n    Pair<int, double> data(123, 45.67);\n    \n    cout << \"\\nPairs:\" << endl;\n    person.display();\n    data.display();\n    \n    // File and date/time demonstrations\n    demonstrateFiles();\n    demonstrateDateTime();\n    \n    return 0;\n}",
+            "real_world_example": "Templates are used in the Standard Template Library (STL) for containers like vector, list, and map. File handling is essential for configuration files, data persistence, log files, and data import/export. Date/time functions are crucial for logging, scheduling, financial applications (interest calculations), and any time-sensitive operations.",
+            "interactive_tasks": [
+                "Create a template function that swaps two values of any type.",
+                "Create a template class Stack with push, pop, and peek operations.",
+                "Write a program that logs messages with timestamps to a file."
+            ],
+            "quiz": [
+                {
+                    "question": "What is the purpose of templates in C++?",
+                    "options": [
+                        "To create web templates",
+                        "To write generic code that works with any data type",
+                        "To make code run faster",
+                        "To create user interfaces"
+                    ],
+                    "answer": "To write generic code that works with any data type",
+                    "reasoning": "Templates enable generic programming by allowing functions and classes to work with any data type."
+                },
+                {
+                    "question": "Which keyword is used to declare a template?",
+                    "options": [
+                        "generic",
+                        "template",
+                        "typename",
+                        "any"
+                    ],
+                    "answer": "template",
+                    "reasoning": "The template keyword is used to declare a template, followed by template parameters in angle brackets."
+                },
+                {
+                    "question": "What library is used for file handling in C++?",
+                    "options": [
+                        "iostream",
+                        "fstream",
+                        "fileio",
+                        "stream"
+                    ],
+                    "answer": "fstream",
+                    "reasoning": "The fstream library provides classes for file input/output operations (ifstream, ofstream, fstream)."
+                },
+                {
+                    "question": "Which library provides date and time functions?",
+                    "options": [
+                        "chrono",
+                        "ctime",
+                        "datetime",
+                        "time"
+                    ],
+                    "answer": "ctime",
+                    "reasoning": "The ctime library (C time library) provides functions for working with dates and times."
+                },
+                {
+                    "question": "What does the time() function return?",
+                    "options": [
+                        "A formatted string",
+                        "A time_t value representing current time",
+                        "A tm structure",
+                        "The current hour"
+                    ],
+                    "answer": "A time_t value representing current time",
+                    "reasoning": "The time() function returns a time_t value representing the current calendar time as seconds since epoch."
+                },
+                {
+                    "question": "What is the advantage of using templates?",
+                    "options": [
+                        "Code reuse for different data types",
+                        "Faster execution",
+                        "Smaller executable size",
+                        "Easier debugging"
+                    ],
+                    "answer": "Code reuse for different data types",
+                    "reasoning": "Templates promote code reuse by allowing the same algorithm to work with multiple data types without duplication."
+                },
+                {
+                    "question": "Which class is used for writing to files?",
+                    "options": [
+                        "ifstream",
+                        "ofstream",
+                        "fstream",
+                        "Both 2 and 3"
+                    ],
+                    "answer": "Both 2 and 3",
+                    "reasoning": "Both ofstream (output file stream) and fstream (general file stream) can be used for writing to files."
+                }
+            ]
+        },
+        {
+            "title": "Day 18 – C++ STL Containers - Vector and List",
+            "definition": "Vectors and Lists are fundamental STL containers for dynamic data storage with different access patterns.",
+            "explanation": "The Standard Template Library (STL) provides powerful data structures called containers. Vectors are dynamic arrays that can grow and shrink, supporting random access via indexes. Lists are doubly-linked sequences that allow efficient insertion and deletion at both ends but don't support random access. Vectors are ideal when you need frequent access by position, while lists excel when you need frequent insertions and deletions anywhere in the sequence. Both automatically manage memory and provide convenient methods for common operations.",
+            "code_example": "#include <iostream>\n#include <vector>\n#include <list>\nusing namespace std;\n\nint main() {\n    // Vector demonstration\n    cout << \"=== VECTOR ===\" << endl;\n    vector<string> cars = {\"Volvo\", \"BMW\", \"Ford\", \"Mazda\"};\n    \n    // Vector operations\n    cars.push_back(\"Tesla\");      // Add to end\n    cars.pop_back();              // Remove from end\n    cars.insert(cars.begin() + 1, \"Audi\");  // Insert at position\n    \n    cout << \"Vector elements: \";\n    for (size_t i = 0; i < cars.size(); i++) {\n        cout << cars[i] << \" \";  // Random access\n    }\n    cout << endl;\n    \n    cout << \"First element: \" << cars.front() << endl;\n    cout << \"Last element: \" << cars.back() << endl;\n    cout << \"Size: \" << cars.size() << endl;\n    \n    // List demonstration\n    cout << \"\\n=== LIST ===\" << endl;\n    list<string> animals = {\"Dog\", \"Cat\", \"Elephant\", \"Lion\"};\n    \n    // List operations\n    animals.push_front(\"Tiger\");   // Add to front\n    animals.push_back(\"Bear\");     // Add to back\n    animals.pop_front();           // Remove from front\n    \n    cout << \"List elements: \";\n    for (const string& animal : animals) {\n        cout << animal << \" \";     // Sequential access only\n    }\n    cout << endl;\n    \n    cout << \"First element: \" << animals.front() << endl;\n    cout << \"Last element: \" << animals.back() << endl;\n    cout << \"Size: \" << animals.size() << endl;\n    \n    // Performance comparison\n    cout << \"\\n=== PERFORMANCE ===\" << endl;\n    cout << \"Vector: Fast random access, slow insert/delete in middle\" << endl;\n    cout << \"List: Fast insert/delete anywhere, no random access\" << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Vectors are used for storing game levels, user lists, and any collection where you need fast access by position. Lists are used for browser history, undo/redo functionality, and music playlists where you frequently add/remove items. Vectors are like books on a shelf (easy to find by position), while lists are like train cars (easy to add/remove anywhere).",
+            "interactive_tasks": [
+                "Create a vector of integers, add 10 numbers, then remove the first and last elements.",
+                "Create a list of student names and implement functions to add to front and back.",
+                "Compare the performance of inserting in the middle of a vector vs list with 1000 elements."
+            ],
+            "quiz": [
+                {
+                    "question": "What is the main advantage of vectors over arrays?",
+                    "options": [
+                        "Vectors can store different data types",
+                        "Vectors can dynamically resize",
+                        "Vectors are faster",
+                        "Vectors use less memory"
+                    ],
+                    "answer": "Vectors can dynamically resize",
+                    "reasoning": "Vectors can grow and shrink dynamically, unlike arrays which have fixed size."
+                },
+                {
+                    "question": "How do you add an element to the end of a vector?",
+                    "options": [
+                        "vector.add()",
+                        "vector.push_back()",
+                        "vector.insert_end()",
+                        "vector.append()"
+                    ],
+                    "answer": "vector.push_back()",
+                    "reasoning": "The push_back() method adds an element to the end of a vector."
+                },
+                {
+                    "question": "Can you access list elements using index notation like list[0]?",
+                    "options": [
+                        "Yes, always",
+                        "No, never",
+                        "Only if the list is sorted",
+                        "Only for integer lists"
+                    ],
+                    "answer": "No, never",
+                    "reasoning": "Lists don't support random access; you must traverse sequentially using iterators."
+                },
+                {
+                    "question": "Which method adds an element to the front of a list?",
+                    "options": [
+                        "list.push_front()",
+                        "list.add_front()",
+                        "list.insert_begin()",
+                        "list.front_add()"
+                    ],
+                    "answer": "list.push_front()",
+                    "reasoning": "The push_front() method adds an element to the beginning of a list."
+                },
+                {
+                    "question": "What happens when you call pop_back() on an empty vector?",
+                    "options": [
+                        "It returns 0",
+                        "It throws an exception",
+                        "Undefined behavior",
+                        "It does nothing"
+                    ],
+                    "answer": "Undefined behavior",
+                    "reasoning": "Calling pop_back() on an empty vector leads to undefined behavior - it may crash or cause errors."
+                },
+                {
+                    "question": "Which container is better for frequent insertions in the middle?",
+                    "options": [
+                        "Vector",
+                        "List",
+                        "Array",
+                        "They are equally good"
+                    ],
+                    "answer": "List",
+                    "reasoning": "Lists have O(1) insertion time anywhere, while vectors have O(n) for middle insertions."
+                },
+                {
+                    "question": "How do you get the number of elements in a vector?",
+                    "options": [
+                        "vector.length()",
+                        "vector.size()",
+                        "vector.count()",
+                        "vector.elements()"
+                    ],
+                    "answer": "vector.size()",
+                    "reasoning": "The size() method returns the number of elements in a vector."
+                }
+            ]
+        },
+        {
+            "title": "Day 19 – C++ STL Containers - Stack, Queue, and Deque",
+            "definition": "Stack (LIFO), Queue (FIFO), and Deque (double-ended) provide specialized data access patterns.",
+            "explanation": "Stack follows Last-In-First-Out (LIFO) principle - like a stack of plates where you only access the top. Queue follows First-In-First-Out (FIFO) principle - like people waiting in line. Deque (double-ended queue) allows efficient insertion and deletion at both ends while supporting random access. These containers are adapters built on other containers (like deque or list) and provide restricted interfaces for specific use cases. Understanding these patterns helps choose the right container for algorithms like depth-first search (stack) or breadth-first search (queue).",
+            "code_example": "#include <iostream>\n#include <stack>\n#include <queue>\n#include <deque>\nusing namespace std;\n\nint main() {\n    // Stack demonstration (LIFO)\n    cout << \"=== STACK (LIFO) ===\" << endl;\n    stack<string> browserHistory;\n    \n    browserHistory.push(\"google.com\");\n    browserHistory.push(\"w3schools.com\");\n    browserHistory.push(\"cpp-reference.com\");\n    \n    cout << \"Current page: \" << browserHistory.top() << endl;\n    browserHistory.pop();  // Go back\n    cout << \"After back: \" << browserHistory.top() << endl;\n    cout << \"Stack size: \" << browserHistory.size() << endl;\n    \n    // Queue demonstration (FIFO)\n    cout << \"\\n=== QUEUE (FIFO) ===\" << endl;\n    queue<string> printerQueue;\n    \n    printerQueue.push(\"Document1.pdf\");\n    printerQueue.push(\"Document2.pdf\");\n    printerQueue.push(\"Document3.pdf\");\n    \n    cout << \"Printing: \" << printerQueue.front() << endl;\n    printerQueue.pop();  // Finish printing\n    cout << \"Next to print: \" << printerQueue.front() << endl;\n    cout << \"Queue size: \" << printerQueue.size() << endl;\n    \n    // Deque demonstration (Double-ended)\n    cout << \"\\n=== DEQUE (Double-ended) ===\" << endl;\n    deque<string> taskList;\n    \n    // Add tasks from both ends\n    taskList.push_back(\"Code review\");     // Low priority\n    taskList.push_front(\"Bug fix\");        // High priority\n    taskList.push_back(\"Documentation\");   // Low priority\n    taskList.push_front(\"Critical issue\"); // Highest priority\n    \n    cout << \"All tasks: \";\n    for (size_t i = 0; i < taskList.size(); i++) {\n        cout << taskList[i] << \" \";  // Random access\n    }\n    cout << endl;\n    \n    cout << \"Highest priority: \" << taskList.front() << endl;\n    cout << \"Lowest priority: \" << taskList.back() << endl;\n    \n    // Process high priority tasks first\n    taskList.pop_front();\n    cout << \"After processing critical: \" << taskList.front() << endl;\n    \n    // Real-world scenarios\n    cout << \"\\n=== REAL-WORLD USAGE ===\" << endl;\n    cout << \"Stack: Browser history, function calls, undo operations\" << endl;\n    cout << \"Queue: Print spooling, message queues, breadth-first search\" << endl;\n    cout << \"Deque: Task scheduling, sliding window algorithms\" << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Stacks are used in browser back/forward navigation, function call management in programming languages, and undo/redo functionality. Queues handle print jobs, message processing in servers, and customer service systems. Deques are used in task schedulers where high-priority tasks can be added to the front and low-priority to the back, and in algorithms requiring sliding windows.",
+            "interactive_tasks": [
+                "Implement a browser history using stack with back and forward navigation.",
+                "Create a print queue system that processes jobs in FIFO order.",
+                "Build a task manager using deque that allows adding high/low priority tasks."
+            ],
+            "quiz": [
+                {
+                    "question": "What does LIFO stand for?",
+                    "options": [
+                        "Last In First Out",
+                        "First In First Out",
+                        "Last In Last Out",
+                        "First In Last Out"
+                    ],
+                    "answer": "Last In First Out",
+                    "reasoning": "LIFO means the last element added is the first one removed, like a stack of plates."
+                },
+                {
+                    "question": "Which method adds an element to a stack?",
+                    "options": [
+                        "stack.add()",
+                        "stack.push()",
+                        "stack.insert()",
+                        "stack.enqueue()"
+                    ],
+                    "answer": "stack.push()",
+                    "reasoning": "The push() method adds an element to the top of a stack."
+                },
+                {
+                    "question": "How do you access the front element of a queue?",
+                    "options": [
+                        "queue.top()",
+                        "queue.front()",
+                        "queue.first()",
+                        "queue.peek()"
+                    ],
+                    "answer": "queue.front()",
+                    "reasoning": "The front() method returns the first element in a queue (next to be processed)."
+                },
+                {
+                    "question": "What is the main advantage of deque over vector?",
+                    "options": [
+                        "Faster random access",
+                        "Efficient insertion at both ends",
+                        "Smaller memory footprint",
+                        "Built-in sorting"
+                    ],
+                    "answer": "Efficient insertion at both ends",
+                    "reasoning": "Deque allows O(1) insertion at both front and back, while vector only at the back."
+                },
+                {
+                    "question": "Which container would you use for breadth-first search?",
+                    "options": [
+                        "Stack",
+                        "Queue",
+                        "Deque",
+                        "List"
+                    ],
+                    "answer": "Queue",
+                    "reasoning": "Breadth-first search uses FIFO ordering, making queue the natural choice."
+                },
+                {
+                    "question": "What happens when you pop from an empty stack?",
+                    "options": [
+                        "Returns null",
+                        "Throws an exception",
+                        "Undefined behavior",
+                        "Returns default value"
+                    ],
+                    "answer": "Undefined behavior",
+                    "reasoning": "Popping from an empty stack leads to undefined behavior - it may crash or cause errors."
+                },
+                {
+                    "question": "Which method removes an element from the front of a deque?",
+                    "options": [
+                        "deque.pop_front()",
+                        "deque.remove_front()",
+                        "deque.delete_front()",
+                        "deque.erase_front()"
+                    ],
+                    "answer": "deque.pop_front()",
+                    "reasoning": "The pop_front() method removes the first element from a deque."
+                }
+            ]
+        },
+        {
+            "title": "Day 20 – C++ STL Containers - Set and Map",
+            "definition": "Set stores unique sorted elements; Map stores key-value pairs with unique sorted keys.",
+            "explanation": "Set is a collection of unique elements automatically sorted in ascending order. It's ideal for maintaining sorted unique data and fast membership testing. Map stores key-value pairs where keys are unique and sorted. It provides fast lookup by key. Both sets and maps are typically implemented as balanced binary search trees, providing O(log n) operations. Unordered versions (unordered_set, unordered_map) use hash tables for average O(1) operations but don't maintain order. Understanding these containers is crucial for efficient data retrieval and unique data management.",
+            "code_example": "#include <iostream>\n#include <set>\n#include <map>\n#include <string>\nusing namespace std;\n\nint main() {\n    // Set demonstration\n    cout << \"=== SET (Unique Sorted Elements) ===\" << endl;\n    set<string> uniqueWords;\n    \n    // Add elements (duplicates are ignored)\n    uniqueWords.insert(\"apple\");\n    uniqueWords.insert(\"banana\");\n    uniqueWords.insert(\"apple\");  // Duplicate - ignored\n    uniqueWords.insert(\"cherry\");\n    uniqueWords.insert(\"date\");\n    \n    cout << \"Unique words (sorted): \";\n    for (const string& word : uniqueWords) {\n        cout << word << \" \";\n    }\n    cout << endl;\n    \n    // Set operations\n    cout << \"Size: \" << uniqueWords.size() << endl;\n    cout << \"Contains 'banana': \" << uniqueWords.count(\"banana\") << endl;\n    cout << \"Contains 'grape': \" << uniqueWords.count(\"grape\") << endl;\n    \n    // Map demonstration\n    cout << \"\\n=== MAP (Key-Value Pairs) ===\" << endl;\n    map<string, int> studentGrades;\n    \n    // Add key-value pairs\n    studentGrades[\"Alice\"] = 95;\n    studentGrades[\"Bob\"] = 87;\n    studentGrades[\"Charlie\"] = 92;\n    studentGrades[\"Diana\"] = 78;\n    \n    // Access and display (automatically sorted by key)\n    cout << \"Student grades (sorted by name):\" << endl;\n    for (const auto& student : studentGrades) {\n        cout << student.first << \": \" << student.second << endl;\n    }\n    \n    // Map operations\n    cout << \"\\nMap operations:\" << endl;\n    cout << \"Alice's grade: \" << studentGrades[\"Alice\"] << endl;\n    cout << \"Contains Bob: \" << studentGrades.count(\"Bob\") << endl;\n    \n    // Update values\n    studentGrades[\"Bob\"] = 91;  // Update existing\n    studentGrades[\"Eve\"] = 88;  // Add new\n    \n    cout << \"\\nAfter updates:\" << endl;\n    for (const auto& student : studentGrades) {\n        cout << student.first << \": \" << student.second << endl;\n    }\n    \n    // Practical examples\n    cout << \"\\n=== PRACTICAL EXAMPLES ===\" << endl;\n    \n    // Word frequency counter using map\n    map<string, int> wordFrequency;\n    string text = \"apple banana apple cherry banana apple\";\n    string word = \"\";\n    \n    // Simple word counting\n    for (char c : text) {\n        if (c == ' ') {\n            if (!word.empty()) {\n                wordFrequency[word]++;\n                word = \"\";\n            }\n        } else {\n            word += c;\n        }\n    }\n    if (!word.empty()) {\n        wordFrequency[word]++;\n    }\n    \n    cout << \"Word frequencies:\" << endl;\n    for (const auto& entry : wordFrequency) {\n        cout << entry.first << \": \" << entry.second << endl;\n    }\n    \n    return 0;\n}",
+            "real_world_example": "Sets are used for maintaining unique usernames, stopword lists in search engines, and visited URLs in web crawlers. Maps are essential for dictionaries, database indexing, configuration settings (key-value stores), and representing JSON-like structures. Real-world examples include user profiles (map of userID to user data), word counters, and inventory systems (productID to product details).",
+            "interactive_tasks": [
+                "Create a set of unique email addresses and check for duplicates.",
+                "Build a phone book using map with names as keys and numbers as values.",
+                "Implement a word frequency counter that ignores case sensitivity."
+            ],
+            "quiz": [
+                {
+                    "question": "What happens when you insert a duplicate value into a set?",
+                    "options": [
+                        "It replaces the existing value",
+                        "It throws an exception",
+                        "It is ignored",
+                        "It creates a new set"
+                    ],
+                    "answer": "It is ignored",
+                    "reasoning": "Sets only store unique elements, so duplicates are silently ignored."
+                },
+                {
+                    "question": "How are elements stored in a set by default?",
+                    "options": [
+                        "In insertion order",
+                        "In random order",
+                        "In ascending sorted order",
+                        "In descending order"
+                    ],
+                    "answer": "In ascending sorted order",
+                    "reasoning": "Sets automatically sort elements in ascending order using the less-than operator."
+                },
+                {
+                    "question": "How do you access a value in a map using its key?",
+                    "options": [
+                        "map.get(key)",
+                        "map[key]",
+                        "map.value(key)",
+                        "map.find(key)"
+                    ],
+                    "answer": "map[key]",
+                    "reasoning": "The subscript operator [] allows accessing values by their keys in a map."
+                },
+                {
+                    "question": "What is the time complexity of finding an element in a set?",
+                    "options": [
+                        "O(1)",
+                        "O(log n)",
+                        "O(n)",
+                        "O(n log n)"
+                    ],
+                    "answer": "O(log n)",
+                    "reasoning": "Sets are typically implemented as balanced BSTs, providing logarithmic time operations."
+                },
+                {
+                    "question": "Can a map have duplicate keys?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Only if values are different",
+                        "Only for integer keys"
+                    ],
+                    "answer": "No",
+                    "reasoning": "Map keys must be unique; inserting with an existing key updates the value."
+                },
+                {
+                    "question": "Which method checks if a key exists in a map?",
+                    "options": [
+                        "map.exists(key)",
+                        "map.contains(key)",
+                        "map.count(key)",
+                        "map.has(key)"
+                    ],
+                    "answer": "map.count(key)",
+                    "reasoning": "count(key) returns 1 if the key exists, 0 otherwise."
+                },
+                {
+                    "question": "What is the difference between map and unordered_map?",
+                    "options": [
+                        "map is sorted, unordered_map is not",
+                        "unordered_map is faster, map maintains order",
+                        "map uses BST, unordered_map uses hash table",
+                        "All of the above"
+                    ],
+                    "answer": "All of the above",
+                    "reasoning": "map is sorted (BST-based), unordered_map is faster on average (hash-based) but doesn't maintain order."
+                }
+            ]
+        },
+        {
+            "title": "Day 21 – C++ STL Iterators and Algorithms",
+            "definition": "Iterators provide uniform access to containers; Algorithms perform operations on data ranges.",
+            "explanation": "Iterators are objects that point to elements in containers, providing a unified way to traverse different data structures. They act as bridges between containers and algorithms. The STL provides various iterator categories: input, output, forward, bidirectional, and random access. Algorithms are template functions that perform common operations like sorting, searching, and modifying elements. They work with iterators to operate on ranges of elements without knowing the underlying container type. This separation of data structures and algorithms is a key strength of the STL.",
+            "code_example": "#include <iostream>\n#include <vector>\n#include <list>\n#include <set>\n#include <algorithm>\n#include <iterator>\nusing namespace std;\n\nint main() {\n    // Iterator basics\n    cout << \"=== ITERATOR BASICS ===\" << endl;\n    vector<int> numbers = {5, 2, 8, 1, 9, 3};\n    \n    // Using iterators to traverse\n    cout << \"Vector elements: \";\n    for (auto it = numbers.begin(); it != numbers.end(); ++it) {\n        cout << *it << \" \";\n    }\n    cout << endl;\n    \n    // Reverse iteration\n    cout << \"Reverse order: \";\n    for (auto it = numbers.rbegin(); it != numbers.rend(); ++it) {\n        cout << *it << \" \";\n    }\n    cout << endl;\n    \n    // Algorithm demonstrations\n    cout << \"\\n=== ALGORITHMS ===\" << endl;\n    \n    // Sorting\n    vector<int> toSort = {5, 2, 8, 1, 9, 3};\n    sort(toSort.begin(), toSort.end());\n    cout << \"Sorted: \";\n    for (int num : toSort) cout << num << \" \";\n    cout << endl;\n    \n    // Finding elements\n    auto found = find(numbers.begin(), numbers.end(), 8);\n    if (found != numbers.end()) {\n        cout << \"Found 8 at position: \" << distance(numbers.begin(), found) << endl;\n    }\n    \n    // Counting elements\n    int countFives = count(numbers.begin(), numbers.end(), 5);\n    cout << \"Number of 5s: \" << countFives << endl;\n    \n    // Min and max elements\n    auto minIt = min_element(numbers.begin(), numbers.end());\n    auto maxIt = max_element(numbers.begin(), numbers.end());\n    cout << \"Min: \" << *minIt << \", Max: \" << *maxIt << endl;\n    \n    // Advanced algorithms\n    cout << \"\\n=== ADVANCED ALGORITHMS ===\" << endl;\n    \n    // Transform - square all elements\n    vector<int> squares(numbers.size());\n    transform(numbers.begin(), numbers.end(), squares.begin(),\n              [](int x) { return x * x; });\n    cout << \"Squares: \";\n    for (int sq : squares) cout << sq << \" \";\n    cout << endl;\n    \n    // Copy if - filter even numbers\n    vector<int> evens;\n    copy_if(numbers.begin(), numbers.end(), back_inserter(evens),\n            [](int x) { return x % 2 == 0; });\n    cout << \"Even numbers: \";\n    for (int even : evens) cout << even << \" \";\n    cout << endl;\n    \n    // Accumulate - sum of elements\n    int sum = 0;\n    for (int num : numbers) sum += num;\n    cout << \"Sum: \" << sum << endl;\n    \n    // Working with different containers\n    cout << \"\\n=== MULTI-CONTAINER OPERATIONS ===\" << endl;\n    \n    list<string> words = {\"apple\", \"banana\", \"cherry\", \"date\"};\n    set<string> sortedWords;\n    \n    // Copy from list to set (automatically sorts)\n    copy(words.begin(), words.end(), inserter(sortedWords, sortedWords.begin()));\n    \n    cout << \"Sorted words: \";\n    for (const string& word : sortedWords) {\n        cout << word << \" \";\n    }\n    cout << endl;\n    \n    // Iterator categories demonstration\n    cout << \"\\n=== ITERATOR CATEGORIES ===\" << endl;\n    cout << \"Vector: Random Access (can jump anywhere)\" << endl;\n    cout << \"List: Bidirectional (can move forward/backward)\" << endl;\n    cout << \"Set: Bidirectional (sorted order traversal)\" << endl;\n    \n    return 0;\n}",
+            "real_world_example": "Iterators are used in database cursors, file stream processing, and GUI element traversal. Algorithms power search functionality (find), data analysis (count, accumulate), data transformation (transform), and sorting operations. Real-world applications include search engines (sorting results), data processing pipelines (filtering and transforming data), and scientific computing (mathematical operations on data ranges).",
+            "interactive_tasks": [
+                "Use iterators to find and remove all occurrences of a value from a vector.",
+                "Implement a function that uses algorithms to find the most frequent element.",
+                "Create a program that transforms a list of strings to uppercase using transform."
+            ],
+            "quiz": [
+                {
+                    "question": "What is an iterator in C++?",
+                    "options": [
+                        "A data type for loops",
+                        "An object that points to container elements",
+                        "A function that sorts data",
+                        "A type of algorithm"
+                    ],
+                    "answer": "An object that points to container elements",
+                    "reasoning": "Iterators are objects that point to elements in containers and enable traversal."
+                },
+                {
+                    "question": "What does begin() return?",
+                    "options": [
+                        "The first element",
+                        "An iterator to the first element",
+                        "The size of the container",
+                        "A boolean value"
+                    ],
+                    "answer": "An iterator to the first element",
+                    "reasoning": "begin() returns an iterator pointing to the first element, not the element itself."
+                },
+                {
+                    "question": "Which algorithm sorts elements in a range?",
+                    "options": [
+                        "find()",
+                        "sort()",
+                        "search()",
+                        "order()"
+                    ],
+                    "answer": "sort()",
+                    "reasoning": "The sort() algorithm sorts elements in the specified range."
+                },
+                {
+                    "question": "What is the purpose of the auto keyword with iterators?",
+                    "options": [
+                        "To make code run faster",
+                        "To automatically determine iterator type",
+                        "To create automatic loops",
+                        "To free memory automatically"
+                    ],
+                    "answer": "To automatically determine iterator type",
+                    "reasoning": "auto lets the compiler deduce the correct iterator type, simplifying code."
+                },
+                {
+                    "question": "Which iterator can move both forward and backward?",
+                    "options": [
+                        "Input iterator",
+                        "Forward iterator",
+                        "Bidirectional iterator",
+                        "Output iterator"
+                    ],
+                    "answer": "Bidirectional iterator",
+                    "reasoning": "Bidirectional iterators support both ++ (forward) and -- (backward) movement."
+                },
+                {
+                    "question": "What does the transform algorithm do?",
+                    "options": [
+                        "Changes container type",
+                        "Applies a function to each element",
+                        "Sorts elements",
+                        "Searches for elements"
+                    ],
+                    "answer": "Applies a function to each element",
+                    "reasoning": "transform applies a function to each element in a range and stores results."
+                },
+                {
+                    "question": "How do you check if an element exists using find?",
+                    "options": [
+                        "Check if find() returns true",
+                        "Check if find() returns end()",
+                        "Check if find() returns begin()",
+                        "Check if find() returns the element"
+                    ],
+                    "answer": "Check if find() returns end()",
+                    "reasoning": "If find() returns end(), the element was not found; otherwise, it points to the element."
+                }
+            ]
+        }
+    ]
+}
