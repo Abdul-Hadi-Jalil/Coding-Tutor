@@ -1,20 +1,45 @@
+import 'dart:ffi';
+
+import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';
-
 import 'course_level_selection.dart';
 import 'all_courses_screen.dart';
 import 'navbar_screen.dart';
 import '../models/course_model.dart';
 import '../services/course_service.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Preload ads after build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      try {
+        final adProvider = context.read<AdProvider>();
+        adProvider.preloadAd(AdType.homeAd1, adSize: TemplateType.small);
+        adProvider.preloadAd(AdType.homeAd2, adSize: TemplateType.small);
+        debugPrint('[HomeScreen] ✅ Ads preload requested');
+      } catch (e) {
+        debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
       body: SafeArea(
@@ -96,6 +121,10 @@ class HomeScreen extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 30),
+
+                // an ad above available courses
+                _buildNativeAd(context, AdType.homeAd1),
+                SizedBox(height: 10),
 
                 // 🔹 Available Courses - Use _CourseTile
                 _SectionHeader(
@@ -301,10 +330,46 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
+                SizedBox(height: 8),
+                // an ad below the trending courses
+                _buildNativeAd(context, AdType.homeAd2),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildNativeAd(BuildContext context, AdType adType) {
+    final adProvider = context.watch<AdProvider>();
+    final isAdLoaded = adType == AdType.homeAd1
+        ? adProvider.isHomeAd1
+        : adProvider.isHomeAd2;
+    final nativeAd = adType == AdType.homeAd1
+        ? adProvider.homeAd1
+        : adProvider.homeAd2;
+
+    if (!isAdLoaded || nativeAd == null) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      height: 130,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(4),
+        child: AdWidget(ad: nativeAd),
       ),
     );
   }
@@ -402,14 +467,6 @@ class _CourseTile extends StatelessWidget {
                 ],
               ),
             ),
-            // Text(
-            //   price,
-            //   style: TextStyle(
-            //     color: theme.colorScheme.onSurface,
-            //     fontFamily: "custom",
-            //     fontWeight: FontWeight.w600,
-            //   ),
-            // ),
           ],
         ),
       ),

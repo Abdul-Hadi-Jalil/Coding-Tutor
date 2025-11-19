@@ -76,7 +76,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
       for (final entry in all.entries) {
         final title = entry.key;
-        final completedDays = List<int>.from(entry.value['completedDays'] ?? const []);
+        final completedDays = List<int>.from(
+          entry.value['completedDays'] ?? const [],
+        );
         final count = completedDays.length;
         byCourseLessons[title] = count;
         byCoursePoints[title] = count * 5;
@@ -127,16 +129,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: user == null
           ? const _LoadingState()
           : _ProfileContent(
-        user: user,
-        loadingStats: _loadingStats,
-        computedPoints: _computedPoints,
-        computedLessons: _computedLessons,
-        activeCourses: _activeCourses,
-        lessonsByCourse: _lessonsByCourse,
-        pointsByCourse: _pointsByCourse,
-        activeCourseTitles: _activeCourseTitles,
-        onSignOut: () => _handleSignOut(context),
-      ),
+              user: user,
+              loadingStats: _loadingStats,
+              computedPoints: _computedPoints,
+              computedLessons: _computedLessons,
+              activeCourses: _activeCourses,
+              lessonsByCourse: _lessonsByCourse,
+              pointsByCourse: _pointsByCourse,
+              activeCourseTitles: _activeCourseTitles,
+              onSignOut: () => _handleSignOut(context),
+            ),
     );
   }
 
@@ -217,9 +219,7 @@ class _ProfileContent extends StatelessWidget {
           const SizedBox(height: 32),
 
           // Actions Section
-          _ActionsSection(
-            onSignOut: onSignOut,
-          ),
+          _ActionsSection(onSignOut: onSignOut),
         ],
       ),
     );
@@ -243,7 +243,9 @@ class _ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final displayName = user.name.isNotEmpty ? user.name : (user.email.isNotEmpty ? user.email.split('@').first : 'Learner');
+    final displayName = user.name.isNotEmpty
+        ? user.name
+        : (user.email.isNotEmpty ? user.email.split('@').first : 'Learner');
 
     return Container(
       padding: const EdgeInsets.all(24),
@@ -257,9 +259,7 @@ class _ProfileHeader extends StatelessWidget {
           ],
         ),
         borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: colorScheme.primary.withOpacity(0.2),
-        ),
+        border: Border.all(color: colorScheme.primary.withOpacity(0.2)),
       ),
       child: Row(
         children: [
@@ -318,7 +318,10 @@ class _ProfileHeader extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
                   decoration: BoxDecoration(
                     color: colorScheme.primary.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
@@ -522,27 +525,29 @@ class _StatsOverview extends StatelessWidget {
                 )
               else
                 ...activeCourseTitles
-                    .map((course) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.play_circle_filled_rounded,
-                        size: 16,
-                        color: theme.colorScheme.primary,
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          course,
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            fontFamily: 'custom',
-                          ),
+                    .map(
+                      (course) => Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.play_circle_filled_rounded,
+                              size: 16,
+                              color: theme.colorScheme.primary,
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Text(
+                                course,
+                                style: theme.textTheme.bodyMedium?.copyWith(
+                                  fontFamily: 'custom',
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                ))
+                    )
                     .toList(),
               const SizedBox(height: 20),
               SizedBox(
@@ -591,9 +596,7 @@ class _StatCard extends StatelessWidget {
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(
-          color: colorScheme.outline.withOpacity(0.2),
-        ),
+        border: Border.all(color: colorScheme.outline.withOpacity(0.2)),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -602,7 +605,7 @@ class _StatCard extends StatelessWidget {
           children: [
             Container(
               width: 40,
-              height: 40,
+              height: 30,
               decoration: BoxDecoration(
                 color: color.withOpacity(0.15),
                 shape: BoxShape.circle,
@@ -704,7 +707,9 @@ class _BreakdownSheet extends StatelessWidget {
                 child: Column(
                   children: [
                     Icon(
-                      isPoints ? Icons.emoji_events_outlined : Icons.menu_book_outlined,
+                      isPoints
+                          ? Icons.emoji_events_outlined
+                          : Icons.menu_book_outlined,
                       size: 48,
                       color: colorScheme.onSurface.withOpacity(0.3),
                     ),
@@ -720,46 +725,51 @@ class _BreakdownSheet extends StatelessWidget {
                 ),
               )
             else
-              ...sortedItems.map((entry) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    color: colorScheme.surface,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                      color: colorScheme.outline.withOpacity(0.1),
+              ...sortedItems.map(
+                (entry) => Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: colorScheme.surface,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: colorScheme.outline.withOpacity(0.1),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            entry.key,
+                            style: theme.textTheme.bodyMedium?.copyWith(
+                              fontFamily: 'custom',
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 6,
+                          ),
+                          decoration: BoxDecoration(
+                            color: colorScheme.primary.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            '${entry.value} ${isPoints ? 'pts' : 'lessons'}',
+                            style: theme.textTheme.bodyMedium?.copyWith(
+                              color: colorScheme.primary,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'custom',
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          entry.key,
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            fontFamily: 'custom',
-                          ),
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(
-                          color: colorScheme.primary.withOpacity(0.1),
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Text(
-                          '${entry.value} ${isPoints ? 'pts' : 'lessons'}',
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            color: colorScheme.primary,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'custom',
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ),
-              )),
+              ),
             const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
@@ -800,9 +810,7 @@ class _ActionsSection extends StatelessWidget {
           decoration: BoxDecoration(
             color: colorScheme.surface,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(
-              color: colorScheme.outline.withOpacity(0.1),
-            ),
+            border: Border.all(color: colorScheme.outline.withOpacity(0.1)),
           ),
           child: Column(
             children: [
@@ -816,7 +824,9 @@ class _ActionsSection extends StatelessWidget {
                     isScrollControlled: true,
                     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                     shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(24),
+                      ),
                     ),
                     builder: (ctx) => const _EditProfileSheet(),
                   );
@@ -832,7 +842,9 @@ class _ActionsSection extends StatelessWidget {
                     context: context,
                     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                     shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(24),
+                      ),
                     ),
                     builder: (ctx) => const _SettingsSheet(),
                   );
@@ -848,7 +860,9 @@ class _ActionsSection extends StatelessWidget {
                     context: context,
                     backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                     shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(24),
+                      ),
                     ),
                     builder: (ctx) => const _HelpSupportSheet(),
                   );
@@ -872,17 +886,27 @@ class _ActionsSection extends StatelessWidget {
 class _HelpSupportSheet extends StatelessWidget {
   const _HelpSupportSheet();
 
-  static final Uri _faqUrl = Uri.parse('https://vectorlabzlimited.com/terms-of-use/');
-  static final Uri _privacyUrl = Uri.parse('https://vectorlabzlimited.com/privacy-policy/');
-  static final Uri _bugUrl = Uri.parse('https://vectorlabzlimited.com/terms-of-use/');
-  static final Uri _supportEmail = Uri.parse('https://vectorlabzlimited.com/privacy-policy/');
+  static final Uri _faqUrl = Uri.parse(
+    'https://vectorlabzlimited.com/terms-of-use/',
+  );
+  static final Uri _privacyUrl = Uri.parse(
+    'https://vectorlabzlimited.com/privacy-policy/',
+  );
+  static final Uri _bugUrl = Uri.parse(
+    'https://vectorlabzlimited.com/terms-of-use/',
+  );
+  static final Uri _supportEmail = Uri.parse(
+    'https://vectorlabzlimited.com/privacy-policy/',
+  );
 
   Future<void> _openUri(BuildContext context, Uri uri) async {
     final messenger = ScaffoldMessenger.of(context);
     try {
       final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
       if (!ok) {
-        messenger.showSnackBar(const SnackBar(content: Text('Unable to open link')));
+        messenger.showSnackBar(
+          const SnackBar(content: Text('Unable to open link')),
+        );
       }
     } catch (e) {
       messenger.showSnackBar(SnackBar(content: Text('Failed to open: $e')));
@@ -1000,7 +1024,9 @@ class _EditProfileSheetState extends State<_EditProfileSheet> {
 
     final newName = _nameController.text.trim();
     if (newName.isEmpty) {
-      messenger.showSnackBar(const SnackBar(content: Text('Name cannot be empty')));
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Name cannot be empty')),
+      );
       return;
     }
 
@@ -1076,7 +1102,11 @@ class _EditProfileSheetState extends State<_EditProfileSheet> {
               child: FilledButton(
                 onPressed: _saving ? null : _save,
                 child: _saving
-                    ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2))
+                    ? const SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
                     : const Text('Save Changes'),
               ),
             ),

@@ -1,4 +1,7 @@
+import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:provider/provider.dart';
 import '../core/App_theme.dart';
 import '../models/course_model.dart';
 import '../controllers/course_controller.dart';
@@ -25,6 +28,30 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
   void initState() {
     super.initState();
     _load();
+
+    // Preload ads after build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      try {
+        final adProvider = context.read<AdProvider>();
+        adProvider.preloadAd(
+          AdType.courseTopicsAd1,
+          adSize: TemplateType.small,
+        );
+        adProvider.preloadAd(
+          AdType.courseTopicsAd2,
+          adSize: TemplateType.small,
+        );
+        adProvider.preloadAd(
+          AdType.courseTopicsAd3,
+          adSize: TemplateType.small,
+        );
+        debugPrint('[HomeScreen] ✅ Ads preload requested');
+      } catch (e) {
+        debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
+      }
+    });
   }
 
   Future<void> _load() async {
@@ -44,7 +71,10 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
       _completedDays = completed;
       _loading = false;
       _resumeIndex = resumeIndex;
-      _itemKeys = List<GlobalKey>.generate(course.days.length, (_) => GlobalKey());
+      _itemKeys = List<GlobalKey>.generate(
+        course.days.length,
+        (_) => GlobalKey(),
+      );
     });
 
     // After first build, auto-scroll to the resume card
@@ -99,16 +129,16 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           curve: Curves.easeInOut,
         )
         .then((_) {
-      final ctx2 = _itemKeys[idx].currentContext;
-      if (ctx2 != null) {
-        Scrollable.ensureVisible(
-          ctx2,
-          duration: const Duration(milliseconds: 300),
-          curve: Curves.easeInOut,
-          alignment: 0.05,
-        );
-      }
-    });
+          final ctx2 = _itemKeys[idx].currentContext;
+          if (ctx2 != null) {
+            Scrollable.ensureVisible(
+              ctx2,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut,
+              alignment: 0.05,
+            );
+          }
+        });
   }
 
   // Function to remove "Day X - " prefix from title
@@ -123,8 +153,13 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
     return cleaned;
   }
 
-
-  Widget _buildTopicCard(int index, CourseDay day, bool isCompleted, ThemeData theme, ColorScheme colorScheme) {
+  Widget _buildTopicCard(
+    int index,
+    CourseDay day,
+    bool isCompleted,
+    ThemeData theme,
+    ColorScheme colorScheme,
+  ) {
     final progressPercentage = _completedDays.length / _course!.days.length;
     final cleanTitle = _getCleanTitle(day.title);
 
@@ -137,23 +172,25 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           end: Alignment.bottomRight,
           colors: isCompleted
               ? [
-            AppColors.secondary.withOpacity(0.15),
-            AppColors.secondary.withOpacity(0.05),
-          ]
+                  AppColors.secondary.withOpacity(0.15),
+                  AppColors.secondary.withOpacity(0.05),
+                ]
               : [
-            colorScheme.primary.withOpacity(0.12),
-            colorScheme.primary.withOpacity(0.04),
-          ],
+                  colorScheme.primary.withOpacity(0.12),
+                  colorScheme.primary.withOpacity(0.04),
+                ],
         ),
         boxShadow: [
           BoxShadow(
-            color: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.1),
+            color: (isCompleted ? AppColors.secondary : colorScheme.primary)
+                .withOpacity(0.1),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
         border: Border.all(
-          color: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.2),
+          color: (isCompleted ? AppColors.secondary : colorScheme.primary)
+              .withOpacity(0.2),
           width: 1,
         ),
       ),
@@ -173,7 +210,8 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
             );
           },
           borderRadius: BorderRadius.circular(20),
-          splashColor: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.1),
+          splashColor: (isCompleted ? AppColors.secondary : colorScheme.primary)
+              .withOpacity(0.1),
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Row(
@@ -188,7 +226,11 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.3),
+                          color:
+                              (isCompleted
+                                      ? AppColors.secondary
+                                      : colorScheme.primary)
+                                  .withOpacity(0.3),
                           width: 2,
                         ),
                       ),
@@ -197,14 +239,20 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                       width: 50,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.1),
+                        color:
+                            (isCompleted
+                                    ? AppColors.secondary
+                                    : colorScheme.primary)
+                                .withOpacity(0.1),
                         shape: BoxShape.circle,
                       ),
                       child: Center(
                         child: Text(
                           day.day.toString(),
                           style: theme.textTheme.titleLarge?.copyWith(
-                            color: isCompleted ? AppColors.secondary : colorScheme.primary,
+                            color: isCompleted
+                                ? AppColors.secondary
+                                : colorScheme.primary,
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                             fontFamily: 'custom',
@@ -251,7 +299,8 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                               style: theme.textTheme.titleMedium?.copyWith(
                                 color: colorScheme.onSurface,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 14, // Increased font size for better readability
+                                fontSize:
+                                    14, // Increased font size for better readability
                                 fontFamily: 'custom',
                               ),
                               maxLines: 2,
@@ -298,7 +347,8 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                               ),
                             ),
                             Expanded(
-                              flex: _course!.days.length - _completedDays.length,
+                              flex:
+                                  _course!.days.length - _completedDays.length,
                               child: const SizedBox(),
                             ),
                           ],
@@ -336,7 +386,9 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                 // Navigation Arrow
                 Icon(
                   Icons.arrow_forward_ios_rounded,
-                  color: (isCompleted ? AppColors.secondary : colorScheme.primary).withOpacity(0.7),
+                  color:
+                      (isCompleted ? AppColors.secondary : colorScheme.primary)
+                          .withOpacity(0.7),
                   size: 16,
                 ),
               ],
@@ -353,17 +405,21 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
       return 'Learn data types and variables';
     } else if (lowerTitle.contains('control') || lowerTitle.contains('loop')) {
       return 'Master control flow and loops';
-    } else if (lowerTitle.contains('function') || lowerTitle.contains('method')) {
+    } else if (lowerTitle.contains('function') ||
+        lowerTitle.contains('method')) {
       return 'Understand functions and methods';
     } else if (lowerTitle.contains('class') || lowerTitle.contains('object')) {
       return 'Explore classes and objects';
     } else if (lowerTitle.contains('array') || lowerTitle.contains('list')) {
       return 'Work with arrays and collections';
-    } else if (lowerTitle.contains('exception') || lowerTitle.contains('error')) {
+    } else if (lowerTitle.contains('exception') ||
+        lowerTitle.contains('error')) {
       return 'Handle exceptions and errors';
-    } else if (lowerTitle.contains('inheritance') || lowerTitle.contains('polymorphism')) {
+    } else if (lowerTitle.contains('inheritance') ||
+        lowerTitle.contains('polymorphism')) {
       return 'Learn OOP concepts';
-    } else if (lowerTitle.contains('interface') || lowerTitle.contains('abstract')) {
+    } else if (lowerTitle.contains('interface') ||
+        lowerTitle.contains('abstract')) {
       return 'Understand advanced OOP';
     } else {
       return 'Continue your learning journey';
@@ -471,9 +527,7 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
                   colorScheme.secondary.withOpacity(0.05),
                 ],
               ),
-              border: Border.all(
-                color: colorScheme.primary.withOpacity(0.2),
-              ),
+              border: Border.all(color: colorScheme.primary.withOpacity(0.2)),
             ),
             child: Column(
               children: [
@@ -531,17 +585,52 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           ),
 
           // Topics List
+
+          // Expanded(
+          //   child: ListView.builder(
+          //     controller: _scrollController,
+          //     physics: const BouncingScrollPhysics(),
+          //     itemCount: _course!.days.length,
+          //     itemBuilder: (context, index) {
+          //       final day = _course!.days[index];
+          //       final isCompleted = _completedDays.contains(day.day);
+          //       return Container(
+          //         key: _itemKeys.isNotEmpty && index < _itemKeys.length
+          //             ? _itemKeys[index]
+          //             : null,
+          //         child: _buildTopicCard(
+          //           index,
+          //           day,
+          //           isCompleted,
+          //           theme,
+          //           colorScheme,
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // ),
           Expanded(
             child: ListView.builder(
               controller: _scrollController,
-              physics: const BouncingScrollPhysics(),
-              itemCount: _course!.days.length,
+              itemCount: _course!.days.length + _numberOfAdsToInsert(),
               itemBuilder: (context, index) {
-                final day = _course!.days[index];
+                // Check if this index should show an ad
+                if ((index + 1) % 4 == 0) {
+                  return _buildAdSlot(index);
+                }
+
+                // Calculate real course/day index (ad slots shift indexes)
+                final itemIndex = index - (index ~/ 4);
+
+                final day = _course!.days[itemIndex];
                 final isCompleted = _completedDays.contains(day.day);
-                return Container(
-                  key: _itemKeys.isNotEmpty && index < _itemKeys.length ? _itemKeys[index] : null,
-                  child: _buildTopicCard(index, day, isCompleted, theme, colorScheme),
+
+                return _buildTopicCard(
+                  itemIndex,
+                  day,
+                  isCompleted,
+                  Theme.of(context),
+                  Theme.of(context).colorScheme,
                 );
               },
             ),
@@ -555,5 +644,41 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
   void dispose() {
     _scrollController.dispose();
     super.dispose();
+  }
+
+  int _numberOfAdsToInsert() {
+    return (_course!.days.length / 3).floor();
+  }
+
+  Widget _buildAdSlot(int index) {
+    final adProvider = context.watch<AdProvider>();
+
+    // Select which ad to show based on position
+    if (index % 12 == 3 && adProvider.iscourseTopicsAd1) {
+      return Container(
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        child: AdWidget(ad: adProvider.courseTopicsAd1!),
+        height: 120,
+      );
+    }
+
+    if (index % 12 == 7 && adProvider.iscourseTopicsAd2) {
+      return Container(
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        child: AdWidget(ad: adProvider.courseTopicsAd2!),
+        height: 120,
+      );
+    }
+
+    if (index % 12 == 11 && adProvider.iscourseTopicsAd3) {
+      return Container(
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        child: AdWidget(ad: adProvider.courseTopicsAd3!),
+        height: 120,
+      );
+    }
+
+    // fallback empty if ad not loaded
+    return const SizedBox.shrink();
   }
 }

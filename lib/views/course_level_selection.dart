@@ -1,11 +1,41 @@
+import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:provider/provider.dart';
 import '../core/App_theme.dart';
 import 'course_detail_screen.dart';
 import 'course_topics_screen.dart';
 
-class CourseLevelSelectionScreen extends StatelessWidget {
+class CourseLevelSelectionScreen extends StatefulWidget {
   final String courseTitle;
   const CourseLevelSelectionScreen({super.key, required this.courseTitle});
+
+  @override
+  State<CourseLevelSelectionScreen> createState() =>
+      _CourseLevelSelectionScreenState();
+}
+
+class _CourseLevelSelectionScreenState
+    extends State<CourseLevelSelectionScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Preload ads after build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      try {
+        final adProvider = context.read<AdProvider>();
+        adProvider.preloadAd(
+          AdType.discoverPlantAd,
+          adSize: TemplateType.small,
+        );
+        debugPrint('[HomeScreen] ✅ Ads preload requested');
+      } catch (e) {
+        debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
+      }
+    });
+  }
 
   String _beginnerTitleFor(String title) {
     if (title.toLowerCase().contains('java')) {
@@ -232,7 +262,7 @@ class CourseLevelSelectionScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    courseTitle,
+                    widget.courseTitle,
                     style: theme.textTheme.titleLarge?.copyWith(
                       color: colorScheme.primary,
                       fontWeight: FontWeight.w600,
@@ -272,7 +302,9 @@ class CourseLevelSelectionScreen extends StatelessWidget {
                         color: AppColors.primary,
                         isLocked: false,
                         onTap: () {
-                          final beginnerTitle = _beginnerTitleFor(courseTitle);
+                          final beginnerTitle = _beginnerTitleFor(
+                            widget.courseTitle,
+                          );
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -283,6 +315,9 @@ class CourseLevelSelectionScreen extends StatelessWidget {
                           );
                         },
                       ),
+
+                      // ad to show
+                      _buildNativeAd(context, AdType.discoverPlantAd),
 
                       // Intermediate Level
                       levelTile(
@@ -479,6 +514,39 @@ class CourseLevelSelectionScreen extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildNativeAd(BuildContext context, AdType adType) {
+    final adProvider = context.watch<AdProvider>();
+    final isAdLoaded = adType == AdType.discoverPlantAd
+        ? adProvider.isYVideoPageAd1
+        : adProvider.isHomeAd2;
+    final nativeAd = adType == AdType.discoverPlantAd
+        ? adProvider.discoverPlantAd
+        : adProvider.homeAd2;
+
+    if (!isAdLoaded || nativeAd == null) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      height: 130,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(4),
+        child: AdWidget(ad: nativeAd),
       ),
     );
   }

@@ -1,4 +1,7 @@
+import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:provider/provider.dart';
 import '../core/App_theme.dart';
 import '../controllers/course_controller.dart';
 import '../models/course_model.dart';
@@ -22,6 +25,17 @@ class _ProgressScreenState extends State<ProgressScreen> {
   void initState() {
     super.initState();
     _load();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      try {
+        final adProvider = context.read<AdProvider>();
+        adProvider.preloadAd(AdType.calendarAd, adSize: TemplateType.small);
+        debugPrint('[HomeScreen] ✅ Ads preload requested');
+      } catch (e) {
+        debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
+      }
+    });
   }
 
   Future<void> _load() async {
@@ -60,50 +74,94 @@ class _ProgressScreenState extends State<ProgressScreen> {
           ? const Center(child: CircularProgressIndicator())
           : Padding(
               padding: const EdgeInsets.all(20),
-              child: ListView.builder(
-                itemCount: _courses.length,
-                itemBuilder: (context, index) {
-                  final course = _courses[index];
-                  final progress = _progressByCourse[course.title] ?? const {
-                    'completedDays': <int>[],
-                    'currentDay': 0,
-                  };
-                  final completedDays = List<int>.from(progress['completedDays'] ?? []);
-                  final currentDay = (progress['currentDay'] ?? 0) as int;
-                  final totalDays = course.days.length;
-                  final percentage = totalDays > 0
-                      ? (completedDays.length / totalDays).clamp(0.0, 1.0)
-                      : 0.0;
+              child: Column(
+                children: [
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: _courses.length,
+                      itemBuilder: (context, index) {
+                        final course = _courses[index];
+                        final progress =
+                            _progressByCourse[course.title] ??
+                            const {'completedDays': <int>[], 'currentDay': 0};
+                        final completedDays = List<int>.from(
+                          progress['completedDays'] ?? [],
+                        );
+                        final currentDay = (progress['currentDay'] ?? 0) as int;
+                        final totalDays = course.days.length;
+                        final percentage = totalDays > 0
+                            ? (completedDays.length / totalDays).clamp(0.0, 1.0)
+                            : 0.0;
 
-                  return _ProgressCard(
-                    title: course.title,
-                    subtitle: '${completedDays.length}/$totalDays topics completed',
-                    percentage: percentage,
-                    accentColor: colorScheme.primary,
-                    onTap: () {
-                      showModalBottomSheet(
-                        context: context,
-                        isScrollControlled: true,
-                        backgroundColor: theme.scaffoldBackgroundColor,
-                        shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-                        ),
-                        builder: (_) {
-                          return _ProgressDetailSheet(
-                            course: course,
-                            completedDays: completedDays,
-                            currentDay: currentDay,
-                            percentage: percentage,
-                            accentColor: colorScheme.primary,
-                          );
-                        },
-                      );
-                    },
-                    currentDay: currentDay,
-                  );
-                },
+                        return _ProgressCard(
+                          title: course.title,
+                          subtitle:
+                              '${completedDays.length}/$totalDays topics completed',
+                          percentage: percentage,
+                          accentColor: colorScheme.primary,
+                          onTap: () {
+                            showModalBottomSheet(
+                              context: context,
+                              isScrollControlled: true,
+                              backgroundColor: theme.scaffoldBackgroundColor,
+                              shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(24),
+                                ),
+                              ),
+                              builder: (_) {
+                                return _ProgressDetailSheet(
+                                  course: course,
+                                  completedDays: completedDays,
+                                  currentDay: currentDay,
+                                  percentage: percentage,
+                                  accentColor: colorScheme.primary,
+                                );
+                              },
+                            );
+                          },
+                          currentDay: currentDay,
+                        );
+                      },
+                    ),
+                  ),
+                  _buildNativeAd(context, AdType.calendarAd),
+                ],
               ),
             ),
+    );
+  }
+
+  Widget _buildNativeAd(BuildContext context, AdType adType) {
+    final adProvider = context.watch<AdProvider>();
+    final isAdLoaded = adType == AdType.homeAd1
+        ? adProvider.isHomeAd1
+        : adProvider.isHomeAd2;
+    final nativeAd = adType == AdType.homeAd1
+        ? adProvider.homeAd1
+        : adProvider.homeAd2;
+
+    if (!isAdLoaded || nativeAd == null) {
+      return const SizedBox.shrink();
+    }
+
+    return Container(
+      height: 130,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(4),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(4),
+        child: AdWidget(ad: nativeAd),
+      ),
     );
   }
 }
@@ -155,10 +213,7 @@ class _ProgressCard extends StatelessWidget {
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(
-          color: accentColor.withValues(alpha: 0.2),
-          width: 1,
-        ),
+        border: Border.all(color: accentColor.withValues(alpha: 0.2), width: 1),
       ),
       child: Material(
         color: Colors.transparent,
@@ -178,7 +233,11 @@ class _ProgressCard extends StatelessWidget {
                     color: accentColor.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Icon(Icons.insights_rounded, color: accentColor, size: 26),
+                  child: Icon(
+                    Icons.insights_rounded,
+                    color: accentColor,
+                    size: 26,
+                  ),
                 ),
                 const SizedBox(width: 16),
                 Expanded(
@@ -207,7 +266,9 @@ class _ProgressCard extends StatelessWidget {
                         child: LinearProgressIndicator(
                           value: percentage,
                           minHeight: 8,
-                          backgroundColor: colorScheme.surface.withValues(alpha: 0.6),
+                          backgroundColor: colorScheme.surface.withValues(
+                            alpha: 0.6,
+                          ),
                           color: accentColor,
                         ),
                       ),
@@ -216,15 +277,24 @@ class _ProgressCard extends StatelessWidget {
                 ),
                 const SizedBox(width: 12),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.secondary.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: AppColors.secondary.withValues(alpha: 0.25)),
+                    border: Border.all(
+                      color: AppColors.secondary.withValues(alpha: 0.25),
+                    ),
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.flag_rounded, size: 16, color: AppColors.secondary),
+                      const Icon(
+                        Icons.flag_rounded,
+                        size: 16,
+                        color: AppColors.secondary,
+                      ),
                       const SizedBox(width: 6),
                       Text(
                         'Day $currentDay',
@@ -302,9 +372,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                   fontFamily: 'custom',
                 ),
               ),
-      
+
               const SizedBox(height: 20),
-      
+
               // Donut Progress
               Row(
                 children: [
@@ -319,7 +389,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                           painter: _DonutProgressPainter(
                             percentage: percentage,
                             color: accentColor,
-                            backgroundColor: colorScheme.surface.withValues(alpha: 0.3),
+                            backgroundColor: colorScheme.surface.withValues(
+                              alpha: 0.3,
+                            ),
                           ),
                         ),
                         Column(
@@ -336,7 +408,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                             Text(
                               'Complete',
                               style: theme.textTheme.labelMedium?.copyWith(
-                                color: colorScheme.onSurface.withValues(alpha: 0.6),
+                                color: colorScheme.onSurface.withValues(
+                                  alpha: 0.6,
+                                ),
                                 fontFamily: 'custom',
                               ),
                             ),
@@ -345,9 +419,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                       ],
                     ),
                   ),
-      
+
                   const SizedBox(width: 16),
-      
+
                   // Stats
                   Expanded(
                     child: Column(
@@ -374,9 +448,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                   ),
                 ],
               ),
-      
+
               const SizedBox(height: 24),
-      
+
               // Segmented progress by topic/day
               Text(
                 'Topics Breakdown',
@@ -407,9 +481,9 @@ class _ProgressDetailSheet extends StatelessWidget {
                     ),
                 ],
               ),
-      
+
               const SizedBox(height: 24),
-      
+
               // Action: View Topics
               SizedBox(
                 width: double.infinity,
@@ -418,7 +492,8 @@ class _ProgressDetailSheet extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => CourseTopicsScreen(courseTitle: course.title),
+                        builder: (_) =>
+                            CourseTopicsScreen(courseTitle: course.title),
                       ),
                     );
                   },
@@ -518,7 +593,8 @@ class _DayChip extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         // Responsive width based on screen size
-        final double chipWidth = constraints.maxWidth * 0.23; // 25% of parent width
+        final double chipWidth =
+            constraints.maxWidth * 0.23; // 25% of parent width
         final double minWidth = 70;
         final double maxWidth = 110;
 
@@ -526,7 +602,10 @@ class _DayChip extends StatelessWidget {
           onTap: onTap,
           borderRadius: BorderRadius.circular(12),
           child: Container(
-            width: chipWidth.clamp(minWidth, maxWidth), // keeps it responsive yet bounded
+            width: chipWidth.clamp(
+              minWidth,
+              maxWidth,
+            ), // keeps it responsive yet bounded
             height: 40, // fixed height for consistent design
             padding: const EdgeInsets.symmetric(horizontal: 8),
             decoration: BoxDecoration(
@@ -562,7 +641,6 @@ class _DayChip extends StatelessWidget {
     );
   }
 }
-
 
 class _DonutProgressPainter extends CustomPainter {
   final double percentage;
