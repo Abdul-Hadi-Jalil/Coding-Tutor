@@ -47,6 +47,8 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           AdType.courseTopicsAd3,
           adSize: TemplateType.small,
         );
+        adProvider.preloadAd(AdType.lensAd);
+
         debugPrint('[HomeScreen] ✅ Ads preload requested');
       } catch (e) {
         debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
@@ -199,19 +201,39 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
         borderRadius: BorderRadius.circular(20),
         child: InkWell(
           onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (_) => CourseDetailScreen(
-                  courseTitle: widget.courseTitle,
-                  initialDay: day.day,
+            final adProvider = context.read<AdProvider>();
+            if (adProvider.canShowRewarded()) {
+              adProvider.showRewardedAd(
+                AdType.lensAd, // Use your rewarded ad type
+                onRewarded: () {
+                  // After user watches the ad, navigate to lesson
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => CourseDetailScreen(
+                        courseTitle: widget.courseTitle,
+                        initialDay: day.day,
+                      ),
+                    ),
+                  );
+                },
+              );
+            } else {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => CourseDetailScreen(
+                    courseTitle: widget.courseTitle,
+                    initialDay: day.day,
+                  ),
                 ),
-              ),
-            );
+              );
+            }
           },
           borderRadius: BorderRadius.circular(20),
           splashColor: (isCompleted ? AppColors.secondary : colorScheme.primary)
               .withOpacity(0.1),
+
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Row(
