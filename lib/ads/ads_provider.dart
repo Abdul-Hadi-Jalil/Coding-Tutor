@@ -463,8 +463,6 @@ class AdProvider with ChangeNotifier {
         return AdHelper.courseTopicsAd3;
       case AdType.lensAd:
         return AdHelper.lensAd;
-      default:
-        return null;
     }
   }
 }

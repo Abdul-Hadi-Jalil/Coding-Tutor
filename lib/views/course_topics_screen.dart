@@ -679,24 +679,24 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
     if (index % 12 == 3 && adProvider.iscourseTopicsAd1) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 10),
-        child: AdWidget(ad: adProvider.courseTopicsAd1!),
         height: 120,
+        child: AdWidget(ad: adProvider.courseTopicsAd1!),
       );
     }
 
     if (index % 12 == 7 && adProvider.iscourseTopicsAd2) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 10),
-        child: AdWidget(ad: adProvider.courseTopicsAd2!),
         height: 120,
+        child: AdWidget(ad: adProvider.courseTopicsAd2!),
       );
     }
 
     if (index % 12 == 11 && adProvider.iscourseTopicsAd3) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 10),
-        child: AdWidget(ad: adProvider.courseTopicsAd3!),
         height: 120,
+        child: AdWidget(ad: adProvider.courseTopicsAd3!),
       );
     }
 

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../core/app_theme.dart';
 import '../models/course_model.dart';
 import '../services/course_service.dart';
 import '../controllers/course_controller.dart';
@@ -28,8 +27,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
   int? _selectedOptionIndex;
   bool _showResult = false;
   bool _isCorrect = false;
-  int _correctAnswers = 0;
-  bool _quizCompleted = false;
   final CourseController _controller = CourseController();
 
   @override
@@ -64,7 +61,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
       _currentTaskIndex = 0;
       _currentQuizIndex = 0;
       _isLoading = false;
-      _quizCompleted = false;
     });
   }
 
@@ -94,11 +90,9 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
         _currentStep = 0;
         _currentTaskIndex = 0;
         _currentQuizIndex = 0;
-        _correctAnswers = 0;
         _selectedOptionIndex = null;
         _showResult = false;
         _isCorrect = false;
-        _quizCompleted = false;
       });
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -137,7 +131,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
             _isCorrect = false;
           } else {
             // Quiz completed -> proceed to tasks if any, else next day
-            _quizCompleted = true;
             if (day.interactiveTasks.isNotEmpty) {
               _currentStep = 5;
               _currentTaskIndex = 0;
@@ -185,9 +178,7 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
       });
     } else {
       // Quiz completed
-      setState(() {
-        _quizCompleted = true;
-      });
+      setState(() {});
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text('Quiz completed ✅')));
@@ -584,7 +575,6 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                                   _selectedOptionIndex = opt.key;
                                   _showResult = true;
                                   _isCorrect = opt.value == q.answer;
-                                  if (_isCorrect) _correctAnswers++;
                                 });
                               },
                         child: Container(

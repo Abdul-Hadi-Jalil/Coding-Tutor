@@ -3,7 +3,6 @@ import 'package:coding_tutor/views/navbar_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'home_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -20,7 +19,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     _OnboardPageModel(
       animation: 'assets/animations/code dark.json',
       title: 'Learn by Doing',
-      description: 'Interactive lessons and coding challenges to build skills fast.',
+      description:
+          'Interactive lessons and coding challenges to build skills fast.',
     ),
     _OnboardPageModel(
       animation: 'assets/animations/Online Learning.json',
@@ -32,20 +32,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       title: 'Track Your Progress',
       description: 'Keep up with your goals and celebrate milestones.',
     ),
-
   ];
 
   Future<void> _completeOnboarding() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
 
-    await FirebaseFirestore.instance.collection('users').doc(user.uid).set(
-      {
-        // Ensure the flag name matches UserModel/fromDocument
-        'onboardingCompleted': true,
-      },
-      SetOptions(merge: true),
-    );
+    await FirebaseFirestore.instance.collection('users').doc(user.uid).set({
+      // Ensure the flag name matches UserModel/fromDocument
+      'onboardingCompleted': true,
+    }, SetOptions(merge: true));
   }
 
   void _nextPage() async {
@@ -90,22 +86,33 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   final page = _pages[index];
                   return AnimatedSwitcher(
                     duration: const Duration(milliseconds: 500),
-                    transitionBuilder: (Widget child, Animation<double> animation) {
-                      return SlideTransition(
-                        position: Tween<Offset>(
-                          begin: const Offset(0.3, 0), // slide from right
-                          end: Offset.zero,
-                        ).animate(CurvedAnimation(
-                          parent: animation,
-                          curve: Curves.easeOutCubic,
-                        )),
-                        child: FadeTransition(
-                          opacity: animation,
-                          child: child,
-                        ),
-                      );
-                    },
-                    child: _buildPageContent(page, theme, key: ValueKey(page.title)),
+                    transitionBuilder:
+                        (Widget child, Animation<double> animation) {
+                          return SlideTransition(
+                            position:
+                                Tween<Offset>(
+                                  begin: const Offset(
+                                    0.3,
+                                    0,
+                                  ), // slide from right
+                                  end: Offset.zero,
+                                ).animate(
+                                  CurvedAnimation(
+                                    parent: animation,
+                                    curve: Curves.easeOutCubic,
+                                  ),
+                                ),
+                            child: FadeTransition(
+                              opacity: animation,
+                              child: child,
+                            ),
+                          );
+                        },
+                    child: _buildPageContent(
+                      page,
+                      theme,
+                      key: ValueKey(page.title),
+                    ),
                   );
                 },
               ),
@@ -160,9 +167,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   child: Text(
-                    _currentIndex == _pages.length - 1
-                        ? "Get Started"
-                        : "Next",
+                    _currentIndex == _pages.length - 1 ? "Get Started" : "Next",
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
@@ -177,7 +182,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  Widget _buildPageContent(_OnboardPageModel page, ThemeData theme, {Key? key}) {
+  Widget _buildPageContent(
+    _OnboardPageModel page,
+    ThemeData theme, {
+    Key? key,
+  }) {
     return Padding(
       key: key,
       padding: const EdgeInsets.symmetric(horizontal: 24.0),

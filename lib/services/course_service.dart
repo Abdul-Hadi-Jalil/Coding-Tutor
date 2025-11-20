@@ -40,12 +40,15 @@ class CourseService {
       final searchTitle = title.toLowerCase();
 
       // Handle different title formats
-      if (searchTitle.contains('c++') && courseTitle.contains('c++'))
+      if (searchTitle.contains('c++') && courseTitle.contains('c++')) {
         return true;
-      if (searchTitle.contains('java') && courseTitle.contains('java'))
+      }
+      if (searchTitle.contains('java') && courseTitle.contains('java')) {
         return true;
-      if (searchTitle.contains('python') && courseTitle.contains('python'))
+      }
+      if (searchTitle.contains('python') && courseTitle.contains('python')) {
         return true;
+      }
 
       // Exact match fallback
       return courseTitle == searchTitle;

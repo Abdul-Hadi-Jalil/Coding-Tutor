@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import '../core/App_theme.dart';
-import 'course_detail_screen.dart';
 import 'course_topics_screen.dart';
 
 class CourseLevelSelectionScreen extends StatefulWidget {
