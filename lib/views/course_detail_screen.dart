@@ -1,4 +1,6 @@
+import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/course_model.dart';
 import '../services/course_service.dart';
 import '../controllers/course_controller.dart';
@@ -33,6 +35,66 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
   void initState() {
     super.initState();
     _loadCourse();
+
+    // Preload ads after build
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+
+      try {
+        final adProvider = context.read<AdProvider>();
+
+        adProvider.preloadAd(AdType.lensAd);
+
+        debugPrint('[HomeScreen] ✅ Ads preload requested');
+      } catch (e) {
+        debugPrint('[HomeScreen] ⚠️ Ad preload error: $e');
+      }
+    });
+  }
+
+  void _goToPreviousStep() {
+    final day = _course!.days[_currentDay];
+
+    setState(() {
+      if (_currentStep > 0) {
+        if (_currentStep == 4) {
+          // Quiz step
+          if (_currentQuizIndex > 0) {
+            _currentQuizIndex--;
+            _selectedOptionIndex = null;
+            _showResult = false;
+            _isCorrect = false;
+          } else {
+            _currentStep = 3; // go back to Real-World Example
+          }
+        } else if (_currentStep >= 5 && day.interactiveTasks.isNotEmpty) {
+          // Task step
+          if (_currentTaskIndex > 0) {
+            _currentTaskIndex--;
+            _currentStep--;
+          } else {
+            _currentStep = 4; // go back to Quiz
+          }
+        } else {
+          _currentStep--;
+        }
+      } else if (_currentDay > 0) {
+        // Go to previous day’s last step
+        _currentDay--;
+        final prevDay = _course!.days[_currentDay];
+        _currentStep = prevDay.interactiveTasks.isNotEmpty
+            ? 5 + prevDay.interactiveTasks.length - 1
+            : prevDay.quiz.isNotEmpty
+            ? 4
+            : 3; // last step of previous day
+        _currentTaskIndex = prevDay.interactiveTasks.isNotEmpty
+            ? prevDay.interactiveTasks.length - 1
+            : 0;
+        _currentQuizIndex = prevDay.quiz.isNotEmpty
+            ? prevDay.quiz.length - 1
+            : 0;
+      }
+    });
   }
 
   Future<void> _loadCourse() async {
@@ -73,10 +135,12 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
 
   void _advanceToNextDay() {
     final current = _course!.days[_currentDay];
+
     // Avoid recording progress again if this day was already completed
     if (!_completedDays.contains(current.day)) {
       _markDayComplete(current.day);
     }
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Day ${current.day} completed successfully ✅'),
@@ -84,6 +148,16 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     );
+
+    final adProvider = context.read<AdProvider>();
+    if (adProvider.canShowRewarded()) {
+      adProvider.showRewardedAd(AdType.lensAd, onRewarded: _proceedToNextDay);
+    } else {
+      _proceedToNextDay();
+    }
+  }
+
+  void _proceedToNextDay() {
     if (_currentDay < _course!.days.length - 1) {
       setState(() {
         _currentDay++;
@@ -107,61 +181,131 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
     }
   }
 
-  void _nextStep() {
+  void _goToNextStep() {
     final day = _course!.days[_currentDay];
 
     setState(() {
-      if (_currentStep < 3) {
-        // Move through definition -> explanation -> code -> real-world
-        _currentStep++;
-      } else if (_currentStep == 3) {
-        // After real-world example, go to quiz step
-        _currentStep = 4;
-        _selectedOptionIndex = null;
-        _showResult = false;
-        _isCorrect = false;
-      } else if (_currentStep == 4) {
-        // Quiz step - handle quiz navigation separately
-        // This is where the fix is needed
-        if (_showResult && _isCorrect) {
-          if (_currentQuizIndex < day.quiz.length - 1) {
-            _currentQuizIndex++;
-            _selectedOptionIndex = null;
-            _showResult = false;
-            _isCorrect = false;
-          } else {
-            // Quiz completed -> proceed to tasks if any, else next day
-            if (day.interactiveTasks.isNotEmpty) {
-              _currentStep = 5;
-              _currentTaskIndex = 0;
-            } else {
-              _advanceToNextDay();
-            }
-          }
+      // QUIZ
+      if (_currentStep == 4) {
+        if (_currentQuizIndex < day.quiz.length - 1) {
+          _currentQuizIndex++;
+          _selectedOptionIndex = null;
+          _showResult = false;
+          _isCorrect = false;
+          return;
         } else {
-          // For non-quiz steps, just proceed
-          if (_currentStep >= 5 &&
-              _currentStep < 5 + day.interactiveTasks.length) {
-            if (_currentTaskIndex < day.interactiveTasks.length - 1) {
-              _currentTaskIndex++;
-              _currentStep++;
-            } else {
-              _advanceToNextDay();
-            }
-          }
+          _currentStep++;
+          return;
         }
-      } else if (_currentStep >= 5 &&
-          _currentStep < 5 + day.interactiveTasks.length) {
-        // Interactive tasks after quiz
+      }
+
+      // TASKS
+      if (_currentStep >= 5 && day.interactiveTasks.isNotEmpty) {
         if (_currentTaskIndex < day.interactiveTasks.length - 1) {
           _currentTaskIndex++;
           _currentStep++;
+          return;
         } else {
-          // Finished last task -> next day
-          _advanceToNextDay();
+          _finishDay(); // your existing finish logic
+          return;
         }
       }
+
+      // NORMAL step
+      if (_currentStep < 3) {
+        _currentStep++;
+        return;
+      }
+
+      // Move to quiz
+      if (day.quiz.isNotEmpty && _currentStep == 3) {
+        _currentStep = 4;
+        return;
+      }
+
+      // Move to tasks
+      if (day.interactiveTasks.isNotEmpty && _currentStep == 4) {
+        _currentStep = 5;
+        return;
+      }
+
+      // Completed
+      _finishDay();
     });
+  }
+
+  // Call this when the current day is "finished" (end of steps/tasks/quiz)
+  Future<void> _finishDay() async {
+    final current = _course!.days[_currentDay];
+
+    // 1) Mark day complete
+    if (!_completedDays.contains(current.day)) {
+      await _markDayComplete(current.day);
+    }
+
+    // 2) Show completion snackbar
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Day ${current.day} completed 🎉'),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      );
+    }
+
+    // 3) Attempt to show rewarded ad
+    try {
+      final adProvider = context.read<AdProvider>();
+
+      if (adProvider.canShowRewarded()) {
+        // Only callback supported is onRewarded
+        adProvider.showRewardedAd(
+          AdType.lensAd,
+          onRewarded: () {
+            // user earned reward — continue
+            _proceedAfterFinish();
+          },
+        );
+        return; // wait for reward callback
+      }
+    } catch (e) {
+      debugPrint('[CourseDetail] Rewarded ad error: $e');
+    }
+
+    // 4) No ad → continue immediately
+    _proceedAfterFinish();
+  }
+
+  // Advance to next day or show completion UI. Extracted helper so ad callbacks can call it.
+  void _proceedAfterFinish() {
+    if (!mounted) return;
+
+    if (_currentDay < _course!.days.length - 1) {
+      // Go to next day
+      setState(() {
+        _currentDay++;
+        _currentStep = 0;
+        _currentTaskIndex = 0;
+        _currentQuizIndex = 0;
+        _selectedOptionIndex = null;
+        _showResult = false;
+        _isCorrect = false;
+      });
+    } else {
+      // Course is completed
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Course completed 🎉'),
+          behavior: SnackBarBehavior.floating,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      );
+    }
   }
 
   // NEW METHOD: Handle quiz navigation specifically
@@ -402,9 +546,15 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
               _sectionHeader('Explanation', icon: Icons.menu_book),
               const SizedBox(height: 25),
               _sectionBody(day.explanation),
+              SizedBox(height: 12),
+              _buildBottomNavButtons(
+                onBack: _goToPreviousStep, // you already have this logic
+                onNext: _goToNextStep, // already exists
+                nextLabel: 'Next: Explanation',
+                nextIcon: Icons.arrow_forward,
+              ),
             ],
           ),
-          _buildNextButton('Next: Code Example', Icons.arrow_forward),
         ],
       ),
     );
@@ -442,9 +592,15 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 12),
+              _buildBottomNavButtons(
+                onBack: _goToPreviousStep, // you already have this logic
+                onNext: _goToNextStep, // already exists
+                nextLabel: 'Next: Explanation',
+                nextIcon: Icons.arrow_forward,
+              ),
             ],
           ),
-          _buildNextButton('Next: Real-World Example', Icons.arrow_forward),
         ],
       ),
     );
@@ -459,15 +615,22 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
             _sectionHeader('Real-World Example', icon: Icons.public),
             const SizedBox(height: 25),
             _sectionBody(day.realWorldExample),
+            SizedBox(height: 12),
+            _buildBottomNavButtons(
+              onBack: _goToPreviousStep, // you already have this logic
+              onNext: _goToNextStep, // already exists
+              nextLabel: 'Next: Explanation',
+              nextIcon: Icons.arrow_forward,
+            ),
           ],
         ),
-        _buildNextButton('Start Quiz', Icons.quiz),
       ],
     );
   }
 
   Widget _buildTaskView(CourseDay day) {
     final String task = day.interactiveTasks[_currentTaskIndex];
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -511,20 +674,52 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
             ),
           ],
         ),
-        _buildNextButton(
-          _currentTaskIndex < day.interactiveTasks.length - 1
-              ? 'Next Task'
-              : 'Finish Day',
-          _currentTaskIndex < day.interactiveTasks.length - 1
-              ? Icons.arrow_forward
-              : Icons.celebration,
-        ),
+
+        // Decide which button to show
+        _currentTaskIndex < day.interactiveTasks.length - 1
+            ? _buildBottomNavButtons(
+                onBack: _goToPreviousStep,
+                onNext: _goToNextStep,
+                nextLabel: '',
+                nextIcon: Icons.arrow_forward,
+              )
+            : _buildNextButton('Finish Day', Icons.celebration),
       ],
     );
   }
 
   Widget _buildQuizView(CourseDay day) {
     final q = day.quiz[_currentQuizIndex];
+
+    void _goBack() {
+      setState(() {
+        if (_currentQuizIndex > 0) {
+          _currentQuizIndex--;
+        } else if (_currentStep > 3) {
+          _currentStep--; // optional: go to previous section
+        }
+        _selectedOptionIndex = null;
+        _showResult = false;
+        _isCorrect = false;
+      });
+    }
+
+    void _goNext() {
+      setState(() {
+        if (_currentQuizIndex < day.quiz.length - 1) {
+          _currentQuizIndex++;
+        } else if (day.interactiveTasks.isNotEmpty) {
+          _currentStep = 5; // move to tasks
+          _currentTaskIndex = 0;
+        } else {
+          _finishDay();
+        }
+        _selectedOptionIndex = null;
+        _showResult = false;
+        _isCorrect = false;
+      });
+    }
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -677,91 +872,139 @@ class _CourseDetailScreenState extends State<CourseDetailScreen> {
                         ),
                       ),
                       const SizedBox(height: 20),
+                      // Keep existing "Try Again / Next Question" button
+                      ElevatedButton(
+                        onPressed: !_isCorrect
+                            ? () {
+                                setState(() {
+                                  _selectedOptionIndex = null;
+                                  _showResult = false;
+                                  _isCorrect = false;
+                                });
+                              }
+                            : _handleQuizNavigation,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.primary,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 32,
+                            vertical: 16,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          elevation: 4,
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              !_isCorrect
+                                  ? 'Try Again'
+                                  : _currentQuizIndex < day.quiz.length - 1
+                                  ? 'Next Question'
+                                  : (day.interactiveTasks.isNotEmpty
+                                        ? 'Proceed to Tasks'
+                                        : 'Finish Day'),
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Icon(
+                              !_isCorrect ? Icons.refresh : Icons.arrow_forward,
+                              size: 20,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
               ],
             ),
           ),
         ),
-        if (_showResult)
-          Container(
-            margin: const EdgeInsets.only(top: 20),
-            child: ElevatedButton(
-              onPressed: !_isCorrect
-                  ? () {
-                      setState(() {
-                        _selectedOptionIndex = null;
-                        _showResult = false;
-                        _isCorrect = false;
-                      });
-                    }
-                  : _handleQuizNavigation, // Use the new method for quiz navigation
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Theme.of(context).colorScheme.primary,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 16,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                elevation: 4,
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    !_isCorrect
-                        ? 'Try Again'
-                        : _currentQuizIndex < day.quiz.length - 1
-                        ? 'Next Question'
-                        : (day.interactiveTasks.isNotEmpty
-                              ? 'Proceed to Tasks'
-                              : 'Finish Day'),
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Icon(
-                    !_isCorrect ? Icons.refresh : Icons.arrow_forward,
-                    size: 20,
-                  ),
-                ],
-              ),
+        // Bottom nav: use the same _goBack and _goNext functions
+        _buildBottomNavButtons(
+          onBack: _goBack,
+          onNext: _goNext,
+          nextLabel: '',
+          nextIcon: Icons.arrow_forward,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildBottomNavButtons({
+    required VoidCallback onBack,
+    required VoidCallback onNext,
+    required String nextLabel,
+    required IconData nextIcon,
+  }) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        // BACK BUTTON
+        ElevatedButton(
+          onPressed: onBack,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey[800],
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
             ),
           ),
+          child: const Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.arrow_back),
+              SizedBox(width: 6),
+              Text("Previous"),
+            ],
+          ),
+        ),
+
+        const SizedBox(height: 12),
+
+        // NEXT BUTTON (ICON ONLY)
+        ElevatedButton(
+          onPressed: onNext,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          ),
+          child: const Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.arrow_forward),
+              SizedBox(width: 6),
+              Text("Next"),
+            ],
+          ),
+        ),
       ],
     );
   }
 
   Widget _buildNextButton(String text, IconData icon) {
-    return Container(
-      margin: const EdgeInsets.only(top: 20),
-      child: ElevatedButton(
-        onPressed: _nextStep,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Theme.of(context).colorScheme.primary,
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          elevation: 4,
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              text,
-              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(width: 8),
-            Icon(icon, size: 20),
-          ],
-        ),
+    return ElevatedButton.icon(
+      onPressed: _goToNextStep,
+      icon: Icon(icon),
+      label: Text(
+        text,
+        style: const TextStyle(fontSize: 16, fontFamily: 'custom'),
+      ),
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     );
   }

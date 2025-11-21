@@ -47,7 +47,6 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           AdType.courseTopicsAd3,
           adSize: TemplateType.small,
         );
-        adProvider.preloadAd(AdType.lensAd);
 
         debugPrint('[HomeScreen] ✅ Ads preload requested');
       } catch (e) {
@@ -201,35 +200,17 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
         borderRadius: BorderRadius.circular(20),
         child: InkWell(
           onTap: () {
-            final adProvider = context.read<AdProvider>();
-            if (adProvider.canShowRewarded()) {
-              adProvider.showRewardedAd(
-                AdType.lensAd, // Use your rewarded ad type
-                onRewarded: () {
-                  // After user watches the ad, navigate to lesson
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => CourseDetailScreen(
-                        courseTitle: widget.courseTitle,
-                        initialDay: day.day,
-                      ),
-                    ),
-                  );
-                },
-              );
-            } else {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => CourseDetailScreen(
-                    courseTitle: widget.courseTitle,
-                    initialDay: day.day,
-                  ),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => CourseDetailScreen(
+                  courseTitle: widget.courseTitle,
+                  initialDay: day.day,
                 ),
-              );
-            }
+              ),
+            );
           },
+
           borderRadius: BorderRadius.circular(20),
           splashColor: (isCompleted ? AppColors.secondary : colorScheme.primary)
               .withOpacity(0.1),
@@ -607,30 +588,6 @@ class _CourseTopicsScreenState extends State<CourseTopicsScreen> {
           ),
 
           // Topics List
-
-          // Expanded(
-          //   child: ListView.builder(
-          //     controller: _scrollController,
-          //     physics: const BouncingScrollPhysics(),
-          //     itemCount: _course!.days.length,
-          //     itemBuilder: (context, index) {
-          //       final day = _course!.days[index];
-          //       final isCompleted = _completedDays.contains(day.day);
-          //       return Container(
-          //         key: _itemKeys.isNotEmpty && index < _itemKeys.length
-          //             ? _itemKeys[index]
-          //             : null,
-          //         child: _buildTopicCard(
-          //           index,
-          //           day,
-          //           isCompleted,
-          //           theme,
-          //           colorScheme,
-          //         ),
-          //       );
-          //     },
-          //   ),
-          // ),
           Expanded(
             child: ListView.builder(
               controller: _scrollController,

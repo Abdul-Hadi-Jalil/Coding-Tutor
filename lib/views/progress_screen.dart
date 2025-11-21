@@ -55,7 +55,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -72,60 +71,72 @@ class _ProgressScreenState extends State<ProgressScreen> {
       ),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : Padding(
+          : SingleChildScrollView(
               padding: const EdgeInsets.all(20),
               child: Column(
                 children: [
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: _courses.length,
-                      itemBuilder: (context, index) {
-                        final course = _courses[index];
-                        final progress =
-                            _progressByCourse[course.title] ??
-                            const {'completedDays': <int>[], 'currentDay': 0};
-                        final completedDays = List<int>.from(
-                          progress['completedDays'] ?? [],
-                        );
-                        final currentDay = (progress['currentDay'] ?? 0) as int;
-                        final totalDays = course.days.length;
-                        final percentage = totalDays > 0
-                            ? (completedDays.length / totalDays).clamp(0.0, 1.0)
-                            : 0.0;
+                  ...List.generate(_courses.length, (index) {
+                    final course = _courses[index];
+                    final progress =
+                        _progressByCourse[course.title] ??
+                        const {'completedDays': <int>[], 'currentDay': 0};
+                    final completedDays = List<int>.from(
+                      progress['completedDays'] ?? [],
+                    );
+                    final currentDay = (progress['currentDay'] ?? 0) as int;
+                    final totalDays = course.days.length;
+                    final percentage = totalDays > 0
+                        ? (completedDays.length / totalDays).clamp(0.0, 1.0)
+                        : 0.0;
 
-                        return _ProgressCard(
-                          title: course.title,
-                          subtitle:
-                              '${completedDays.length}/$totalDays topics completed',
-                          percentage: percentage,
-                          accentColor: colorScheme.primary,
-                          onTap: () {
-                            showModalBottomSheet(
-                              context: context,
-                              isScrollControlled: true,
-                              backgroundColor: theme.scaffoldBackgroundColor,
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.vertical(
-                                  top: Radius.circular(24),
-                                ),
+                    final List<Widget> items = [];
+
+                    // Add the progress card
+                    items.add(
+                      _ProgressCard(
+                        title: course.title,
+                        subtitle:
+                            '$completedDays.length/$totalDays topics completed',
+                        percentage: percentage,
+                        accentColor: Theme.of(context).colorScheme.primary,
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+                            isScrollControlled: true,
+                            backgroundColor: Theme.of(
+                              context,
+                            ).scaffoldBackgroundColor,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(24),
                               ),
-                              builder: (_) {
-                                return _ProgressDetailSheet(
-                                  course: course,
-                                  completedDays: completedDays,
-                                  currentDay: currentDay,
-                                  percentage: percentage,
-                                  accentColor: colorScheme.primary,
-                                );
-                              },
-                            );
-                          },
-                          currentDay: currentDay,
-                        );
-                      },
-                    ),
-                  ),
-                  _buildNativeAd(context, AdType.calendarAd),
+                            ),
+                            builder: (_) => _ProgressDetailSheet(
+                              course: course,
+                              completedDays: completedDays,
+                              currentDay: currentDay,
+                              percentage: percentage,
+                              accentColor: Theme.of(
+                                context,
+                              ).colorScheme.primary,
+                            ),
+                          );
+                        },
+                        currentDay: currentDay,
+                      ),
+                    );
+
+                    // Insert ad after 3rd item
+                    if (index == 2) {
+                      items.add(const SizedBox(height: 16));
+                      items.add(_buildNativeAd(context, AdType.calendarAd));
+                      items.add(const SizedBox(height: 16));
+                    } else {
+                      items.add(const SizedBox(height: 16));
+                    }
+
+                    return Column(children: items);
+                  }),
                 ],
               ),
             ),
