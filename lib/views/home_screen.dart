@@ -338,6 +338,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Replace both _buildNativeAd and _buildNativeAd2 with this single method
   Widget _buildNativeAd(BuildContext context, AdType adType) {
     final adProvider = context.watch<AdProvider>();
     final isAdLoaded = adType == AdType.homeAd1
