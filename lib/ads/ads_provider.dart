@@ -11,7 +11,6 @@ class AdProvider with ChangeNotifier {
     AdType.calendarAd: AdState(),
     AdType.myGardenAd: AdState(),
     AdType.discoverPlantAd: AdState(),
-    AdType.discoverPlantDetailAd: AdState(),
     AdType.courseTopicsAd1: AdState(),
     AdType.courseTopicsAd2: AdState(),
     AdType.courseTopicsAd3: AdState(),
@@ -23,7 +22,6 @@ class AdProvider with ChangeNotifier {
   NativeAd? _calendarAd;
   NativeAd? _myGardenAd;
   NativeAd? _discoverPlantAd;
-  NativeAd? _discoverPlantDetailAd;
   NativeAd? _courseTopicsAd1;
   NativeAd? _courseTopicsAd2;
   NativeAd? _courseTopicsAd3;
@@ -50,7 +48,6 @@ class AdProvider with ChangeNotifier {
   bool get isNotePageAd3 => _adStates[AdType.calendarAd]!.isLoaded;
   bool get isExercisePageAd1 => _adStates[AdType.myGardenAd]!.isLoaded;
   bool get isYVideoPageAd1 => _adStates[AdType.discoverPlantAd]!.isLoaded;
-  bool get isYVideoPageAd2 => _adStates[AdType.discoverPlantDetailAd]!.isLoaded;
   bool get iscourseTopicsAd1 => _adStates[AdType.courseTopicsAd1]!.isLoaded;
   bool get iscourseTopicsAd2 => _adStates[AdType.courseTopicsAd2]!.isLoaded;
   bool get iscourseTopicsAd3 => _adStates[AdType.courseTopicsAd3]!.isLoaded;
@@ -63,7 +60,6 @@ class AdProvider with ChangeNotifier {
   NativeAd? get calendarAd => _calendarAd;
   NativeAd? get myGardenAd => _myGardenAd;
   NativeAd? get discoverPlantAd => _discoverPlantAd;
-  NativeAd? get discoverPlantDetailAd => _discoverPlantDetailAd;
   NativeAd? get courseTopicsAd1 => _courseTopicsAd1;
   NativeAd? get courseTopicsAd2 => _courseTopicsAd2;
   NativeAd? get courseTopicsAd3 => _courseTopicsAd3;
@@ -297,10 +293,6 @@ class AdProvider with ChangeNotifier {
         _discoverPlantAd?.dispose();
         _discoverPlantAd = null;
         break;
-      case AdType.discoverPlantDetailAd:
-        _discoverPlantDetailAd?.dispose();
-        _discoverPlantDetailAd = null;
-        break;
       case AdType.lensAd:
         _lensAd?.dispose();
         _lensAd = null;
@@ -324,7 +316,6 @@ class AdProvider with ChangeNotifier {
     _calendarAd?.dispose();
     _myGardenAd?.dispose();
     _discoverPlantAd?.dispose();
-    _discoverPlantDetailAd?.dispose();
     _courseTopicsAd1?.dispose();
     _courseTopicsAd2?.dispose();
     _courseTopicsAd3?.dispose();
@@ -413,9 +404,6 @@ class AdProvider with ChangeNotifier {
       case AdType.discoverPlantAd:
         _discoverPlantAd = ad;
         break;
-      case AdType.discoverPlantDetailAd:
-        _discoverPlantDetailAd = ad;
-        break;
       case AdType.courseTopicsAd1:
         _courseTopicsAd1 = ad;
         break;
@@ -453,8 +441,6 @@ class AdProvider with ChangeNotifier {
         return AdHelper.myGardenAd;
       case AdType.discoverPlantAd:
         return AdHelper.discoverPlantAd;
-      case AdType.discoverPlantDetailAd:
-        return AdHelper.discoverPlantDetailAd;
       case AdType.courseTopicsAd1:
         return AdHelper.courseTopicsAd1;
       case AdType.courseTopicsAd2:
@@ -477,7 +463,6 @@ enum AdType {
   calendarAd,
   myGardenAd,
   discoverPlantAd,
-  discoverPlantDetailAd,
   courseTopicsAd1,
   courseTopicsAd2,
   courseTopicsAd3,
