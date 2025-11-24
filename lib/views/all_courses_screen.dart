@@ -55,6 +55,7 @@ class _AllCoursesScreenState extends State<AllCoursesScreen> {
         elevation: 0,
         foregroundColor: colorScheme.onSurface,
       ),
+
       body: FutureBuilder<List<Course>>(
         future: _load(),
         builder: (context, snapshot) {
@@ -84,76 +85,79 @@ class _AllCoursesScreenState extends State<AllCoursesScreen> {
             );
           }
 
-          return Column(
-            children: [
-              Expanded(
-                child: ListView.separated(
-                  padding: const EdgeInsets.all(16),
-                  itemCount: courses.length,
-                  separatorBuilder: (_, __) => const SizedBox(height: 12),
-                  itemBuilder: (context, index) {
-                    final course = courses[index];
-                    return Material(
-                      color: colorScheme.surface,
-                      borderRadius: BorderRadius.circular(16),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(16),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) =>
-                                  CourseTopicsScreen(courseTitle: course.title),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 14,
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.menu_book, color: colorScheme.primary),
-                              const SizedBox(width: 16),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      course.title,
-                                      style: TextStyle(
-                                        color: colorScheme.onSurface,
-                                        fontFamily: 'custom',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 4),
-                                    Text(
-                                      course.language,
-                                      style: TextStyle(
-                                        color: colorScheme.onSurface.withValues(
-                                          alpha: 0.7,
-                                        ),
-                                        fontFamily: 'custom',
-                                        fontSize: 13,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const Icon(Icons.chevron_right),
-                            ],
-                          ),
-                        ),
+          // Build a scrollable column with courses and ad
+          final List<Widget> courseWidgets = [];
+          for (int i = 0; i < courses.length; i++) {
+            final course = courses[i];
+            courseWidgets.add(
+              Material(
+                color: colorScheme.surface,
+                borderRadius: BorderRadius.circular(16),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(16),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) =>
+                            CourseTopicsScreen(courseTitle: course.title),
                       ),
                     );
                   },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 14,
+                    ),
+                    child: Row(
+                      children: [
+                        Icon(Icons.menu_book, color: colorScheme.primary),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                course.title,
+                                style: TextStyle(
+                                  color: colorScheme.onSurface,
+                                  fontFamily: 'custom',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                course.language,
+                                style: TextStyle(
+                                  color: colorScheme.onSurface.withOpacity(0.7),
+                                  fontFamily: 'custom',
+                                  fontSize: 13,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Icon(Icons.chevron_right),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-              _buildNativeAd(context, AdType.myGardenAd),
-            ],
+            );
+
+            // Insert ad after the 3rd course
+            if (i == 2) {
+              courseWidgets.add(_buildNativeAd(context, AdType.myGardenAd));
+            }
+
+            // Add spacing between items
+            courseWidgets.add(const SizedBox(height: 12));
+          }
+
+          return SingleChildScrollView(
+            padding: const EdgeInsets.all(16),
+            child: Column(children: courseWidgets),
           );
         },
       ),

@@ -4,32 +4,28 @@ import 'package:flutter/foundation.dart';
 class AdHelper {
   // Android ad unit IDs
   static const Map<String, String> _androidAds = {
-    'homeAd1': 'ca-app-pub-3774337907915828/4814707974', // native ad
-    'homeAd2': 'ca-app-pub-3774337907915828/8737926520', // native ad
-    'lensAd': 'ca-app-pub-3774337907915828/2301769861', //  REWARDED ad unit
-    'calendarAd': 'ca-app-pub-3774337907915828/3485599848', // native ad
-    'myGardenAd': 'ca-app-pub-3774337907915828/3266656738', // native ad
-    'discoverPlantAd': 'ca-app-pub-3774337907915828/9605544817', // native ad
-    'discoverPlantDetailAd':
-        'ca-app-pub-9286190198569219/5595831514', // native ad
-    'courseTopicsAd1': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
-    'courseTopicsAd2': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
-    'courseTopicsAd3': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
+    'homeAd1': 'ca-app-pub-3774337907915828/1575027464', // native ad
+    'homeAd2': 'ca-app-pub-3774337907915828/6398326345', // native ad
+    'calendarAd': 'ca-app-pub-3774337907915828/3855923488', // native ad
+    'myGardenAd': 'ca-app-pub-3774337907915828/6911114625', // native ad
+    'discoverPlantAd': 'ca-app-pub-3774337907915828/1738678993', // native ad
+    'courseTopicsAd1': 'ca-app-pub-3774337907915828/5322700789', // native ad
+    'courseTopicsAd2': 'ca-app-pub-3774337907915828/8641346306', // native ad
+    'courseTopicsAd3': 'ca-app-pub-3774337907915828/4887586512', // native ad
+    'lensAd': 'ca-app-pub-3774337907915828/6448080193', //  REWARDED ad unit
   };
 
   // iOS ad unit IDs
   static const Map<String, String> _iosAds = {
-    'homeAd1': 'ca-app-pub-3774337907915828/4814707974', // native ad
-    'homeAd2': 'ca-app-pub-3774337907915828/8737926520', // native ad
-    'lensAd': 'ca-app-pub-3774337907915828/2301769861', // REWARDED ad unit
-    'calendarAd': 'ca-app-pub-3774337907915828/3485599848', // native ad
-    'myGardenAd': 'ca-app-pub-3774337907915828/3266656738', // native ad
-    'discoverPlantAd': 'ca-app-pub-3774337907915828/9605544817', // native ad
-    'discoverPlantDetailAd':
-        'ca-app-pub-9286190198569219/5595831514', // native ad
-    'courseTopicsAd1': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
-    'courseTopicsAd2': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
-    'courseTopicsAd3': 'ca-app-pub-XXXXXXXXXXXXXXX/XXXXXXXXXX', // native ad
+    'homeAd1': 'ca-app-pub-3774337907915828/1575027464', // native ad
+    'homeAd2': 'ca-app-pub-3774337907915828/6398326345', // native ad
+    'calendarAd': 'ca-app-pub-3774337907915828/3855923488', // native ad
+    'myGardenAd': 'ca-app-pub-3774337907915828/6911114625', // native ad
+    'discoverPlantAd': 'ca-app-pub-3774337907915828/1738678993', // native ad
+    'courseTopicsAd1': 'ca-app-pub-3774337907915828/5322700789', // native ad
+    'courseTopicsAd2': 'ca-app-pub-3774337907915828/8641346306', // native ad
+    'courseTopicsAd3': 'ca-app-pub-3774337907915828/4887586512', // native ad
+    'lensAd': 'ca-app-pub-3774337907915828/6448080193', // REWARDED ad unit
   };
 
   // Test ad unit IDs
@@ -92,7 +88,6 @@ class AdHelper {
   static String get calendarAd => _getAd('calendarAd');
   static String get myGardenAd => _getAd('myGardenAd');
   static String get discoverPlantAd => _getAd('discoverPlantAd');
-  static String get discoverPlantDetailAd => _getAd('discoverPlantDetailAd');
   static String get courseTopicsAd1 => _getAd('courseTopicsAd1');
   static String get courseTopicsAd2 => _getAd('courseTopicsAd2');
   static String get courseTopicsAd3 => _getAd('courseTopicsAd3');

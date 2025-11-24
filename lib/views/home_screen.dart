@@ -1,12 +1,9 @@
-import 'dart:ffi';
-
 import 'package:coding_tutor/ads/ads_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import '../providers/theme_provider.dart';
 import 'course_level_selection.dart';
-import 'all_courses_screen.dart';
 import 'navbar_screen.dart';
 import '../models/course_model.dart';
 import '../services/course_service.dart';
@@ -311,7 +308,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           _TrendingCourseCard(
                             title: "Development with C++",
                             applicants: cppLessons,
-                            image: 'assets/images/course2.jpg',
+                            image: 'assets/images/course3.jpeg',
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -341,6 +338,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  // Replace both _buildNativeAd and _buildNativeAd2 with this single method
   Widget _buildNativeAd(BuildContext context, AdType adType) {
     final adProvider = context.watch<AdProvider>();
     final isAdLoaded = adType == AdType.homeAd1
